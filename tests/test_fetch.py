@@ -50,3 +50,52 @@ def test_one_failure_does_not_block_others_and_is_logged(tmp_path):
     log = (root / "test" / "fetch_log.jsonl").read_text().splitlines()
     assert len(log) == 2
     assert not (root / "test" / "bad").exists()
+
+
+# ---- probe mode, size cap, HTTP errors (use a real local HTTP server) ----
+import threading
+from functools import partial
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+
+
+def serve(directory):
+    class Quiet(SimpleHTTPRequestHandler):
+        def log_message(self, *args):
+            pass
+    server = HTTPServer(("127.0.0.1", 0), partial(Quiet, directory=str(directory)))
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    return server, f"http://127.0.0.1:{server.server_port}"
+
+
+def run_one(tmp_path, source):
+    cfg = tmp_path / "s.json"
+    cfg.write_text(json.dumps({"election": "t", "sources": [source]}))
+    return run(cfg, tmp_path / "raw")[0]
+
+
+def test_probe_records_size_but_stores_nothing(tmp_path):
+    (tmp_path / "www").mkdir()
+    (tmp_path / "www" / "big.pdf").write_bytes(b"x" * 1000)
+    server, base = serve(tmp_path / "www")
+    entry = run_one(tmp_path, {"id": "p", "url": base + "/big.pdf", "head": True})
+    server.shutdown()
+    assert entry["result"] == "probed" and entry["http_status"] == 200 and entry["content_length"] == "1000"
+    assert not (tmp_path / "raw" / "t" / "p").exists()
+
+
+def test_http_404_is_logged_with_its_status(tmp_path):
+    (tmp_path / "www").mkdir()
+    server, base = serve(tmp_path / "www")
+    entry = run_one(tmp_path, {"id": "p", "url": base + "/missing.pdf", "head": True})
+    server.shutdown()
+    assert entry["result"] == "error" and entry["http_status"] == 404
+
+
+def test_file_over_size_cap_is_not_saved(tmp_path):
+    (tmp_path / "www").mkdir()
+    (tmp_path / "www" / "f").write_bytes(b"x" * 500)
+    server, base = serve(tmp_path / "www")
+    entry = run_one(tmp_path, {"id": "p", "url": base + "/f", "max_bytes": 100})
+    server.shutdown()
+    assert entry["result"] == "too_large"
+    assert not (tmp_path / "raw" / "t" / "p").exists()

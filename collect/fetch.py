@@ -7,12 +7,14 @@ Raw snapshots are never edited after they are written.
 import hashlib
 import json
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
 USER_AGENT = "la-county-elections-collector (public research project)"
 TIMEOUT_S = 60
+DEFAULT_MAX_BYTES = 30_000_000  # raw snapshots are committed to git, so refuse huge files
 
 
 def now_utc():
@@ -29,10 +31,12 @@ def latest_hash(source_dir):
     return json.loads((snaps[-1] / "manifest.json").read_text())["sha256"]
 
 
-def download(url):
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+def download(url, method="GET", max_bytes=DEFAULT_MAX_BYTES):
+    """Return (status, headers, body). Body is None for HEAD. Reads at most max_bytes + 1 bytes."""
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT}, method=method)
     with urllib.request.urlopen(req, timeout=TIMEOUT_S) as resp:
-        return resp.status, resp.headers.get("Content-Type", ""), resp.read()
+        body = None if method == "HEAD" else resp.read(max_bytes + 1)
+        return resp.status, resp.headers, body
 
 
 def fetch_source(source, election_dir, now=None):
@@ -40,10 +44,25 @@ def fetch_source(source, election_dir, now=None):
     now = now or now_utc()
     stamp = now.strftime("%Y%m%dT%H%M%S%fZ")
     entry = {"source_id": source["id"], "url": source["url"], "fetched_at": now.isoformat()}
+    probe = source.get("head", False)  # probe only: record status and size, never store the body
+    max_bytes = source.get("max_bytes", DEFAULT_MAX_BYTES)
     try:
-        status, ctype, body = download(source["url"])
+        status, headers, body = download(source["url"], "HEAD" if probe else "GET", max_bytes)
+    except urllib.error.HTTPError as e:  # e.g. 404 for a file the county has not published yet
+        entry.update(result="error", http_status=e.code, error=f"HTTPError: HTTP Error {e.code}: {e.reason}")
+        return entry
     except Exception as e:  # network errors must not stop the other sources
         entry.update(result="error", error=f"{type(e).__name__}: {e}")
+        return entry
+
+    ctype = headers.get("Content-Type", "")
+    if probe:
+        entry.update(result="probed", http_status=status, content_type=ctype,
+                     content_length=headers.get("Content-Length"), last_modified=headers.get("Last-Modified"))
+        return entry
+    if len(body) > max_bytes:
+        entry.update(result="too_large", http_status=status, content_type=ctype,
+                     content_length=headers.get("Content-Length"), error=f"more than {max_bytes} bytes, not saved")
         return entry
 
     digest = hashlib.sha256(body).hexdigest()
@@ -81,4 +100,4 @@ if __name__ == "__main__":
         print(e["source_id"], e["result"], e.get("error", ""))
     # Exit 0 even if some sources failed: the log records it, and a flaky county
     # server should not turn the whole schedule red. Fail only if every source failed.
-    sys.exit(1 if all(e["result"] == "error" for e in results) else 0)
+    sys.exit(1 if all(e["result"] in ("error", "too_large") for e in results) else 0)

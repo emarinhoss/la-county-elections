@@ -67,3 +67,26 @@ with an uncertainty range, city clustering, spatial autocorrelation, ACS correla
 
 The Claude Code cloud sandbox used to write this spec could not reach county, Census or Secretary of State hosts
 (proxy blocked). Parsers are developed against fixtures. The first real fetch happens in GitHub Actions.
+
+## Countywide contests by city (status: waiting on county data)
+
+What we know (Nov 4, 2026):
+- The live results API gives county totals only. No city or precinct breakdown is in the API or in the results app code.
+- City-level numbers for countywide contests come from the Statement of Votes Cast (SVC), published after
+  certification (early December for past general elections). Files live under `content.lavote.gov/docs/rrcc/svc/`
+  and, for past elections, start with the election id (e.g. `4324_...` for the 2024 general). For 2026 the id is 4348.
+  Only `4324_final_svc_district_v3.pdf` was seen in a web search. The other file names in `config/sources.json`
+  are guesses, and 2026 files are expected to 404 until certification.
+- The collector probes these URLs (HEAD only, nothing stored) every run, so the log shows when a file appears.
+
+Plan once a precinct-level file exists:
+1. Parse it into `precinct_results(contest_id, precinct, choice, votes)`.
+2. Map precincts to cities with `CITY_EST` from the county precinct layer (33,219 polygons).
+3. Sum by city and show it on the map for countywide contests, labelled "from precinct data, as of <date>".
+
+Risks to check, not assumed away:
+- The SVC may report consolidated precincts (the election data says 2,853) while the layer has 33,219 polygons.
+  We need a crosswalk between them. If none is published, city totals cannot be computed exactly.
+- `CITY_EST` is an estimate. A precinct can straddle a city boundary. Report how many votes sit in such precincts.
+- Check: precinct sums per contest must equal the county total before any city number is shown.
+- The SVC format (PDF vs Excel/CSV) is unknown. A PDF parser is a larger job than an Excel one.

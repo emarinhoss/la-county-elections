@@ -40,6 +40,52 @@
       "id": "city_boundary_geojson",
       "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/City_Boundry/FeatureServer/24/query?where=1%3D1&outFields=*&outSR=4326&maxAllowableOffset=0.0002&geometryPrecision=5&resultRecordCount=2000&f=geojson",
       "note": "UNVERIFIED. All city and unincorporated polygons in WGS84, lightly simplified (about 20 m). If the layer has more than 2000 features this needs paging."
+    },
+    {
+      "id": "text_results_2024_general",
+      "url": "https://results.lavote.gov/text-results/4324",
+      "note": "UNVERIFIED. County 'text results' page for the 2024 general (id 4324); looking for by-city or by-precinct numbers."
+    },
+    {
+      "id": "text_results_2026_general",
+      "url": "https://results.lavote.gov/text-results/4348",
+      "note": "Same page for the 2026 general (id 4348)."
+    },
+    {
+      "id": "svc_2024_district_pdf",
+      "url": "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_district_v3.pdf",
+      "head": true,
+      "note": "Name seen in a web search for the 2024 general. Probe only: size and type, not stored."
+    },
+    {
+      "id": "svc_2024_countywide_pdf",
+      "url": "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_countywide.pdf",
+      "head": true,
+      "note": "GUESSED name, following the 2022 pattern 4300_final_svc_countywide.pdf."
+    },
+    {
+      "id": "svc_2024_precinct_pdf",
+      "url": "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_precinct_public.pdf",
+      "head": true,
+      "note": "GUESSED name, following the pattern 4306_final_svc_precinct_public.pdf."
+    },
+    {
+      "id": "svc_2026_countywide_pdf",
+      "url": "https://content.lavote.gov/docs/rrcc/svc/4348_final_svc_countywide.pdf",
+      "head": true,
+      "note": "GUESSED. Expected to 404 until the county certifies (about early December). Probe detects when it appears."
+    },
+    {
+      "id": "svc_2026_precinct_pdf",
+      "url": "https://content.lavote.gov/docs/rrcc/svc/4348_final_svc_precinct_public.pdf",
+      "head": true,
+      "note": "GUESSED. As above."
+    },
+    {
+      "id": "svc_2026_district_pdf",
+      "url": "https://content.lavote.gov/docs/rrcc/svc/4348_final_svc_district_v3.pdf",
+      "head": true,
+      "note": "GUESSED. As above."
     }
   ]
 }
