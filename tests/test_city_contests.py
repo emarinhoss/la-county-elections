@@ -11,6 +11,7 @@ def test_title_patterns_seen_in_real_data():
         "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Mayor": ("LOS ANGELES", "Mayor"),
         "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE EE": ("LOS ANGELES", "MEASURE EE"),
         "CITY OF PASADENA REGULAR MUNICIPAL ELECTION Mayor": ("PASADENA", "Mayor"),
+        "CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION Member of the City Council": ("CULVER CITY", "Member of the City Council"),
         "CITY OF LA VERNE GENERAL MUNICIPAL ELECTION City Clerk": ("LA VERNE", "City Clerk"),
     }
     for title, expected in cases.items():

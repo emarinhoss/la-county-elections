@@ -153,6 +153,9 @@ async function start() {
       lyr.on("click", () => { if (byKey[f.properties.key]) showCity(f.properties.key); });
     },
   }).addTo(map);
-  map.fitBounds(layer.getBounds());
+  // Fit the view to cities that have contests, so remote areas and offshore islands do not shrink the map.
+  const view = L.latLngBounds([]);
+  layer.eachLayer((l) => { if (l.feature.properties.has_contests) view.extend(l.getBounds()); });
+  map.fitBounds(view.isValid() ? view.pad(0.03) : layer.getBounds());
 }
 start().catch((e) => { document.getElementById("status").textContent = "Could not load data: " + e.message; });

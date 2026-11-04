@@ -19,7 +19,7 @@ NUMBER_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, 
 # "CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION ..." / "LOS ANGELES CITY GENERAL ..." /
 # "CITY OF PASADENA REGULAR MUNICIPAL ELECTION ..." / "... SPECIAL MUNICIPAL ELECTION - MEASURE DB"
 TITLE = re.compile(
-    r"^(?:CITY OF\s+)?(?P<city>.+?)(?:\s+CITY)?"
+    r"^(?:CITY OF\s+)?(?P<city>.+?)"
     r"\s+(?:(?:REGULAR|GENERAL|SPECIAL|NOMINATING)\s+)?(?:MUNICIPAL\s+)?(?:ELECTION|PRIMARY|RUNOFF)"
     r"\b[\s-]*(?P<rest>.*)$"
 )
@@ -37,7 +37,11 @@ def parse_city_title(title):
     if not m:
         return None
     rest = re.sub(r"^NOMINATING ELECTION\s*", "", m.group("rest").strip()).strip(" -")
-    return m.group("city").strip(), rest or title.strip()
+    city = m.group("city").strip()
+    # "LOS ANGELES CITY ..." names the city with a trailing CITY, but "CITY OF CULVER CITY" keeps its own.
+    if not title.strip().startswith("CITY OF") and city.endswith(" CITY"):
+        city = city[: -len(" CITY")]
+    return city, rest or title.strip()
 
 
 def parse_vote_for(text):
