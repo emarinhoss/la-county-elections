@@ -1,0 +1,20 @@
+{
+  "election": "2026-11-03-general",
+  "sources": [
+    {
+      "id": "rrcc_results_page",
+      "url": "https://results.lavote.gov/",
+      "note": "UNVERIFIED. Landing page of the county live results. Saved so we can find the real data endpoints."
+    },
+    {
+      "id": "rrcc_voter_page",
+      "url": "https://rrcc.lacounty.gov/Voter",
+      "note": "UNVERIFIED. County voter/election page. Saved to find Statement of Votes Cast links."
+    },
+    {
+      "id": "precinct_boundaries_layers",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/layers?f=json",
+      "note": "UNVERIFIED. Layer metadata for the county precinct boundaries feature service (from a web search)."
+    }
+  ]
+}
