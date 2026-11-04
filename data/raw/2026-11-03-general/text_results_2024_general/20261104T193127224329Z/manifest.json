@@ -1,0 +1,9 @@
+{
+  "source_id": "text_results_2024_general",
+  "url": "https://results.lavote.gov/text-results/4324",
+  "fetched_at": "2026-11-04T19:31:27.224329+00:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 951567,
+  "sha256": "7977a8ae354cc4685a3d36ffa2f5ff5fcbed0ac7831d71b642c5d549cef6ffd6"
+}
