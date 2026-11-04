@@ -28,11 +28,13 @@ jobs:
           python -m pytest -q
       - name: Fetch sources
         run: python -m collect.fetch config/sources.json data/raw
+      - name: Parse snapshots into tidy tables
+        run: python -m parse.election 2026-11-03-general
       - name: Commit new snapshots
         run: |
           git config user.name "election-collector"
           git config user.email "actions@users.noreply.github.com"
-          git add data/raw
+          git add data/raw data/tidy
           if git diff --cached --quiet; then
             echo "nothing new"
           else

@@ -1,0 +1,410 @@
+contest_id,group,title,type,vote_for,pass_rate
+10534,County Measures,COUNTY MEASURE A,Measure,,Majority of votes cast
+10959,County Measures,COUNTY MEASURE E,Measure,,Majority of votes cast
+10828,Governor,GOVERNOR,Candidate,,
+10829,Lieutenant Governor,LIEUTENANT GOVERNOR,Candidate,,
+10830,Secretary of State,SECRETARY OF STATE,Candidate,,
+10831,Controller,CONTROLLER,Candidate,,
+10832,Treasurer,TREASURER,Candidate,,
+10833,Attorney General,ATTORNEY GENERAL,Candidate,,
+10834,Insurance Commissioner,INSURANCE COMMISSIONER,Candidate,,
+10835,Board of Equalization,MEMBER STATE BOARD OF EQUALIZATION 3rd District,Candidate,,
+10805,U.S. Representative,"UNITED STATES REPRESENTATIVE, 23rd District",Candidate,,
+10806,U.S. Representative,"UNITED STATES REPRESENTATIVE, 26th District",Candidate,,
+10807,U.S. Representative,"UNITED STATES REPRESENTATIVE, 27th District",Candidate,,
+10808,U.S. Representative,"UNITED STATES REPRESENTATIVE, 28th District",Candidate,,
+10809,U.S. Representative,"UNITED STATES REPRESENTATIVE, 29th District",Candidate,,
+10810,U.S. Representative,"UNITED STATES REPRESENTATIVE, 30th District",Candidate,,
+10811,U.S. Representative,"UNITED STATES REPRESENTATIVE, 31st District",Candidate,,
+10812,U.S. Representative,"UNITED STATES REPRESENTATIVE, 32nd District",Candidate,,
+10813,U.S. Representative,"UNITED STATES REPRESENTATIVE, 34th District",Candidate,,
+10814,U.S. Representative,"UNITED STATES REPRESENTATIVE, 35th District",Candidate,,
+10815,U.S. Representative,"UNITED STATES REPRESENTATIVE, 36th District",Candidate,,
+10816,U.S. Representative,"UNITED STATES REPRESENTATIVE, 37th District",Candidate,,
+10817,U.S. Representative,"UNITED STATES REPRESENTATIVE, 38th District",Candidate,,
+10818,U.S. Representative,"UNITED STATES REPRESENTATIVE, 41st District",Candidate,,
+10819,U.S. Representative,"UNITED STATES REPRESENTATIVE, 42nd District",Candidate,,
+10820,U.S. Representative,"UNITED STATES REPRESENTATIVE, 43rd District",Candidate,,
+10821,U.S. Representative,"UNITED STATES REPRESENTATIVE, 44th District",Candidate,,
+10822,U.S. Representative,"UNITED STATES REPRESENTATIVE, 45th District",Candidate,,
+10773,State Senator,"STATE SENATOR, 20th District",Candidate,,
+10774,State Senator,"STATE SENATOR, 22nd District",Candidate,,
+10775,State Senator,"STATE SENATOR, 24th District",Candidate,,
+10776,State Senator,"STATE SENATOR, 26th District",Candidate,,
+10777,State Senator,"STATE SENATOR, 28th District",Candidate,,
+10778,State Senator,"STATE SENATOR, 30th District",Candidate,,
+10779,State Senator,"STATE SENATOR, 34th District",Candidate,,
+10780,State Senator,"STATE SENATOR, 36th District",Candidate,,
+10781,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 34th District",Candidate,,
+10782,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 39th District",Candidate,,
+10783,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 40th District",Candidate,,
+10784,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 41st District",Candidate,,
+10785,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 42nd District",Candidate,,
+10786,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 43rd District",Candidate,,
+10787,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 44th District",Candidate,,
+10788,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 46th District",Candidate,,
+10789,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 48th District",Candidate,,
+10790,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 49th District",Candidate,,
+10791,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 51st District",Candidate,,
+10792,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 52nd District",Candidate,,
+10793,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 53rd District",Candidate,,
+10794,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 54th District",Candidate,,
+10795,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 55th District",Candidate,,
+10796,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 56th District",Candidate,,
+10797,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 57th District",Candidate,,
+10798,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 61st District",Candidate,,
+10799,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 62nd District",Candidate,,
+10800,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 64th District",Candidate,,
+10801,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 65th District",Candidate,,
+10802,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 66th District",Candidate,,
+10803,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 67th District",Candidate,,
+10804,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 69th District",Candidate,,
+10888,Supreme Court Justices,For Associate Justice of the Supreme Court - JOSHUA GROBAN,Judicial,,
+10889,Supreme Court Justices,For Associate Justice of the Supreme Court - KELLI M. EVANS,Judicial,,
+10904,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Eight - JOHN WILEY",Judicial,,
+10905,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Eight - MATTHEW A. SCHERB",Judicial,,
+10906,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Eight - VICTOR G. VIRAMONTES",Judicial,,
+10962,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Four - ARMEN TAMZARIAN",Judicial,,
+10899,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Four - AUDRA M. MORI",Judicial,,
+10898,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Four - NICHOLAS DAUM",Judicial,,
+10891,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division One - GREGORY J. WEINGART",Judicial,,
+10890,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division One - MICHELLE C. KIM",Judicial,,
+10902,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Seven - NATALIE STONE",Judicial,,
+10901,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Six - KENNETH R. YEGAN",Judicial,,
+10894,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Three - MARK HANASONO",Judicial,,
+10892,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Two - ANNE RICHARDSON",Judicial,,
+10893,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Two - STEVE GOORVITCH",Judicial,,
+10900,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Five - BRIAN M. HOFFSTADT",Judicial,,
+10897,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Four - HELEN ZUKIN",Judicial,,
+10903,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Seven - GONZALO C. MARTINEZ",Judicial,,
+10963,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Six - TARI L. CODY",Judicial,,
+10896,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Three - RASHIDA A. ADAMS",Judicial,,
+10836,Superintendent Public Inst,SUPERINTENDENT OF PUBLIC INSTRUCTION,Candidate,,
+10853,State Measures,STATE MEASURE 1,Measure,,Majority of votes cast
+10854,State Measures,STATE MEASURE 2,Measure,,Majority of votes cast
+10855,State Measures,STATE MEASURE 3,Measure,,Majority of votes cast
+10856,State Measures,STATE MEASURE 4,Measure,,Majority of votes cast
+10857,State Measures,STATE MEASURE 5,Measure,,Majority of votes cast
+10858,State Measures,STATE MEASURE 37,Measure,,Majority of votes cast
+10859,State Measures,STATE MEASURE 38,Measure,,Majority of votes cast
+10860,State Measures,STATE MEASURE 39,Measure,,Majority of votes cast
+10861,State Measures,STATE MEASURE 40,Measure,,Majority of votes cast
+10862,State Measures,STATE MEASURE 41,Measure,,Majority of votes cast
+10863,State Measures,STATE MEASURE 42,Measure,,Majority of votes cast
+10864,State Measures,STATE MEASURE 43,Measure,,Majority of votes cast
+10865,State Measures,STATE MEASURE 44,Measure,,Majority of votes cast
+10866,State Measures,STATE MEASURE 45,Measure,,Majority of votes cast
+10823,Sheriff,SHERIFF,Candidate,,
+10824,Judge Superior Court,JUDGE OF THE SUPERIOR COURT Office No. 64,Candidate,,
+10825,Judge Superior Court,JUDGE OF THE SUPERIOR COURT Office No. 65,Candidate,,
+10826,Judge Superior Court,JUDGE OF THE SUPERIOR COURT Office No. 87,Candidate,,
+10827,Judge Superior Court,JUDGE OF THE SUPERIOR COURT Office No. 131,Candidate,,
+10410,Cities,"CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION Member of the City Council, Fifth District",Candidate,,
+10408,Cities,"CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION Member of the City Council, First District",Candidate,,
+10409,Cities,"CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION Member of the City Council, Second District",Candidate,,
+10941,Cities,CITY OF ALHAMBRA SPECIAL MUNICIPAL ELECTION - MEASURE DB,Measure,,Majority of votes cast
+10940,Cities,CITY OF ALHAMBRA SPECIAL MUNICIPAL ELECTION - MEASURE HT,Measure,,Majority of votes cast
+10411,Cities,"CITY OF ARCADIA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
+10412,Cities,"CITY OF ARCADIA GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
+10413,Cities,"CITY OF ARCADIA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
+10879,Cities,CITY OF ARTESIA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10536,Cities,"CITY OF AZUSA GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
+10414,Cities,"CITY OF AZUSA GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
+10912,Cities,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION - MEASURE CR,Measure,,Majority of votes cast
+10416,Cities,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10417,Cities,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10415,Cities,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10419,Cities,CITY OF BELL GARDENS GENERAL MUNICIPAL ELECTION - MEASURE W,Measure,,Majority of votes cast
+10418,Cities,CITY OF BELL GARDENS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10420,Cities,"CITY OF BELLFLOWER GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
+10880,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE C,Measure,,Majority of votes cast
+10942,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE CC,Measure,,Majority of votes cast
+10943,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE CD,Measure,,Majority of votes cast
+10426,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10427,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10425,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10945,Cities,CITY OF CARSON GENERAL MUNICIPAL ELECTION - MEASURE CU,Measure,,Majority of votes cast
+10432,Cities,CITY OF CARSON GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10433,Cities,CITY OF CARSON GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10430,Cities,"CITY OF CARSON GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
+10431,Cities,"CITY OF CARSON GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10434,Cities,"CITY OF CLAREMONT GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
+10435,Cities,"CITY OF CLAREMONT GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
+10436,Cities,"CITY OF CLAREMONT GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10437,Cities,CITY OF COMMERCE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10766,Cities,CITY OF COMPTON GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
+10769,Cities,"CITY OF COMPTON GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
+10947,Cities,CITY OF CUDAHY GENERAL MUNICIPAL ELECTION - MEASURE H,Measure,,Majority of votes cast
+10946,Cities,CITY OF CUDAHY GENERAL MUNICIPAL ELECTION - MEASURE OK,Measure,,Majority of votes cast
+10438,Cities,CITY OF CUDAHY GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10908,Cities,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE AA,Measure,,Majority of votes cast
+10929,Cities,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE T,Measure,,Majority of votes cast
+10907,Cities,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE YV,Measure,,Majority of votes cast
+10439,Cities,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10440,Cities,"CITY OF DIAMOND BAR GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
+10441,Cities,"CITY OF DIAMOND BAR GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
+10442,Cities,"CITY OF DIAMOND BAR GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10930,Cities,CITY OF DIAMOND BAR SPECIAL MUNICIPAL ELECTION - MEASURE Q,Measure,,Majority of votes cast
+10443,Cities,"CITY OF DOWNEY GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
+10444,Cities,"CITY OF DOWNEY GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10445,Cities,"CITY OF DUARTE GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
+10658,Cities,CITY OF EL MONTE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10659,Cities,CITY OF EL MONTE GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10657,Cities,CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
+10449,Cities,"CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
+10450,Cities,"CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
+10451,Cities,"CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council, 6th District",Candidate,,
+10883,Cities,CITY OF EL SEGUNDO GENERAL MUNICIPAL ELECTION - MEASURE CT,Measure,,Majority of votes cast
+10452,Cities,CITY OF EL SEGUNDO GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10453,Cities,"CITY OF GLENDORA GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
+10454,Cities,"CITY OF GLENDORA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10455,Cities,CITY OF HAWAIIAN GARDENS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10932,Cities,CITY OF HAWAIIAN GARDENS SPECIAL MUNICIPAL ELECTION - MEASURE BL,Measure,,Majority of votes cast
+10456,Cities,CITY OF HAWTHORNE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10457,Cities,CITY OF HAWTHORNE GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10458,Cities,CITY OF HAWTHORNE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10869,Cities,CITY OF HAWTHORNE SPECIAL MUNICIPAL ELECTION - MEASURE O,Measure,,Majority of votes cast
+10875,Cities,CITY OF HERMOSA BEACH GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10951,Cities,CITY OF HERMOSA BEACH SPECIAL MUNICIPAL ELECTION - MEASURE HB,Measure,,Majority of votes cast
+10462,Cities,"CITY OF HUNTINGTON PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District (Unexpired term ending December 8, 2028)",Candidate,,
+10461,Cities,"CITY OF HUNTINGTON PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10920,Cities,"CITY OF HUNTINGTON PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
+10956,Cities,CITY OF HUNTINGTON PARK SPECIAL MUNICIPAL ELECTION - MEASURE HP,Measure,,Majority of votes cast
+10913,Cities,CITY OF INGLEWOOD GENERAL MUNICIPAL ELECTION - MEASURE AT,Measure,,Majority of votes cast
+10914,Cities,CITY OF INGLEWOOD GENERAL MUNICIPAL ELECTION - MEASURE BB,Measure,,Majority of votes cast
+10870,Cities,CITY OF INGLEWOOD PRIMARY NOMINATING ELECTION Mayor,Candidate,,
+10464,Cities,"CITY OF INGLEWOOD PRIMARY NOMINATING ELECTION Member of the City Council, 1st District",Candidate,,
+10463,Cities,"CITY OF INGLEWOOD PRIMARY NOMINATING ELECTION Member of the City Council, 2nd District",Candidate,,
+10468,Cities,CITY OF IRWINDALE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10471,Cities,"CITY OF LA VERNE GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
+10472,Cities,"CITY OF LA VERNE GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
+10473,Cities,"CITY OF LA VERNE GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10475,Cities,CITY OF LAWNDALE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10474,Cities,CITY OF LAWNDALE GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
+10476,Cities,CITY OF LAWNDALE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10477,Cities,CITY OF LYNWOOD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10952,Cities,CITY OF LYNWOOD SPECIAL MUNICIPAL ELECTION - MEASURE L,Measure,,Majority of votes cast
+10478,Cities,CITY OF MALIBU GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10479,Cities,CITY OF MANHATTAN BEACH GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10480,Cities,CITY OF MAYWOOD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10489,Cities,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10488,Cities,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10487,Cities,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
+10486,Cities,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10485,Cities,CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10481,Cities,"CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
+10482,Cities,"CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
+10484,Cities,"CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
+10483,Cities,"CITY OF MONTEBELLO SPECIAL MUNICIPAL ELECTION Member of the City Council, 4th District (Unexpired term ending November 7, 2028)",Candidate,,
+10909,Cities,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION - MEASURE AAA,Measure,,Majority of votes cast
+10960,Cities,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION - MEASURE HOM,Measure,,Majority of votes cast
+10493,Cities,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10492,Cities,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10490,Cities,"CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
+10491,Cities,"CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
+10494,Cities,CITY OF NORWALK GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10495,Cities,"CITY OF PALMDALE GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
+10496,Cities,"CITY OF PALMDALE GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10497,Cities,"CITY OF PALMDALE GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
+10881,Cities,CITY OF PALMDALE SPECIAL MUNICIPAL ELECTION - MEASURE DE,Measure,,Majority of votes cast
+10498,Cities,CITY OF PALOS VERDES ESTATES GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10953,Cities,CITY OF PALOS VERDES ESTATES SPECIAL MUNICIPAL ELECTION - MEASURE PVE,Measure,,2/3 of votes cast
+10934,Cities,CITY OF PARAMOUNT SPECIAL MUNICIPAL ELECTION - MEASURE P,Measure,,2/3 of votes cast
+10954,Cities,CITY OF PASADENA REGULAR MUNICIPAL ELECTION - MEASURE PFD,Measure,,2/3 of votes cast
+10503,Cities,CITY OF PICO RIVERA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10772,Cities,"CITY OF POMONA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
+10936,Cities,CITY OF RANCHO PALOS VERDES GENERAL MUNICIPAL ELECTION - MEASURE RS,Measure,,Majority of votes cast
+10504,Cities,CITY OF RANCHO PALOS VERDES GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10955,Cities,CITY OF REDONDO BEACH SPECIAL MUNICIPAL ELECTION - MEASURE ART,Measure,,Majority of votes cast
+10505,Cities,CITY OF ROLLING HILLS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10507,Cities,CITY OF ROSEMEAD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10508,Cities,CITY OF ROSEMEAD SPECIAL MUNICIPAL ELECTION - MEASURE RC,Measure,,Majority of votes cast
+10510,Cities,CITY OF SAN GABRIEL GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10511,Cities,CITY OF SAN GABRIEL GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10509,Cities,CITY OF SAN GABRIEL GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10915,Cities,CITY OF SAN GABRIEL SPECIAL MUNICIPAL ELECTION - MEASURE PS,Measure,,Majority of votes cast
+10512,Cities,CITY OF SAN MARINO GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10957,Cities,CITY OF SAN MARINO SPECIAL MUNICIPAL ELECTION - MEASURE U,Measure,,Majority of votes cast
+10837,Cities,"CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
+10838,Cities,"CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10839,Cities,"CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
+10513,Cities,CITY OF SANTA FE SPRINGS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10514,Cities,CITY OF SANTA MONICA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10515,Cities,CITY OF SANTA MONICA GENERAL MUNICIPAL ELECTION Member of the Rent Control Board,Candidate,Vote for no more than three,
+10916,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE ES,Measure,,Majority of votes cast
+10917,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE GG,Measure,,Majority of votes cast
+10918,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE RR,Measure,,Majority of votes cast
+10958,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE TT,Measure,,Majority of votes cast
+10919,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE VV,Measure,,Majority of votes cast
+10519,Cities,CITY OF SOUTH EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10939,Cities,CITY OF SOUTH EL MONTE SPECIAL MUNICIPAL ELECTION - MEASURE CL,Measure,,Majority of votes cast
+10938,Cities,CITY OF SOUTH EL MONTE SPECIAL MUNICIPAL ELECTION - MEASURE RM,Measure,,Majority of votes cast
+10521,Cities,CITY OF SOUTH GATE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10522,Cities,CITY OF SOUTH GATE GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10520,Cities,CITY OF SOUTH GATE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10910,Cities,CITY OF SOUTH GATE SPECIAL MUNICIPAL ELECTION - MEASURE SG,Measure,,Majority of votes cast
+10882,Cities,CITY OF SOUTH PASADENA GENERAL MUNICIPAL ELECTION - MEASURE SOS,Measure,,2/3 of votes cast
+10524,Cities,"CITY OF SOUTH PASADENA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10526,Cities,CITY OF WALNUT GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
+10530,Cities,CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
+10531,Cities,CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
+10527,Cities,"CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
+10528,Cities,"CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
+10529,Cities,"CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
+10533,Cities,CITY OF WEST HOLLYWOOD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
+10877,Cities,CITY OF WHITTIER SPECIAL MUNICIPAL ELECTION - MEASURE EL,Measure,,Majority of votes cast
+10876,Cities,CITY OF WHITTIER SPECIAL MUNICIPAL ELECTION - MEASURE EV,Measure,,Majority of votes cast
+10924,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE EE,Measure,,Majority of votes cast
+10927,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE FD,Measure,,Majority of votes cast
+10922,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LA,Measure,,Majority of votes cast
+10923,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PL,Measure,,Majority of votes cast
+10925,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PRK,Measure,,Majority of votes cast
+10926,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PRT,Measure,,Majority of votes cast
+10928,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE SC,Measure,,Majority of votes cast
+10921,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE TE,Measure,,Majority of votes cast
+10768,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION City Attorney,Candidate,,
+10767,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
+10770,Cities,"LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
+10771,Cities,"LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Member of the City Council, 9th District",Candidate,,
+10604,Schools,"ABC UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10607,Schools,"ABC UNIFIED SCHOOL DISTRICT SPECIAL ELECTION Governing Board Member, Trustee Area No. 5 (Unexpired term ending December 8, 2028)",Candidate,,
+10613,Schools,"ACTON-AGUA DULCE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10571,Schools,"ANTELOPE VALLEY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10572,Schools,"ANTELOPE VALLEY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10573,Schools,"ANTELOPE VALLEY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10679,Schools,"ANTELOPE VALLEY JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10619,Schools,"AZUSA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10620,Schools,BALDWIN PARK UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than two,
+10621,Schools,BASSETT UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10764,Schools,"BELLFLOWER UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10765,Schools,"BELLFLOWER UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10872,Schools,BELLFLOWER UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE SM,Measure,,55% of votes cast
+10622,Schools,BEVERLY HILLS UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than two,
+10625,Schools,"BURBANK UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10574,Schools,"CERRITOS COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10911,Schools,CHARTER OAK UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE S,Measure,,55% of votes cast
+10631,Schools,"CLAREMONT UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10937,Schools,CLAREMONT UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE CS,Measure,,55% of votes cast
+10579,Schools,"COMPTON COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10580,Schools,"COMPTON COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10581,Schools,"COMPTON COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10582,Schools,"COMPTON COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION Governing Board Member, Trustee Area No. 2 (Unexpired term ending December 8, 2028)",Candidate,,
+10635,Schools,"COVINA-VALLEY UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10636,Schools,CULVER CITY UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10640,Schools,"DOWNEY UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 7",Candidate,,
+10642,Schools,"DUARTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10691,Schools,"EAST WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10692,Schools,"EAST WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10693,Schools,"EAST WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10694,Schools,"EASTSIDE UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10697,Schools,"EASTSIDE UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10584,Schools,"EL CAMINO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10685,Schools,"EL MONTE UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10686,Schools,"EL MONTE UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10687,Schools,"EL MONTE UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10948,Schools,EL RANCHO UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE ED,Measure,,55% of votes cast
+10750,Schools,"FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10751,Schools,"FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10646,Schools,"GLENDORA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10931,Schools,GLENDORA UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE G,Measure,,55% of votes cast
+10648,Schools,"HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10649,Schools,"HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10650,Schools,"HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10873,Schools,HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE B,Measure,,Majority of votes cast
+10884,Schools,HAWTHORNE SCHOOL DISTRICT SPECIAL ELECTION - MEASURE HH,Measure,,55% of votes cast
+10465,Schools,"INGLEWOOD UNIFIED SCHOOL DISTRICT Member, Board of Education, Trustee Area 1",Candidate,,
+10466,Schools,"INGLEWOOD UNIFIED SCHOOL DISTRICT Member, Board of Education, Trustee Area 2",Candidate,,
+10467,Schools,"INGLEWOOD UNIFIED SCHOOL DISTRICT Member, Board of Education, Trustee Area 3",Candidate,,
+10933,Schools,INGLEWOOD UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE MM,Measure,,55% of votes cast
+10755,Schools,"KEPPEL UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10756,Schools,"KEPPEL UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10757,Schools,"KEPPEL UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10874,Schools,KEPPEL UNION SCHOOL DISTRICT SPECIAL ELECTION - MEASURE K,Measure,,55% of votes cast
+10651,Schools,LA CAÑADA UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10705,Schools,"LANCASTER SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10707,Schools,"LANCASTER SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10652,Schools,LAS VIRGENES UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10961,Schools,LAS VIRGENES UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE LV,Measure,,2/3 of votes cast
+10708,Schools,"LAWNDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10709,Schools,"LAWNDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10711,Schools,LENNOX SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10712,Schools,"LITTLE LAKE CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10713,Schools,"LITTLE LAKE CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10871,Schools,"LITTLE LAKE CITY SCHOOL DISTRICT SPECIAL ELECTION Governing Board Member, Trustee Area No. 5 (Unexpired term ending December 12, 2028)",Candidate,,
+10587,Schools,"LONG BEACH COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10588,Schools,"LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 2",Candidate,,
+10589,Schools,"LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 4",Candidate,,
+10590,Schools,"LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 6",Candidate,,
+10714,Schools,"LOS NIETOS SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10653,Schools,LYNWOOD UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than two,
+10656,Schools,"MONROVIA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10843,Schools,"MONTEBELLO UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10717,Schools,MOUNTAIN VIEW SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10592,Schools,"MT. SAN ANTONIO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10739,Schools,"NORWALK-LA MIRADA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10740,Schools,"NORWALK-LA MIRADA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10661,Schools,"NORWALK-LA MIRADA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 6",Candidate,,
+10758,Schools,"PALMDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10759,Schools,"PALMDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10760,Schools,"PALMDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10662,Schools,PALOS VERDES PENINSULA UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10743,Schools,"PARAMOUNT UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10595,Schools,"PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10596,Schools,"PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10597,Schools,"PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10935,Schools,PASADENA AREA COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION - MEASURE UP,Measure,,55% of votes cast
+10499,Schools,"PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 1",Candidate,,
+10500,Schools,"PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 3",Candidate,,
+10502,Schools,"PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 7",Candidate,,
+10663,Schools,"POMONA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10664,Schools,"POMONA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
+10599,Schools,"RIO HONDO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10600,Schools,"RIO HONDO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10666,Schools,"ROWLAND UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10667,Schools,"ROWLAND UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10668,Schools,"ROWLAND UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10669,Schools,SAN GABRIEL UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10949,Schools,SAN MARINO UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE SMS,Measure,,2/3 of votes cast
+10602,Schools,"SANTA CLARITA COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Trustee Area 1",Candidate,,
+10516,Schools,SANTA MONICA COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees,Candidate,Vote for no more than four,
+10517,Schools,SANTA MONICA-MALIBU UNIFIED SCHOOL DISTRICT Member of the Board of Education,Candidate,Vote for no more than four,
+10722,Schools,"SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
+10723,Schools,"SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10724,Schools,"SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10727,Schools,"SOUTH WHITTIER SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10950,Schools,TEMPLE CITY UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE TCS,Measure,,55% of votes cast
+10747,Schools,"TORRANCE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area D",Candidate,,
+10731,Schools,VALLE LINDO SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10868,Schools,VALLE LINDO SCHOOL DISTRICT SPECIAL ELECTION - MEASURE R,Measure,,55% of votes cast
+10732,Schools,WESTSIDE UNION SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10733,Schools,"WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
+10735,Schools,"WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10690,Schools,"WHITTIER UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10845,Schools,"WILLIAM S. HART UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
+10848,Schools,"WILLIAM S. HART UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
+10678,Schools,WISEBURN UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
+10541,Library Districts,"ALTADENA LIBRARY DISTRICT Member, Board of Trustees, Trustee Area No. 3",Candidate,,
+10543,Library Districts,"PALOS VERDES LIBRARY DISTRICT Member, Board of Trustees",Candidate,Vote for no more than three,
+10562,Water Districts,"ANTELOPE VALLEY-EAST KERN WATER AGENCY Member, Board of Directors, Division 1",Candidate,,
+10563,Water Districts,"ANTELOPE VALLEY-EAST KERN WATER AGENCY Member, Board of Directors, Division 3",Candidate,,
+10377,Water Districts,"CRESCENTA VALLEY WATER DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,
+10545,Water Districts,"FOOTHILL MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
+10546,Water Districts,"FOOTHILL MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 4",Candidate,,
+10547,Water Districts,"FOOTHILL MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 5",Candidate,,
+10405,Water Districts,"LA CAÑADA IRRIGATION DISTRICT Member, Board of Directors, Division 4",Candidate,,
+10384,Water Districts,"LA PUENTE VALLEY COUNTY WATER DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,
+10548,Water Districts,"LAS VIRGENES MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
+10535,Water Districts,"PALMDALE WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
+10553,Water Districts,"SAN GABRIEL VALLEY MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 5",Candidate,,
+10565,Water Districts,"SANTA CLARITA VALLEY WATER AGENCY Member, Board of Directors, Division 1",Candidate,,
+10567,Water Districts,"SANTA CLARITA VALLEY WATER AGENCY Member, Board of Directors, Division 3",Candidate,Vote for no more than two,
+10555,Water Districts,"THREE VALLEYS MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 3",Candidate,,
+10397,Water Districts,"VALLEY COUNTY WATER DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,
+10371,Water Districts,"WALNUT VALLEY WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
+10372,Water Districts,"WALNUT VALLEY WATER DISTRICT Member, Board of Directors, Division 3",Candidate,,
+10374,Water Districts,"WALNUT VALLEY WATER DISTRICT SPECIAL ELECTION Member, Board of Directors, Division 5 (Unexpired term ending December 1, 2028)",Candidate,,
+10570,Water Districts,"WATER REPLENISHMENT DISTRICT OF SOUTHERN CALIFORNIA Member, Board of Directors, Division 3",Candidate,,
+10569,Water Districts,"WATER REPLENISHMENT DISTRICT OF SOUTHERN CALIFORNIA Member, Board of Directors, Division 4",Candidate,,
+10559,Water Districts,"WEST BASIN MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 1",Candidate,,
+10560,Water Districts,"WEST BASIN MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
+10375,Recreation and Park,"WRIGHTWOOD COMMUNITY SERVICES DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,

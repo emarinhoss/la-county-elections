@@ -1,0 +1,83 @@
+{
+ "Data": [
+  {
+   "Number": 1437,
+   "ReferenceID": 25522,
+   "ReferenceType": "CAND",
+   "Value": 1196112.0
+  },
+  {
+   "Number": 1441,
+   "ReferenceID": 25646,
+   "ReferenceType": "CAND",
+   "Value": 610059.0
+  },
+  {
+   "Number": 1438,
+   "ReferenceID": 25523,
+   "ReferenceType": "CAND",
+   "Value": 657526.0
+  },
+  {
+   "Number": 3682,
+   "ReferenceID": 10534,
+   "ReferenceType": "CBLT",
+   "Value": 2147064.0
+  },
+  {
+   "Number": 3909,
+   "ReferenceID": 4348,
+   "ReferenceType": "DBLT",
+   "Value": 635836.0
+  },
+  {
+   "Number": 3684,
+   "ReferenceID": 10534,
+   "ReferenceType": "CUV",
+   "Value": 291213.0
+  },
+  {
+   "Number": 3693,
+   "ReferenceID": 10828,
+   "ReferenceType": "COV",
+   "Value": 982.0
+  },
+  {
+   "Number": 3908,
+   "ReferenceID": 4348,
+   "ReferenceType": "MBLT",
+   "Value": 1511407.0
+  },
+  {
+   "Number": 3692,
+   "ReferenceID": 10828,
+   "ReferenceType": "CBLT",
+   "Value": 2147243.0
+  },
+  {
+   "Number": 1442,
+   "ReferenceID": 25647,
+   "ReferenceType": "CAND",
+   "Value": 1494575.0
+  },
+  {
+   "Number": 3910,
+   "ReferenceID": 4348,
+   "ReferenceType": "EBLT",
+   "Value": 2147243.0
+  },
+  {
+   "Number": 3683,
+   "ReferenceID": 10534,
+   "ReferenceType": "COV",
+   "Value": 2213.0
+  },
+  {
+   "Number": 3694,
+   "ReferenceID": 10828,
+   "ReferenceType": "CUV",
+   "Value": 41627.0
+  }
+ ],
+ "TimeStamp": "11/4/2026 3:11:55 AM"
+}

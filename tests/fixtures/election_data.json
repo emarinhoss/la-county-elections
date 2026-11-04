@@ -1,0 +1,103 @@
+{
+ "Data": {
+  "ID": 4348,
+  "Date": "2026-11-03T00:00:00-08:00",
+  "Title": "General Election",
+  "VBMCount": 1685,
+  "PrecinctCount": 2853,
+  "RegistrationCount": 5908408,
+  "Presidential": false,
+  "Primary": false,
+  "Major": true,
+  "VBM": false,
+  "Locked": true,
+  "CandidateList": true,
+  "ContestGroups": [
+   {
+    "Name": "County Measures",
+    "Order": 11,
+    "Contests": [
+     {
+      "ID": 10534,
+      "Title": "COUNTY MEASURE A",
+      "Type": "Measure",
+      "AdditionalText": "",
+      "MeasureText": "LOS ANGELES COUNTY CHARTER AMENDMENT REITERATING GOOD FAITH ",
+      "MeasurePassRate": "Majority of votes cast",
+      "PrecinctCount": 0,
+      "NonPartisan": true,
+      "VoterNominated": false,
+      "VoteFor": "",
+      "Candidates": [
+       {
+        "ID": 25522,
+        "Name": "YES",
+        "Party": "Non Partisan",
+        "Winner": false,
+        "Votes": 0
+       },
+       {
+        "ID": 25523,
+        "Name": "NO",
+        "Party": "Non Partisan",
+        "Winner": false,
+        "Votes": 0
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "Name": "Governor",
+    "Order": 13,
+    "Contests": [
+     {
+      "ID": 10828,
+      "Title": "GOVERNOR",
+      "Type": "Candidate",
+      "AdditionalText": "Los Angeles County Results Only",
+      "MeasureText": "",
+      "MeasurePassRate": "",
+      "PrecinctCount": 0,
+      "NonPartisan": false,
+      "VoterNominated": true,
+      "VoteFor": "",
+      "Candidates": [
+       {
+        "ID": 25646,
+        "Name": "STEVE HILTON",
+        "Party": "Republican",
+        "Winner": false,
+        "Votes": 0
+       },
+       {
+        "ID": 25647,
+        "Name": "XAVIER BECERRA",
+        "Party": "Democratic",
+        "Winner": false,
+        "Votes": 0
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "Parties": [
+   {
+    "ID": 12,
+    "Name": "AI Crossover",
+    "Key": "ai-crossover",
+    "Abbreviation": "XAI",
+    "Color": "ORANGE"
+   },
+   {
+    "ID": 10,
+    "Name": "Dem Crossover",
+    "Key": "dem-crossover",
+    "Abbreviation": "XDM",
+    "Color": "BLUE"
+   }
+  ]
+ },
+ "TimeStamp": "11/4/2026 9:59:25 AM"
+}
