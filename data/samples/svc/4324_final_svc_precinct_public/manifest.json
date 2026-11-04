@@ -1,0 +1,33 @@
+{
+  "source_url": "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_precinct_public.pdf",
+  "bytes": 61021444,
+  "sha256": "567faf4c987e30b5d759709f1692a0416e2bfdd66b3845db518180f4c12e21e6",
+  "pages": 6190,
+  "sampled_pages": [
+    1,
+    2,
+    3,
+    884,
+    1769,
+    2653,
+    3537,
+    4421,
+    5306,
+    6189,
+    6190
+  ],
+  "non_blank_chars_per_sampled_page": {
+    "1": 4096,
+    "2": 3608,
+    "3": 720,
+    "884": 4513,
+    "1769": 4201,
+    "2653": 4605,
+    "3537": 3912,
+    "4421": 4039,
+    "5306": 3991,
+    "6189": 1730,
+    "6190": 834
+  },
+  "text_extraction": "pdftotext -layout (poppler)"
+}

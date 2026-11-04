@@ -1,0 +1,55 @@
+COUNTY OF LOS ANGELES                       11/05/24              GENERAL ELECTION                                           286.11   -Page- 1769
+
+                                                                  LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LL
+
+
+FINAL OFFICIAL V2
+STATEMENT OF VOTES CAST
+  BY PRECINCT
+
+
+                                                    Ballots
+Location                             Registration     Cast               YES          NO
+SOUTH GATE - 6550053A                                    602            292          218
+ VOTE BY MAIL          SERIAL 0755                     1,210            788          289
+TOTAL                                      3,159       1,812          1,080          507
+SOUTH GATE - 6550083A                                    401            193          114
+ VOTE BY MAIL          SERIAL 0757                       841            525          192
+TOTAL                                      2,389       1,242            718          306
+SUNLAND - 6850002B                                       135             66          45
+ VOTE BY MAIL          SERIAL 7253                       334            190          95
+TOTAL                                        616         469            256          140
+SUNLAND - 6850006A                                            1           1            0
+ VOTE BY MAIL          SERIAL 7255                            1           1            0
+TOTAL                                          3              2           2            0
+SUNLAND - 6850017A                                        36             25            6
+ VOTE BY MAIL          SERIAL 7258                        63             47          10
+TOTAL                                        213          99             72          16
+SUNLAND - 6850034A                                            7           2            3
+ VOTE BY MAIL          SERIAL 7265                        30             22            3
+TOTAL                                         54          37             24            6
+SUNLAND - 6850038A                                            1           1            0
+ VOTE BY MAIL          SERIAL 7267                            8           4            0
+TOTAL                                         13              9           5            0
+TOPANGA - 7100004B                                       919            551          202
+ VOTE BY MAIL          SERIAL 0781                     2,785          1,936          355
+TOTAL                                      4,800       3,704          2,487          557
+TORRANCE - 7150043A                                       10              4            4
+ VOTE BY MAIL          SERIAL 7280                        27             18            6
+TOTAL                                         56          37             22          10
+VERNON - 7450005A                                         14              6            5
+ VOTE BY MAIL          SERIAL 7311                        65             40          15
+TOTAL                                        113          79             46          20
+VETERANS ADMIN CENTER - 7470001A                          72             38          12
+ VOTE BY MAIL          SERIAL 7312                       119             68          27
+TOTAL                                        363         191            106          39
+VIEW PARK - 7510001A                                     611            358          169
+ VOTE BY MAIL          SERIAL 0808                     2,154          1,405          437
+TOTAL                                      3,618       2,765          1,763          606
+VIEW PARK - 7510003C                                      74             43          20
+ VOTE BY MAIL          SERIAL 7313                       369            239          64
+TOTAL                                        586         443            282          84
+VIEW PARK - 7510007A                                     208            112          66
+ VOTE BY MAIL          SERIAL 7314                       494            319          92
+TOTAL                                        929         702            431          158
+

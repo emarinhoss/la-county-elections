@@ -1,0 +1,55 @@
+COUNTY OF LOS ANGELES                     11/05/24              GENERAL ELECTION         364.91   -Page- 4421
+
+                                                                STATE MEASURE 5
+
+
+FINAL OFFICIAL V2
+STATEMENT OF VOTES CAST
+  BY PRECINCT
+
+
+                                                  Ballots
+Location                           Registration     Cast               YES          NO
+POMONA - 5250040A                                      574            288          228
+ VOTE BY MAIL        SERIAL 0629                     1,205            573          550
+TOTAL                                    3,400       1,779            861          778
+POMONA - 5250042A                                      330            141          153
+ VOTE BY MAIL        SERIAL 0630                       830            371          403
+TOTAL                                    2,030       1,160            512          556
+POMONA - 5250043A                                      411            193          169
+ VOTE BY MAIL        SERIAL 0631                       902            400          430
+TOTAL                                    2,587       1,313            593          599
+POMONA - 5250044A*                                          6           3            3
+ VOTE BY MAIL        SERIAL 6984                        21             12            5
+TOTAL                                       79          27             15            8
+POMONA - 5250048A                                      524            220          243
+ VOTE BY MAIL        SERIAL 0632                     1,307            559          637
+TOTAL                                    3,181       1,831            779          880
+POMONA - 5250049A                                      428            250          128
+ VOTE BY MAIL        SERIAL 0633                       749            416          270
+TOTAL                                    2,882       1,177            666          398
+POMONA - 5250055A                                      477            185          257
+ VOTE BY MAIL        SERIAL 0634                     1,058            387          587
+TOTAL                                    2,443       1,535            572          844
+POMONA - 5250057A                                      347            167          143
+ VOTE BY MAIL        SERIAL 0635                       735            354          323
+TOTAL                                    2,227       1,082            521          466
+POMONA - 5250059A*                                      97             59          29
+ VOTE BY MAIL        SERIAL 6985                       116             69          37
+TOTAL                                      469         213            128          66
+POMONA - 5250059D*                                      25             14          10
+ VOTE BY MAIL        SERIAL 6986                        40             15          24
+TOTAL                                      170          65             29          34
+POMONA - 5250060F*                                      17             12            5
+ VOTE BY MAIL        SERIAL 6987                        36             27            5
+TOTAL                                      112          53             39          10
+POMONA - 5250062A                                      537            275          193
+ VOTE BY MAIL        SERIAL 0636                     1,038            543          421
+TOTAL                                    3,398       1,575            818          614
+POMONA - 5250063B*                                      26              7          17
+ VOTE BY MAIL        SERIAL 6988                        61             15          44
+TOTAL                                      138          87             22          61
+POMONA - 5250063C                                      396            162          190
+ VOTE BY MAIL        SERIAL 0637                       955            466          433
+TOTAL                                    2,750       1,351            628          623
+

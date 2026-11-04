@@ -1,0 +1,55 @@
+COUNTY OF LOS ANGELES                     11/05/24           GENERAL ELECTION         359.137   -Page- 3537
+
+                                                             COUNTY MEASURE G
+
+
+FINAL OFFICIAL V2
+STATEMENT OF VOTES CAST
+  BY PRECINCT
+
+
+                                                  Ballots
+Location                           Registration     Cast            YES          NO
+LOS ANGELES - 9000500A                                 305         118          112
+ VOTE BY MAIL        SERIAL 7417                       798         351          310
+TOTAL                                    1,873       1,103         469          422
+LOS ANGELES - 9000507A                                 404         193          103
+ VOTE BY MAIL        SERIAL 7418                       998         533          319
+TOTAL                                    2,018       1,402         726          422
+LOS ANGELES - 9000508C                                 547         203          185
+ VOTE BY MAIL        SERIAL 0971                     1,095         499          443
+TOTAL                                    2,693       1,642         702          628
+LOS ANGELES - 9000509A                                 422         163          154
+ VOTE BY MAIL        SERIAL 0972                       770         363          278
+TOTAL                                    2,066       1,192         526          432
+LOS ANGELES - 9000510A                                 434         194          141
+ VOTE BY MAIL        SERIAL 0973                       721         390          254
+TOTAL                                    2,077       1,155         584          395
+LOS ANGELES - 9000512C                                 300         122          111
+ VOTE BY MAIL        SERIAL 0974                       710         343          259
+TOTAL                                    1,841       1,010         465          370
+LOS ANGELES - 9000517A                                 429         215          118
+ VOTE BY MAIL        SERIAL 0975                       986         520          308
+TOTAL                                    2,556       1,415         735          426
+LOS ANGELES - 9000519A                                 713         335          219
+ VOTE BY MAIL        SERIAL 0976                     1,232         653          362
+TOTAL                                    3,529       1,945         988          581
+LOS ANGELES - 9000524A                                 524         277          151
+ VOTE BY MAIL        SERIAL 0977                     1,027         583          343
+TOTAL                                    2,699       1,551         860          494
+LOS ANGELES - 9000525C                                 826         358          289
+ VOTE BY MAIL        SERIAL 0978                     2,062         965          768
+TOTAL                                    4,565       2,888       1,323     1,057
+LOS ANGELES - 9000530A                                 923         501          220
+ VOTE BY MAIL        SERIAL 0979                     2,121       1,183          583
+TOTAL                                    4,615       3,044       1,684          803
+LOS ANGELES - 9000532A                                 538         236          199
+ VOTE BY MAIL        SERIAL 0980                     1,076         485          451
+TOTAL                                    2,947       1,614         721          650
+LOS ANGELES - 9000533B                                 130          68          32
+ VOTE BY MAIL        SERIAL 7419                       303         139          133
+TOTAL                                      879         433         207          165
+LOS ANGELES - 9000534A                                 596         274          205
+ VOTE BY MAIL        SERIAL 0981                     1,423         734          478
+TOTAL                                    3,279       2,019       1,008          683
+

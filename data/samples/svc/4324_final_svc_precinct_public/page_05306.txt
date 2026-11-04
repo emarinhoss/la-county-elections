@@ -1,0 +1,55 @@
+COUNTY OF LOS ANGELES                       11/05/24           GENERAL ELECTION         369.46   -Page- 5306
+
+                                                               STATE MEASURE 35
+
+
+FINAL OFFICIAL V2
+STATEMENT OF VOTES CAST
+  BY PRECINCT
+
+
+                                                    Ballots
+Location                             Registration     Cast            YES          NO
+GLENDORA - 2600022B                                      658         300          286
+ VOTE BY MAIL          SERIAL 0297                     1,243         789          352
+TOTAL                                      2,668       1,901       1,089          638
+GLENDORA - 2600023B*                                     141          55          73
+ VOTE BY MAIL          SERIAL 6522                       266         129          117
+TOTAL                                        517         407         184          190
+GLENDORA - 2600026A*                                     379         168          172
+ VOTE BY MAIL          SERIAL 6523                       870         526          278
+TOTAL                                      1,689       1,249         694          450
+GLENDORA - 2600028A*                                     481         210          215
+ VOTE BY MAIL          SERIAL 6524                     1,094         600          425
+TOTAL                                      2,140       1,575         810          640
+GLENDORA - 2600031B*                                      16           9            5
+ VOTE BY MAIL          SERIAL 6525                        30          16          12
+TOTAL                                         56          46          25          17
+GLENDORA - 2600040A                                      836         386          348
+ VOTE BY MAIL          SERIAL 0298                     1,950       1,064          724
+TOTAL                                      3,813       2,786       1,450     1,072
+GLENDORA - 2600044A*                                      17           3          13
+ VOTE BY MAIL          SERIAL 6526                        38          24          11
+TOTAL                                         65          55          27          24
+GLENDORA - 2600046A*                                      70          15          43
+ VOTE BY MAIL          SERIAL 6527                        91          42          42
+TOTAL                                        212         161          57          85
+GLENDORA - 2600050A*                                      63          24          33
+ VOTE BY MAIL          SERIAL 6528                       112          44          60
+TOTAL                                        230         175          68          93
+GLENDORA - 2600052A*                                     262         100          134
+ VOTE BY MAIL          SERIAL 6529                       710         326          346
+TOTAL                                      1,195         972         426          480
+GLENDORA - 2600058D*                                     296         130          142
+ VOTE BY MAIL          SERIAL 6530                       543         281          223
+TOTAL                                      1,025         839         411          365
+GLENDORA - 2600059A*                                     362         156          177
+ VOTE BY MAIL          SERIAL 6531                       656         361          237
+TOTAL                                      1,349       1,018         517          414
+GLENDORA - 2600062A*                                     205          78          110
+ VOTE BY MAIL          SERIAL 6532                       414         206          190
+TOTAL                                        789         619         284          300
+GLENDORA - 2600065B*                                     168          68          87
+ VOTE BY MAIL          SERIAL 6533                       324         151          151
+TOTAL                                        615         492         219          238
+
