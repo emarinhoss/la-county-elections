@@ -30,6 +30,16 @@
       "id": "rrcc_api_menu_groups",
       "url": "https://results.lavote.gov/ElectionResults/GetMenuGroups?electionID=4348",
       "note": "Contest groups for election 4348."
+    },
+    {
+      "id": "city_boundary_layer_meta",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/City_Boundry/FeatureServer/24?f=json",
+      "note": "UNVERIFIED. County Public Works city boundary layer (DPW_City_Boundaries). Field names and licence to confirm."
+    },
+    {
+      "id": "city_boundary_geojson",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/City_Boundry/FeatureServer/24/query?where=1%3D1&outFields=*&outSR=4326&maxAllowableOffset=0.0002&geometryPrecision=5&resultRecordCount=2000&f=geojson",
+      "note": "UNVERIFIED. All city and unincorporated polygons in WGS84, lightly simplified (about 20 m). If the layer has more than 2000 features this needs paging."
     }
   ]
 }

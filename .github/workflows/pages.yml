@@ -1,0 +1,45 @@
+name: pages
+
+# Builds the site from the committed data and publishes it to GitHub Pages.
+# Needs Settings > Pages > Source = "GitHub Actions" (one-time setup).
+on:
+  workflow_run:
+    workflows: ["fetch"]
+    types: [completed]
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build site data
+        run: |
+          python -m parse.election 2026-11-03-general
+          python -m sitegen.city_contests 2026-11-03-general
+          python -m sitegen.boundaries 2026-11-03-general
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

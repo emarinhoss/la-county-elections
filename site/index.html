@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LA County City Contests</title>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>LA County city contests</h1>
+  <p id="status" role="status">Loading…</p>
+</header>
+<main>
+  <section id="map-wrap" aria-label="Map of Los Angeles County cities">
+    <div id="map"></div>
+    <div id="legend"></div>
+  </section>
+  <section id="panel">
+    <div class="controls">
+      <label for="city-select">City</label>
+      <select id="city-select"></select>
+      <label for="contest-select">Color map by</label>
+      <select id="contest-select"></select>
+    </div>
+    <div id="contests"></div>
+  </section>
+</main>
+<footer>
+  <p>Unofficial partial results from the LA County Registrar-Recorder/County Clerk, collected by
+  <a href="https://github.com/emarinhoss/la-county-elections">this open project</a>. Counts change until the county
+  certifies the election. Bars show each choice's share of votes counted so far in that contest, not of all ballots.</p>
+</footer>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
