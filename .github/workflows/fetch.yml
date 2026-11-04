@@ -1,5 +1,8 @@
 name: fetch
 
+# Collection does not run the tests: a failing test must never stop data collection during an election.
+# Tests run in ci.yml.
+
 on:
   schedule:
     - cron: "*/15 * * * *"
@@ -22,13 +25,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Run tests
-        run: |
-          python -m pip install pytest
-          python -m pytest -q
       - name: Fetch sources
         run: python -m collect.fetch config/sources.json data/raw
       - name: Parse snapshots into tidy tables
+        # A parse problem must not stop the raw snapshots from being committed. The step still shows as failed.
+        continue-on-error: true
         run: python -m parse.election 2026-11-03-general
       - name: Commit new snapshots
         run: |

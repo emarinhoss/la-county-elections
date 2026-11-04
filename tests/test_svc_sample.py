@@ -1,4 +1,5 @@
 import json
+import shutil
 
 import pytest
 
@@ -49,6 +50,7 @@ def test_only_county_svc_pdfs_are_allowed():
             check_url(bad)
 
 
+@pytest.mark.skipif(shutil.which("pdfinfo") is None, reason="needs poppler-utils (pdfinfo, pdftotext)")
 def test_sample_writes_pages_and_manifest(tmp_path):
     pdf = tmp_path / "t.pdf"
     make_pdf(pdf, 4)
