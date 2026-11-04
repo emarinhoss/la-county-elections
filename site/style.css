@@ -53,3 +53,16 @@ input[type="search"] { width: 100%; padding: 6px; font: inherit; background: var
 #county-contests .contest { break-inside: avoid; }
 details { margin-top: 6px; font-size: 0.82rem; color: var(--muted); }
 details summary { cursor: pointer; }
+
+details.history { margin-top: 8px; }
+.chart { width: 100%; height: auto; max-width: 560px; display: block; margin-top: 6px; }
+.chart text { fill: var(--muted); font-size: 11px; }
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.hist-legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.8rem; margin: 4px 0; color: var(--text); }
+.hist-legend .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
+table.hist { border-collapse: collapse; font-size: 0.78rem; margin-top: 6px; width: 100%; }
+table.hist th, table.hist td { border-top: 1px solid var(--line); padding: 3px 6px; text-align: right; }
+table.hist th:first-child, table.hist td:first-child { text-align: left; }
+table.hist th { color: var(--muted); font-weight: 600; }
+#totals + details.history { margin-bottom: 14px; }
+table.hist { max-width: 560px; }

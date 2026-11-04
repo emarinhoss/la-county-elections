@@ -71,6 +71,105 @@ function drawLegend() {
   else { add(BLUE, "Leader's share (darker = larger)"); add(GREY, "Other cities"); }
 }
 
+
+// ---- count over time ----------------------------------------------------------
+// data/history.json has one entry per saved county tally. History starts when our collector started saving.
+// Colors are a colorblind-safe set (Okabe-Ito); the legend and table also carry the names and numbers.
+const LINE_COLORS = ["#0072B2", "#D55E00", "#009E73", "#CC79A7", "#E69F00", "#56B4E9"];
+let historyPromise = null;
+const getHistory = () => (historyPromise ||= getJSON("data/history.json"));
+const SVG = "http://www.w3.org/2000/svg";
+function svg(tag, attrs) {
+  const e = document.createElementNS(SVG, tag);
+  for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v);
+  return e;
+}
+function fmtTime(t) { // county times have no time zone: show the same wall clock the county printed
+  const d = new Date(t.county_iso);
+  return isNaN(d) ? t.county_time : d.toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+}
+
+// series: [{name, values:[number|null per tally]}]; format turns a value into text for the axis
+function lineChart(series, times, format, label) {
+  const W = 560, H = 220, L = 74, R = 14, T = 10, B = 30;
+  const root = svg("svg", { viewBox: `0 0 ${W} ${H}`, class: "chart", role: "img", "aria-label": label });
+  const all = series.flatMap((s) => s.values.filter((v) => v !== null));
+  if (all.length === 0) return root;
+  let lo = Math.min(...all), hi = Math.max(...all);
+  if (hi - lo < 1e-9) { lo -= Math.abs(lo) * 0.05 + 0.01; hi += Math.abs(hi) * 0.05 + 0.01; }
+  const pad = (hi - lo) * 0.1; lo -= pad; hi += pad;
+  const stamps = times.map((t) => Date.parse(t.county_iso));
+  const useTime = stamps.every((s) => !isNaN(s)) && stamps[stamps.length - 1] > stamps[0];
+  const xs = times.map((_, i) => {
+    const f = times.length === 1 ? 0.5 : useTime ? (stamps[i] - stamps[0]) / (stamps[stamps.length - 1] - stamps[0]) : i / (times.length - 1);
+    return L + f * (W - L - R);
+  });
+  const y = (v) => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+  for (let k = 0; k <= 3; k++) { // horizontal grid + y labels
+    const v = lo + ((hi - lo) * k) / 3, yy = y(v);
+    root.append(svg("line", { x1: L, x2: W - R, y1: yy, y2: yy, class: "grid" }));
+    const t = svg("text", { x: L - 6, y: yy + 4, "text-anchor": "end" }); t.textContent = format(v); root.append(t);
+  }
+  [0, times.length - 1].forEach((i, n) => { // first and last tally time on the x axis
+    if (n === 1 && i === 0) return;
+    const t = svg("text", { x: xs[i], y: H - 8, "text-anchor": times.length === 1 ? "middle" : n === 0 ? "start" : "end" });
+    t.textContent = fmtTime(times[i]); root.append(t);
+  });
+  series.forEach((s, k) => {
+    const color = LINE_COLORS[k % LINE_COLORS.length];
+    const pts = s.values.map((v, i) => (v === null ? null : [xs[i], y(v)])).filter(Boolean);
+    if (pts.length > 1) root.append(svg("polyline", { points: pts.map((p) => p.join(",")).join(" "), fill: "none", stroke: color, "stroke-width": 2 }));
+    pts.forEach((p) => root.append(svg("circle", { cx: p[0], cy: p[1], r: 3.5, fill: color })));
+  });
+  return root;
+}
+
+function historyTable(rows, header) {
+  const t = el("table", "hist");
+  const head = el("tr"); header.forEach((h) => head.append(el("th", null, h))); t.append(head);
+  rows.forEach((r) => { const tr = el("tr"); r.forEach((c) => tr.append(el("td", null, c))); t.append(tr); });
+  return t;
+}
+function legend(series) {
+  const box = el("div", "hist-legend");
+  series.forEach((s, k) => {
+    const item = el("span"); const sw = el("span", "swatch"); sw.style.background = LINE_COLORS[k % LINE_COLORS.length];
+    item.append(sw, document.createTextNode(s.name)); box.append(item);
+  });
+  return box;
+}
+function oneTallyNote(times) {
+  return el("p", "muted", `Only ${times.length === 1 ? "one tally has" : times.length + " tallies have"} been recorded so far ` +
+    `(county time ${fmtTime(times[times.length - 1])}). Earlier election-night tallies were published before this collector started saving. ` +
+    (times.length === 1 ? "The chart fills in as the county posts updates." : ""));
+}
+
+// Share of votes per choice, over the recorded tallies (top 6 choices by latest votes).
+function drawContestHistory(box, contest, h) {
+  const hc = h.contests[String(contest.id)];
+  if (!hc) { box.append(el("p", "muted", "No history for this contest.")); return; }
+  const n = h.times.length;
+  const top = [...hc.choices].sort((a, b) => (b.votes[n - 1] || 0) - (a.votes[n - 1] || 0)).slice(0, 6);
+  const totals = h.times.map((_, i) => hc.choices.reduce((sum, c) => sum + (c.votes[i] || 0), 0));
+  const series = top.map((c) => ({ name: c.name, values: c.votes.map((v, i) => (v === null || totals[i] === 0 ? null : v / totals[i])) }));
+  box.append(lineChart(series, h.times, (v) => (v * 100).toFixed(1) + "%",
+    `Share of votes over ${n} tally${n === 1 ? "" : "s"}: ` + top.map((c, k) => `${c.name} ${pct(series[k].values[n - 1])}`).join(", ")));
+  box.append(legend(series));
+  if (n < 3) box.append(oneTallyNote(h.times));
+  const last = h.times.map((t, i) => [fmtTime(t), num(hc.ballots[i]), ...top.map((c) => num(c.votes[i]))]).slice(-10).reverse();
+  box.append(historyTable(last, ["Tally (county time)", "Ballots", ...top.map((c) => c.name)]));
+}
+function lazyHistory(summaryText, draw) {
+  const d = el("details", "history"); d.append(el("summary", null, summaryText));
+  const body = el("div"); d.append(body);
+  d.addEventListener("toggle", () => {
+    if (!d.open || d.dataset.done) return;
+    d.dataset.done = "1";
+    getHistory().then((h) => draw(body, h)).catch((e) => body.append(el("p", "muted", "History could not be loaded: " + e.message)));
+  });
+  return d;
+}
+
 // ---- panel ----------------------------------------------------------------
 function renderContest(c) {
   const box = el("div", "contest");
@@ -92,6 +191,7 @@ function renderContest(c) {
   if (c.measure_text) {
     const d = el("details"); d.append(el("summary", null, "Measure text"), el("p", null, c.measure_text)); box.append(d);
   }
+  box.append(lazyHistory("Count over time", (body, h) => drawContestHistory(body, c, h)));
   return box;
 }
 function showCity(key) {
@@ -152,6 +252,12 @@ function setupCounty() {
   stat("registered voters", num(t.registered));
   stat("share of registered", pct(t.share_of_registered));
   stat("vote-by-mail ballots", num(t.vote_by_mail_ballots));
+  totals.after(lazyHistory("Ballots counted over time", (body, h) => {
+    const series = [{ name: "Ballots counted (all contests)", values: h.ballots_counted }];
+    body.append(lineChart(series, h.times, (v) => Math.round(v).toLocaleString("en-US"), "Ballots counted over time"));
+    if (h.times.length < 3) body.append(oneTallyNote(h.times));
+    body.append(historyTable(h.times.map((tm, i) => [fmtTime(tm), num(h.ballots_counted[i])]).slice(-10).reverse(), ["Tally (county time)", "Ballots counted"]));
+  }));
   const sel = document.getElementById("group-select");
   countyData.groups.forEach((g) => sel.append(new Option(`${g.name} (${g.contests.length})`, g.name)));
   sel.addEventListener("change", renderCounty);
