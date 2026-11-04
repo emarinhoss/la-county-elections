@@ -1,0 +1,9 @@
+{
+  "source_id": "rrcc_api_menu_groups",
+  "url": "https://results.lavote.gov/ElectionResults/GetMenuGroups?electionID=4348",
+  "fetched_at": "2026-11-04T23:19:08.829274+00:00",
+  "http_status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "bytes": 101492,
+  "sha256": "15abeb2100c9daea034b42086c18757be49f16761a223183a67371c357b1e5b2"
+}
