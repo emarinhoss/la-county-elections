@@ -1,0 +1,9 @@
+{
+  "source_id": "city_boundary_geojson",
+  "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/City_Boundry/FeatureServer/24/query?where=1%3D1&outFields=*&outSR=4326&maxAllowableOffset=0.0002&geometryPrecision=5&resultRecordCount=2000&f=geojson",
+  "fetched_at": "2026-11-04T18:16:55.227919+00:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 642990,
+  "sha256": "e72353095b04deb5f37009f45d2dba9d44e156dea2942ac1a7fa2dc326a8122d"
+}
