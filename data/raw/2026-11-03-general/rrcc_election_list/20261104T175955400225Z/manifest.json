@@ -1,0 +1,9 @@
+{
+  "source_id": "rrcc_election_list",
+  "url": "https://results.lavote.gov/election-list",
+  "fetched_at": "2026-11-04T17:59:55.400225+00:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 34356,
+  "sha256": "85b5bfde1c9018e53fc1524661daccb7ff4ba2797ff21fec62a08123d8ba15a2"
+}

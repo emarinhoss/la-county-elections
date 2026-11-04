@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/yre-my-gon-a-badgd-ither-knock-I-with-Faitor-Gou" async></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/county_seal.png">
+    <title>Election Results List</title>
+    <link rel="stylesheet" type="text/css" href="/css/master.css?v=3.1" />
+    <link rel="stylesheet" type="text/css" href="/css/v2.css?v=3.1">
+    <link rel="stylesheet" type="text/css" href="/css/election-results.css" />
+    
+    <link rel="stylesheet" href="/css/election-results.min.css?v=134326952210000000" />
+
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <div id="project">
+
+        <!-- Header -->
+        <header id="header">
+            <div id="top" class="row">
+                <div id="brand" class="base m_span">
+                    <div class="m_pad">
+                        <a class="fill" href="/" aria-label="Logo - Home">
+                            <div class="m_margin_align_c">
+                                <div class="base">
+                                    <img src="/images/county_seal.png" title="Los Angeles County RR/CC" alt="Los Angeles County RR/CC" width="60" height="60" />
+                                </div>
+                                <div id="txt" class="base margin_l single">
+                                    <p>Los Angeles County</p>
+                                    <p><strong>Registrar-Recorder/County Clerk</strong></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Responsive -->
+                <div class="m_d_toggle">
+                    <nav id="primary_nav" class="right" aria-label="Primary">
+                        <ul>
+                            <li class="primary"><a href="https://www.lavote.gov" aria-label="Navigate to lavote.gov">LAVote.gov</a></li>
+                            <li class="primary"><a href="https://www.lavote.gov/about-us/background" aria-label="Navigate to About Us">About Us</a></li>
+                            <li class="primary"><a href="https://www.lavote.gov/contact-us/contact-us" aria-label="Navigate to Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="m_toggle">
+                    <div id="m_primary_nav" class="row">
+                        <div id="m_primary_nav_btn" class="row">
+                            <button id="nav_prim_tog_plchldr" class="base btn" type="button" aria-expanded="false" aria-controls="m_primary_nav_items" aria-label="Toggle navigation menu">
+                                <img class="m_pad" src="/images/m/icon_nav_primary.png" alt="" />
+                            </button>
+                        </div>
+                        <nav id="m_primary_nav_items" class="hide row" aria-label="Mobile primary">
+                            <ul>
+                                <li><a href="https://www.lavote.gov" aria-label="Navigate to lavote.gov">LAVote.gov</a></li>
+                                <li><a href="https://www.lavote.gov/about-us/background" aria-label="Navigate to About Us">About Us</a></li>
+                                <li><a href="https://www.lavote.gov/contact-us/contact-us" aria-label="Navigate to Contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+            <div id="title_row" class="row">
+                <div class="main_content m_w">
+                    <div class="base margin_l">
+                        <img id="vLogo" src="/images/VSAP Logo - V.png" alt="Icon — LA County Election Results" title="LA County Election Results" />
+                    </div>
+                    <div class="base" id="mobileHeading">
+                        <span class="m_span title_txt">LA COUNTY <b>ELECTION RESULTS</b></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            <div id="page">
+                <div id="content" align="center">
+                    <div id="page-sidebar-layout">
+                        <main id="main-content" class="main_content" align="left">
+                            <div id="pg_content" class="landscape m">
+                                <div id="div_pg_content" class="landscape m">
+                                    <div id="content_det" class="base content_det">
+                                        <div class="m_pad">
+                                            
+<div id="er">
+    <div>
+        <b>To view election results, click on an election link below:</b>
+    </div>
+    <div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2026">
+                        <h3>
+                            <span>2026 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/03/2026 :
+                                    <a class="fs" href="/#year=2026&election=4348">General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/02/2026 :
+                                    <a class="fs" href="/#year=2026&election=4338">Statewide Direct Primary Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2025">
+                        <h3>
+                            <span>2025 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/04/2025 :
+                                    <a class="fs" href="/#year=2025&election=4337">Statewide Special Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/03/2025 :
+                                    <a class="fs" href="/#year=2025&election=4331">San Marino Unified School District Special Parcel Tax Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    02/25/2025 :
+                                    <a class="fs" href="/#year=2025&election=4329">State Senate District 36 Special Primary Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2024">
+                        <h3>
+                            <span>2024 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/05/2024 :
+                                    <a class="fs" href="/#year=2024&election=4324">General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/05/2024 :
+                                    <a class="fs" href="/#year=2024&election=4316">Presidential Primary Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2023">
+                        <h3>
+                            <span>2023 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/07/2023 :
+                                    <a class="fs" href="/#year=2023&election=4311">Local and Municipal Elections</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    07/25/2023 :
+                                    <a class="fs" href="/#year=2023&election=4312">Claremont Unified School District Trustee Area 4 Special Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/27/2023 :
+                                    <a class="fs" href="/#year=2023&election=4313">City of Los Angeles Council District 6 Special Runoff Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    05/23/2023 :
+                                    <a class="fs" href="/#year=2023&election=4310">City of Beverly Hills Special Municipal Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    05/09/2023 :
+                                    <a class="fs" href="/#year=2023&election=4309">City of Sierra Madre Special Municipal Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    05/02/2023 :
+                                    <a class="fs" href="/#year=2023&election=4308">South Pasadena Unified School District Parcel Tax Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    04/04/2023 :
+                                    <a class="fs" href="/#year=2023&election=4306">City of Los Angeles Council District 6 Special Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/07/2023 :
+                                    <a class="fs" href="/#year=2023&election=4307">City of Inglewood Council District 1 Runoff Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    01/31/2023 :
+                                    <a class="fs" href="/#year=2023&election=4303">City of Downey Special Municipal Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2022">
+                        <h3>
+                            <span>2022 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/08/2022 :
+                                    <a class="fs" href="/#year=2022&election=4300">General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/07/2022 :
+                                    <a class="fs" href="/#year=2022&election=4269">Statewide Direct Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    04/05/2022 :
+                                    <a class="fs" href="/#year=2022&election=4291">Assembly District 62 Special Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    02/15/2022 :
+                                    <a class="fs" href="/#year=2022&election=4285">Assembly District 49 Special Primary Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2021">
+                        <h3>
+                            <span>2021 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/02/2021 :
+                                    <a class="fs" href="/#year=2021&election=4261">Local and Municipal Elections</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    09/14/2021 :
+                                    <a class="fs" href="/#year=2021&election=4278">California Gubernatorial Recall Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    07/20/2021 :
+                                    <a class="fs" href="/#year=2021&election=4271">Norwalk-La Mirada Unified School District Special Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/29/2021 :
+                                    <a class="fs" href="/#year=2021&election=4272">San Marino USD Special Parcel Tax Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/01/2021 :
+                                    <a class="fs" href="/#year=2021&election=4259">City of Compton General Municipal Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    05/18/2021 :
+                                    <a class="fs" href="/#year=2021&election=4267">Assembly District 54 Special Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    05/11/2021 :
+                                    <a class="fs" href="/#year=2021&election=4266">City of Hermosa Beach Special Municipal Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    04/20/2021 :
+                                    <a class="fs" href="/#year=2021&election=4258">City of Compton Primary Nominating Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/02/2021 :
+                                    <a class="fs" href="/#year=2021&election=4256">Special Elections</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2020">
+                        <h3>
+                            <span>2020 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/03/2020 :
+                                    <a class="fs" href="/#year=2020&election=4193">General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    07/21/2020 :
+                                    <a class="fs" href="/#year=2020&election=4207">City of Industry Special Municipal Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/02/2020 :
+                                    <a class="fs" href="/#year=2020&election=4140">Special Elections</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    05/12/2020 :
+                                    <a class="fs" href="/#year=2020&election=4178">Congressional District 25 Special General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    04/14/2020 :
+                                    <a class="fs" href="/#year=2020&election=4110">Charter City Elections</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/03/2020 :
+                                    <a class="fs" href="/#year=2020&election=4085">Presidential Primary Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2019">
+                        <h3>
+                            <span>2019 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/05/2019 :
+                                    <a class="fs" href="/#year=2019&election=4053">Local and Municipal Elections</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    08/13/2019 :
+                                    <a class="fs" href="/#year=2019&election=4058">City of Los Angeles Council District 12 Special Runoff Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/04/2019 :
+                                    <a class="fs" href="/#year=2019&election=4041">Senate District 33 Special General Election (and Municipal and Special Elections)</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    05/14/2019 :
+                                    <a class="fs" href="/#year=2019&election=4040">LAUSD District 5 Special Runoff Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    04/16/2019 :
+                                    <a class="fs" href="/#year=2019&election=3958">City of Compton Primary Nominating Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/26/2019 :
+                                    <a class="fs" href="/#year=2019&election=4032">Senate District 33 Special Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/05/2019 :
+                                    <a class="fs" href="/#year=2019&election=3983">General Law and Charter City Elections</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    02/26/2019 :
+                                    <a class="fs" href="/#year=2019&election=3957">San Marino USD Special Parcel Tax Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2018">
+                        <h3>
+                            <span>2018 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/06/2018 :
+                                    <a class="fs" href="/#year=2018&election=3861">General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    08/07/2018 :
+                                    <a class="fs" href="/#year=2018&election=3883">Senate District 32 Special General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    07/24/2018 :
+                                    <a class="fs" href="/#year=2018&election=3867">Los Angeles County Employees Retirement Association Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/05/2018 :
+                                    <a class="fs" href="/#year=2018&election=3878">Long Beach City General Municipal (Run-off) Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/05/2018 :
+                                    <a class="fs" href="/#year=2018&election=3793">Statewide Direct Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    04/03/2018 :
+                                    <a class="fs" href="/#year=2018&election=3843">Special Elections</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    02/27/2018 :
+                                    <a class="fs" href="/#year=2018&election=3823">South Pasadena USD Special Parcel Tax Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2017">
+                        <h3>
+                            <span>2017 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    12/05/2017 :
+                                    <a class="fs" href="/#year=2017&election=3791">Assembly District 51 Special General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    11/07/2017 :
+                                    <a class="fs" href="/#year=2017&election=3752">Local and Municipal Consolidated Elections</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    10/03/2017 :
+                                    <a class="fs" href="/#year=2017&election=3758">Assembly District 51 Special Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    08/01/2017 :
+                                    <a class="fs" href="/#year=2017&election=3718">Los Angeles County Employees Retirement Association Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/06/2017 :
+                                    <a class="fs" href="/#year=2017&election=3744">Congressional District 34 Special General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    04/18/2017 :
+                                    <a class="fs" href="/#year=2017&election=3528">Arcadia USD Board of Education Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    04/04/2017 :
+                                    <a class="fs" href="/#year=2017&election=3685">Congressional District 34 Special Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/07/2017 :
+                                    <a class="fs" href="/#year=2017&election=3577">Consolidated Municipal and Special Elections</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2016">
+                        <h3>
+                            <span>2016 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/08/2016 :
+                                    <a class="fs" href="/#year=2016&election=3496">General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/07/2016 :
+                                    <a class="fs" href="/#year=2016&election=3467">Long Beach City General Municipal (Run-off) Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/07/2016 :
+                                    <a class="fs" href="/#year=2016&election=980">Presidential Primary Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2015">
+                        <h3>
+                            <span>2015 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    11/03/2015 :
+                                    <a class="fs" href="/#year=2015&election=967">Local and Municipal Consolidated Elections</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/17/2015 :
+                                    <a class="fs" href="/#year=2015&election=960">Senate District 21 Special Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/10/2015 :
+                                    <a class="fs" href="/#year=2015&election=953">San Marino USD Special Parcel Tax Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/03/2015 :
+                                    <a class="fs" href="/#year=2015&election=922">Consolidated Elections</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2014">
+                        <h3>
+                            <span>2014 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    12/09/2014 :
+                                    <a class="fs" href="/#year=2014&election=911">Senate District 35 Special Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    11/04/2014 :
+                                    <a class="fs" href="/#year=2014&election=905">General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    08/05/2014 :
+                                    <a class="fs" href="/#year=2014&election=906">Los Angeles County Employees Retirement Association Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    06/03/2014 :
+                                    <a class="fs" href="/#year=2014&election=879">Statewide Direct Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    03/04/2014 :
+                                    <a class="fs" href="/#year=2014&election=897">La Canada USD Special Parcel Tax Election</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandableDiv">
+                <div class="expandable_item">
+                    <a class="fs yearDropDown" href="#2013">
+                        <h3>
+                            <span>2013 Elections</span>
+                        </h3>
+                    </a>
+                    <div class="electonContent indent fs">
+                                <p class="m_txt_size_s">
+                                    12/03/2013 :
+                                    <a class="fs" href="/#year=2013&election=878">Assembly District 54 Special Primary Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    11/19/2013 :
+                                    <a class="fs" href="/#year=2013&election=877">Assembly District 45 Special General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    09/24/2013 :
+                                    <a class="fs" href="/#year=2013&election=876">Assembly District 52 Special General Election</a>
+                                </p>
+                                <p class="m_txt_size_s">
+                                    09/17/2013 :
+                                    <a class="fs" href="/#year=2013&election=868">Special Elections</a>
+                                </p>
+                    </div>
+                </div>
+            </div>
+        <div class="expandable_item">
+            <a class="yearDropDown" target="_blank" href="https://lavote.gov/historical-election-results/pdownrslt.html-ssi">
+                <h3>
+                    <span>Archived Elections</span>
+                </h3>
+            </a>
+            <br />
+        </div>
+    </div>
+</div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                        
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+            </div>
+            <footer id="footer" align="center">
+                <div class="content_frame">
+                    <div class="sfContentBlock">
+                        <div class="landscape">
+                            <div id="policy" class="base">
+                                <div>
+                                    <a href="https://lavote.gov/about-us/background" class="fs">About Us</a> |
+                                    <a href="https://www.lacounty.gov/wps/portal/lac/about/privacy" target="_blank" rel="noopener noreferrer" class="fs">Privacy Policy<span class="sr-only"> (opens in new tab)</span></a> |
+                                    <a href="https://www.lacounty.gov/wps/portal/lac/user/" target="_blank" rel="noopener noreferrer" class="fs">User Rights<span class="sr-only"> (opens in new tab)</span></a> |
+                                    <a href="https://www.lacounty.gov/wps/portal/lac/disclaimer/" target="_blank" rel="noopener noreferrer" class="fs">Disclaimer<span class="sr-only"> (opens in new tab)</span></a> |
+                                    <a href="https://lavote.gov/site-map" class="fs">Site Map</a> |
+                                    <a href="https://www.lacounty.gov/accessibility" target="_blank" rel="noopener noreferrer" class="fs">Accessibility<span class="sr-only"> (opens in new tab)</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Platform Version -->
+            <input id="plat_vers" type="hidden" value="" />
+
+        </div>
+    </div>
+    <script language="javascript" src="/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180636053-1"></script>
+    <script src="/js/site.js"></script>
+
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery(".yearDropDown").click(function () {
+                jQuery(this).next(".electonContent").slideToggle(200);
+            });
+        });
+    </script>
+
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=549500843" async></script></body>
+</html>

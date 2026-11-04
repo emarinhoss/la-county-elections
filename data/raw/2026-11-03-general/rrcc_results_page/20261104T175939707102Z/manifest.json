@@ -1,0 +1,9 @@
+{
+  "source_id": "rrcc_results_page",
+  "url": "https://results.lavote.gov/",
+  "fetched_at": "2026-11-04T17:59:39.707102+00:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 11920,
+  "sha256": "fc6766b388666af8d2ff07f256e47e7221cdb55a567feb34eca3f69ac9e3b832"
+}

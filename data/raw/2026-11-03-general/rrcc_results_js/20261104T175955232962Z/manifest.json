@@ -1,0 +1,9 @@
+{
+  "source_id": "rrcc_results_js",
+  "url": "https://results.lavote.gov/js/election-results.min.js?v=134372722370000000",
+  "fetched_at": "2026-11-04T17:59:55.232962+00:00",
+  "http_status": 200,
+  "content_type": "text/javascript",
+  "bytes": 43572,
+  "sha256": "0f656dd9adf1c8e9f92e50f51d7aca110730c45175070e6a6e07d3a9e0b10c61"
+}

@@ -1,0 +1,9 @@
+{
+  "source_id": "precinct_count",
+  "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+  "fetched_at": "2026-11-04T17:59:55.576910+00:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 15,
+  "sha256": "ef6cf41e90a41f4b48193c4cfca88b5f9730a59ba3da98a9d4108b694c9598fc"
+}
