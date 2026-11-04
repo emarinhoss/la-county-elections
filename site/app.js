@@ -4,7 +4,7 @@
 // Text is added with textContent (never innerHTML) so county text can never inject markup.
 
 const BLUE = "#1f6fb2", ORANGE = "#d9822b", GREY = "#c9ced6";
-let map, layer, data, selectedKey = null, colorContestId = "";
+let map, layer, cityView, data, selectedKey = null, colorContestId = "";
 const byKey = {};
 
 function el(tag, className, text) {
@@ -89,6 +89,9 @@ function renderContest(c) {
     fill.style.width = (ch.share === null ? 0 : ch.share * 100) + "%";
     bar.append(fill); row.append(bar); box.append(row);
   }
+  if (c.measure_text) {
+    const d = el("details"); d.append(el("summary", null, "Measure text"), el("p", null, c.measure_text)); box.append(d);
+  }
   return box;
 }
 function showCity(key) {
@@ -128,16 +131,64 @@ function fillSelects() {
   });
 }
 
+// ---- county / state / district view -------------------------------------
+let countyData = null;
+function renderCounty() {
+  const group = countyData.groups.find((g) => g.name === document.getElementById("group-select").value);
+  const filter = document.getElementById("county-filter").value.trim().toLowerCase();
+  const box = document.getElementById("county-contests");
+  box.replaceChildren();
+  const shown = group.contests.filter((c) => c.label.toLowerCase().includes(filter));
+  shown.forEach((c) => box.append(renderContest(c)));
+  document.getElementById("county-note").textContent =
+    `${shown.length} of ${group.contests.length} contests. Numbers are the Los Angeles County totals; ` +
+    "a contest that spans several counties shows only its Los Angeles County part.";
+}
+function setupCounty() {
+  const t = countyData.totals;
+  const totals = document.getElementById("totals");
+  const stat = (label, value) => { const d = el("div"); d.append(el("div", "big", value), el("div", "muted", label)); totals.append(d); };
+  stat("ballots counted so far", num(t.ballots_counted));
+  stat("registered voters", num(t.registered));
+  stat("share of registered", pct(t.share_of_registered));
+  stat("vote-by-mail ballots", num(t.vote_by_mail_ballots));
+  const sel = document.getElementById("group-select");
+  countyData.groups.forEach((g) => sel.append(new Option(`${g.name} (${g.contests.length})`, g.name)));
+  sel.addEventListener("change", renderCounty);
+  document.getElementById("county-filter").addEventListener("input", renderCounty);
+  renderCounty();
+}
+
+// ---- tabs -------------------------------------------------------------------
+function showTab(name) {
+  const county = name === "county";
+  document.getElementById("view-city").hidden = county;
+  document.getElementById("view-county").hidden = !county;
+  document.getElementById("tab-city").setAttribute("aria-selected", String(!county));
+  document.getElementById("tab-county").setAttribute("aria-selected", String(county));
+  history.replaceState(null, "", county ? "#county" : "#city");
+  if (!county && map && cityView) { map.invalidateSize(); map.fitBounds(cityView); }
+}
+
 async function start() {
+  document.getElementById("tab-city").addEventListener("click", () => showTab("city"));
+  document.getElementById("tab-county").addEventListener("click", () => showTab("county"));
   data = await getJSON("data/city_contests.json");
   data.cities.forEach((c) => (byKey[c.key] = c));
-  const nContests = data.cities.reduce((n, c) => n + c.contests.length, 0);
-  document.getElementById("status").textContent =
-    `${data.election.title}, ${data.election.date} · ${data.cities.length} cities, ${nContests} contests · ` +
-    `county tally time: ${data.county_time} (county clock)`;
+  const nCity = data.cities.reduce((n, c) => n + c.contests.length, 0);
+  const setStatus = (nOther) => {
+    document.getElementById("status").textContent =
+      `${data.election.title}, ${data.election.date} · ${nCity} city contests in ${data.cities.length} cities` +
+      (nOther === null ? "" : ` · ${nOther} county, state and district contests`) +
+      ` · county tally time: ${data.county_time} (county clock)`;
+  };
+  setStatus(null);
   fillSelects();
   drawLegend();
   showCity(null);
+  getJSON("data/county_contests.json").then((d) => { countyData = d; setupCounty(); setStatus(d.groups.reduce((n, g) => n + g.contests.length, 0)); })
+    .catch((e) => { document.getElementById("county-note").textContent = "County contests could not be loaded: " + e.message; });
+  if (location.hash === "#county") showTab("county");
 
   map = L.map("map", { zoomSnap: 0.25, attributionControl: false });
   let shapes;
@@ -156,6 +207,7 @@ async function start() {
   // Fit the view to cities that have contests, so remote areas and offshore islands do not shrink the map.
   const view = L.latLngBounds([]);
   layer.eachLayer((l) => { if (l.feature.properties.has_contests) view.extend(l.getBounds()); });
-  map.fitBounds(view.isValid() ? view.pad(0.03) : layer.getBounds());
+  cityView = view.isValid() ? view.pad(0.03) : layer.getBounds();
+  map.fitBounds(cityView);
 }
 start().catch((e) => { document.getElementById("status").textContent = "Could not load data: " + e.message; });

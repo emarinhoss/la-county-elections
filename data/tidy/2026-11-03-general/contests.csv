@@ -1,410 +1,410 @@
-contest_id,group,title,type,vote_for,pass_rate
-10534,County Measures,COUNTY MEASURE A,Measure,,Majority of votes cast
-10959,County Measures,COUNTY MEASURE E,Measure,,Majority of votes cast
-10828,Governor,GOVERNOR,Candidate,,
-10829,Lieutenant Governor,LIEUTENANT GOVERNOR,Candidate,,
-10830,Secretary of State,SECRETARY OF STATE,Candidate,,
-10831,Controller,CONTROLLER,Candidate,,
-10832,Treasurer,TREASURER,Candidate,,
-10833,Attorney General,ATTORNEY GENERAL,Candidate,,
-10834,Insurance Commissioner,INSURANCE COMMISSIONER,Candidate,,
-10835,Board of Equalization,MEMBER STATE BOARD OF EQUALIZATION 3rd District,Candidate,,
-10805,U.S. Representative,"UNITED STATES REPRESENTATIVE, 23rd District",Candidate,,
-10806,U.S. Representative,"UNITED STATES REPRESENTATIVE, 26th District",Candidate,,
-10807,U.S. Representative,"UNITED STATES REPRESENTATIVE, 27th District",Candidate,,
-10808,U.S. Representative,"UNITED STATES REPRESENTATIVE, 28th District",Candidate,,
-10809,U.S. Representative,"UNITED STATES REPRESENTATIVE, 29th District",Candidate,,
-10810,U.S. Representative,"UNITED STATES REPRESENTATIVE, 30th District",Candidate,,
-10811,U.S. Representative,"UNITED STATES REPRESENTATIVE, 31st District",Candidate,,
-10812,U.S. Representative,"UNITED STATES REPRESENTATIVE, 32nd District",Candidate,,
-10813,U.S. Representative,"UNITED STATES REPRESENTATIVE, 34th District",Candidate,,
-10814,U.S. Representative,"UNITED STATES REPRESENTATIVE, 35th District",Candidate,,
-10815,U.S. Representative,"UNITED STATES REPRESENTATIVE, 36th District",Candidate,,
-10816,U.S. Representative,"UNITED STATES REPRESENTATIVE, 37th District",Candidate,,
-10817,U.S. Representative,"UNITED STATES REPRESENTATIVE, 38th District",Candidate,,
-10818,U.S. Representative,"UNITED STATES REPRESENTATIVE, 41st District",Candidate,,
-10819,U.S. Representative,"UNITED STATES REPRESENTATIVE, 42nd District",Candidate,,
-10820,U.S. Representative,"UNITED STATES REPRESENTATIVE, 43rd District",Candidate,,
-10821,U.S. Representative,"UNITED STATES REPRESENTATIVE, 44th District",Candidate,,
-10822,U.S. Representative,"UNITED STATES REPRESENTATIVE, 45th District",Candidate,,
-10773,State Senator,"STATE SENATOR, 20th District",Candidate,,
-10774,State Senator,"STATE SENATOR, 22nd District",Candidate,,
-10775,State Senator,"STATE SENATOR, 24th District",Candidate,,
-10776,State Senator,"STATE SENATOR, 26th District",Candidate,,
-10777,State Senator,"STATE SENATOR, 28th District",Candidate,,
-10778,State Senator,"STATE SENATOR, 30th District",Candidate,,
-10779,State Senator,"STATE SENATOR, 34th District",Candidate,,
-10780,State Senator,"STATE SENATOR, 36th District",Candidate,,
-10781,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 34th District",Candidate,,
-10782,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 39th District",Candidate,,
-10783,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 40th District",Candidate,,
-10784,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 41st District",Candidate,,
-10785,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 42nd District",Candidate,,
-10786,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 43rd District",Candidate,,
-10787,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 44th District",Candidate,,
-10788,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 46th District",Candidate,,
-10789,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 48th District",Candidate,,
-10790,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 49th District",Candidate,,
-10791,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 51st District",Candidate,,
-10792,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 52nd District",Candidate,,
-10793,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 53rd District",Candidate,,
-10794,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 54th District",Candidate,,
-10795,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 55th District",Candidate,,
-10796,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 56th District",Candidate,,
-10797,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 57th District",Candidate,,
-10798,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 61st District",Candidate,,
-10799,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 62nd District",Candidate,,
-10800,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 64th District",Candidate,,
-10801,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 65th District",Candidate,,
-10802,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 66th District",Candidate,,
-10803,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 67th District",Candidate,,
-10804,Member of the Assembly,"MEMBER OF THE STATE ASSEMBLY, 69th District",Candidate,,
-10888,Supreme Court Justices,For Associate Justice of the Supreme Court - JOSHUA GROBAN,Judicial,,
-10889,Supreme Court Justices,For Associate Justice of the Supreme Court - KELLI M. EVANS,Judicial,,
-10904,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Eight - JOHN WILEY",Judicial,,
-10905,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Eight - MATTHEW A. SCHERB",Judicial,,
-10906,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Eight - VICTOR G. VIRAMONTES",Judicial,,
-10962,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Four - ARMEN TAMZARIAN",Judicial,,
-10899,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Four - AUDRA M. MORI",Judicial,,
-10898,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Four - NICHOLAS DAUM",Judicial,,
-10891,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division One - GREGORY J. WEINGART",Judicial,,
-10890,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division One - MICHELLE C. KIM",Judicial,,
-10902,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Seven - NATALIE STONE",Judicial,,
-10901,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Six - KENNETH R. YEGAN",Judicial,,
-10894,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Three - MARK HANASONO",Judicial,,
-10892,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Two - ANNE RICHARDSON",Judicial,,
-10893,Appellate Court Justices,"For Associate Justice, Court of Appeal, Second District, Division Two - STEVE GOORVITCH",Judicial,,
-10900,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Five - BRIAN M. HOFFSTADT",Judicial,,
-10897,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Four - HELEN ZUKIN",Judicial,,
-10903,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Seven - GONZALO C. MARTINEZ",Judicial,,
-10963,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Six - TARI L. CODY",Judicial,,
-10896,Appellate Court Justices,"For Presiding Justice, Court of Appeal, Second District, Division Three - RASHIDA A. ADAMS",Judicial,,
-10836,Superintendent Public Inst,SUPERINTENDENT OF PUBLIC INSTRUCTION,Candidate,,
-10853,State Measures,STATE MEASURE 1,Measure,,Majority of votes cast
-10854,State Measures,STATE MEASURE 2,Measure,,Majority of votes cast
-10855,State Measures,STATE MEASURE 3,Measure,,Majority of votes cast
-10856,State Measures,STATE MEASURE 4,Measure,,Majority of votes cast
-10857,State Measures,STATE MEASURE 5,Measure,,Majority of votes cast
-10858,State Measures,STATE MEASURE 37,Measure,,Majority of votes cast
-10859,State Measures,STATE MEASURE 38,Measure,,Majority of votes cast
-10860,State Measures,STATE MEASURE 39,Measure,,Majority of votes cast
-10861,State Measures,STATE MEASURE 40,Measure,,Majority of votes cast
-10862,State Measures,STATE MEASURE 41,Measure,,Majority of votes cast
-10863,State Measures,STATE MEASURE 42,Measure,,Majority of votes cast
-10864,State Measures,STATE MEASURE 43,Measure,,Majority of votes cast
-10865,State Measures,STATE MEASURE 44,Measure,,Majority of votes cast
-10866,State Measures,STATE MEASURE 45,Measure,,Majority of votes cast
-10823,Sheriff,SHERIFF,Candidate,,
-10824,Judge Superior Court,JUDGE OF THE SUPERIOR COURT Office No. 64,Candidate,,
-10825,Judge Superior Court,JUDGE OF THE SUPERIOR COURT Office No. 65,Candidate,,
-10826,Judge Superior Court,JUDGE OF THE SUPERIOR COURT Office No. 87,Candidate,,
-10827,Judge Superior Court,JUDGE OF THE SUPERIOR COURT Office No. 131,Candidate,,
-10410,Cities,"CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION Member of the City Council, Fifth District",Candidate,,
-10408,Cities,"CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION Member of the City Council, First District",Candidate,,
-10409,Cities,"CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION Member of the City Council, Second District",Candidate,,
-10941,Cities,CITY OF ALHAMBRA SPECIAL MUNICIPAL ELECTION - MEASURE DB,Measure,,Majority of votes cast
-10940,Cities,CITY OF ALHAMBRA SPECIAL MUNICIPAL ELECTION - MEASURE HT,Measure,,Majority of votes cast
-10411,Cities,"CITY OF ARCADIA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
-10412,Cities,"CITY OF ARCADIA GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
-10413,Cities,"CITY OF ARCADIA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
-10879,Cities,CITY OF ARTESIA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10536,Cities,"CITY OF AZUSA GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
-10414,Cities,"CITY OF AZUSA GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
-10912,Cities,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION - MEASURE CR,Measure,,Majority of votes cast
-10416,Cities,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10417,Cities,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10415,Cities,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10419,Cities,CITY OF BELL GARDENS GENERAL MUNICIPAL ELECTION - MEASURE W,Measure,,Majority of votes cast
-10418,Cities,CITY OF BELL GARDENS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10420,Cities,"CITY OF BELLFLOWER GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
-10880,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE C,Measure,,Majority of votes cast
-10942,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE CC,Measure,,Majority of votes cast
-10943,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE CD,Measure,,Majority of votes cast
-10426,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10427,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10425,Cities,CITY OF BURBANK GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10945,Cities,CITY OF CARSON GENERAL MUNICIPAL ELECTION - MEASURE CU,Measure,,Majority of votes cast
-10432,Cities,CITY OF CARSON GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10433,Cities,CITY OF CARSON GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10430,Cities,"CITY OF CARSON GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
-10431,Cities,"CITY OF CARSON GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10434,Cities,"CITY OF CLAREMONT GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
-10435,Cities,"CITY OF CLAREMONT GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
-10436,Cities,"CITY OF CLAREMONT GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10437,Cities,CITY OF COMMERCE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10766,Cities,CITY OF COMPTON GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
-10769,Cities,"CITY OF COMPTON GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
-10947,Cities,CITY OF CUDAHY GENERAL MUNICIPAL ELECTION - MEASURE H,Measure,,Majority of votes cast
-10946,Cities,CITY OF CUDAHY GENERAL MUNICIPAL ELECTION - MEASURE OK,Measure,,Majority of votes cast
-10438,Cities,CITY OF CUDAHY GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10908,Cities,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE AA,Measure,,Majority of votes cast
-10929,Cities,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE T,Measure,,Majority of votes cast
-10907,Cities,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE YV,Measure,,Majority of votes cast
-10439,Cities,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10440,Cities,"CITY OF DIAMOND BAR GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
-10441,Cities,"CITY OF DIAMOND BAR GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
-10442,Cities,"CITY OF DIAMOND BAR GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10930,Cities,CITY OF DIAMOND BAR SPECIAL MUNICIPAL ELECTION - MEASURE Q,Measure,,Majority of votes cast
-10443,Cities,"CITY OF DOWNEY GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
-10444,Cities,"CITY OF DOWNEY GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10445,Cities,"CITY OF DUARTE GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
-10658,Cities,CITY OF EL MONTE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10659,Cities,CITY OF EL MONTE GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10657,Cities,CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
-10449,Cities,"CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
-10450,Cities,"CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
-10451,Cities,"CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council, 6th District",Candidate,,
-10883,Cities,CITY OF EL SEGUNDO GENERAL MUNICIPAL ELECTION - MEASURE CT,Measure,,Majority of votes cast
-10452,Cities,CITY OF EL SEGUNDO GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10453,Cities,"CITY OF GLENDORA GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
-10454,Cities,"CITY OF GLENDORA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10455,Cities,CITY OF HAWAIIAN GARDENS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10932,Cities,CITY OF HAWAIIAN GARDENS SPECIAL MUNICIPAL ELECTION - MEASURE BL,Measure,,Majority of votes cast
-10456,Cities,CITY OF HAWTHORNE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10457,Cities,CITY OF HAWTHORNE GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10458,Cities,CITY OF HAWTHORNE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10869,Cities,CITY OF HAWTHORNE SPECIAL MUNICIPAL ELECTION - MEASURE O,Measure,,Majority of votes cast
-10875,Cities,CITY OF HERMOSA BEACH GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10951,Cities,CITY OF HERMOSA BEACH SPECIAL MUNICIPAL ELECTION - MEASURE HB,Measure,,Majority of votes cast
-10462,Cities,"CITY OF HUNTINGTON PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District (Unexpired term ending December 8, 2028)",Candidate,,
-10461,Cities,"CITY OF HUNTINGTON PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10920,Cities,"CITY OF HUNTINGTON PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
-10956,Cities,CITY OF HUNTINGTON PARK SPECIAL MUNICIPAL ELECTION - MEASURE HP,Measure,,Majority of votes cast
-10913,Cities,CITY OF INGLEWOOD GENERAL MUNICIPAL ELECTION - MEASURE AT,Measure,,Majority of votes cast
-10914,Cities,CITY OF INGLEWOOD GENERAL MUNICIPAL ELECTION - MEASURE BB,Measure,,Majority of votes cast
-10870,Cities,CITY OF INGLEWOOD PRIMARY NOMINATING ELECTION Mayor,Candidate,,
-10464,Cities,"CITY OF INGLEWOOD PRIMARY NOMINATING ELECTION Member of the City Council, 1st District",Candidate,,
-10463,Cities,"CITY OF INGLEWOOD PRIMARY NOMINATING ELECTION Member of the City Council, 2nd District",Candidate,,
-10468,Cities,CITY OF IRWINDALE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10471,Cities,"CITY OF LA VERNE GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
-10472,Cities,"CITY OF LA VERNE GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
-10473,Cities,"CITY OF LA VERNE GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10475,Cities,CITY OF LAWNDALE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10474,Cities,CITY OF LAWNDALE GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
-10476,Cities,CITY OF LAWNDALE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10477,Cities,CITY OF LYNWOOD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10952,Cities,CITY OF LYNWOOD SPECIAL MUNICIPAL ELECTION - MEASURE L,Measure,,Majority of votes cast
-10478,Cities,CITY OF MALIBU GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10479,Cities,CITY OF MANHATTAN BEACH GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10480,Cities,CITY OF MAYWOOD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10489,Cities,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10488,Cities,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10487,Cities,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
-10486,Cities,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10485,Cities,CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10481,Cities,"CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
-10482,Cities,"CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
-10484,Cities,"CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
-10483,Cities,"CITY OF MONTEBELLO SPECIAL MUNICIPAL ELECTION Member of the City Council, 4th District (Unexpired term ending November 7, 2028)",Candidate,,
-10909,Cities,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION - MEASURE AAA,Measure,,Majority of votes cast
-10960,Cities,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION - MEASURE HOM,Measure,,Majority of votes cast
-10493,Cities,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10492,Cities,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10490,Cities,"CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,
-10491,Cities,"CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
-10494,Cities,CITY OF NORWALK GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10495,Cities,"CITY OF PALMDALE GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
-10496,Cities,"CITY OF PALMDALE GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10497,Cities,"CITY OF PALMDALE GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
-10881,Cities,CITY OF PALMDALE SPECIAL MUNICIPAL ELECTION - MEASURE DE,Measure,,Majority of votes cast
-10498,Cities,CITY OF PALOS VERDES ESTATES GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10953,Cities,CITY OF PALOS VERDES ESTATES SPECIAL MUNICIPAL ELECTION - MEASURE PVE,Measure,,2/3 of votes cast
-10934,Cities,CITY OF PARAMOUNT SPECIAL MUNICIPAL ELECTION - MEASURE P,Measure,,2/3 of votes cast
-10954,Cities,CITY OF PASADENA REGULAR MUNICIPAL ELECTION - MEASURE PFD,Measure,,2/3 of votes cast
-10503,Cities,CITY OF PICO RIVERA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10772,Cities,"CITY OF POMONA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
-10936,Cities,CITY OF RANCHO PALOS VERDES GENERAL MUNICIPAL ELECTION - MEASURE RS,Measure,,Majority of votes cast
-10504,Cities,CITY OF RANCHO PALOS VERDES GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10955,Cities,CITY OF REDONDO BEACH SPECIAL MUNICIPAL ELECTION - MEASURE ART,Measure,,Majority of votes cast
-10505,Cities,CITY OF ROLLING HILLS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10507,Cities,CITY OF ROSEMEAD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10508,Cities,CITY OF ROSEMEAD SPECIAL MUNICIPAL ELECTION - MEASURE RC,Measure,,Majority of votes cast
-10510,Cities,CITY OF SAN GABRIEL GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10511,Cities,CITY OF SAN GABRIEL GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10509,Cities,CITY OF SAN GABRIEL GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10915,Cities,CITY OF SAN GABRIEL SPECIAL MUNICIPAL ELECTION - MEASURE PS,Measure,,Majority of votes cast
-10512,Cities,CITY OF SAN MARINO GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10957,Cities,CITY OF SAN MARINO SPECIAL MUNICIPAL ELECTION - MEASURE U,Measure,,Majority of votes cast
-10837,Cities,"CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
-10838,Cities,"CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10839,Cities,"CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
-10513,Cities,CITY OF SANTA FE SPRINGS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10514,Cities,CITY OF SANTA MONICA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10515,Cities,CITY OF SANTA MONICA GENERAL MUNICIPAL ELECTION Member of the Rent Control Board,Candidate,Vote for no more than three,
-10916,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE ES,Measure,,Majority of votes cast
-10917,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE GG,Measure,,Majority of votes cast
-10918,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE RR,Measure,,Majority of votes cast
-10958,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE TT,Measure,,Majority of votes cast
-10919,Cities,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE VV,Measure,,Majority of votes cast
-10519,Cities,CITY OF SOUTH EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10939,Cities,CITY OF SOUTH EL MONTE SPECIAL MUNICIPAL ELECTION - MEASURE CL,Measure,,Majority of votes cast
-10938,Cities,CITY OF SOUTH EL MONTE SPECIAL MUNICIPAL ELECTION - MEASURE RM,Measure,,Majority of votes cast
-10521,Cities,CITY OF SOUTH GATE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10522,Cities,CITY OF SOUTH GATE GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10520,Cities,CITY OF SOUTH GATE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10910,Cities,CITY OF SOUTH GATE SPECIAL MUNICIPAL ELECTION - MEASURE SG,Measure,,Majority of votes cast
-10882,Cities,CITY OF SOUTH PASADENA GENERAL MUNICIPAL ELECTION - MEASURE SOS,Measure,,2/3 of votes cast
-10524,Cities,"CITY OF SOUTH PASADENA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10526,Cities,CITY OF WALNUT GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,
-10530,Cities,CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,
-10531,Cities,CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,
-10527,Cities,"CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,
-10528,Cities,"CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,
-10529,Cities,"CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,
-10533,Cities,CITY OF WEST HOLLYWOOD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,
-10877,Cities,CITY OF WHITTIER SPECIAL MUNICIPAL ELECTION - MEASURE EL,Measure,,Majority of votes cast
-10876,Cities,CITY OF WHITTIER SPECIAL MUNICIPAL ELECTION - MEASURE EV,Measure,,Majority of votes cast
-10924,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE EE,Measure,,Majority of votes cast
-10927,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE FD,Measure,,Majority of votes cast
-10922,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LA,Measure,,Majority of votes cast
-10923,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PL,Measure,,Majority of votes cast
-10925,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PRK,Measure,,Majority of votes cast
-10926,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PRT,Measure,,Majority of votes cast
-10928,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE SC,Measure,,Majority of votes cast
-10921,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE TE,Measure,,Majority of votes cast
-10768,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION City Attorney,Candidate,,
-10767,Cities,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Mayor,Candidate,,
-10770,Cities,"LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,
-10771,Cities,"LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Member of the City Council, 9th District",Candidate,,
-10604,Schools,"ABC UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10607,Schools,"ABC UNIFIED SCHOOL DISTRICT SPECIAL ELECTION Governing Board Member, Trustee Area No. 5 (Unexpired term ending December 8, 2028)",Candidate,,
-10613,Schools,"ACTON-AGUA DULCE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10571,Schools,"ANTELOPE VALLEY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10572,Schools,"ANTELOPE VALLEY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10573,Schools,"ANTELOPE VALLEY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10679,Schools,"ANTELOPE VALLEY JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10619,Schools,"AZUSA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10620,Schools,BALDWIN PARK UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than two,
-10621,Schools,BASSETT UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10764,Schools,"BELLFLOWER UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10765,Schools,"BELLFLOWER UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10872,Schools,BELLFLOWER UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE SM,Measure,,55% of votes cast
-10622,Schools,BEVERLY HILLS UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than two,
-10625,Schools,"BURBANK UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10574,Schools,"CERRITOS COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10911,Schools,CHARTER OAK UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE S,Measure,,55% of votes cast
-10631,Schools,"CLAREMONT UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10937,Schools,CLAREMONT UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE CS,Measure,,55% of votes cast
-10579,Schools,"COMPTON COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10580,Schools,"COMPTON COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10581,Schools,"COMPTON COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10582,Schools,"COMPTON COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION Governing Board Member, Trustee Area No. 2 (Unexpired term ending December 8, 2028)",Candidate,,
-10635,Schools,"COVINA-VALLEY UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10636,Schools,CULVER CITY UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10640,Schools,"DOWNEY UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 7",Candidate,,
-10642,Schools,"DUARTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10691,Schools,"EAST WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10692,Schools,"EAST WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10693,Schools,"EAST WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10694,Schools,"EASTSIDE UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10697,Schools,"EASTSIDE UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10584,Schools,"EL CAMINO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10685,Schools,"EL MONTE UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10686,Schools,"EL MONTE UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10687,Schools,"EL MONTE UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10948,Schools,EL RANCHO UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE ED,Measure,,55% of votes cast
-10750,Schools,"FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10751,Schools,"FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10646,Schools,"GLENDORA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10931,Schools,GLENDORA UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE G,Measure,,55% of votes cast
-10648,Schools,"HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10649,Schools,"HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10650,Schools,"HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10873,Schools,HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE B,Measure,,Majority of votes cast
-10884,Schools,HAWTHORNE SCHOOL DISTRICT SPECIAL ELECTION - MEASURE HH,Measure,,55% of votes cast
-10465,Schools,"INGLEWOOD UNIFIED SCHOOL DISTRICT Member, Board of Education, Trustee Area 1",Candidate,,
-10466,Schools,"INGLEWOOD UNIFIED SCHOOL DISTRICT Member, Board of Education, Trustee Area 2",Candidate,,
-10467,Schools,"INGLEWOOD UNIFIED SCHOOL DISTRICT Member, Board of Education, Trustee Area 3",Candidate,,
-10933,Schools,INGLEWOOD UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE MM,Measure,,55% of votes cast
-10755,Schools,"KEPPEL UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10756,Schools,"KEPPEL UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10757,Schools,"KEPPEL UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10874,Schools,KEPPEL UNION SCHOOL DISTRICT SPECIAL ELECTION - MEASURE K,Measure,,55% of votes cast
-10651,Schools,LA CAÑADA UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10705,Schools,"LANCASTER SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10707,Schools,"LANCASTER SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10652,Schools,LAS VIRGENES UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10961,Schools,LAS VIRGENES UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE LV,Measure,,2/3 of votes cast
-10708,Schools,"LAWNDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10709,Schools,"LAWNDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10711,Schools,LENNOX SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10712,Schools,"LITTLE LAKE CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10713,Schools,"LITTLE LAKE CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10871,Schools,"LITTLE LAKE CITY SCHOOL DISTRICT SPECIAL ELECTION Governing Board Member, Trustee Area No. 5 (Unexpired term ending December 12, 2028)",Candidate,,
-10587,Schools,"LONG BEACH COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10588,Schools,"LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 2",Candidate,,
-10589,Schools,"LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 4",Candidate,,
-10590,Schools,"LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 6",Candidate,,
-10714,Schools,"LOS NIETOS SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10653,Schools,LYNWOOD UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than two,
-10656,Schools,"MONROVIA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10843,Schools,"MONTEBELLO UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10717,Schools,MOUNTAIN VIEW SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10592,Schools,"MT. SAN ANTONIO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10739,Schools,"NORWALK-LA MIRADA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10740,Schools,"NORWALK-LA MIRADA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10661,Schools,"NORWALK-LA MIRADA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 6",Candidate,,
-10758,Schools,"PALMDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10759,Schools,"PALMDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10760,Schools,"PALMDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10662,Schools,PALOS VERDES PENINSULA UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10743,Schools,"PARAMOUNT UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10595,Schools,"PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10596,Schools,"PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10597,Schools,"PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10935,Schools,PASADENA AREA COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION - MEASURE UP,Measure,,55% of votes cast
-10499,Schools,"PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 1",Candidate,,
-10500,Schools,"PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 3",Candidate,,
-10502,Schools,"PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 7",Candidate,,
-10663,Schools,"POMONA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10664,Schools,"POMONA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,
-10599,Schools,"RIO HONDO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10600,Schools,"RIO HONDO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10666,Schools,"ROWLAND UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10667,Schools,"ROWLAND UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10668,Schools,"ROWLAND UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10669,Schools,SAN GABRIEL UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10949,Schools,SAN MARINO UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE SMS,Measure,,2/3 of votes cast
-10602,Schools,"SANTA CLARITA COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Trustee Area 1",Candidate,,
-10516,Schools,SANTA MONICA COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees,Candidate,Vote for no more than four,
-10517,Schools,SANTA MONICA-MALIBU UNIFIED SCHOOL DISTRICT Member of the Board of Education,Candidate,Vote for no more than four,
-10722,Schools,"SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,
-10723,Schools,"SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10724,Schools,"SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10727,Schools,"SOUTH WHITTIER SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10950,Schools,TEMPLE CITY UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE TCS,Measure,,55% of votes cast
-10747,Schools,"TORRANCE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area D",Candidate,,
-10731,Schools,VALLE LINDO SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10868,Schools,VALLE LINDO SCHOOL DISTRICT SPECIAL ELECTION - MEASURE R,Measure,,55% of votes cast
-10732,Schools,WESTSIDE UNION SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10733,Schools,"WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,
-10735,Schools,"WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10690,Schools,"WHITTIER UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10845,Schools,"WILLIAM S. HART UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,
-10848,Schools,"WILLIAM S. HART UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,
-10678,Schools,WISEBURN UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,
-10541,Library Districts,"ALTADENA LIBRARY DISTRICT Member, Board of Trustees, Trustee Area No. 3",Candidate,,
-10543,Library Districts,"PALOS VERDES LIBRARY DISTRICT Member, Board of Trustees",Candidate,Vote for no more than three,
-10562,Water Districts,"ANTELOPE VALLEY-EAST KERN WATER AGENCY Member, Board of Directors, Division 1",Candidate,,
-10563,Water Districts,"ANTELOPE VALLEY-EAST KERN WATER AGENCY Member, Board of Directors, Division 3",Candidate,,
-10377,Water Districts,"CRESCENTA VALLEY WATER DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,
-10545,Water Districts,"FOOTHILL MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
-10546,Water Districts,"FOOTHILL MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 4",Candidate,,
-10547,Water Districts,"FOOTHILL MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 5",Candidate,,
-10405,Water Districts,"LA CAÑADA IRRIGATION DISTRICT Member, Board of Directors, Division 4",Candidate,,
-10384,Water Districts,"LA PUENTE VALLEY COUNTY WATER DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,
-10548,Water Districts,"LAS VIRGENES MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
-10535,Water Districts,"PALMDALE WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
-10553,Water Districts,"SAN GABRIEL VALLEY MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 5",Candidate,,
-10565,Water Districts,"SANTA CLARITA VALLEY WATER AGENCY Member, Board of Directors, Division 1",Candidate,,
-10567,Water Districts,"SANTA CLARITA VALLEY WATER AGENCY Member, Board of Directors, Division 3",Candidate,Vote for no more than two,
-10555,Water Districts,"THREE VALLEYS MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 3",Candidate,,
-10397,Water Districts,"VALLEY COUNTY WATER DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,
-10371,Water Districts,"WALNUT VALLEY WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
-10372,Water Districts,"WALNUT VALLEY WATER DISTRICT Member, Board of Directors, Division 3",Candidate,,
-10374,Water Districts,"WALNUT VALLEY WATER DISTRICT SPECIAL ELECTION Member, Board of Directors, Division 5 (Unexpired term ending December 1, 2028)",Candidate,,
-10570,Water Districts,"WATER REPLENISHMENT DISTRICT OF SOUTHERN CALIFORNIA Member, Board of Directors, Division 3",Candidate,,
-10569,Water Districts,"WATER REPLENISHMENT DISTRICT OF SOUTHERN CALIFORNIA Member, Board of Directors, Division 4",Candidate,,
-10559,Water Districts,"WEST BASIN MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 1",Candidate,,
-10560,Water Districts,"WEST BASIN MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,
-10375,Recreation and Park,"WRIGHTWOOD COMMUNITY SERVICES DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,
+contest_id,group,group_order,title,type,vote_for,pass_rate,measure_text
+10534,County Measures,11,COUNTY MEASURE A,Measure,,Majority of votes cast,"LOS ANGELES COUNTY CHARTER AMENDMENT REITERATING GOOD FAITH NEGOTIATION OBLIGATIONS AND ESTABLISHING IMPARTIAL BINDING ARBITRATION FOR CERTIFIED PUBLIC SAFETY EMPLOYEE DISPUTES Shall the measure amending the Los Angeles County Charter to prohibit strikes by district attorney investigators, medical examiners, and lifeguards; their supervisors; and nonadministrative civilian employees working in the Fire Department, Sheriff's Department, and the Department of Medical Examiner, reiterate existing legal obligations for good faith negotiations, and establish an impartial binding arbitration process for resolving labor disputes with certified public safety employee organizations representing County employees including firefighters, sheriffs, and the abovementioned employees, as specified in the charter amendment ordinance, be adopted? Supporters: LA County Firefighters Local #1014; Association of LA Deputy Sheriffs; LA/OC Building Trades Council Opponents: None submitted."
+10959,County Measures,11,COUNTY MEASURE E,Measure,,Majority of votes cast,"PROPOSED COUNTY CHARTER AMENDMENT. COUNTY OF LOS ANGELES ETHICS COMMISSION AND COMMUNITY INVESTMENT BUDGET ALLOCATION CHARTER AMENDMENT. Shall the measure amending the Los Angeles County Charter to provide greater independence and structure for the County of Los Angeles Ethics Commission, Office of Ethics Compliance, and Ethics Compliance Officer, including appointment processes, qualifications, term, duties and responsibilities, and to continue uninterrupted the County's commitment to community investment and alternatives to incarceration, as specified in the charter amendment ordinance, be adopted? Supporters: League of Women Voters of LA County; CA Clean Money; Supervisor Lindsey Horvath; CA Common Cause; AAPI Equity Alliance Opponents: None submitted."
+10828,Governor,13,GOVERNOR,Candidate,,,
+10829,Lieutenant Governor,14,LIEUTENANT GOVERNOR,Candidate,,,
+10830,Secretary of State,15,SECRETARY OF STATE,Candidate,,,
+10831,Controller,16,CONTROLLER,Candidate,,,
+10832,Treasurer,17,TREASURER,Candidate,,,
+10833,Attorney General,18,ATTORNEY GENERAL,Candidate,,,
+10834,Insurance Commissioner,19,INSURANCE COMMISSIONER,Candidate,,,
+10835,Board of Equalization,20,MEMBER STATE BOARD OF EQUALIZATION 3rd District,Candidate,,,
+10805,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 23rd District",Candidate,,,
+10806,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 26th District",Candidate,,,
+10807,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 27th District",Candidate,,,
+10808,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 28th District",Candidate,,,
+10809,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 29th District",Candidate,,,
+10810,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 30th District",Candidate,,,
+10811,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 31st District",Candidate,,,
+10812,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 32nd District",Candidate,,,
+10813,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 34th District",Candidate,,,
+10814,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 35th District",Candidate,,,
+10815,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 36th District",Candidate,,,
+10816,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 37th District",Candidate,,,
+10817,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 38th District",Candidate,,,
+10818,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 41st District",Candidate,,,
+10819,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 42nd District",Candidate,,,
+10820,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 43rd District",Candidate,,,
+10821,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 44th District",Candidate,,,
+10822,U.S. Representative,23,"UNITED STATES REPRESENTATIVE, 45th District",Candidate,,,
+10773,State Senator,24,"STATE SENATOR, 20th District",Candidate,,,
+10774,State Senator,24,"STATE SENATOR, 22nd District",Candidate,,,
+10775,State Senator,24,"STATE SENATOR, 24th District",Candidate,,,
+10776,State Senator,24,"STATE SENATOR, 26th District",Candidate,,,
+10777,State Senator,24,"STATE SENATOR, 28th District",Candidate,,,
+10778,State Senator,24,"STATE SENATOR, 30th District",Candidate,,,
+10779,State Senator,24,"STATE SENATOR, 34th District",Candidate,,,
+10780,State Senator,24,"STATE SENATOR, 36th District",Candidate,,,
+10781,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 34th District",Candidate,,,
+10782,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 39th District",Candidate,,,
+10783,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 40th District",Candidate,,,
+10784,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 41st District",Candidate,,,
+10785,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 42nd District",Candidate,,,
+10786,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 43rd District",Candidate,,,
+10787,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 44th District",Candidate,,,
+10788,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 46th District",Candidate,,,
+10789,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 48th District",Candidate,,,
+10790,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 49th District",Candidate,,,
+10791,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 51st District",Candidate,,,
+10792,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 52nd District",Candidate,,,
+10793,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 53rd District",Candidate,,,
+10794,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 54th District",Candidate,,,
+10795,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 55th District",Candidate,,,
+10796,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 56th District",Candidate,,,
+10797,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 57th District",Candidate,,,
+10798,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 61st District",Candidate,,,
+10799,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 62nd District",Candidate,,,
+10800,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 64th District",Candidate,,,
+10801,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 65th District",Candidate,,,
+10802,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 66th District",Candidate,,,
+10803,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 67th District",Candidate,,,
+10804,Member of the Assembly,25,"MEMBER OF THE STATE ASSEMBLY, 69th District",Candidate,,,
+10888,Supreme Court Justices,26,For Associate Justice of the Supreme Court - JOSHUA GROBAN,Judicial,,,
+10889,Supreme Court Justices,26,For Associate Justice of the Supreme Court - KELLI M. EVANS,Judicial,,,
+10904,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Eight - JOHN WILEY",Judicial,,,
+10905,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Eight - MATTHEW A. SCHERB",Judicial,,,
+10906,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Eight - VICTOR G. VIRAMONTES",Judicial,,,
+10962,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Four - ARMEN TAMZARIAN",Judicial,,,
+10899,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Four - AUDRA M. MORI",Judicial,,,
+10898,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Four - NICHOLAS DAUM",Judicial,,,
+10891,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division One - GREGORY J. WEINGART",Judicial,,,
+10890,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division One - MICHELLE C. KIM",Judicial,,,
+10902,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Seven - NATALIE STONE",Judicial,,,
+10901,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Six - KENNETH R. YEGAN",Judicial,,,
+10894,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Three - MARK HANASONO",Judicial,,,
+10892,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Two - ANNE RICHARDSON",Judicial,,,
+10893,Appellate Court Justices,27,"For Associate Justice, Court of Appeal, Second District, Division Two - STEVE GOORVITCH",Judicial,,,
+10900,Appellate Court Justices,27,"For Presiding Justice, Court of Appeal, Second District, Division Five - BRIAN M. HOFFSTADT",Judicial,,,
+10897,Appellate Court Justices,27,"For Presiding Justice, Court of Appeal, Second District, Division Four - HELEN ZUKIN",Judicial,,,
+10903,Appellate Court Justices,27,"For Presiding Justice, Court of Appeal, Second District, Division Seven - GONZALO C. MARTINEZ",Judicial,,,
+10963,Appellate Court Justices,27,"For Presiding Justice, Court of Appeal, Second District, Division Six - TARI L. CODY",Judicial,,,
+10896,Appellate Court Justices,27,"For Presiding Justice, Court of Appeal, Second District, Division Three - RASHIDA A. ADAMS",Judicial,,,
+10836,Superintendent Public Inst,28,SUPERINTENDENT OF PUBLIC INSTRUCTION,Candidate,,,
+10853,State Measures,29,STATE MEASURE 1,Measure,,Majority of votes cast,"AUTHORIZES BONDS FOR HOUSING AFFORDABILITY PROGRAMS. LEGISLATIVE STATUTE. Authorizes $11.25 billion in state general obligation bonds for housing affordability programs, including multifamily rental housing, mortgages for veterans, supportive housing, preservation of existing affordable housing, and downpayment assistance. Fiscal Impact: Increased state cost of $500 million to $600 million annually for about 25 years to repay the housing bond. Supporters: US Vets; CA Federation of Teachers; Self-Help for the Elderly; Habitat for Humanity CA; CA Alliance of Child & Family Services Opponents: None submitted."
+10854,State Measures,29,STATE MEASURE 2,Measure,,Majority of votes cast,"INCREASES STATE'S RAINY DAY FUND. LEGISLATIVE CONSTITUTIONAL AMENDMENT. Increases California's Rainy Day Fund, approved by voters in 2014, to provide funding for education, health care, public safety, and other essential services during economic downturns. Fiscal Impact: State budget reserves would be higher. Supporters: CA Professional Firefighters; LA Chamber of Commerce; Gavin Newsom; Xavier Becerra; Assemblymember Jesse Gabriel Opponents: None submitted."
+10855,State Measures,29,STATE MEASURE 3,Measure,,Majority of votes cast,"PROVIDES PERMANENT FUNDING FOR SCHOOLS AND HEALTH CARE BY EXTENDING EXISTING TAX ON HIGH INCOMES. INITIATIVE CONSTITUTIONAL AMENDMENT. Makes permanent existing voter-approved tax rates for individuals earning over $371,000 (adjusted annually for inflation). Allocates tax revenues to public education. Fiscal Impact: Maintains $5 billion to $15 billion of annual state income tax revenue by making a temporary tax increase on high-income earners permanent instead of letting it expire in 2031. Supporters: California Teachers Association; CA School Nurses Organization; California State PTA; Planned Parenthood Affiliates of CA Opponents: California Taxpayers Association; Family Business Association of California; California Hispanic Chambers of Commerce"
+10856,State Measures,29,STATE MEASURE 4,Measure,,Majority of votes cast,"REPEALS PROHIBITION AGAINST PUBLIC FUNDING OF ELECTION CAMPAIGNS. LEGISLATIVE STATUTE. Repeals prohibition on state and local governments offering public funding of candidate election campaigns. Public funding programs may not use funds earmarked for education, transportation, or public safety. Fiscal Impact: Ongoing costs to the state of a few hundred thousand dollars each year for the Fair Political Practices Commission to answer questions from state and local governments about public campaign finance programs. Supporters: League of Women Voters of CA; California Nurses Association; Mental Health Advocacy; Social Security Works; Consumer Watchdog Opponents: California Taxpayers Assn; Howard Jarvis Taxpayers Assn; Family Business Assn of California; United Latinos Action"
+10857,State Measures,29,STATE MEASURE 5,Measure,,Majority of votes cast,"CHANGES RECALL ELECTION PROCESS FOR STATEWIDE OFFICERS. LEGISLATIVE CONSTITUTIONAL AMENDMENT. Under current law, voters elect replacement candidates at the same time as the recall election. This measure instead fills recall vacancies by subsequent special election or appointment. Fiscal Impact: Net fiscal effect unknown. In the event of a recall, savings or costs of millions of dollars to administer the election depending on the office recalled. Supporters: None submitted Opponents: None submitted."
+10858,State Measures,29,STATE MEASURE 37,Measure,,Majority of votes cast,"CREATES LOAN PROGRAM FOR MIDDLE-INCOME BUYERS OF QUALIFIED NEW HOMES. INITIATIVE STATUTE. Authorizes $25 billion in bonds to offer eligible buyers fixed-rate mortgages for up to 17% of purchase price of a newly constructed home priced below about $1.5 million. Borrowers must be California residents, occupy the home, meet income limits, and pay at least 3% down. Bonds repaid by mortgage payments, not State. Fiscal Impact: No direct state or local costs. Supporters: United Nurses Associations of California; California Conference of Carpenters; California State Treasurer Fiona Ma Opponents: None submitted."
+10859,State Measures,29,STATE MEASURE 38,Measure,,Majority of votes cast,"AUTHORIZES BONDS FOR IMMUNOLOGY MEDICAL RESEARCH. INITIATIVE STATUTE. Authorizes $8.4 billion in general obligation bonds for immunology and immunotherapy research, half to a single University of California-affiliated nonprofit medical research institute, half to research grants. Fiscal Impact: Increased state cost of $500 million to $600 million annually for about 20 years to repay the research bond, with some or all of the cost offset if the funded research generates revenue. Supporters: Michael J. Fox Foundation; Alzheimer's Los Angeles; Kidney Cancer Assoc; American Nurses Assoc/CA Opponents: Robert M Kaplan Ph.D."
+10860,State Measures,29,STATE MEASURE 39,Measure,,Majority of votes cast,PROHIBITS CITIZENS FROM VOTING UNLESS THEY PRESENT GOVERNMENT-ISSUED IDENTIFICATION. INITIATIVE CONSTITUTIONAL AMENDMENT. Invalidates mail ballots that do not have last four digits of designated government-issued identification number written on envelope. Prohibits in-person voting without presenting government-issued identification. Fiscal Impact: Costs of between tens of millions of dollars and low hundreds of millions of dollars each year to implement new voting requirements. Supporters: The Transparency Foundation; Latino American Political Assn; Howard Jarvis Taxpayers Assn; CA Women's Leadership Assn Opponents: ACLU California Action; Common Cause; League of Women Voters of California
+10861,State Measures,29,STATE MEASURE 40,Measure,,Majority of votes cast,IMPOSES ONE-TIME TAX ON CERTAIN TAXPAYERS. INITIATIVE CONSTITUTIONAL AMENDMENT AND STATUTE. Imposes 5% tax on certain taxpayers with assets over $1 billion; revenue primarily for health care. Exempts revenues from constitutional requirements for school funding and spending limit. Fiscal Impact: Temporary revenue increase of tens of billions of dollars spread over several years from wealth tax on billionaires. Possible ongoing decrease of less than $1 billion per year in income tax revenue from billionaires. Supporters: US Senator Bernie Sanders; SEIU United Healthcare Workers West Opponents: California Primary Care Association; California School Boards Association; California Taxpayers Association
+10862,State Measures,29,STATE MEASURE 41,Measure,,Majority of votes cast,"PROHIBITS NEW STATE TAXES THAT EXCLUDE REVENUES FROM STATE SPENDING LIMIT. REQUIRES AUDITS FOR NEW STATE SPECIAL TAXES. INITIATIVE CONSTITUTIONAL AMENDMENT. Nullifies state taxes enacted after January 1, 2026 that exempt their revenues from voter-approved state spending limit. Requires pre-election and recurring audits of programs funded by new special taxes. Fiscal Impact: The net fiscal effect is unknown as it depends on future decisions by voters, the Legislature, and other policymakers. Supporters: CA Society of Certified Public Accountants (CalCPAs); CalAsian Chamber of Commerce; California Taxpayers Association (CalTax) Opponents: US Senator Bernie Sanders; SEIU United Healthcare Workers West"
+10863,State Measures,29,STATE MEASURE 42,Measure,,Majority of votes cast,"PROHIBITS NEW STATE PERSONAL PROPERTY TAXES AND CERTAIN RETROACTIVE STATE TAXES. INITIATIVE CONSTITUTIONAL AMENDMENT. Prohibits any new state tax (1) imposed on the ownership of personal property (all things people own other than real estate), or (2) that applies retroactively based on taxpayer's past activities. Nullifies taxes enacted after January 1, 2026 that conflict with this measure. Fiscal Impact: Possibility that tax revenues will not go up as much in the future. Supporters: CA Professional Firefighters; State Building & Construction Trades Council of CA; AMVETS Department of CA Opponents: US Senator Bernie Sanders; SEIU United Healthcare Workers West"
+10864,State Measures,29,STATE MEASURE 43,Measure,,Majority of votes cast,"LIMITS VOTERS' ABILITY TO RAISE REVENUES FOR LOCAL GOVERNMENT SERVICES. LEGISLATIVE CONSTITUTIONAL AMENDMENT. Limits voters' ability to pass voter-proposed local special taxes by increasing percentage of votes needed to approve such ballot measures from a majority (over 50%) to two-thirds, beginning January 1, 2027. Fiscal Impact: Possibility that local government tax revenues will not go up as much in the future due to a higher vote threshold for certain taxes. Supporters: California Taxpayers Association; Family Business Association of California; California Hispanic Chambers of Commerce Opponents: California Professional Firefighters; California Federation of Teachers; Nurse Alliance of SEIU CA"
+10865,State Measures,29,STATE MEASURE 44,Measure,,Majority of votes cast,"REQUIRES COMMUNITY HEALTH CLINICS SPEND 90% OF REVENUE ON PROGRAM SERVICES. INITIATIVE STATUTE. Imposes penalties on nonprofit Federally Qualified Health Centers (community clinics providing primary care to medically underserved areas and populations) that spend less than 90% of revenue on ""program services"" advancing their charitable purpose, including but not limited to patient services. Fiscal Impact: Increased state costs in the low tens of millions of dollars per year, covered by fees. Supporters: None submitted Opponents: American Academy of Pediatrics CA; CA School Nurses Org; CA Academy of Family Physicians; CA Medical Assoc"
+10866,State Measures,29,STATE MEASURE 45,Measure,,Majority of votes cast,"MODIFIES ENVIRONMENTAL REVIEW FOR CERTAIN PROJECTS. INITIATIVE STATUTE. Amends California Environmental Quality Act (CEQA) to expedite environmental review for certain projects (including most housing, transportation, water, and health projects) by setting deadlines to complete environmental review and resolve lawsuits challenging project approvals. Fiscal Impact: Initial costs for state and local governments, likely in the high tens of millions of dollars-potentially exceeding $100 million-annually, partly covered by fees. Uncertain, potentially more significant positive or negative longer-term fiscal effects. Supporters: California Children's Hospital Association; California Water Association; California Council for Affordable Housing Opponents: Coalition for Clean Air; CA Environmental Voters; Physicians for Social Responsibility, LA; National Wildlife Federation"
+10823,Sheriff,32,SHERIFF,Candidate,,,
+10824,Judge Superior Court,35,JUDGE OF THE SUPERIOR COURT Office No. 64,Candidate,,,
+10825,Judge Superior Court,35,JUDGE OF THE SUPERIOR COURT Office No. 65,Candidate,,,
+10826,Judge Superior Court,35,JUDGE OF THE SUPERIOR COURT Office No. 87,Candidate,,,
+10827,Judge Superior Court,35,JUDGE OF THE SUPERIOR COURT Office No. 131,Candidate,,,
+10410,Cities,40,"CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION Member of the City Council, Fifth District",Candidate,,,
+10408,Cities,40,"CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION Member of the City Council, First District",Candidate,,,
+10409,Cities,40,"CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION Member of the City Council, Second District",Candidate,,,
+10941,Cities,40,CITY OF ALHAMBRA SPECIAL MUNICIPAL ELECTION - MEASURE DB,Measure,,Majority of votes cast,"Data Centers Prohibited. Shall an ordinance be adopted affirming the Council adopted ban on ""Data Centers"" by amending the Alhambra Municipal Code to again define ""Data Centers"" and prohibit them in all zones of the City? Supporters: Jeffrey K. Maloney; Adele Andrade-Stadler; Ross Maza; Noya Wong; Katherine Lee Opponents: None submitted."
+10940,Cities,40,CITY OF ALHAMBRA SPECIAL MUNICIPAL ELECTION - MEASURE HT,Measure,,Majority of votes cast,"Modernization/No Tax Rate Increase Measure. To maintain city services, such as: Fire protection, paramedic, 911 emergency response, crime prevention and keeping streets, infrastructure, and parks safe and well-maintained shall City of Alhambra's measure modernizing the hotel/motel transient occupancy tax be adopted at the current 12% rate for stays up to 30 days to include short-term lodging, providing an additional $134,000 annually for city services until ended by voters, with all money locally controlled? Supporters: Alhambra Firefighters Association; Alhambra Police Officers Association Opponents: None submitted."
+10411,Cities,40,"CITY OF ARCADIA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,,
+10412,Cities,40,"CITY OF ARCADIA GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,,
+10413,Cities,40,"CITY OF ARCADIA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,,
+10879,Cities,40,CITY OF ARTESIA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10536,Cities,40,"CITY OF AZUSA GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,,
+10414,Cities,40,"CITY OF AZUSA GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,,
+10912,Cities,40,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION - MEASURE CR,Measure,,Majority of votes cast,"Good Government Cannabis Reform Measure To fund general city services in Baldwin Park, such as cleaning trash/graffiti, fixing streets/potholes, crime prevention, 911 emergency response, and providing afterschool/youth employment programs, shall the measure applying the City of Baldwin Park's existing 4% cannabis retailing tax rate to non-retail cannabis businesses, providing a projected $1,000,000 annually in additional locally-controlled funding until ended by voters, that can't be taken by the state, with public independent audits be adopted? Supporters: Daniel Damian, Lakeside Realty & Home Loans; Javier E. Vargas, BP Bus. Assn. Pres; Cecelia Bernal; Martha Escobar, Chicas Graphics Opponents: None submitted."
+10416,Cities,40,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10417,Cities,40,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10415,Cities,40,CITY OF BALDWIN PARK GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10419,Cities,40,CITY OF BELL GARDENS GENERAL MUNICIPAL ELECTION - MEASURE W,Measure,,Majority of votes cast,Shall the measure permitting the City of Bell Gardens to sell the Bell Gardens Municipal Water System to the Golden State Water Company be adopted? Supporters: None submitted Opponents: None submitted.
+10418,Cities,40,CITY OF BELL GARDENS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10420,Cities,40,"CITY OF BELLFLOWER GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,,
+10880,Cities,40,CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE C,Measure,,Majority of votes cast,"CITY OF BURBANK CITY SERVICES MEASURE: MEASURE C: To maintain services including fire, paramedic, police, 911 response; prepare for/respond to wildfires/other disasters; prevent property crimes; keep public areas/neighborhoods clean/safe; address homelessness; support youth programs, senior services, other general city services; shall the measure increasing Burbank's transient occupancy tax, paid only by hotel/motel guests, from 10% to 12%, providing approximately $3,000,000 annually until ended by voters, requiring audits, spending disclosures, funds used locally, be adopted? Supporters: Burbank City Council Opponents: None submitted."
+10942,Cities,40,CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE CC,Measure,,Majority of votes cast,CHARTER AMENDMENT MEASURE CC: Shall the Burbank City Charter be amended to remove the requirement for at-large elections of City Council members and permit the City's electoral system to be specified by ordinance adopted by the City Council or by the voters by initiative? Supporters: Burbank City Council Opponents: None submitted.
+10943,Cities,40,CITY OF BURBANK GENERAL MUNICIPAL ELECTION - MEASURE CD,Measure,,Majority of votes cast,BY-DISTRICT COUNCIL ELECTIONS MEASURE CD: Shall the Ordinance be adopted adding Chapter 3 to Title 2 of the Municipal Code changing the City's electoral system for City Council elections from at-large to by-district elections in the districts reflected in Map 130? Supporters: None submitted Opponents: Burbank City Council.
+10426,Cities,40,CITY OF BURBANK GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10427,Cities,40,CITY OF BURBANK GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10425,Cities,40,CITY OF BURBANK GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10945,Cities,40,CITY OF CARSON GENERAL MUNICIPAL ELECTION - MEASURE CU,Measure,,Majority of votes cast,"Carson City Government Accountability, Charter Update, No Tax Increase Measure. Shall the measure amending the Carson City Charter to require campaign contribution transparency; make the City Charter consistent with State law on referring ballot measures for voter approval; update term limits to increase voter options; update City Treasurer duties; clarify and clean up inconsistent or outdated language, be adopted? Supporters: Lula Davis-Holmes, Mayor; Cedric Hicks, Mayor Pro Tem; Jawane Hilton, Councilmember; Arleen Rojas, Councilmember; Darrow's New Orleans Grill Opponents: None submitted."
+10432,Cities,40,CITY OF CARSON GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10433,Cities,40,CITY OF CARSON GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10430,Cities,40,"CITY OF CARSON GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,,
+10431,Cities,40,"CITY OF CARSON GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10434,Cities,40,"CITY OF CLAREMONT GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,,
+10435,Cities,40,"CITY OF CLAREMONT GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,,
+10436,Cities,40,"CITY OF CLAREMONT GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10437,Cities,40,CITY OF COMMERCE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10766,Cities,40,CITY OF COMPTON GENERAL MUNICIPAL ELECTION Mayor,Candidate,,,
+10769,Cities,40,"CITY OF COMPTON GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,,
+10947,Cities,40,CITY OF CUDAHY GENERAL MUNICIPAL ELECTION - MEASURE H,Measure,,Majority of votes cast,"Cudahy Rent Stabilization Protection Measure To safeguard tenant protections codified under Cudahy Municipal Code Chapter 5.13, including provisions that prevent excessive rent increases and stabilize rents over time while affording landlords reasonable returns, shall voter approval be required for any increase to the 3% maximum ceiling by which rents can be increased annually under Chapter 5.13, and 2/3 approval of the full City Council be required to otherwise amend or repeal Chapter 5.13? Supporters: Elizabeth Alcantar, Councilmember; Amanda Gomez, Councilmember Opponents: None submitted."
+10946,Cities,40,CITY OF CUDAHY GENERAL MUNICIPAL ELECTION - MEASURE OK,Measure,,Majority of votes cast,"Keep Cudahy Sales Tax Revenues Local Measure To preserve and continue the City's existing local funding stream, which may be used to support general City services, including, but not limited to, street, sidewalk and City building repair; park maintenance and enhancements; and youth and recreational programs, shall the City's existing 3/4% transactions (sales) and use tax be extended indefinitely, unless repealed by voters, providing approximately $1.3 million annually for local use? Supporters: Council Members, Elizabeth Alcantar; Martin U. Fuentes; Amanda Gomez; Cynthia Gonzalez, Mayor; Daisy Lomeli, Vice Mayor Opponents: None submitted."
+10438,Cities,40,CITY OF CUDAHY GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10908,Cities,40,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE AA,Measure,,Majority of votes cast,"Shall the measure, to strengthen academic excellence, attract and retain teachers, support music/arts/athletics/STEM programs, instructional aides, and for other designated purposes, by imposing a special tax on all real estate parcels, including commercial use, of $0.48/building square foot, with senior exemptions, independent citizen/auditor oversight, subject to a tax cap, for 10 years, generating approximately $18,000,000 annually in local funds for Culver City public schools that the state cannot take be adopted? Supporters: Darrel Menthe; Ross Piro; Culver City Federation of Teachers; CCUSD Association of Classified Employees; Ji Young Denick Opponents: John Derevlany"
+10929,Cities,40,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE T,Measure,,Majority of votes cast,"Shall an ordinance to maintain Culver City emergency response/firefighter/paramedic/police staffing; affordable housing/mental health/homeless reduction programs; improve streets, sidewalks, public transportation, infrastructure, parks and other general fund services by raising Culver City's transient occupancy tax paid by hotel/motel guests from 14% to 15% until March 1, 2028, and then to 16% generating up to approximately $2,000,000 annually until ended by voters, requiring annual audits, public spending disclosures, with all funds used locally, be adopted? Supporters: Culver City Mayor Freddy Puza; Vice Mayor Bryan ""Bubba"" Fish; Councilmember Yasmine-Imani McMorrin Opponents: None submitted."
+10907,Cities,40,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION - MEASURE YV,Measure,,Majority of votes cast,"Measure YV. Shall the measure amending the City of Culver City Charter to allow Culver City residents aged 16 and 17, who are otherwise eligible to vote under state and local law, to vote on City and School District candidates and ballot measures, provided that each legislative body has approved budgetary funds and determined logistical systems are in place, and that inclusion would not prevent consolidation of City or School District elections with county elections, be adopted? Supporters: Culver City Mayor Freddy Puza; Vice Mayor Bryan ""Bubba"" Fish; Councilmember Yasmine-Imani McMorrin Opponents: Councilman Albert Vera; Former Mayor Göran Eriksson; Former Mayor Ed Wolkowitz; Marta Valdez."
+10439,Cities,40,CITY OF CULVER CITY GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10440,Cities,40,"CITY OF DIAMOND BAR GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,,
+10441,Cities,40,"CITY OF DIAMOND BAR GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,,
+10442,Cities,40,"CITY OF DIAMOND BAR GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10930,Cities,40,CITY OF DIAMOND BAR SPECIAL MUNICIPAL ELECTION - MEASURE Q,Measure,,Majority of votes cast,"To maintain local funding for emergency response/Sheriff protection; keep Diamond Bar's neighborhoods/public areas safe/clean; prevent property crimes/burglaries; minimize the risk of wildfires; prepare for/respond to wildfires/other natural disasters; maintain roads/prevent potholes; for other general city services; shall a measure be adopted establishing a 1¢ sales tax, providing approximately $6,000,000 annually until ended by voters, requiring audits/spending disclosure, all funds benefiting Diamond Bar residents? Supporters: Jody Roberto; Devang Mehta Opponents: None submitted."
+10443,Cities,40,"CITY OF DOWNEY GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,,
+10444,Cities,40,"CITY OF DOWNEY GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10445,Cities,40,"CITY OF DUARTE GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,,
+10658,Cities,40,CITY OF EL MONTE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10659,Cities,40,CITY OF EL MONTE GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10657,Cities,40,CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Mayor,Candidate,,,
+10449,Cities,40,"CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,,
+10450,Cities,40,"CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,,
+10451,Cities,40,"CITY OF EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council, 6th District",Candidate,,,
+10883,Cities,40,CITY OF EL SEGUNDO GENERAL MUNICIPAL ELECTION - MEASURE CT,Measure,,Majority of votes cast,"Shall an Ordinance amending the City's Business License Tax Ordinance to restore and impose a business license tax on nonprofit organizations that do not serve a charitable purpose, and also to exempt charitable organizations from having to pay a business license tax, thereby indefinitely restoring approximately $700,000 general funds annually, be adopted? Supporters: Mayor Pimentel; Mayor Pro Tem Baldino; Council Member Boyles; Council Member Giroux; Council Member Keldorf Opponents: None submitted."
+10452,Cities,40,CITY OF EL SEGUNDO GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10453,Cities,40,"CITY OF GLENDORA GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,,
+10454,Cities,40,"CITY OF GLENDORA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10455,Cities,40,CITY OF HAWAIIAN GARDENS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10932,Cities,40,CITY OF HAWAIIAN GARDENS SPECIAL MUNICIPAL ELECTION - MEASURE BL,Measure,,Majority of votes cast,"Shall the measure to help fund general City services, such as public safety, street operations and maintenance, and parks and recreation services, by updating and simplifying the City's business license tax to levy a maximum annual $50 flat rate plus $0.95 per $1,000 of gross receipts above $30,000 for all businesses other than contractors, and a $175 flat rate for contractors, generating approximately $563,810 until ended by voters, all funds being local, be adopted? Supporters: Victor Farfan; Maria Teresa Del Rio Opponents: None submitted."
+10456,Cities,40,CITY OF HAWTHORNE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10457,Cities,40,CITY OF HAWTHORNE GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10458,Cities,40,CITY OF HAWTHORNE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10869,Cities,40,CITY OF HAWTHORNE SPECIAL MUNICIPAL ELECTION - MEASURE O,Measure,,Majority of votes cast,"Shall the measure increasing the City of Hawthorne's transient occupancy (hotel) tax from 12% to 17%, to maintain City services such as police and fire protection, street repairs, park/recreation programs, and other general City services, generating approximately $3.1 million annually, paid only by hotel/lodging guests until ended by voters, with all funds staying local, be adopted? Supporters: Angie Reyes English, Hawthorne City Council Member; Alex Monteiro, Hawthorne City Council Member Opponents: None submitted."
+10875,Cities,40,CITY OF HERMOSA BEACH GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10951,Cities,40,CITY OF HERMOSA BEACH SPECIAL MUNICIPAL ELECTION - MEASURE HB,Measure,,Majority of votes cast,"Shall the measure to adopt a one-half percent (0.5%) local transactions and use (sales) tax providing approximately two million dollars ($2,000,000) annually until ended by voters (with citizens' oversight, independent audits, public reporting, and all funds remaining under local control) to maintain public safety services; repair and maintain streets, sidewalks, storm drains, parks, public facilities, and other infrastructure; address long-term fiscal sustainability; and support other general governmental purposes be adopted? Supporters: Michael Keegan and Rob Saemann, Hb Councilmembers; Maggie Bove-LaMonica, School Boardmember; Richard Koenig; Annie Seawright Opponents: Dean Francois, HB Councilmember; George Barks, HB Ex Mayor; Mike Sribney, Brian Sheil & Richard O'Reilly, HB Small Biz Owners"
+10462,Cities,40,"CITY OF HUNTINGTON PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District (Unexpired term ending December 8, 2028)",Candidate,,,
+10461,Cities,40,"CITY OF HUNTINGTON PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10920,Cities,40,"CITY OF HUNTINGTON PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,,
+10956,Cities,40,CITY OF HUNTINGTON PARK SPECIAL MUNICIPAL ELECTION - MEASURE HP,Measure,,Majority of votes cast,"Shall an ordinance be adopted to establish a lifetime limit of two (2) terms for members of the City Council, where a partial term of more than two (2) years counts as a full term, and a partial term of two (2) years or less does not count against the limit? Supporters: Eduardo Martinez, Mayor, City of Huntington Park; Nancy Martiz, Council Member, City of Huntington Park Opponents: None submitted."
+10913,Cities,40,CITY OF INGLEWOOD GENERAL MUNICIPAL ELECTION - MEASURE AT,Measure,,Majority of votes cast,"Ordinance To Amend the Admissions Tax for Large Venues. Shall the ordinance amending the City's admissions tax on large venues to establish tiered rates of 10% and 2.5% based on venue seating capacity, and to remove the existing annual cap on admissions tax revenue, resulting in increased general fund revenues, be approved? Supporters: None submitted Opponents: Lisa Collins; Edna Cabrera; 77th St. Block Club Captain Krystal Alexander"
+10914,Cities,40,CITY OF INGLEWOOD GENERAL MUNICIPAL ELECTION - MEASURE BB,Measure,,Majority of votes cast,"Ordinance To Eliminate Advertising on Public Right-Of-Way. Shall the ordinance to amend the General Plan and Inglewood Municipal Code to eliminate the City's authority to allow advertising on the public right-of-way and certain available properties, resulting in a loss of general fund revenues, be approved? Supporters: SoFi Stadium; Kia Forum; Intuit Dome; Former State Senator Steven Bradford; Pastor KW Tulloss; Edna Cabrera; Charles Braggs Opponents: None submitted."
+10870,Cities,40,CITY OF INGLEWOOD PRIMARY NOMINATING ELECTION Mayor,Candidate,,,
+10464,Cities,40,"CITY OF INGLEWOOD PRIMARY NOMINATING ELECTION Member of the City Council, 1st District",Candidate,,,
+10463,Cities,40,"CITY OF INGLEWOOD PRIMARY NOMINATING ELECTION Member of the City Council, 2nd District",Candidate,,,
+10468,Cities,40,CITY OF IRWINDALE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10471,Cities,40,"CITY OF LA VERNE GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,,
+10472,Cities,40,"CITY OF LA VERNE GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,,
+10473,Cities,40,"CITY OF LA VERNE GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10475,Cities,40,CITY OF LAWNDALE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10474,Cities,40,CITY OF LAWNDALE GENERAL MUNICIPAL ELECTION Mayor,Candidate,,,
+10476,Cities,40,CITY OF LAWNDALE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10477,Cities,40,CITY OF LYNWOOD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10952,Cities,40,CITY OF LYNWOOD SPECIAL MUNICIPAL ELECTION - MEASURE L,Measure,,Majority of votes cast,"Lynwood Public Safety/Community Protection/City Services Measure To maintain 911 emergency response; prevent crime, including gang/juvenile crime and human trafficking; address homelessness; keep parks/public areas safe/clean; address speeding/unsafe driving; repair streets/potholes; support youth/senior programs, other general city services, shall the City of Lynwood ordinance establishing a 12% transient occupancy tax, (paid only by hotel/motel guests), be adopted, providing approximately $751,315 annually until ended by voters, requiring audits/public spending disclosure, all funds locally controlled/benefitting Lynwood residents? Supporters: Yolanda Rodriguez Gonzalez, Former Treasurer; Gary Hardie, Board Member; Rene Luna, Business Owner; Aura Quijada Opponents: None submitted."
+10478,Cities,40,CITY OF MALIBU GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10479,Cities,40,CITY OF MANHATTAN BEACH GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10480,Cities,40,CITY OF MAYWOOD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10489,Cities,40,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10488,Cities,40,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10487,Cities,40,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION Mayor,Candidate,,,
+10486,Cities,40,CITY OF MONROVIA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10485,Cities,40,CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10481,Cities,40,"CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,,
+10482,Cities,40,"CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,,
+10484,Cities,40,"CITY OF MONTEBELLO GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,,
+10483,Cities,40,"CITY OF MONTEBELLO SPECIAL MUNICIPAL ELECTION Member of the City Council, 4th District (Unexpired term ending November 7, 2028)",Candidate,,,
+10909,Cities,40,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION - MEASURE AAA,Measure,,Majority of votes cast,"Shall the ordinance maintaining City of Monterey Park's services like fire, police, 911 response; keeping public areas safe/clean; helping prevent property crimes/human trafficking in Monterey Park; repairing streets/potholes; for other city services; by increasing the transient occupancy tax paid only by hotel/motel guests from 13% to 14%, and short-term rental guests, from 13% to 16%, providing approximately $600,000 annually until ended by voters; requiring audits, spending disclosure, local control over all funds, be adopted? Supporters: Henry Lo, Mayor; Jose Sanchez, Pro Tem; Thomas Wong, Councilmember; Vinh Ngo, Councilmember; Elizabeth Yang, Councilmember Opponents: None submitted."
+10960,Cities,40,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION - MEASURE HOM,Measure,,Majority of votes cast,"Proposition to Create HOME Housing Overlays in Monterey Park Shall a measure amending the Monterey Park Land Use Element to keep residential neighborhoods intact through maintaining voter-approved land use restrictions and Monterey Park's local control over the state for housing decisions, continue prohibiting data centers, provide housing for residents, prevent crime/homeless encampments, attract businesses, and improve the local economy by allowing limited residential uses in underutilized industrial, commercial/office areas, requiring public input, ensuring environmental protections, protecting public safety, parks/open space, be adopted? Supporters: Henry Lo, Mayor; Jose Sanchez, Pro Tem; Thomas Wong, Councilmember; Vinh Ngo, Councilmember; Elizabeth Yang, Councilmember Opponents: None submitted."
+10493,Cities,40,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10492,Cities,40,CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10490,Cities,40,"CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 1st District",Candidate,,,
+10491,Cities,40,"CITY OF MONTEREY PARK GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,,
+10494,Cities,40,CITY OF NORWALK GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10495,Cities,40,"CITY OF PALMDALE GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,,
+10496,Cities,40,"CITY OF PALMDALE GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10497,Cities,40,"CITY OF PALMDALE GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,,
+10881,Cities,40,CITY OF PALMDALE SPECIAL MUNICIPAL ELECTION - MEASURE DE,Measure,,Majority of votes cast,"Shall the ordinance establishing the office of Mayor as an at-large, elected position beginning with the November 2028 general municipal election be adopted? Supporters: None submitted Opponents: None submitted."
+10498,Cities,40,CITY OF PALOS VERDES ESTATES GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10953,Cities,40,CITY OF PALOS VERDES ESTATES SPECIAL MUNICIPAL ELECTION - MEASURE PVE,Measure,,2/3 of votes cast,"Palos Verdes Estates Law Enforcement Services and Pension Liability Payment Measure. Shall the measure to maintain Palos Verdes Estates Police Department services and to pay down the City's unfunded accrued pension liability, by extending the City's special parcel tax for 6 years at the new rate of $1,025 per taxable parcel plus 20¢ per square foot of taxable building improvements, subject to 2% annual adjustment, generating approximately $8,700,000 annually, subject to annual audits, reporting and citizens' committee oversight, be adopted? Supporters: Michael Kemps Mayor; Ken Feldman, MD; John Nendick; Mark Saroyan, MD; Craig Quinn, Councilmember Opponents: None submitted."
+10934,Cities,40,CITY OF PARAMOUNT SPECIAL MUNICIPAL ELECTION - MEASURE P,Measure,,2/3 of votes cast,"City of Paramount Public Safety, Environment, Streets and Business Improvement Measure Without taxing residential property owners or renters, shall the ordinance to fund services for Paramount 911 response/public safety; reducing crime; responding to business burglaries; addressing street racing; monitoring/improving water/air quality; repairing streets/potholes; supporting businesses by annually levying between 8¢ and 13¢ per square foot on industrial/commercial properties only, with annual adjustments up to 3%, raising approximately $4,000,000 annually until ended by voters, requiring audits, spending disclosure, local control, be adopted? Supporters: Brenda Olmos, Mayor; Robert Luna, Sheriff; Coalition for Clean Air; J. Perez, Business Owner; MUSA nonprofit Opponents: None submitted."
+10954,Cities,40,CITY OF PASADENA REGULAR MUNICIPAL ELECTION - MEASURE PFD,Measure,,2/3 of votes cast,"City of Pasadena 911 Firefighter/Paramedic Emergency Medical/Wildfire Preparedness/Response Measure. To help maintain fire, paramedic, 911 response; prepare for/respond to wildfires/earthquakes/medical emergencies; recruit/retain well-trained firefighters; maintain lifesaving equipment/fire alert communication; shall City of Pasadena's measure annually levy 19¢ per square foot of improved property, with low-income senior exemption, providing approximately $22,100,000 annually, expiring after 14 years, requiring accountability, independent audits, oversight, public spending disclosure; all funds must be used to support local fire protection/emergency medical response services, be adopted? Supporters: Pasadena Firefighters Association; Victor M. Gordo, Pasadena Mayor; Gale Kohl, Owner, Gale's Restaurant; Giancarlo DiMassa, MD Opponents: Pasadena Foothill Association of Realtors"
+10503,Cities,40,CITY OF PICO RIVERA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10772,Cities,40,"CITY OF POMONA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,,
+10936,Cities,40,CITY OF RANCHO PALOS VERDES GENERAL MUNICIPAL ELECTION - MEASURE RS,Measure,,Majority of votes cast,"Rancho Palos Verdes Public Safety/City Services Measure: To help prepare for and respond to wildfires/natural disasters; maintain roads/storm drains; prevent sinkholes; address landslides/land movement; and support general city services, shall the transient occupancy tax (paid only by hotel/motel guests) be adjusted from 10% to 13%, providing approximately $2,200,000 annually until ended by voters, requiring audits, spending disclosures, all funds benefiting Rancho Palos Verdes which cannot be taken by the State or Los Angeles County, be adopted? Supporters: PVP Chamber of Commerce; RPV Neighborhood Watch; Wayfarers Chapel; PVP Montessori School; ret. Judge Gregory O'Brien Opponents: None submitted."
+10504,Cities,40,CITY OF RANCHO PALOS VERDES GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10955,Cities,40,CITY OF REDONDO BEACH SPECIAL MUNICIPAL ELECTION - MEASURE ART,Measure,,Majority of votes cast,"Shall the measure be adopted to amend the Redondo Beach General Plan and Zoning Ordinance to support increased commercial activity in key areas of the City, including expanded property development potential (i.e. new floor area ratio caps, height limits, and rooftop dining) along Artesia and Aviation Boulevards, industrial properties north of Manhattan Beach Boulevard, and certain commercial properties along Pacific Coast Highway; and to reduce the allowed housing density for some residential and mixed-use properties in the City? Supporters: Redondo Beach City Council and Mayor Opponents: Patrick Healy"
+10505,Cities,40,CITY OF ROLLING HILLS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10507,Cities,40,CITY OF ROSEMEAD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10508,Cities,40,CITY OF ROSEMEAD SPECIAL MUNICIPAL ELECTION - MEASURE RC,Measure,,Majority of votes cast,"Shall the City of Rosemead Charter be adopted to establish Rosemead as a charter city to have more authority over municipal affairs, imposing term limits on City Councilmembers, establishing the position of City prosecutor, permitting use of City funds for economic development, continuing following California law for limiting compensation for Councilmembers, and giving the City Council authority to adopt an ordinance giving veterans and disabled veterans preference in awarding contracts? Supporters: Mayor Sandra Armenta; Councilman Steven Ly Opponents: Barbara Murphy; Nancy Eng; Frances Chavez"
+10510,Cities,40,CITY OF SAN GABRIEL GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10511,Cities,40,CITY OF SAN GABRIEL GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10509,Cities,40,CITY OF SAN GABRIEL GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10915,Cities,40,CITY OF SAN GABRIEL SPECIAL MUNICIPAL ELECTION - MEASURE PS,Measure,,Majority of votes cast,"SAN GABRIEL PUBLIC SAFETY/LOCAL CONTROL To protect San Gabriel's financial stability; maintain medical 911/police response, fire services; prevent crime; protect drinking water sources; repair streets/potholes; keep public areas safe/clean; maintain safe schools; prepare for/respond to earthquakes, fire/other disasters; retain/attract qualified firefighters; for other general services; shall a measure establishing a 1¢ sales tax providing approximately $7,100,000 annually until ended by voters, requiring audits, spending disclosure, funds locally controlled, be adopted? Supporters: P. Apparis SG Firefighters Assn President; T. Guliani SG Police Assn President Opponents: None submitted."
+10512,Cities,40,CITY OF SAN MARINO GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10957,Cities,40,CITY OF SAN MARINO SPECIAL MUNICIPAL ELECTION - MEASURE U,Measure,,Majority of votes cast,"SAN MARINO SERVICE PRESERVATION MEASURE. To maintain existing funding which supports essential San Marino services including: police, fire, paramedic, emergency preparedness, repairing streets and sidewalks and other City infrastructure, providing youth and senior programs, and general government use; shall the City of San Marino measure be adopted extending the currently existing utility users tax at a rate of 6 percent, raising $2,620,000 annually, until ended by voters? Supporters: Mayor Chou; Vice Mayor Lo; Council Member Shepherd Romey; Council Member Chang; Council Member Chou Opponents: None submitted."
+10837,Cities,40,"CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,,
+10838,Cities,40,"CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10839,Cities,40,"CITY OF SANTA CLARITA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,,
+10513,Cities,40,CITY OF SANTA FE SPRINGS GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10514,Cities,40,CITY OF SANTA MONICA GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10515,Cities,40,CITY OF SANTA MONICA GENERAL MUNICIPAL ELECTION Member of the Rent Control Board,Candidate,Vote for no more than three,,
+10916,Cities,40,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE ES,Measure,,Majority of votes cast,"MEASURE ES: Shall a measure imposing a City of Santa Monica collected parcel tax of $495 per taxable parcel, adjusted annually for inflation, exempting qualifying seniors, affordable housing, non-profits, religious organizations, and schools, providing continual funding for Santa Monica's public schools, including retaining teachers, assisting disadvantaged students, supporting art, music, science, math, and early childhood education, keeping school facilities clean and safe for student and community use, generating an estimated $12,000,000 annually until repealed by voters, with oversight requirements, be adopted? Supporters: SM-Malibu Classroom Teachers Assn.; SM Chamber of Commerce; SMM Council of PTAs Opponents: Northeast Neighbors; Wilshire Montana Neighborhood Coalition; Marc Verville; Karen Melick; Lori Brown"
+10917,Cities,40,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE GG,Measure,,Majority of votes cast,"MEASURE GG: Shall the City Charter be amended to: affirm the City of Santa Monica's just cause eviction laws; allow Rent Control Board Commissioners to serve up to three terms, including appointed service; annually increase the cap on rent controlled unit registration fees; clarify Rent Control Board authority to regulate timelines for deciding rent adjustment petitions; and permit eviction from affordable housing units for tenants who are not eligible or do not establish eligibility? Supporters: RCB Chair Danny Ivanov; Tracy Condon; Councilman Dan Hall; Juan Matute; Fmr RCB Chair Bruria Finkel Opponents: None submitted."
+10918,Cities,40,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE RR,Measure,,Majority of votes cast,"MEASURE RR: Shall the City Charter be amended to prohibit evictions based on non-payment of rent when a tenant owes less than one month of the average of fair market rents, set annually by the U.S. Department of Housing and Urban Development, for ZIP codes in Santa Monica? Supporters: Mayor Caroline Torosis; Rent Board Cmr. Kay Ambriz; CM Ellis Raskin; Jennifer Kennedy; Irma Carranza Opponents: None submitted."
+10958,Cities,40,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE TT,Measure,,Majority of votes cast,"MEASURE TT: Shall the measure, which maintains the existing transient occupancy tax rates; authorizes the City Council to establish Major Event Periods, as defined, when the tax applies to lodging paid for or obtained by corporate entities for stays over 30 days, and to adjust the hotel and motel tax rate for such stays; clarifies that refunds require a natural person to complete at least thirty-one consecutive days of occupancy, and authorizes administrative regulations, be adopted? Supporters: Santa Monica Firefighters Local 1109; Manju Raman; Richard Bloom, Fmr Mayor, Assemblymember; Jesse Zwick; Natalya Zernitskaya Opponents: None submitted."
+10919,Cities,40,CITY OF SANTA MONICA SPECIAL MUNICIPAL ELECTION - MEASURE VV,Measure,,Majority of votes cast,"MEASURE VV: Shall Article XXIII of the City Charter related to housing policies be amended to extend existing eviction protections to tenants renting single-unit dwellings and condominiums and require that for owner occupancy evictions from non-rent controlled units, the owner must intend in good faith to occupy the unit within 60 days after the tenant vacates and for at least 2 years thereafter? Supporters: Ellis Raskin, Councilmember; Barry Snell, Councilmember; Kay Ambriz, Rent Bd. Vice Chair; Soledad Marcial Opponents: None submitted."
+10519,Cities,40,CITY OF SOUTH EL MONTE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10939,Cities,40,CITY OF SOUTH EL MONTE SPECIAL MUNICIPAL ELECTION - MEASURE CL,Measure,,Majority of votes cast,"Term Limits Reform Measure Shall the terms served by the City Council in the City of South El Monte be limited to no more than four (4) four-year terms in their lifetime and where service for the unexpired balance of a vacated City Council seat (whether by appointment or election) will not count as service for a full four-year term even if such service is for less than four years in duration? Supporters: Gloria Olmos, Mayor; Rudy Bojorquez, Councilmember; Hector Delgado, Councilmember; Larry Rodriguez, Councilmember; Manuel Acosta, Councilmember Opponents: None submitted."
+10938,Cities,40,CITY OF SOUTH EL MONTE SPECIAL MUNICIPAL ELECTION - MEASURE RM,Measure,,Majority of votes cast,"City Council Reform Measure Shall the voters amend the South El Monte Municipal Code to return to five elected City Council members and a Mayor selected from among the five elected City Council members? Supporters: Hector Delgado, Councilmember, City of South El Monte; Larry Rodriguez, Councilmember, City of South El Monte; Opponents: Gloria Olmos, Mayor of South El Monte; Manny Acosta, Councilmember of South El Monte"
+10521,Cities,40,CITY OF SOUTH GATE GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10522,Cities,40,CITY OF SOUTH GATE GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10520,Cities,40,CITY OF SOUTH GATE GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10910,Cities,40,CITY OF SOUTH GATE SPECIAL MUNICIPAL ELECTION - MEASURE SG,Measure,,Majority of votes cast,"SOUTH GATE FISCAL EMERGENCY STREET MAINTENANCE, YOUTH PROGRAMS, PARKS FUNDING PROTECTION MEASURE. Shall an ordinance preventing cuts to City of South Gate services including maintaining streets and sidewalks; maintaining school crossing guards, parks/recreation programs, police 911 and support services, and other General Fund uses by establishing an 8% utility user tax, exempting low income seniors, annually providing approximately $10,400,000 until ended by voters; requiring independent audits, public disclosure of all spending, local control, to benefit South Gate residents, be adopted? Supporters: Gil Hurtado, Councilmember; Hector De La Torre, Former Councilmember; South Gate POA; South Gate MEA; South Gate AYSO Opponents: California Taxpayers Association; Los Angeles County Taxpayers Association."
+10882,Cities,40,CITY OF SOUTH PASADENA GENERAL MUNICIPAL ELECTION - MEASURE SOS,Measure,,2/3 of votes cast,"SOUTH PASADENA STREET/ROAD/POTHOLE REPAIR, 9-1-1 SAFETY MEASURE. To fix damaged local streets/roads/sidewalks, repair potholes, address speeding/unsafe driving; improve emergency evacuation routes; upgrade/repair storm drains to prevent flooding, prevent cuts to City services; shall the City of South Pasadena measure authorizing $80,000,000 in bonds at legal rates, levying on average $33 per $100,000 of assessed valuation, generating approximately $4,400,000 annually while bonds are outstanding be adopted, requiring public spending disclosure, audits, all funds spent locally? Supporters: Janet Braun, SP Council; Bob Joe, Fmr SP Mayor; Michele Kipke, SPUSD Brd Pres; Shireen Chang, Fmr Pres, SPCC; Kris Maines Opponents: None submitted."
+10524,Cities,40,"CITY OF SOUTH PASADENA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10526,Cities,40,CITY OF WALNUT GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than two,,
+10530,Cities,40,CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION City Clerk,Candidate,,,
+10531,Cities,40,CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION City Treasurer,Candidate,,,
+10527,Cities,40,"CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District",Candidate,,,
+10528,Cities,40,"CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION Member of the City Council, 4th District",Candidate,,,
+10529,Cities,40,"CITY OF WEST COVINA GENERAL MUNICIPAL ELECTION Member of the City Council, 5th District",Candidate,,,
+10533,Cities,40,CITY OF WEST HOLLYWOOD GENERAL MUNICIPAL ELECTION Member of the City Council,Candidate,Vote for no more than three,,
+10877,Cities,40,CITY OF WHITTIER SPECIAL MUNICIPAL ELECTION - MEASURE EL,Measure,,Majority of votes cast,"Shall the measure amending the City's charter to prohibit candidates from running for mayor or member of the city council if their election would result in that candidate serving more than 12 total years in elective office in the City (aside from terms of office that were elected or appointed at or prior to November 3, 2026) be adopted? Supporters: None submitted. Opponents: None submitted."
+10876,Cities,40,CITY OF WHITTIER SPECIAL MUNICIPAL ELECTION - MEASURE EV,Measure,,Majority of votes cast,"Shall the measure amending the City's charter so that the City's general municipal elections (currently held in April of each even-numbered year) are held in each even-numbered year on the same day as the November statewide general elections, be adopted? Supporters: None submitted. Opponents: None submitted."
+10924,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE EE,Measure,,Majority of votes cast,"CITY ETHICS, ELECTIONS, AND GOVERNANCE. CHARTER AMENDMENT EE. Shall the City Charter be amended to: increase the authority of the Police Department Inspector General and Fire Department Independent Assessor; prohibit Ethics Commissioners from running for certain elected offices for five years; increase penalties for campaign finance violations; require City Council to meet at least weekly rather than the currently required three days per week; increase referendum petition signature requirements; and make other changes regarding ethics, elections and governance? Supporters: Tim McOsker, LA City Councilmember; Katy Yaroslavsky, LA City Councilwoman; Marqueece Harris-Dawson, LA City Councilmember Opponents: Monica Rodriguez, Los Angeles City Councilwoman, District 7"
+10927,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE FD,Measure,,Majority of votes cast,"FUNDING FOR THE LOS ANGELES FIRE DEPARTMENT THROUGH A ONE-HALF PERCENT SALES TAX. INITIATIVE ORDINANCE FD. Shall an ordinance providing funding for the Los Angeles Fire Department, including for hiring firefighters, paramedics, and other staff, purchasing and maintaining vehicles and equipment, building and upgrading fire stations, and brush clearance; by imposing a one-half percent (0.5%) sales tax in the City of Los Angeles; with annual audits and a citizen's oversight committee; generating approximately $345 million annually until ended by voters; be adopted? Supporters: LA City Firefighters; LAFD Chief Officers Association; CA Professional Firefighters; International Assn. of Fire Fighters Opponents: Howard Jarvis Taxpayers Association"
+10922,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LA,Measure,,Majority of votes cast,"CITY INFRASTRUCTURE, BUDGET, FINANCE, AND CONTRACTING. CHARTER AMENDMENT LA. Shall the City Charter be amended to: establish a capital infrastructure plan and two-year budget cycle for the City; increase the authority of the Director of Public Works and allow for the elimination of or changes to the Board of Public Works; remove restrictions prohibiting the City from engaging in business enterprises and mortgaging City-owned property; and change certain contracting rules and procedures? Supporters: City Controller, Mejia; City Councilmembers, Yaroslavsky & Blumenfield; Fmr. City Controller, Galperin; Investing in Place Opponents: Monica Rodriguez, Los Angeles City Councilwoman, District 7"
+10923,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PL,Measure,,Majority of votes cast,"CITY PLANNING DEPARTMENT. CHARTER AMENDMENT PL. Shall the City Charter be amended to: establish a Neighborhood Appeals Commission to replace Area Planning Commissions and establish a process for City Council review of Neighborhood Appeals Commission and City Planning Commission decisions; change the timing and process for City Council action on certain planning decisions; grant the Planning Department the authority to investigate, hear, and determine applications for quasi-judicial review; and allow for changes to floor area regulations by ordinance? Supporters: Raymond Meza, Chair, Charter Reform Commission; Roy Samaan, President, Engineers & Architects Association Opponents: None submitted."
+10925,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PRK,Measure,,Majority of votes cast,"CITY DEPARTMENT OF RECREATION AND PARKS BUDGET. CHARTER AMENDMENT PRK. Shall the City Charter be amended to increase the minimum budget allocated to the Department of Recreation and Parks, phased in over ten years until it is double the current minimum budget allocation, with exceptions for fiscal emergencies? Supporters: LA City Councilmembers, Monica Rodriguez, Imelda Padilla & Ysabel Jurado; LA City Controller, Kenneth Mejia; Father Greg Boyle Opponents: None submitted."
+10926,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE PRT,Measure,,Majority of votes cast,"CITY AIRPORTS, HARBOR, AND WATER AND POWER DEPARTMENTS. CHARTER AMENDMENT PRT. Shall the City Charter be amended to: require the Harbor Department to allocate funds for waterfront public access projects; require disclosure of workforce impacts for certain Harbor Department leases and agreements; increase maximum terms for certain leases; and change the composition requirement for the Airport Commission? Supporters: Tim McOsker, LA City Councilmember; Imelda Padilla, LA City Councilwoman; Traci Park, LA City Councilwoman Opponents: None submitted."
+10928,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE SC,Measure,,Majority of votes cast,"CAMPAIGN FINANCE RULES RELATED TO BOARD OF EDUCATION ELECTIONS. CHARTER AMENDMENT SC. Shall the Los Angeles City Charter be amended to clarify the campaign finance rules for Board of Education elections and allow for changes by ordinance? Supporters: Councilmember, Adrin Nazarian; LAUSD Board Member, Nick Melvoin; League of Women Voters of Greater LA; CA Common Cause Opponents: None submitted."
+10921,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE TE,Measure,,Majority of votes cast,PROPERTY TRANSFER TAX EXEMPTION FOR VICTIMS OF JANUARY 2025 FIRE DISASTER. PROPOSITION TE. Shall an ordinance be adopted to provide a one-time exemption from the City's special documentary transfer tax (Proposition ULA) for residential properties that were damaged or destroyed in the Palisades Fire and are sold within five years of the date of the Fire? Supporters: Councilmember Park; Mayor Bass; Council President Harris-Dawson; Western States Carpenters; Palisades Community Council Opponents: None submitted.
+10768,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION City Attorney,Candidate,,,
+10767,Cities,40,LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Mayor,Candidate,,,
+10770,Cities,40,"LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Member of the City Council, 3rd District",Candidate,,,
+10771,Cities,40,"LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Member of the City Council, 9th District",Candidate,,,
+10604,Schools,42,"ABC UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10607,Schools,42,"ABC UNIFIED SCHOOL DISTRICT SPECIAL ELECTION Governing Board Member, Trustee Area No. 5 (Unexpired term ending December 8, 2028)",Candidate,,,
+10613,Schools,42,"ACTON-AGUA DULCE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10571,Schools,42,"ANTELOPE VALLEY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10572,Schools,42,"ANTELOPE VALLEY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10573,Schools,42,"ANTELOPE VALLEY COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10679,Schools,42,"ANTELOPE VALLEY JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10619,Schools,42,"AZUSA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10620,Schools,42,BALDWIN PARK UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than two,,
+10621,Schools,42,BASSETT UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10764,Schools,42,"BELLFLOWER UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10765,Schools,42,"BELLFLOWER UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10872,Schools,42,BELLFLOWER UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE SM,Measure,,55% of votes cast,"With funds that cannot be taken by the State and spent elsewhere, shall Bellflower Unified School District's measure to repair/replace deteriorating roofs, plumbing, heating, ventilation and electrical systems; upgrade classrooms, labs and career training facilities; and, improve access for students with disabilities be adopted, authorizing $135 million in bonds levying $49 per $100,000 assessed value ($8 million annually) while outstanding, with legal rates, audits, citizen oversight, no funds for administrator salaries and full disclosure of all spending? Supporters: Asm. José Solache; Sup. Janice Hahn; Dr. Robinson, BUSD Teacher; John Young, BTA Pres.; Mayra Garza, BUSD School Board Pres. Opponents: None submitted."
+10622,Schools,42,BEVERLY HILLS UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than two,,
+10625,Schools,42,"BURBANK UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10574,Schools,42,"CERRITOS COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10911,Schools,42,CHARTER OAK UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE S,Measure,,55% of votes cast,"To provide safe, modern neighborhood schools by repairing/upgrading/equipping aging classrooms, science labs, instructional technology, and school facilities that support math, science, engineering, literacy, arts, skilled trades, and college/career readiness, fixing deteriorating roofs, plumbing, electrical systems, and removing asbestos/lead pipes, shall Charter Oak Unified School District's measure authorizing $75,000,000 in bonds at legal rates be adopted, levying $40 per $100,000 assessed value ($5,000,000 annually) while bonds are outstanding, with independent oversight/audits, all money locally controlled? Supporters: Charter Oak PTA Council; Covina Police Officers Assn.; Charter Oak Education Foundation; Cristian Aguilar, COUSD Board Pres. Opponents: None submitted."
+10631,Schools,42,"CLAREMONT UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10937,Schools,42,CLAREMONT UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE CS,Measure,,55% of votes cast,"CLAREMONT UNIFIED SCHOOL DISTRICT CLASSROOM SAFETY, HEALTH AND REPAIR MEASURE. To repair/upgrade aging classrooms, heating/air conditioning/electrical/plumbing systems, improve safety/security, fix leaky/deteriorating roofs, repair/construct/equip classroom sites/facilities without increasing current taxes, shall the Claremont Unified School District's measure authorizing $77,000,000 of bonds at legal rates, levying approximately $32/$100,000 of assessed value ($5,000,000 annually) while bonds are outstanding, be adopted, requiring audits/independent oversight, no money for inappropriate administrator salaries, all funds staying local? Supporters: John Faranda; Sue Keith; John Neiuber; Brett O'Connor; Phalana Tiller Opponents: James M. Belna; Donna Lowe; Gary Lowe; Joyce H. Sauter; Deborah Barker-Benfield"
+10579,Schools,42,"COMPTON COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10580,Schools,42,"COMPTON COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10581,Schools,42,"COMPTON COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10582,Schools,42,"COMPTON COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION Governing Board Member, Trustee Area No. 2 (Unexpired term ending December 8, 2028)",Candidate,,,
+10635,Schools,42,"COVINA-VALLEY UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10636,Schools,42,CULVER CITY UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10640,Schools,42,"DOWNEY UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 7",Candidate,,,
+10642,Schools,42,"DUARTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10691,Schools,42,"EAST WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10692,Schools,42,"EAST WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10693,Schools,42,"EAST WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10694,Schools,42,"EASTSIDE UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10697,Schools,42,"EASTSIDE UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10584,Schools,42,"EL CAMINO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10685,Schools,42,"EL MONTE UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10686,Schools,42,"EL MONTE UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10687,Schools,42,"EL MONTE UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10948,Schools,42,EL RANCHO UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE ED,Measure,,55% of votes cast,"With funds that cannot be taken by the State or Federal government, shall El Rancho Unified School District's measure to update inefficient heating and air-conditioning systems; replace aging plumbing and roofs; improve school safety; and modernize and equip classrooms and facilities be adopted, authorizing $118 million in bonds with legal rates, average annual levies below $55 per $100,000 of assessed valuation ($7.9 million annually while outstanding), annual audits, no administrator salaries, independent oversight, and disclosure of all spending? Supporters: Bob Archuleta; Marco Zapian; Paul Camacho; Guadalupe Diaz; Raul Leos Sr. Opponents: None submitted."
+10750,Schools,42,"FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10751,Schools,42,"FULLERTON JOINT UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10646,Schools,42,"GLENDORA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10931,Schools,42,GLENDORA UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE G,Measure,,55% of votes cast,"Glendora Unified School District Classroom Repair Extension Measure. To repair or replace deteriorating roofs, plumbing, HVAC, electrical systems; remove asbestos and lead pipes; upgrade classrooms, labs, facilities to support college/career readiness in math, science, engineering, technology and skilled trades; shall Glendora Unified School District's measure be adopted, authorizing $86,000,000 in bonds at legal rates (without increasing current tax rates), levying approximately $33 per $100,000 assessed value ($5,000,000 annually) while bonds are outstanding, with independent oversight/audits, and funds locally controlled? Supporters: Art Ludwick; Glendora Ed Foundation; Dr. Cliff Hamlow, Fmr Mayor, Glendora Teachers Assoc.; Mendell Thompson, City Council Opponents: Mel Bennett"
+10648,Schools,42,"HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10649,Schools,42,"HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10650,Schools,42,"HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10873,Schools,42,HACIENDA LA PUENTE UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE B,Measure,,Majority of votes cast,Shall members of the Board of Education of the Hacienda La Puente Unified School District be limited to serving no more than two (2) four-year terms during their lifetime regardless of the trustee area represented? Supporters: None submitted Opponents: None submitted.
+10884,Schools,42,HAWTHORNE SCHOOL DISTRICT SPECIAL ELECTION - MEASURE HH,Measure,,55% of votes cast,"HAWTHORNE SCHOOL DISTRICT SCHOOL REPAIR/IMPROVEMENT MEASURE. To repair aging classrooms, ensure student health, safety and achievement and update technology, upgrade aging plumbing, electrical, lighting, heating/ventilation, safety/security systems, shall this Hawthorne School District measure be adopted to repair, construct, acquire classrooms, facilities, sites/equipment, and issue $110,000,000 in bonds, at legal rates, levy on average $30 per $100,000 assessed value (averaging $5,240,000 annually) while bonds are outstanding, require independent audits/oversight, all money for local schools? Supporters: HSD Board of Trustees; Cristina Chiappe; Sergio R. Mortara; Vicente Bravo; Luciano A. Aguilar; Dr. Eugene M. Krank Opponents: None submitted."
+10465,Schools,42,"INGLEWOOD UNIFIED SCHOOL DISTRICT Member, Board of Education, Trustee Area 1",Candidate,,,
+10466,Schools,42,"INGLEWOOD UNIFIED SCHOOL DISTRICT Member, Board of Education, Trustee Area 2",Candidate,,,
+10467,Schools,42,"INGLEWOOD UNIFIED SCHOOL DISTRICT Member, Board of Education, Trustee Area 3",Candidate,,,
+10933,Schools,42,INGLEWOOD UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE MM,Measure,,55% of votes cast,"Inglewood Unified School District Safety, Repair, Upgrade Measure. To repair/upgrade classrooms/labs including science, engineering, career/skilled trades to help recruit/retain teachers; repair deteriorating gas lines; remove asbestos, lead paint, mold; provide safe drinking water; construct, repair equip sites, facilities; shall Inglewood Unified School District's measure authorizing $396,000,000 in bonds, at legal rates, levying $60 per $100,000 of assessed valuation ($26,000,000 annually) while bonds are outstanding, be adopted, requiring oversight, audits, spending disclosure, all funds for local schools? Supporters: Small Businessowner Moody; YMCA of Metro LA; Civic Leader Marcie Brown; Building Trades E. Medrano; Board Pres. Dr. McGhee Opponents: None submitted."
+10755,Schools,42,"KEPPEL UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10756,Schools,42,"KEPPEL UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10757,Schools,42,"KEPPEL UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10874,Schools,42,KEPPEL UNION SCHOOL DISTRICT SPECIAL ELECTION - MEASURE K,Measure,,55% of votes cast,"Keppel Union School District Classroom Repair, Safety, Upgrade Measure. To repair leaky roofs, deteriorating plumbing, electrical, gas lines; provide safe drinking water; remove asbestos, lead paint, mold; improve fire safety, security, emergency communications; ensure safe children's play areas; upgrade classroom technology, science labs; shall Keppel Union School District's measure authorizing $27,000,000 in bonds at legal rates, levies averaging $30 per $100,000 assessed valuation ($1,700,000 annually) while bonds are outstanding, be adopted, requiring oversight, audits, spending disclosure, all funds for local schools? Supporters: Fmr Trustee Dominique Ballante; LocalBiz MonrealAuto; Deputy Sheriff Cronin; LocalBiz QuePaisa; Fmr Trustee Matthew Gaines Opponents: None submitted."
+10651,Schools,42,LA CAÑADA UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10705,Schools,42,"LANCASTER SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10707,Schools,42,"LANCASTER SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10652,Schools,42,LAS VIRGENES UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10961,Schools,42,LAS VIRGENES UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE LV,Measure,,2/3 of votes cast,"To protect the quality of education in local schools and continue funding for math, science, technology, engineering, arts, skilled trades, and advanced programs that prepare students for success in college/careers; attracting and retaining highly qualified teachers; and maintaining manageable class sizes, shall Las Virgenes Unified School District's measure renewing the existing school parcel tax at the current $98 rate (no increase) for twelve years be adopted, with senior exemptions and all funds ($2,000,000 annually) benefiting local students? Supporters: Richard Sherman, CPHOA Pres.; Karen Zak Kent, DDS; Dr. Kirk Tamaddon, LVUSD Oversight Comm.; Joe Seetoo, CFA; Angie Falk Opponents: None submitted."
+10708,Schools,42,"LAWNDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10709,Schools,42,"LAWNDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10711,Schools,42,LENNOX SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10712,Schools,42,"LITTLE LAKE CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10713,Schools,42,"LITTLE LAKE CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10871,Schools,42,"LITTLE LAKE CITY SCHOOL DISTRICT SPECIAL ELECTION Governing Board Member, Trustee Area No. 5 (Unexpired term ending December 12, 2028)",Candidate,,,
+10587,Schools,42,"LONG BEACH COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10588,Schools,42,"LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 2",Candidate,,,
+10589,Schools,42,"LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 4",Candidate,,,
+10590,Schools,42,"LOS ANGELES COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Seat 6",Candidate,,,
+10714,Schools,42,"LOS NIETOS SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10653,Schools,42,LYNWOOD UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than two,,
+10656,Schools,42,"MONROVIA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10843,Schools,42,"MONTEBELLO UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10717,Schools,42,MOUNTAIN VIEW SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10592,Schools,42,"MT. SAN ANTONIO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10739,Schools,42,"NORWALK-LA MIRADA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10740,Schools,42,"NORWALK-LA MIRADA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10661,Schools,42,"NORWALK-LA MIRADA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 6",Candidate,,,
+10758,Schools,42,"PALMDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10759,Schools,42,"PALMDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10760,Schools,42,"PALMDALE SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10662,Schools,42,PALOS VERDES PENINSULA UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10743,Schools,42,"PARAMOUNT UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10595,Schools,42,"PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10596,Schools,42,"PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10597,Schools,42,"PASADENA AREA COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10935,Schools,42,PASADENA AREA COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION - MEASURE UP,Measure,,55% of votes cast,"PASADENA CITY COLLEGE MEASURE PRESERVING AFFORDABLE HIGHER EDUCATION/CAREER TRAINING WITHOUT INCREASING TAX RATES. To construct/equip classrooms/career training facilities to prepare students for careers in nursing/healthcare, firefighting/EMS, construction, hospitality, and skilled trades; fix deteriorating roofs, plumbing/electrical systems, shall Pasadena Area Community College District's measure be adopted authorizing $485,000,000 in bonds at legal rates, without exceeding the current $9 per $100,000 assessed value (no increase), providing $27,000,000 annually while bonds are outstanding, with independent oversight/local control? Supporters: US Sen Adam Schiff; US Rep Judy Chu; CA Asm John Harabedian; SGV Economic Partnership; Charmayne Mills-Ealy, PCC Foundation Opponents: None submitted."
+10499,Schools,42,"PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 1",Candidate,,,
+10500,Schools,42,"PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 3",Candidate,,,
+10502,Schools,42,"PASADENA UNIFIED SCHOOL DISTRICT Board of Education, District No. 7",Candidate,,,
+10663,Schools,42,"POMONA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10664,Schools,42,"POMONA UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 4",Candidate,,,
+10599,Schools,42,"RIO HONDO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10600,Schools,42,"RIO HONDO COMMUNITY COLLEGE DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10666,Schools,42,"ROWLAND UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10667,Schools,42,"ROWLAND UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10668,Schools,42,"ROWLAND UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10669,Schools,42,SAN GABRIEL UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10949,Schools,42,SAN MARINO UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE SMS,Measure,,2/3 of votes cast,"San Marino Unified School District Quality Education Measure Without increasing the existing rates and to protect/maintain quality education programs, classroom instruction, prevent class size increases or teaching position reductions, attract/retain high-quality teachers/employees, support advanced programs in math, science, engineering, technology, shall San Marino Unified School District's measure to combine and renew their existing parcel taxes for 6 years at $1,499 (combined) with senior exemptions, raising approximately $6,100,000 annually, annual adjustments, requiring spending disclosure be adopted? Supporters: Mandy Saber, President, San Marino Council of PTAs; Karla Domier; Janice Lee; Paul Callahan; Dr. Peter Koh, OD Opponents: None submitted."
+10602,Schools,42,"SANTA CLARITA COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees, Trustee Area 1",Candidate,,,
+10516,Schools,42,SANTA MONICA COMMUNITY COLLEGE DISTRICT Member of the Board of Trustees,Candidate,Vote for no more than four,,
+10517,Schools,42,SANTA MONICA-MALIBU UNIFIED SCHOOL DISTRICT Member of the Board of Education,Candidate,Vote for no more than four,,
+10722,Schools,42,"SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 1",Candidate,,,
+10723,Schools,42,"SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10724,Schools,42,"SAUGUS UNION SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10727,Schools,42,"SOUTH WHITTIER SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10950,Schools,42,TEMPLE CITY UNIFIED SCHOOL DISTRICT SPECIAL ELECTION - MEASURE TCS,Measure,,55% of votes cast,"WITHOUT INCREASING EXISTING TAX RATES, to upgrade safety/security and HVAC systems; remove asbestos/lead pipes; repair/upgrade/equip aging classrooms, science labs, school/career technology facilities to support college/career readiness in math, science, technology, arts, medical science, skilled trades; shall Temple City Unified School District's measure be adopted authorizing $146,000,000 in bonds at legal rates, levying $43 per $100,000 assessed value (averaging $8,710,000 annually) while bonds are outstanding, with independent citizen oversight, audits, all money locally controlled? Supporters: William Man, TC Mayor; Ryan Liu, PCC Trustee; TC Schools Foundation; Jerry Jambazian; Tim Huang, Chinese Amer. Assn Pres. Opponents: None submitted."
+10747,Schools,42,"TORRANCE UNIFIED SCHOOL DISTRICT Governing Board Member, Trustee Area D",Candidate,,,
+10731,Schools,42,VALLE LINDO SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10868,Schools,42,VALLE LINDO SCHOOL DISTRICT SPECIAL ELECTION - MEASURE R,Measure,,55% of votes cast,"To improve the quality of education; replace old heating, ventilation and air-conditioning systems; modernize outdated classrooms, restrooms and school facilities; and repair or replace leaky roofs; shall Valle Lindo School District's measure be adopted authorizing $9,200,000 of bonds at legal rates, generating on average $536,000 annually while bonds are outstanding at a rate of approximately $29 per $100,000 assessed value, with annual audits, independent citizens' oversight committee, NO money for salaries and no money taken by the State? Supporters: Veronica Lauria, Valle Lindo SD Board President; Roxanna Nava; Marissa Lopez Newton; Nydia Romero; Michael Thompson Opponents: None submitted."
+10732,Schools,42,WESTSIDE UNION SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10733,Schools,42,"WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 3",Candidate,,,
+10735,Schools,42,"WHITTIER CITY SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10690,Schools,42,"WHITTIER UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10845,Schools,42,"WILLIAM S. HART UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 2",Candidate,,,
+10848,Schools,42,"WILLIAM S. HART UNION HIGH SCHOOL DISTRICT Governing Board Member, Trustee Area No. 5",Candidate,,,
+10678,Schools,42,WISEBURN UNIFIED SCHOOL DISTRICT Governing Board Member,Candidate,Vote for no more than three,,
+10541,Library Districts,47,"ALTADENA LIBRARY DISTRICT Member, Board of Trustees, Trustee Area No. 3",Candidate,,,
+10543,Library Districts,47,"PALOS VERDES LIBRARY DISTRICT Member, Board of Trustees",Candidate,Vote for no more than three,,
+10562,Water Districts,50,"ANTELOPE VALLEY-EAST KERN WATER AGENCY Member, Board of Directors, Division 1",Candidate,,,
+10563,Water Districts,50,"ANTELOPE VALLEY-EAST KERN WATER AGENCY Member, Board of Directors, Division 3",Candidate,,,
+10377,Water Districts,50,"CRESCENTA VALLEY WATER DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,,
+10545,Water Districts,50,"FOOTHILL MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,,
+10546,Water Districts,50,"FOOTHILL MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 4",Candidate,,,
+10547,Water Districts,50,"FOOTHILL MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 5",Candidate,,,
+10405,Water Districts,50,"LA CAÑADA IRRIGATION DISTRICT Member, Board of Directors, Division 4",Candidate,,,
+10384,Water Districts,50,"LA PUENTE VALLEY COUNTY WATER DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,,
+10548,Water Districts,50,"LAS VIRGENES MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,,
+10535,Water Districts,50,"PALMDALE WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,,
+10553,Water Districts,50,"SAN GABRIEL VALLEY MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 5",Candidate,,,
+10565,Water Districts,50,"SANTA CLARITA VALLEY WATER AGENCY Member, Board of Directors, Division 1",Candidate,,,
+10567,Water Districts,50,"SANTA CLARITA VALLEY WATER AGENCY Member, Board of Directors, Division 3",Candidate,Vote for no more than two,,
+10555,Water Districts,50,"THREE VALLEYS MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 3",Candidate,,,
+10397,Water Districts,50,"VALLEY COUNTY WATER DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,,
+10371,Water Districts,50,"WALNUT VALLEY WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,,
+10372,Water Districts,50,"WALNUT VALLEY WATER DISTRICT Member, Board of Directors, Division 3",Candidate,,,
+10374,Water Districts,50,"WALNUT VALLEY WATER DISTRICT SPECIAL ELECTION Member, Board of Directors, Division 5 (Unexpired term ending December 1, 2028)",Candidate,,,
+10570,Water Districts,50,"WATER REPLENISHMENT DISTRICT OF SOUTHERN CALIFORNIA Member, Board of Directors, Division 3",Candidate,,,
+10569,Water Districts,50,"WATER REPLENISHMENT DISTRICT OF SOUTHERN CALIFORNIA Member, Board of Directors, Division 4",Candidate,,,
+10559,Water Districts,50,"WEST BASIN MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 1",Candidate,,,
+10560,Water Districts,50,"WEST BASIN MUNICIPAL WATER DISTRICT Member, Board of Directors, Division 2",Candidate,,,
+10375,Recreation and Park,52,"WRIGHTWOOD COMMUNITY SERVICES DISTRICT Member, Board of Directors",Candidate,Vote for no more than three,,

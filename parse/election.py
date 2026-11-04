@@ -37,9 +37,10 @@ def parse_structure(payload):
     for group in d["ContestGroups"]:
         for c in group["Contests"]:
             contests.append({
-                "contest_id": c["ID"], "group": group["Name"], "title": c["Title"],
-                "type": c["Type"], "vote_for": c["VoteFor"],
+                "contest_id": c["ID"], "group": group["Name"], "group_order": group["Order"],
+                "title": c["Title"], "type": c["Type"], "vote_for": c["VoteFor"],
                 "pass_rate": c.get("MeasurePassRate") or "",
+                "measure_text": (c.get("MeasureText") or "").strip(),
             })
             for ch in c["Candidates"]:
                 choices.append({
@@ -102,7 +103,7 @@ def run(raw_election_dir, tidy_election_dir):
         ccount += c
         ecount += e
     problems = check(contests, choices, results, ccount)
-    write_csv(tidy / "contests.csv", contests, ["contest_id", "group", "title", "type", "vote_for", "pass_rate"])
+    write_csv(tidy / "contests.csv", contests, ["contest_id", "group", "group_order", "title", "type", "vote_for", "pass_rate", "measure_text"])
     write_csv(tidy / "choices.csv", choices, ["contest_id", "choice_id", "name", "party"])
     write_csv(tidy / "results.csv", results, ["snapshot", "county_time", "choice_id", "votes"])
     write_csv(tidy / "contest_counters.csv", ccount, ["snapshot", "county_time", "contest_id", "counter", "value"])

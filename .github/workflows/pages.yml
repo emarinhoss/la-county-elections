@@ -36,6 +36,7 @@ jobs:
         run: |
           python -m parse.election 2026-11-03-general
           python -m sitegen.city_contests 2026-11-03-general
+          python -m sitegen.county_contests 2026-11-03-general
           python -m sitegen.boundaries 2026-11-03-general
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

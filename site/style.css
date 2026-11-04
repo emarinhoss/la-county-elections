@@ -34,3 +34,22 @@ select { width: 100%; padding: 6px; font: inherit; background: var(--bg); color:
   #map { height: 50vh; }
   #panel { max-height: none; }
 }
+
+#tabs { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+#tabs button { font: inherit; padding: 6px 12px; border: 1px solid var(--line); background: var(--panel); color: var(--text);
+  border-radius: 6px; cursor: pointer; }
+#tabs button[aria-selected="true"] { background: var(--blue); border-color: var(--blue); color: #fff; }
+[hidden] { display: none !important; }
+#county-panel { grid-column: 1 / -1; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 12px; }
+#view-county { display: block; }
+#county-panel .controls { grid-template-columns: 1fr 1fr; align-items: end; }
+#county-panel .controls label { grid-row: 1; }
+#county-panel .controls select, #county-panel .controls input { grid-row: 2; }
+input[type="search"] { width: 100%; padding: 6px; font: inherit; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 4px; }
+#totals { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 12px; }
+#totals div { min-width: 140px; }
+#totals .big { font-size: 1.4rem; font-weight: 600; }
+#county-contests { columns: 2 340px; column-gap: 24px; }
+#county-contests .contest { break-inside: avoid; }
+details { margin-top: 6px; font-size: 0.82rem; color: var(--muted); }
+details summary { cursor: pointer; }

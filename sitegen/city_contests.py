@@ -57,6 +57,30 @@ def read_csv(path):
         return list(csv.DictReader(f))
 
 
+def contest_record(c, label, choice_rows, votes, ballots):
+    """One contest as shown on the site. Shares are of votes counted in this contest."""
+    rows = [{"name": ch["name"], "party": ch["party"], "votes": votes[ch["choice_id"]]} for ch in choice_rows]
+    total = sum(r["votes"] for r in rows)
+    for r in rows:
+        r["share"] = round(r["votes"] / total, 4) if total else None
+    return {
+        "id": int(c["contest_id"]), "label": label, "kind": c["type"].lower(),
+        "vote_for": parse_vote_for(c["vote_for"]), "pass_rate": c["pass_rate"],
+        "ballots_cast": ballots.get(c["contest_id"]), "total_votes": total, "choices": rows,
+    }
+
+
+def latest_numbers(tidy):
+    """(latest snapshot id, county time, votes by choice_id, ballots by contest_id)."""
+    results = read_csv(tidy / "results.csv")
+    latest = max(r["snapshot"] for r in results)
+    votes = {r["choice_id"]: int(r["votes"]) for r in results if r["snapshot"] == latest}
+    county_time = next(r["county_time"] for r in results if r["snapshot"] == latest)
+    ballots = {r["contest_id"]: int(r["value"]) for r in read_csv(tidy / "contest_counters.csv")
+               if r["snapshot"] == latest and r["counter"] == "CBLT"}
+    return latest, county_time, votes, ballots
+
+
 def build(tidy_dir):
     tidy = Path(tidy_dir)
     info = json.loads((tidy / "election.json").read_text())
@@ -64,15 +88,7 @@ def build(tidy_dir):
     choices = defaultdict(list)
     for ch in read_csv(tidy / "choices.csv"):
         choices[ch["contest_id"]].append(ch)
-    results = read_csv(tidy / "results.csv")
-    latest = max(r["snapshot"] for r in results)
-    votes = {r["choice_id"]: int(r["votes"]) for r in results if r["snapshot"] == latest}
-    county_time = next(r["county_time"] for r in results if r["snapshot"] == latest)
-    ballots = {
-        r["contest_id"]: int(r["value"])
-        for r in read_csv(tidy / "contest_counters.csv")
-        if r["snapshot"] == latest and r["counter"] == "CBLT"
-    }
+    latest, county_time, votes, ballots = latest_numbers(tidy)
 
     cities, unparsed = {}, []
     for c in contests:
@@ -81,16 +97,8 @@ def build(tidy_dir):
             unparsed.append(c["title"])
             continue
         name, label = parsed
-        rows = [{"name": ch["name"], "party": ch["party"], "votes": votes[ch["choice_id"]]} for ch in choices[c["contest_id"]]]
-        total = sum(r["votes"] for r in rows)
-        for r in rows:
-            r["share"] = round(r["votes"] / total, 4) if total else None
         city = cities.setdefault(city_key(name), {"key": city_key(name), "name": name.title(), "contests": []})
-        city["contests"].append({
-            "id": int(c["contest_id"]), "label": label, "kind": c["type"].lower(),
-            "vote_for": parse_vote_for(c["vote_for"]), "pass_rate": c["pass_rate"],
-            "ballots_cast": ballots.get(c["contest_id"]), "total_votes": total, "choices": rows,
-        })
+        city["contests"].append(contest_record(c, label, choices[c["contest_id"]], votes, ballots))
     for city in cities.values():
         city["contests"].sort(key=lambda x: (x["kind"] != "candidate", x["label"]))
     return {

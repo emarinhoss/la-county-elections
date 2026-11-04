@@ -3,16 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LA County City Contests</title>
+<title>LA County Election Results</title>
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <h1>LA County city contests</h1>
+  <h1>LA County election results</h1>
   <p id="status" role="status">Loading…</p>
+  <div id="tabs" role="tablist" aria-label="Views">
+    <button role="tab" id="tab-city" aria-controls="view-city" aria-selected="true">City contests (map)</button>
+    <button role="tab" id="tab-county" aria-controls="view-county" aria-selected="false">County, state &amp; district contests</button>
+  </div>
 </header>
-<main>
+<main id="view-city" role="tabpanel" aria-labelledby="tab-city">
   <section id="map-wrap" aria-label="Map of Los Angeles County cities">
     <div id="map"></div>
     <div id="legend"></div>
@@ -25,6 +29,19 @@
       <select id="contest-select"></select>
     </div>
     <div id="contests"></div>
+  </section>
+</main>
+<main id="view-county" role="tabpanel" aria-labelledby="tab-county" hidden>
+  <section id="county-panel">
+    <div id="totals"></div>
+    <div class="controls">
+      <label for="group-select">Contest group</label>
+      <select id="group-select"></select>
+      <label for="county-filter">Filter by name</label>
+      <input id="county-filter" type="search" placeholder="e.g. Measure, Assembly, Judge">
+    </div>
+    <p class="muted" id="county-note"></p>
+    <div id="county-contests"></div>
   </section>
 </main>
 <footer>
