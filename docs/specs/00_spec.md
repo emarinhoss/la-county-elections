@@ -81,7 +81,8 @@ What we know (Nov 4, 2026):
 
 Plan once a precinct-level file exists:
 1. Parse it into `precinct_results(contest_id, precinct, choice, votes)`.
-2. Map precincts to cities with `CITY_EST` from the county precinct layer (33,219 polygons).
+2. Map precincts to cities through the county precinct layer (33,219 polygons). CORRECTION (probes, Nov 4): the layer's
+   `CITY_EST` is NOT a city name. It is the first 7 digits of the precinct id. The city is in `DST_CITY`, a short code (see below).
 3. Sum by city and show it on the map for countywide contests, labelled "from precinct data, as of <date>".
 
 Risks to check, not assumed away:
@@ -111,3 +112,18 @@ Samples are committed under `data/samples/svc/4324_final_svc_precinct_public/`; 
   columns) have not been seen yet.
 - Unincorporated polygons in the boundary layer are all named just "Unincorporated", so unincorporated
   communities cannot be separate map shapes.
+
+### Precinct layer probes (read from real data, Nov 4, 2026)
+
+- Layer `PRECINCT` ids have the same format as the SVC ids: 7 digits + a letter (`1030003A`). The Carson precinct
+  `1030003A` from the 2024 PDF exists in the layer, and so does `1030003B`. So an SVC precinct can be joined to the layer
+  by exact id. Fall back to the 7-digit base only if an exact id is missing, and count how many fall back.
+- `CITY_EST` = the 7-digit base of the id (`1030003`), not a city. `SUBCODE` = the letter.
+- The city is `DST_CITY`, a short code (`AL` for the sampled Alhambra-area precincts, `CC` for Carson's `1030003`).
+  These codes are NOT the boundary layer's `ABBR` (`ALH`, `CAR`), so there is no ready code-to-name table.
+  Plan: build the table from the SVC itself (an SVC precinct's LOCATION text and the city-contest block it belongs to),
+  then check every name against the 88 boundary-layer city names, and report any code left unnamed.
+- The layer is the 2026 precinct layer (last edited about Sept 2026). The 2024 PDF may use precinct ids that have since
+  changed, so a 2024 dress rehearsal will show some unmatched ids. Report the share of ballots they cover.
+- Distinct `CITY_EST` values exceed the 2,000-row page limit, so a full attribute download needs paging
+  (`resultOffset`), about 17 pages for 33,219 polygons.
