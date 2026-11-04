@@ -15,6 +15,21 @@
       "id": "precinct_boundaries_layers",
       "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/layers?f=json",
       "note": "UNVERIFIED. Layer metadata for the county precinct boundaries feature service (from a web search)."
+    },
+    {
+      "id": "rrcc_results_js",
+      "url": "https://results.lavote.gov/js/election-results.min.js?v=134372722370000000",
+      "note": "The results page is a JS app with no data in the HTML. This bundle should name the data endpoints it calls."
+    },
+    {
+      "id": "rrcc_election_list",
+      "url": "https://results.lavote.gov/election-list",
+      "note": "UNVERIFIED. Linked from the results page as 'Change Election'."
+    },
+    {
+      "id": "precinct_count",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+      "note": "Number of precinct polygons (layer max page size is 2000, so we need this to plan paging)."
     }
   ]
 }
