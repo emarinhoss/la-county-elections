@@ -127,3 +127,21 @@ Samples are committed under `data/samples/svc/4324_final_svc_precinct_public/`; 
   changed, so a 2024 dress rehearsal will show some unmatched ids. Report the share of ballots they cover.
 - Distinct `CITY_EST` values exceed the 2,000-row page limit, so a full attribute download needs paging
   (`resultOffset`), about 17 pages for 33,219 polygons.
+
+### Rehearsal run 1 (2024 precinct PDF, Nov 4, 2026): what worked and what was wrong
+
+Worked: the parser read 369 contest blocks (0 errors). 21 countywide blocks had vote columns that equal the printed GRAND
+TOTAL exactly. Carson came out with the same 26 precincts as its own mayor contest, and registration equal to the sum of
+that contest's precinct rows (63,516; the printed total is 1 higher).
+
+Wrong: the first version named each city code by majority vote over city-contest appearances. That produced
+"89 of 89 codes named", but codes are not cities. Code `ZZ` is the unincorporated catch-all (SOUTH WHITTIER, RAMONA, EAST LOS
+ANGELES) and was named Los Angeles because a few ZZ precincts appear in Los Angeles contests. Code `LM` (LOMITA) was named Los
+Angeles for the same reason. Codes `CC`, `SU`, `SD`, `WF` had 0.5-0.7 purity. The sum check cannot see this: it passes
+whatever the cities are, because it adds up every precinct. Those outputs were deleted from the repo.
+
+Now (tools/svc_pipeline.py): each precinct gets its city from the strongest evidence, one precinct at a time:
+direct (listed in that city's own contest) > pure code (at least 3 direct precincts, at least 98% agree) > place name equal to
+a boundary city > otherwise "UNINCORPORATED OR UNKNOWN: <place>". The fallback rules are scored on precincts whose answer is
+known, and the score is reported. Remaining weakness: a city with no contest this year can only be named by its code or its
+place name, and a place name is not always the city (Sunland is in Los Angeles; Lomita-named precincts can be in Los Angeles).
