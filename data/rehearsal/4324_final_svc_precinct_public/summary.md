@@ -1,0 +1,27 @@
+## SVC rehearsal
+- contest blocks parsed: **369** (0 with errors, 168 with notes)
+- precinct rows: 78,632 (exact id match 76,557, 7-digit fallback 1,592, no match 483)
+- city codes: 89 (89 named, 0 unnamed: )
+- boundary cities named by a code: 82 of 88
+- countywide blocks: 21; vote totals equal the printed GRAND TOTAL in all of them: **True**
+  - DISTRICT ATTORNEY: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - JUDGE OF THE SUPERIOR COURT Office No. 39: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - JUDGE OF THE SUPERIOR COURT Office No. 48: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - JUDGE OF THE SUPERIOR COURT Office No. 97: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - JUDGE OF THE SUPERIOR COURT Office No. 135: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - JUDGE OF THE SUPERIOR COURT Office No. 137: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - COUNTY MEASURE G: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - COUNTY MEASURE A: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 2: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 3: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 4: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 5: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 6: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 32: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 33: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 34: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 35: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - STATE MEASURE 36: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - PRESIDENT AND VICE PRESIDENT: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - Voter Nominated : UNITED STATES SENATOR - Full Term: match=True, share of ballots in unnamed/unmatched = 0.0039
+  - Voter Nominated : UNITED STATES SENATOR - Short Term (Unexpired term ending January 3, 2025): match=True, share of ballots in unnamed/unmatched = 0.0039
