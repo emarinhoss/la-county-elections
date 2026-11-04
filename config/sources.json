@@ -42,16 +42,6 @@
       "note": "UNVERIFIED. All city and unincorporated polygons in WGS84, lightly simplified (about 20 m). If the layer has more than 2000 features this needs paging."
     },
     {
-      "id": "text_results_2024_general",
-      "url": "https://results.lavote.gov/text-results/4324",
-      "note": "UNVERIFIED. County 'text results' page for the 2024 general (id 4324); looking for by-city or by-precinct numbers."
-    },
-    {
-      "id": "text_results_2026_general",
-      "url": "https://results.lavote.gov/text-results/4348",
-      "note": "Same page for the 2026 general (id 4348)."
-    },
-    {
       "id": "svc_2024_district_pdf",
       "url": "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_district_v3.pdf",
       "head": true,
