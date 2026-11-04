@@ -90,3 +90,24 @@ Risks to check, not assumed away:
 - `CITY_EST` is an estimate. A precinct can straddle a city boundary. Report how many votes sit in such precincts.
 - Check: precinct sums per contest must equal the county total before any city number is shown.
 - The SVC format (PDF vs Excel/CSV) is unknown. A PDF parser is a larger job than an Excel one.
+
+### What the 2024 SVC precinct PDF looks like (read from real sample pages, Nov 4, 2026)
+
+Source: `4324_final_svc_precinct_public.pdf`, 61 MB, 6,190 pages, text-based (Microsoft Reporting Services).
+Samples are committed under `data/samples/svc/4324_final_svc_precinct_public/`; parser: `tools/svc_parse.py`.
+- Every contest is a block: a title, then one three-row entry per precinct (in-person, VOTE BY MAIL, TOTAL),
+  then PRECINCT TOTAL / VBM TOTAL / GRAND TOTAL rows. So every contest has a check against its own totals.
+- The precinct label is `<LOCATION> - <7-digit id + letter>[*]`. LOCATION is a **community**, not always a city:
+  CARSON, POMONA, TORRANCE, but also SUNLAND (a neighborhood inside the City of Los Angeles) and unincorporated
+  places such as WEST ATHENS. LOCATION alone is therefore not a city. The city must come from the precinct id
+  through the county precinct layer (`CITY_EST`). The layer's id format is not yet known (probes added).
+- Candidate names wrap over several header lines. The parser ignores them and keeps vote columns in order. Columns
+  are then matched to the API's choice order for the same contest, and the contest total is checked against the API.
+- The API's contest titles use the same wording as the PDF (`STATE SENATOR, 35th District`, `STATE MEASURE 5`).
+- On the one contest we can check completely (Carson mayor, 26 precincts), all vote columns match the printed totals
+  exactly. Registration and ballots cast in the county's printed totals are each 1 above the sum of the listed
+  precincts. We report such gaps as notes and keep the check strict on votes.
+- The 26 precinct rows in that contest all parsed. Other layouts (multi-seat races, retention votes, write-in
+  columns) have not been seen yet.
+- Unincorporated polygons in the boundary layer are all named just "Unincorporated", so unincorporated
+  communities cannot be separate map shapes.
