@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><script src="/yre-my-gon-a-badgd-ither-knock-I-with-Faitor-Gou" async></script>
+<meta charset=utf-8 />
+<meta name=viewport content="width=device-width, initial-scale=1.0"/>
+<link rel="shortcut icon" href="/images/county_seal.png">
+<title>Election Results</title>
+<link rel=stylesheet type="text/css" href="/css/master.css?v=3.1"/>
+<link rel=stylesheet type="text/css" href="/css/v2.css?v=3.1">
+<link rel=stylesheet type="text/css" href="/css/election-results.css"/>
+<meta name=dx-license content="ewogICJmb3JtYXQiOiAxLAogICJjdXN0b21lcklkIjogIjM3OTAzNmU2LWQwNzgtNGMxYy1hYjlmLTRmZDRlYjZhY2JmNCIsCiAgIm1heFZlcnNpb25BbGxvd2VkIjogMjUyCn0=.LFVbj79ygj8uLuIUilprQx3u0QVVqjG7CFLNG0AZH3B9Atcq1uAbv&#x2B;YnRbQ0B7ozNYlGlEYum4v4qgIGdXjVHNrNl2zZ7idwepvjPxtfwQksK4&#x2B;rCtxzo/jcVVHmG&#x2B;AtmOEvtQ=="/>
+<link rel=stylesheet href="/css/bundle.dx.min.css?v=3.0"/>
+<link rel=stylesheet href="/css/choices.min.css?v=3.0"/>
+<link rel=stylesheet href="/css/election-results.min.css?v=134326952210000000"/>
+</head>
+<body>
+<a href="#main-content" class=skip-nav>Skip to main content</a>
+<div id=project>
+<header id=header>
+<div id=top class=row>
+<div id=brand class="base m_span">
+<div class=m_pad>
+<a class=fill href="/" aria-label="Logo - Home">
+<div class=m_margin_align_c>
+<div class=base>
+<img src="/images/county_seal.png" title="Los Angeles County RR/CC" alt="Los Angeles County RR/CC" width=60 height=60 />
+</div>
+<div id=txt class="base margin_l single">
+<p>Los Angeles County</p>
+<p><strong>Registrar-Recorder/County Clerk</strong></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class=m_d_toggle>
+<nav id=primary_nav class=right aria-label=Primary>
+<ul>
+<li class=primary><a href="https://www.lavote.gov" aria-label="Navigate to lavote.gov">LAVote.gov</a></li>
+<li class=primary><a href="https://www.lavote.gov/about-us/background" aria-label="Navigate to About Us">About Us</a></li>
+<li class=primary><a href="https://www.lavote.gov/contact-us/contact-us" aria-label="Navigate to Contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+<div class=m_toggle>
+<div id=m_primary_nav class=row>
+<div id=m_primary_nav_btn class=row>
+<button id=nav_prim_tog_plchldr class="base btn" type=button aria-expanded=false aria-controls=m_primary_nav_items aria-label="Toggle navigation menu">
+<img class=m_pad src="/images/m/icon_nav_primary.png" alt=""/>
+</button>
+</div>
+<nav id=m_primary_nav_items class="hide row" aria-label="Mobile primary">
+<ul>
+<li><a href="https://www.lavote.gov" aria-label="Navigate to lavote.gov">LAVote.gov</a></li>
+<li><a href="https://www.lavote.gov/about-us/background" aria-label="Navigate to About Us">About Us</a></li>
+<li><a href="https://www.lavote.gov/contact-us/contact-us" aria-label="Navigate to Contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id=title_row class=row>
+<div class="main_content m_w">
+<div class="base margin_l">
+<img id=vLogo src="/images/VSAP Logo - V.png" alt="Icon — LA County Election Results" title="LA County Election Results"/>
+</div>
+<div class=base id=mobileHeading>
+<span class="m_span title_txt">LA COUNTY <b>ELECTION RESULTS</b></span>
+</div>
+</div>
+</div>
+</header>
+<div id=body>
+<div id=page>
+<div id=content align=center>
+<div id=page-sidebar-layout>
+<main id=main-content class=main_content align=left>
+<div id=pg_content class="landscape m">
+<div id=div_pg_content class="landscape m">
+<div id=content_det class="base content_det">
+<div class=m_pad>
+<div id=er>
+<div class="row m_toggle m_t_toggle" align=center>
+<a class="election-list-button m_txt_size_m" href="/election-list">Change Election</a>
+</div>
+<div id=labels class=row>
+<label for=year-menu id=year-label>Year</label>
+<label for=election-menu id=election-label>Election</label>
+<label for=group-menu id=contest-label>Contest</label>
+</div>
+<div id=menu class=row>
+<select id=year-menu class=left></select>
+<select id=election-menu class=left></select>
+<select id=group-menu class=left><option></option></select>
+<button id=scroll-top class=left type=button>Back to top</button>
+<div id=contest-filter-sticky class=left></div>
+<span class=precincts-reporting></span>
+<div class=time-stamp></div>
+</div>
+<div id=mobile-contest-filter>
+<button id=mobile-contest-filter-toggle type=button aria-expanded=false aria-controls=mobile-contest-filter-body>
+<span id=mobile-contest-filter-label>Filter Contests</span>
+<span id=mobile-contest-filter-caret>&#9660;</span>
+</button>
+<div id=mobile-contest-filter-body>
+<div id=mobile-contest-sidebar-header>
+<button id=mobile-contest-sidebar-toggleall type=button>Clear Filter</button>
+</div>
+<div id=mobile-contest-sidebar-progress role=progressbar aria-valuemin=0 aria-valuemax=100 aria-valuenow=0 aria-label="Loading contests">
+<div id=mobile-contest-sidebar-progress-bar></div>
+</div>
+<div id=mobile-contest-sidebar-list></div>
+</div>
+</div>
+<div id=election-title aria-live=polite aria-atomic=true></div>
+<div id=header-stats>
+<div class=row>
+<div class=right>
+<div class="row process-indicator-row">
+<div id=process-running class="margin_t right" aria-live=polite aria-atomic=true>
+<div class="base margin_r">
+<img src="/images/process-running.gif" alt="Icon - Process Running" title="Process Running"/>
+</div>
+<div class=right>
+<span>Election night tally in progress</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=election-chart align=center>
+<div id=voter-turnout class=chart-container></div>
+<div id=ballot-distribution class=chart-container></div>
+<div id=ballot-party-distribution class=chart-container></div>
+</div>
+<div id=election-footer>
+</div>
+</div>
+<div id=contest-data aria-live=polite aria-atomic=false>
+</div>
+<div id=key class="margin_t row">
+<div id=party-data class="base keys margin_rb">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<aside id=contest-sidebar>
+<div id=contest-sidebar-header>
+<span id=contest-sidebar-title>Filter Contests</span>
+<button id=contest-sidebar-toggleall type=button>Clear Filter</button>
+</div>
+<div id=contest-sidebar-progress style="display:none;" role=progressbar aria-valuemin=0 aria-valuemax=100 aria-valuenow=0 aria-label="Loading contests">
+<div id=contest-sidebar-progress-bar></div>
+</div>
+<div id=contest-sidebar-list></div>
+</aside>
+</div>
+</div>
+<br/>
+<br/>
+<br/>
+</div>
+<footer id=footer align=center>
+<div class=content_frame>
+<div class=sfContentBlock>
+<div class=landscape>
+<div id=policy class=base>
+<div>
+<a href="https://lavote.gov/about-us/background" class=fs>About Us</a> |
+<a href="https://www.lacounty.gov/wps/portal/lac/about/privacy" target=_blank rel="noopener noreferrer" class=fs>Privacy Policy<span class=sr-only> (opens in new tab)</span></a> |
+<a href="https://www.lacounty.gov/wps/portal/lac/user/" target=_blank rel="noopener noreferrer" class=fs>User Rights<span class=sr-only> (opens in new tab)</span></a> |
+<a href="https://www.lacounty.gov/wps/portal/lac/disclaimer/" target=_blank rel="noopener noreferrer" class=fs>Disclaimer<span class=sr-only> (opens in new tab)</span></a> |
+<a href="https://lavote.gov/site-map" class=fs>Site Map</a> |
+<a href="https://www.lacounty.gov/accessibility" target=_blank rel="noopener noreferrer" class=fs>Accessibility<span class=sr-only> (opens in new tab)</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<input id=plat_vers type=hidden value=""/>
+</div>
+</div>
+<script src="/js/jquery-3.7.1.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180636053-1"></script>
+<script src="/js/site.js"></script>
+<script src="/js/dx.all.js?v=134326952210000000"></script>
+<script src="/js/bundle.waypoint.min.js"></script>
+<script src="/js/bundle.gsap.min.js"></script>
+<script src="/js/jquery-visible.min.js"></script>
+<script src="/js/choices.min.js"></script>
+<script src="/js/election-results.min.js?v=134372722370000000"></script>
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=204806311" async></script></body>
+</html>
