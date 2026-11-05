@@ -324,6 +324,10 @@ history chart, About dialog, unknown route). Not verified: other browsers, scree
   fits consolidation but proves nothing about membership. A guess such as "a consolidated precinct covers the base numbers from its
   own id up to the next SVC id" is NOT used: it is unverified. Next probe: the county items linked from the layer description
   (Precinct Information File, Attribute Descriptions), see sources `precinct_info_file_item` and `precinct_attr_desc_item`.
+- **Second probe (Nov 5):** the two county items linked from the layer description are only district-description tables
+  ("Precinct Information File Attribute Descriptions", 7 columns of district descriptions; "Attribute Columns", 2 columns). Neither is a
+  consolidation list. No public source found so far maps regular precincts to the SVC's consolidated precincts. Remaining options: ask the
+  county (the layer's GIS contact is listed in its metadata), or show precinct results without shapes.
 - Side effect to check: each SVC precinct's city comes from one polygon, i.e. one piece of the consolidated precinct. The earlier
   checks (99.6% agreement with place names; 47 of 49 comparable cities within 1% registration) suggest this is mostly fine.
 - Tested: Python unit tests (column order, filtering, missing shapes, switched off by default) and the UI in a headless browser, on
