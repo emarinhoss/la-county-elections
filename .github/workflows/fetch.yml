@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
+    inputs:
+      test_dispatch:
+        description: "Self-test: also start svc-rehearsal for the published 2024 file, to prove this workflow can start it"
+        type: boolean
+        default: false
 
 # One run at a time so two runs never push at once.
 concurrency:
@@ -15,6 +20,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write   # to start the svc-rehearsal workflow when the 2026 SVC file appears
 
 jobs:
   fetch:
@@ -31,15 +37,31 @@ jobs:
         # A parse problem must not stop the raw snapshots from being committed. The step still shows as failed.
         continue-on-error: true
         run: python -m parse.election 2026-11-03-general
+      - name: Decide whether the 2026 SVC precinct file has appeared (see tools/svc_auto.py)
+        id: svc
+        continue-on-error: true
+        run: python -m tools.svc_auto config/sources.json data/raw/2026-11-03-general/fetch_log.jsonl data/svc_auto/state.json data/rehearsal "$GITHUB_OUTPUT"
       - name: Commit new snapshots
         run: |
           git config user.name "election-collector"
           git config user.email "actions@users.noreply.github.com"
-          git add data/raw data/tidy
+          git add data/raw data/tidy data/svc_auto
           if git diff --cached --quiet; then
             echo "nothing new"
           else
             git commit -m "data: new raw snapshots $(date -u +%Y-%m-%dT%H:%MZ)"
-            git pull --rebase
-            git push
+            for i in 1 2 3 4; do git pull --rebase && git push && break; sleep $((i * 5)); done
           fi
+      - name: Start the SVC pipeline (the county published the file)
+        if: steps.svc.outputs.trigger == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SVC_URL: ${{ steps.svc.outputs.url }}
+        run: gh workflow run svc-rehearsal.yml --ref main -f url="$SVC_URL"
+      - name: Self-test of the dispatch (manual runs with test_dispatch ticked only)
+        if: inputs.test_dispatch == true
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run svc-rehearsal.yml --ref main -f url="https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_precinct_public.pdf"

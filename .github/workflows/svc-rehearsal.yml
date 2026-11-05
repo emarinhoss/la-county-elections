@@ -12,9 +12,10 @@ on:
         required: true
         default: "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_precinct_public.pdf"
 
-# Same group as fetch, so the two never push to main at once.
+# Own group (not fetch's): a shared group keeps only one pending run, so a later fetch run could cancel this one.
+# Pushes to main are made safe by the rebase-and-retry loop below instead.
 concurrency:
-  group: fetch
+  group: svc
   cancel-in-progress: false
 
 permissions:
@@ -64,6 +65,5 @@ jobs:
             echo "nothing new"
           else
             git commit -m "data: SVC rehearsal $(basename "$SVC_URL" .pdf)"
-            git pull --rebase
-            git push
+            for i in 1 2 3 4; do git pull --rebase && git push && break; sleep $((i * 5)); done
           fi

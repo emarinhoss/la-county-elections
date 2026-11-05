@@ -78,7 +78,8 @@
       "id": "svc_2026_precinct_pdf",
       "url": "https://content.lavote.gov/docs/rrcc/svc/4348_final_svc_precinct_public.pdf",
       "head": true,
-      "note": "GUESSED. As above."
+      "note": "GUESSED name. Expected to return 400/404 until the county certifies (about early December). When it returns a PDF, fetch.yml starts the svc-rehearsal workflow for it (tools/svc_auto.py).",
+      "auto_svc": true
     },
     {
       "id": "svc_2026_district_pdf",

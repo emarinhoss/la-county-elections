@@ -93,3 +93,10 @@ def test_find_svc_dir_uses_the_election_id(tmp_path):
     d.mkdir(parents=True)
     (d / "countywide_checks.csv").write_text("seq\n")
     assert find_svc_dir(tidy, root=tmp_path / "rehearsal") == d
+    other = tmp_path / "rehearsal" / "4348_semifinal_svc_precinct_v2"  # a differently named file is found too, "final" preferred
+    other.mkdir()
+    (other / "countywide_checks.csv").write_text("seq\n")
+    assert find_svc_dir(tidy, root=tmp_path / "rehearsal") == d
+    (d / "countywide_checks.csv").unlink()
+    assert find_svc_dir(tidy, root=tmp_path / "rehearsal") == other
+    assert find_svc_dir(tidy, root=tmp_path / "no such folder") is None

@@ -17,6 +17,7 @@ left out and reported, never shown with mismatched numbers.
 """
 import csv
 import json
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -116,10 +117,13 @@ def build(svc_dir, tidy_dir):
 
 
 def find_svc_dir(tidy_dir, root="data/rehearsal"):
-    """The pipeline output for this election's SVC precinct file, named <election id>_final_svc_precinct_public."""
+    """The pipeline output for this election's SVC precinct file: <election id>_*precinct*, preferring a name containing "final"."""
     info = json.loads((Path(tidy_dir) / "election.json").read_text())
-    d = Path(root) / f"{info['election_id']}_final_svc_precinct_public"
-    return d if (d / "countywide_checks.csv").exists() else None
+    found = [d for d in Path(root).glob(f"{info['election_id']}_*precinct*") if (d / "countywide_checks.csv").exists()] if Path(root).exists() else []
+    if not found:
+        return None
+    final = [d for d in found if re.search(r"(^|[^a-z])final", d.name.lower())]  # whole word: "semifinal" is not final
+    return sorted(final or found)[-1]
 
 
 if __name__ == "__main__":

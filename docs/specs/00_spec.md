@@ -216,3 +216,17 @@ The site then lists those contests under "Countywide contests, by city" in the m
 repo): all 21 countywide contests joined, including ones whose API choice order was reversed.
 Unverified until the real file exists: that 2026 contest titles match the API's wording, and the file layout (candidate-name
 columns, multi-seat or retention contests) is the same as 2024. The pipeline stops with an error rather than guess on a new layout.
+
+### Automatic start of the 2026 pipeline (Nov 5, 2026)
+
+`fetch.yml` already probes `svc_2026_precinct_pdf` every run. `tools/svc_auto.py` reads that probe; when it is HTTP 200, a PDF, and
+at least 1 MB, it starts `svc-rehearsal` for that URL (`gh workflow run`, `actions: write`), once per version of the file
+(size + Last-Modified). A changed file is processed again, because the county may publish an early file and replace it. A run
+that produced no output is retried at most 3 times, an hour apart, then waits for the file to change. State is committed in
+`data/svc_auto/state.json`. `svc-rehearsal` finishes by triggering `pages`, which rebuilds the city totals.
+The two svc workflows use their own concurrency group, because a shared group keeps only one pending run and a later fetch run
+could cancel the dispatched one. Every commit step retries `pull --rebase && push`.
+Known risks: the file name is a guess (`4348_final_svc_precinct_public.pdf`). The county's names vary (`4306_final_svc_precinct_public`,
+`4291_svc_precinct_zbc`, `4324_final_svc_district_v3`), so if the real 2026 name differs the probe never fires and the pipeline is
+started by hand with the real URL. `city_totals` finds the output folder by `<election id>_*precinct*`, preferring a whole-word "final".
+Self-test: run fetch manually with "test_dispatch" ticked; it starts svc-rehearsal for the published 2024 file.
