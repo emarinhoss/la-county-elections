@@ -1,0 +1,4390 @@
+{
+ "svc_precincts": 2580,
+ "layer_precincts": 2853,
+ "matched": 1486,
+ "matched_share": 0.576,
+ "unmatched_svc": [
+  {
+   "precinct": "0050002B",
+   "ballots": 47
+  },
+  {
+   "precinct": "0050005A",
+   "ballots": 2732
+  },
+  {
+   "precinct": "0050010A",
+   "ballots": 3
+  },
+  {
+   "precinct": "0050014A",
+   "ballots": 559
+  },
+  {
+   "precinct": "0050022D",
+   "ballots": 2
+  },
+  {
+   "precinct": "0050042A",
+   "ballots": 3
+  },
+  {
+   "precinct": "0070001A",
+   "ballots": 785
+  },
+  {
+   "precinct": "0070027B",
+   "ballots": 3
+  },
+  {
+   "precinct": "0080007A",
+   "ballots": 2981
+  },
+  {
+   "precinct": "0080054A",
+   "ballots": 1310
+  },
+  {
+   "precinct": "0080070A",
+   "ballots": 2598
+  },
+  {
+   "precinct": "0090011B",
+   "ballots": 20
+  },
+  {
+   "precinct": "0090026A",
+   "ballots": 2091
+  },
+  {
+   "precinct": "0150005D",
+   "ballots": 7
+  },
+  {
+   "precinct": "0150042A",
+   "ballots": 1237
+  },
+  {
+   "precinct": "0150045A",
+   "ballots": 2106
+  },
+  {
+   "precinct": "0150071A",
+   "ballots": 2511
+  },
+  {
+   "precinct": "0150082A",
+   "ballots": 1787
+  },
+  {
+   "precinct": "0150085A",
+   "ballots": 753
+  },
+  {
+   "precinct": "0180002A",
+   "ballots": 683
+  },
+  {
+   "precinct": "0200005A",
+   "ballots": 3269
+  },
+  {
+   "precinct": "0200016A",
+   "ballots": 4050
+  },
+  {
+   "precinct": "0200031A",
+   "ballots": 3
+  },
+  {
+   "precinct": "0200040A",
+   "ballots": 3672
+  },
+  {
+   "precinct": "0200046A",
+   "ballots": 1562
+  },
+  {
+   "precinct": "0300002A",
+   "ballots": 169
+  },
+  {
+   "precinct": "0300012A",
+   "ballots": 171
+  },
+  {
+   "precinct": "0350027A",
+   "ballots": 3434
+  },
+  {
+   "precinct": "0350030A",
+   "ballots": 1236
+  },
+  {
+   "precinct": "0350042A",
+   "ballots": 2068
+  },
+  {
+   "precinct": "0350048A",
+   "ballots": 1691
+  },
+  {
+   "precinct": "0350061A",
+   "ballots": 23
+  },
+  {
+   "precinct": "0400010A",
+   "ballots": 582
+  },
+  {
+   "precinct": "0450009A",
+   "ballots": 28
+  },
+  {
+   "precinct": "0520024A",
+   "ballots": 1482
+  },
+  {
+   "precinct": "0520025A",
+   "ballots": 1785
+  },
+  {
+   "precinct": "0550011A",
+   "ballots": 2204
+  },
+  {
+   "precinct": "0550073A",
+   "ballots": 2546
+  },
+  {
+   "precinct": "0600039A",
+   "ballots": 1730
+  },
+  {
+   "precinct": "0600046A",
+   "ballots": 36
+  },
+  {
+   "precinct": "0600054A",
+   "ballots": 1922
+  },
+  {
+   "precinct": "0670141B",
+   "ballots": 1430
+  },
+  {
+   "precinct": "0700002A",
+   "ballots": 1259
+  },
+  {
+   "precinct": "0700008A",
+   "ballots": 1166
+  },
+  {
+   "precinct": "0750021A",
+   "ballots": 1645
+  },
+  {
+   "precinct": "0750026A",
+   "ballots": 732
+  },
+  {
+   "precinct": "0750031C",
+   "ballots": 353
+  },
+  {
+   "precinct": "0750035A",
+   "ballots": 1491
+  },
+  {
+   "precinct": "0750057A",
+   "ballots": 334
+  },
+  {
+   "precinct": "0750058A",
+   "ballots": 469
+  },
+  {
+   "precinct": "0800002A",
+   "ballots": 1198
+  },
+  {
+   "precinct": "0800007A",
+   "ballots": 1723
+  },
+  {
+   "precinct": "0800021A",
+   "ballots": 1004
+  },
+  {
+   "precinct": "0850007A",
+   "ballots": 1061
+  },
+  {
+   "precinct": "0850037D",
+   "ballots": 1670
+  },
+  {
+   "precinct": "0850052C",
+   "ballots": 864
+  },
+  {
+   "precinct": "0850054A",
+   "ballots": 1851
+  },
+  {
+   "precinct": "0850055A",
+   "ballots": 955
+  },
+  {
+   "precinct": "0900002A",
+   "ballots": 2882
+  },
+  {
+   "precinct": "0900023A",
+   "ballots": 2612
+  },
+  {
+   "precinct": "0900033B",
+   "ballots": 11
+  },
+  {
+   "precinct": "0900047A",
+   "ballots": 2187
+  },
+  {
+   "precinct": "0950003A",
+   "ballots": 746
+  },
+  {
+   "precinct": "0950014A",
+   "ballots": 4609
+  },
+  {
+   "precinct": "0950027A",
+   "ballots": 2148
+  },
+  {
+   "precinct": "0950031A",
+   "ballots": 2723
+  },
+  {
+   "precinct": "0950042A",
+   "ballots": 3050
+  },
+  {
+   "precinct": "0950132A",
+   "ballots": 1951
+  },
+  {
+   "precinct": "0950136A",
+   "ballots": 1916
+  },
+  {
+   "precinct": "0950138B",
+   "ballots": 3300
+  },
+  {
+   "precinct": "0950152A",
+   "ballots": 196
+  },
+  {
+   "precinct": "0950168A",
+   "ballots": 2748
+  },
+  {
+   "precinct": "0950172A",
+   "ballots": 1895
+  },
+  {
+   "precinct": "0950174A",
+   "ballots": 1660
+  },
+  {
+   "precinct": "0950190A",
+   "ballots": 3635
+  },
+  {
+   "precinct": "0950200A",
+   "ballots": 599
+  },
+  {
+   "precinct": "1020007E",
+   "ballots": 11
+  },
+  {
+   "precinct": "1020192A",
+   "ballots": 22
+  },
+  {
+   "precinct": "1030004A",
+   "ballots": 1471
+  },
+  {
+   "precinct": "1030032A",
+   "ballots": 2624
+  },
+  {
+   "precinct": "1030043A",
+   "ballots": 2142
+  },
+  {
+   "precinct": "1030062A",
+   "ballots": 1902
+  },
+  {
+   "precinct": "1030109A",
+   "ballots": 1201
+  },
+  {
+   "precinct": "1030111A",
+   "ballots": 2191
+  },
+  {
+   "precinct": "1030117A",
+   "ballots": 1539
+  },
+  {
+   "precinct": "1040001A",
+   "ballots": 1706
+  },
+  {
+   "precinct": "1040002E",
+   "ballots": 8
+  },
+  {
+   "precinct": "1040012B",
+   "ballots": 2
+  },
+  {
+   "precinct": "1040012E",
+   "ballots": 2
+  },
+  {
+   "precinct": "1040014B",
+   "ballots": 215
+  },
+  {
+   "precinct": "1040030A",
+   "ballots": 675
+  },
+  {
+   "precinct": "1040035A",
+   "ballots": 325
+  },
+  {
+   "precinct": "1040036A",
+   "ballots": 4
+  },
+  {
+   "precinct": "1040042A",
+   "ballots": 2269
+  },
+  {
+   "precinct": "1070037A",
+   "ballots": 2816
+  },
+  {
+   "precinct": "1070057A",
+   "ballots": 3298
+  },
+  {
+   "precinct": "1070061A",
+   "ballots": 3118
+  },
+  {
+   "precinct": "1100002A",
+   "ballots": 50
+  },
+  {
+   "precinct": "1100025A",
+   "ballots": 31
+  },
+  {
+   "precinct": "1100028A",
+   "ballots": 1810
+  },
+  {
+   "precinct": "1100076A",
+   "ballots": 369
+  },
+  {
+   "precinct": "1100085A",
+   "ballots": 67
+  },
+  {
+   "precinct": "1250005A",
+   "ballots": 80
+  },
+  {
+   "precinct": "1300020A",
+   "ballots": 266
+  },
+  {
+   "precinct": "1300027A",
+   "ballots": 2595
+  },
+  {
+   "precinct": "1300030B",
+   "ballots": 1784
+  },
+  {
+   "precinct": "1300037B",
+   "ballots": 59
+  },
+  {
+   "precinct": "1450003A",
+   "ballots": 1832
+  },
+  {
+   "precinct": "1450010C",
+   "ballots": 405
+  },
+  {
+   "precinct": "1450017E",
+   "ballots": 79
+  },
+  {
+   "precinct": "1450018A",
+   "ballots": 285
+  },
+  {
+   "precinct": "1450024A",
+   "ballots": 1595
+  },
+  {
+   "precinct": "1450030D",
+   "ballots": 106
+  },
+  {
+   "precinct": "1450031A",
+   "ballots": 322
+  },
+  {
+   "precinct": "1450031D",
+   "ballots": 56
+  },
+  {
+   "precinct": "1450037A",
+   "ballots": 164
+  },
+  {
+   "precinct": "1450044B",
+   "ballots": 60
+  },
+  {
+   "precinct": "1450046A",
+   "ballots": 544
+  },
+  {
+   "precinct": "1450051A",
+   "ballots": 12
+  },
+  {
+   "precinct": "1450071A",
+   "ballots": 676
+  },
+  {
+   "precinct": "1450092A",
+   "ballots": 22
+  },
+  {
+   "precinct": "1450136A",
+   "ballots": 1033
+  },
+  {
+   "precinct": "1450137C",
+   "ballots": 485
+  },
+  {
+   "precinct": "1450137G",
+   "ballots": 35
+  },
+  {
+   "precinct": "1450141B",
+   "ballots": 163
+  },
+  {
+   "precinct": "1450142C",
+   "ballots": 95
+  },
+  {
+   "precinct": "1450149D",
+   "ballots": 11
+  },
+  {
+   "precinct": "1450149E",
+   "ballots": 68
+  },
+  {
+   "precinct": "1450150C",
+   "ballots": 2
+  },
+  {
+   "precinct": "1450151C",
+   "ballots": 26
+  },
+  {
+   "precinct": "1450152A",
+   "ballots": 1479
+  },
+  {
+   "precinct": "1450161A",
+   "ballots": 264
+  },
+  {
+   "precinct": "1450163A",
+   "ballots": 1417
+  },
+  {
+   "precinct": "1450305C",
+   "ballots": 4
+  },
+  {
+   "precinct": "1500001A",
+   "ballots": 258
+  },
+  {
+   "precinct": "1500021A",
+   "ballots": 3
+  },
+  {
+   "precinct": "1500025A",
+   "ballots": 475
+  },
+  {
+   "precinct": "1500027E",
+   "ballots": 132
+  },
+  {
+   "precinct": "1500036A",
+   "ballots": 2554
+  },
+  {
+   "precinct": "1500057A",
+   "ballots": 1697
+  },
+  {
+   "precinct": "1500079A",
+   "ballots": 1278
+  },
+  {
+   "precinct": "1500087D",
+   "ballots": 2077
+  },
+  {
+   "precinct": "1500090C",
+   "ballots": 209
+  },
+  {
+   "precinct": "1500092A",
+   "ballots": 1212
+  },
+  {
+   "precinct": "1500093B",
+   "ballots": 448
+  },
+  {
+   "precinct": "1600005A",
+   "ballots": 2342
+  },
+  {
+   "precinct": "1600007A",
+   "ballots": 3077
+  },
+  {
+   "precinct": "1600073A",
+   "ballots": 2919
+  },
+  {
+   "precinct": "1750052A",
+   "ballots": 208
+  },
+  {
+   "precinct": "1750052G",
+   "ballots": 20
+  },
+  {
+   "precinct": "1750057A",
+   "ballots": 13
+  },
+  {
+   "precinct": "1770004A",
+   "ballots": 935
+  },
+  {
+   "precinct": "1770017B",
+   "ballots": 213
+  },
+  {
+   "precinct": "1770072A",
+   "ballots": 698
+  },
+  {
+   "precinct": "1780003A",
+   "ballots": 1885
+  },
+  {
+   "precinct": "1780087A",
+   "ballots": 2026
+  },
+  {
+   "precinct": "1850008A",
+   "ballots": 481
+  },
+  {
+   "precinct": "1850017A",
+   "ballots": 1945
+  },
+  {
+   "precinct": "1850029A",
+   "ballots": 1574
+  },
+  {
+   "precinct": "1850040A",
+   "ballots": 2248
+  },
+  {
+   "precinct": "1850041A",
+   "ballots": 895
+  },
+  {
+   "precinct": "1850045A",
+   "ballots": 1921
+  },
+  {
+   "precinct": "1850048A",
+   "ballots": 35
+  },
+  {
+   "precinct": "1850054A",
+   "ballots": 125
+  },
+  {
+   "precinct": "1850073B",
+   "ballots": 1087
+  },
+  {
+   "precinct": "1850076B",
+   "ballots": 1547
+  },
+  {
+   "precinct": "1850081A",
+   "ballots": 1856
+  },
+  {
+   "precinct": "1850083B",
+   "ballots": 101
+  },
+  {
+   "precinct": "1850083D",
+   "ballots": 3
+  },
+  {
+   "precinct": "1850089A",
+   "ballots": 1118
+  },
+  {
+   "precinct": "1850100A",
+   "ballots": 1598
+  },
+  {
+   "precinct": "1850106A",
+   "ballots": 943
+  },
+  {
+   "precinct": "1850138E",
+   "ballots": 135
+  },
+  {
+   "precinct": "1900002A",
+   "ballots": 180
+  },
+  {
+   "precinct": "1900004C",
+   "ballots": 157
+  },
+  {
+   "precinct": "1900005A",
+   "ballots": 709
+  },
+  {
+   "precinct": "1900015C",
+   "ballots": 449
+  },
+  {
+   "precinct": "1900017A",
+   "ballots": 469
+  },
+  {
+   "precinct": "1900017B",
+   "ballots": 8
+  },
+  {
+   "precinct": "1900018A",
+   "ballots": 164
+  },
+  {
+   "precinct": "1900024A",
+   "ballots": 495
+  },
+  {
+   "precinct": "1900025A",
+   "ballots": 565
+  },
+  {
+   "precinct": "1900030B",
+   "ballots": 203
+  },
+  {
+   "precinct": "1900039A",
+   "ballots": 320
+  },
+  {
+   "precinct": "2000009A",
+   "ballots": 1274
+  },
+  {
+   "precinct": "2000012A",
+   "ballots": 1168
+  },
+  {
+   "precinct": "2000018C",
+   "ballots": 1684
+  },
+  {
+   "precinct": "2000022A",
+   "ballots": 1555
+  },
+  {
+   "precinct": "2000024A",
+   "ballots": 1109
+  },
+  {
+   "precinct": "2000045A",
+   "ballots": 1290
+  },
+  {
+   "precinct": "2040021A",
+   "ballots": 1184
+  },
+  {
+   "precinct": "2080005A",
+   "ballots": 2997
+  },
+  {
+   "precinct": "2100007A",
+   "ballots": 190
+  },
+  {
+   "precinct": "2100013A",
+   "ballots": 969
+  },
+  {
+   "precinct": "2100024B",
+   "ballots": 255
+  },
+  {
+   "precinct": "2100029A",
+   "ballots": 1168
+  },
+  {
+   "precinct": "2100034B",
+   "ballots": 7
+  },
+  {
+   "precinct": "2100034E",
+   "ballots": 99
+  },
+  {
+   "precinct": "2100042C",
+   "ballots": 447
+  },
+  {
+   "precinct": "2100052A",
+   "ballots": 140
+  },
+  {
+   "precinct": "2100053B",
+   "ballots": 642
+  },
+  {
+   "precinct": "2100107D",
+   "ballots": 121
+  },
+  {
+   "precinct": "2100110C",
+   "ballots": 7
+  },
+  {
+   "precinct": "2100112A",
+   "ballots": 873
+  },
+  {
+   "precinct": "2100116A",
+   "ballots": 537
+  },
+  {
+   "precinct": "2100121A",
+   "ballots": 1946
+  },
+  {
+   "precinct": "2100122A",
+   "ballots": 1715
+  },
+  {
+   "precinct": "2250005A",
+   "ballots": 2747
+  },
+  {
+   "precinct": "2300001A",
+   "ballots": 117
+  },
+  {
+   "precinct": "2300005A",
+   "ballots": 1249
+  },
+  {
+   "precinct": "2300007A",
+   "ballots": 274
+  },
+  {
+   "precinct": "2300021A",
+   "ballots": 501
+  },
+  {
+   "precinct": "2300040A",
+   "ballots": 1361
+  },
+  {
+   "precinct": "2300046A",
+   "ballots": 1049
+  },
+  {
+   "precinct": "2300050A",
+   "ballots": 878
+  },
+  {
+   "precinct": "2350024E",
+   "ballots": 47
+  },
+  {
+   "precinct": "2350024G",
+   "ballots": 4
+  },
+  {
+   "precinct": "2350026B",
+   "ballots": 275
+  },
+  {
+   "precinct": "2500002A",
+   "ballots": 1388
+  },
+  {
+   "precinct": "2500043A",
+   "ballots": 3083
+  },
+  {
+   "precinct": "2550002A",
+   "ballots": 2850
+  },
+  {
+   "precinct": "2550004A",
+   "ballots": 2588
+  },
+  {
+   "precinct": "2550007A",
+   "ballots": 2747
+  },
+  {
+   "precinct": "2550019G",
+   "ballots": 2
+  },
+  {
+   "precinct": "2550021A",
+   "ballots": 2644
+  },
+  {
+   "precinct": "2550028A",
+   "ballots": 2365
+  },
+  {
+   "precinct": "2550039A",
+   "ballots": 2756
+  },
+  {
+   "precinct": "2550046A",
+   "ballots": 2514
+  },
+  {
+   "precinct": "2550049A",
+   "ballots": 3267
+  },
+  {
+   "precinct": "2550057B",
+   "ballots": 3102
+  },
+  {
+   "precinct": "2550078B",
+   "ballots": 2352
+  },
+  {
+   "precinct": "2550089A",
+   "ballots": 1484
+  },
+  {
+   "precinct": "2550097A",
+   "ballots": 1649
+  },
+  {
+   "precinct": "2550127A",
+   "ballots": 2569
+  },
+  {
+   "precinct": "2550172A",
+   "ballots": 2382
+  },
+  {
+   "precinct": "2600007A",
+   "ballots": 650
+  },
+  {
+   "precinct": "2600016B",
+   "ballots": 172
+  },
+  {
+   "precinct": "2600019A",
+   "ballots": 365
+  },
+  {
+   "precinct": "2600022B",
+   "ballots": 1900
+  },
+  {
+   "precinct": "2600031B",
+   "ballots": 46
+  },
+  {
+   "precinct": "2600044A",
+   "ballots": 55
+  },
+  {
+   "precinct": "2600046A",
+   "ballots": 161
+  },
+  {
+   "precinct": "2600050A",
+   "ballots": 175
+  },
+  {
+   "precinct": "2600052A",
+   "ballots": 976
+  },
+  {
+   "precinct": "2600068A",
+   "ballots": 1267
+  },
+  {
+   "precinct": "2600069A",
+   "ballots": 9
+  },
+  {
+   "precinct": "2600104A",
+   "ballots": 704
+  },
+  {
+   "precinct": "2600106A",
+   "ballots": 3347
+  },
+  {
+   "precinct": "2600107A",
+   "ballots": 32
+  },
+  {
+   "precinct": "2600108A",
+   "ballots": 942
+  },
+  {
+   "precinct": "2630010A",
+   "ballots": 149
+  },
+  {
+   "precinct": "2630062A",
+   "ballots": 1150
+  },
+  {
+   "precinct": "2630084A",
+   "ballots": 2499
+  },
+  {
+   "precinct": "2630097A",
+   "ballots": 543
+  },
+  {
+   "precinct": "2630159A",
+   "ballots": 3426
+  },
+  {
+   "precinct": "2630172A",
+   "ballots": 1102
+  },
+  {
+   "precinct": "2630195A",
+   "ballots": 1621
+  },
+  {
+   "precinct": "2630199A",
+   "ballots": 1678
+  },
+  {
+   "precinct": "2700013A",
+   "ballots": 868
+  },
+  {
+   "precinct": "2700025B",
+   "ballots": 23
+  },
+  {
+   "precinct": "2700030A",
+   "ballots": 1764
+  },
+  {
+   "precinct": "2700033M",
+   "ballots": 2
+  },
+  {
+   "precinct": "2700039A",
+   "ballots": 2618
+  },
+  {
+   "precinct": "2700047A",
+   "ballots": 1494
+  },
+  {
+   "precinct": "2700050A",
+   "ballots": 378
+  },
+  {
+   "precinct": "2700051C",
+   "ballots": 106
+  },
+  {
+   "precinct": "2700058A",
+   "ballots": 213
+  },
+  {
+   "precinct": "2700101A",
+   "ballots": 650
+  },
+  {
+   "precinct": "2750009A",
+   "ballots": 4510
+  },
+  {
+   "precinct": "2750028A",
+   "ballots": 3840
+  },
+  {
+   "precinct": "2850006A",
+   "ballots": 2060
+  },
+  {
+   "precinct": "2850012A",
+   "ballots": 1160
+  },
+  {
+   "precinct": "2930017A",
+   "ballots": 15
+  },
+  {
+   "precinct": "2930019B",
+   "ballots": 18
+  },
+  {
+   "precinct": "2950010A",
+   "ballots": 2060
+  },
+  {
+   "precinct": "2950028B",
+   "ballots": 186
+  },
+  {
+   "precinct": "2950032A",
+   "ballots": 2505
+  },
+  {
+   "precinct": "2950042A",
+   "ballots": 2398
+  },
+  {
+   "precinct": "2950045A",
+   "ballots": 2273
+  },
+  {
+   "precinct": "2950048A",
+   "ballots": 1383
+  },
+  {
+   "precinct": "2950061A",
+   "ballots": 1025
+  },
+  {
+   "precinct": "2950065A",
+   "ballots": 1494
+  },
+  {
+   "precinct": "2950084A",
+   "ballots": 2464
+  },
+  {
+   "precinct": "2950086A",
+   "ballots": 1274
+  },
+  {
+   "precinct": "2950095A",
+   "ballots": 1416
+  },
+  {
+   "precinct": "2950100A",
+   "ballots": 184
+  },
+  {
+   "precinct": "3150021A",
+   "ballots": 2090
+  },
+  {
+   "precinct": "3200001A",
+   "ballots": 3036
+  },
+  {
+   "precinct": "3200008A",
+   "ballots": 1301
+  },
+  {
+   "precinct": "3300002A",
+   "ballots": 2160
+  },
+  {
+   "precinct": "3300007A",
+   "ballots": 2440
+  },
+  {
+   "precinct": "3300010A",
+   "ballots": 1185
+  },
+  {
+   "precinct": "3300016B",
+   "ballots": 55
+  },
+  {
+   "precinct": "3300029A",
+   "ballots": 1985
+  },
+  {
+   "precinct": "3300042A",
+   "ballots": 3099
+  },
+  {
+   "precinct": "3300043A",
+   "ballots": 252
+  },
+  {
+   "precinct": "3400014A",
+   "ballots": 549
+  },
+  {
+   "precinct": "3400016A",
+   "ballots": 354
+  },
+  {
+   "precinct": "3400021A",
+   "ballots": 285
+  },
+  {
+   "precinct": "3400037A",
+   "ballots": 319
+  },
+  {
+   "precinct": "3400053B",
+   "ballots": 438
+  },
+  {
+   "precinct": "3430008A",
+   "ballots": 133
+  },
+  {
+   "precinct": "3450010A",
+   "ballots": 2282
+  },
+  {
+   "precinct": "3450021A",
+   "ballots": 1933
+  },
+  {
+   "precinct": "3450023A",
+   "ballots": 1998
+  },
+  {
+   "precinct": "3450042A",
+   "ballots": 3158
+  },
+  {
+   "precinct": "3450046A",
+   "ballots": 3228
+  },
+  {
+   "precinct": "3450070A",
+   "ballots": 1473
+  },
+  {
+   "precinct": "3450071A",
+   "ballots": 20
+  },
+  {
+   "precinct": "3450072A",
+   "ballots": 2098
+  },
+  {
+   "precinct": "3450078A",
+   "ballots": 453
+  },
+  {
+   "precinct": "3450081A",
+   "ballots": 1007
+  },
+  {
+   "precinct": "3450084A",
+   "ballots": 83
+  },
+  {
+   "precinct": "3500016A",
+   "ballots": 11
+  },
+  {
+   "precinct": "3550005A",
+   "ballots": 2094
+  },
+  {
+   "precinct": "3550011B",
+   "ballots": 1015
+  },
+  {
+   "precinct": "3550014A",
+   "ballots": 1528
+  },
+  {
+   "precinct": "3550022A",
+   "ballots": 756
+  },
+  {
+   "precinct": "3550027A",
+   "ballots": 642
+  },
+  {
+   "precinct": "3550036A",
+   "ballots": 858
+  },
+  {
+   "precinct": "3550076A",
+   "ballots": 1855
+  },
+  {
+   "precinct": "3550080A",
+   "ballots": 2737
+  },
+  {
+   "precinct": "3550084A",
+   "ballots": 1620
+  },
+  {
+   "precinct": "3550094A",
+   "ballots": 2875
+  },
+  {
+   "precinct": "3550098A",
+   "ballots": 2299
+  },
+  {
+   "precinct": "3550099A",
+   "ballots": 2231
+  },
+  {
+   "precinct": "3650002J",
+   "ballots": 4
+  },
+  {
+   "precinct": "3700004A",
+   "ballots": 18
+  },
+  {
+   "precinct": "3700042A",
+   "ballots": 88
+  },
+  {
+   "precinct": "3700042D",
+   "ballots": 108
+  },
+  {
+   "precinct": "3700044C",
+   "ballots": 304
+  },
+  {
+   "precinct": "3700049A",
+   "ballots": 391
+  },
+  {
+   "precinct": "3750003C",
+   "ballots": 11
+  },
+  {
+   "precinct": "3750004A",
+   "ballots": 6
+  },
+  {
+   "precinct": "3750005A",
+   "ballots": 487
+  },
+  {
+   "precinct": "3800007A",
+   "ballots": 1809
+  },
+  {
+   "precinct": "3800012A",
+   "ballots": 1659
+  },
+  {
+   "precinct": "3800020B",
+   "ballots": 1591
+  },
+  {
+   "precinct": "3850001A",
+   "ballots": 980
+  },
+  {
+   "precinct": "3850007A",
+   "ballots": 3822
+  },
+  {
+   "precinct": "3850016A",
+   "ballots": 1063
+  },
+  {
+   "precinct": "3850020A",
+   "ballots": 1795
+  },
+  {
+   "precinct": "3850026A",
+   "ballots": 1937
+  },
+  {
+   "precinct": "3850037A",
+   "ballots": 1872
+  },
+  {
+   "precinct": "3850046A",
+   "ballots": 1333
+  },
+  {
+   "precinct": "3850059A",
+   "ballots": 1169
+  },
+  {
+   "precinct": "3850068B",
+   "ballots": 941
+  },
+  {
+   "precinct": "3850075A",
+   "ballots": 2976
+  },
+  {
+   "precinct": "3850108A",
+   "ballots": 2438
+  },
+  {
+   "precinct": "3850150A",
+   "ballots": 1888
+  },
+  {
+   "precinct": "3850159A",
+   "ballots": 1713
+  },
+  {
+   "precinct": "3850163A",
+   "ballots": 830
+  },
+  {
+   "precinct": "3850166A",
+   "ballots": 1803
+  },
+  {
+   "precinct": "3850170A",
+   "ballots": 1336
+  },
+  {
+   "precinct": "3850180A",
+   "ballots": 1318
+  },
+  {
+   "precinct": "3850217A",
+   "ballots": 3266
+  },
+  {
+   "precinct": "3850229A",
+   "ballots": 2467
+  },
+  {
+   "precinct": "3850247A",
+   "ballots": 1819
+  },
+  {
+   "precinct": "3850248A",
+   "ballots": 2730
+  },
+  {
+   "precinct": "3850275A",
+   "ballots": 3705
+  },
+  {
+   "precinct": "3850286A",
+   "ballots": 1500
+  },
+  {
+   "precinct": "3850287A",
+   "ballots": 2839
+  },
+  {
+   "precinct": "3850305A",
+   "ballots": 2924
+  },
+  {
+   "precinct": "3850316A",
+   "ballots": 1659
+  },
+  {
+   "precinct": "3850334B",
+   "ballots": 743
+  },
+  {
+   "precinct": "3850372A",
+   "ballots": 2118
+  },
+  {
+   "precinct": "3850400A",
+   "ballots": 1167
+  },
+  {
+   "precinct": "3850421A",
+   "ballots": 5
+  },
+  {
+   "precinct": "3850422A",
+   "ballots": 122
+  },
+  {
+   "precinct": "3850547A",
+   "ballots": 1817
+  },
+  {
+   "precinct": "3850564B",
+   "ballots": 3177
+  },
+  {
+   "precinct": "3850568A",
+   "ballots": 2338
+  },
+  {
+   "precinct": "3850572A",
+   "ballots": 240
+  },
+  {
+   "precinct": "3850634A",
+   "ballots": 419
+  },
+  {
+   "precinct": "3850639B",
+   "ballots": 2964
+  },
+  {
+   "precinct": "3850649A",
+   "ballots": 2726
+  },
+  {
+   "precinct": "3850702A",
+   "ballots": 1481
+  },
+  {
+   "precinct": "3900005C",
+   "ballots": 153
+  },
+  {
+   "precinct": "3900006A",
+   "ballots": 1283
+  },
+  {
+   "precinct": "3900007A",
+   "ballots": 2
+  },
+  {
+   "precinct": "3900007B",
+   "ballots": 158
+  },
+  {
+   "precinct": "3900060B",
+   "ballots": 62
+  },
+  {
+   "precinct": "3900061A",
+   "ballots": 191
+  },
+  {
+   "precinct": "3900066A",
+   "ballots": 1448
+  },
+  {
+   "precinct": "3900068A",
+   "ballots": 77
+  },
+  {
+   "precinct": "3900070A",
+   "ballots": 1429
+  },
+  {
+   "precinct": "3900071A",
+   "ballots": 297
+  },
+  {
+   "precinct": "3900076A",
+   "ballots": 717
+  },
+  {
+   "precinct": "3900083A",
+   "ballots": 1149
+  },
+  {
+   "precinct": "3990003A",
+   "ballots": 1476
+  },
+  {
+   "precinct": "3990015A",
+   "ballots": 1999
+  },
+  {
+   "precinct": "3990017A",
+   "ballots": 2000
+  },
+  {
+   "precinct": "3990028A",
+   "ballots": 1349
+  },
+  {
+   "precinct": "4050002A",
+   "ballots": 1904
+  },
+  {
+   "precinct": "4060001A",
+   "ballots": 882
+  },
+  {
+   "precinct": "4060001C",
+   "ballots": 83
+  },
+  {
+   "precinct": "4060002A",
+   "ballots": 20
+  },
+  {
+   "precinct": "4060008A",
+   "ballots": 9
+  },
+  {
+   "precinct": "4150050A",
+   "ballots": 5549
+  },
+  {
+   "precinct": "4200008A",
+   "ballots": 1595
+  },
+  {
+   "precinct": "4200015A",
+   "ballots": 1628
+  },
+  {
+   "precinct": "4400004A",
+   "ballots": 1027
+  },
+  {
+   "precinct": "4400033A",
+   "ballots": 2394
+  },
+  {
+   "precinct": "4400038A",
+   "ballots": 2
+  },
+  {
+   "precinct": "4400069A",
+   "ballots": 2293
+  },
+  {
+   "precinct": "4450017A",
+   "ballots": 2062
+  },
+  {
+   "precinct": "4450025A",
+   "ballots": 2235
+  },
+  {
+   "precinct": "4450027A",
+   "ballots": 4
+  },
+  {
+   "precinct": "4450032A",
+   "ballots": 2047
+  },
+  {
+   "precinct": "4450074A",
+   "ballots": 1868
+  },
+  {
+   "precinct": "4500001A",
+   "ballots": 830
+  },
+  {
+   "precinct": "4500004A",
+   "ballots": 563
+  },
+  {
+   "precinct": "4500006A",
+   "ballots": 752
+  },
+  {
+   "precinct": "4500007A",
+   "ballots": 1325
+  },
+  {
+   "precinct": "4500008A",
+   "ballots": 342
+  },
+  {
+   "precinct": "4500009A",
+   "ballots": 2286
+  },
+  {
+   "precinct": "4500016A",
+   "ballots": 1104
+  },
+  {
+   "precinct": "4500022A",
+   "ballots": 676
+  },
+  {
+   "precinct": "4500023A",
+   "ballots": 196
+  },
+  {
+   "precinct": "4500023B",
+   "ballots": 281
+  },
+  {
+   "precinct": "4500024A",
+   "ballots": 179
+  },
+  {
+   "precinct": "4500026A",
+   "ballots": 1458
+  },
+  {
+   "precinct": "4500035A",
+   "ballots": 654
+  },
+  {
+   "precinct": "4500039A",
+   "ballots": 162
+  },
+  {
+   "precinct": "4500040A",
+   "ballots": 578
+  },
+  {
+   "precinct": "4500090A",
+   "ballots": 709
+  },
+  {
+   "precinct": "4610025A",
+   "ballots": 2413
+  },
+  {
+   "precinct": "4700003C",
+   "ballots": 15
+  },
+  {
+   "precinct": "4780001B",
+   "ballots": 36
+  },
+  {
+   "precinct": "4780003A",
+   "ballots": 212
+  },
+  {
+   "precinct": "4780011A",
+   "ballots": 1521
+  },
+  {
+   "precinct": "4800019A",
+   "ballots": 3419
+  },
+  {
+   "precinct": "4800021A",
+   "ballots": 72
+  },
+  {
+   "precinct": "4800021B",
+   "ballots": 1446
+  },
+  {
+   "precinct": "4800028A",
+   "ballots": 2582
+  },
+  {
+   "precinct": "4800029B",
+   "ballots": 2320
+  },
+  {
+   "precinct": "4800040A",
+   "ballots": 2116
+  },
+  {
+   "precinct": "4800047A",
+   "ballots": 1948
+  },
+  {
+   "precinct": "4800048A",
+   "ballots": 1965
+  },
+  {
+   "precinct": "5000009A",
+   "ballots": 2419
+  },
+  {
+   "precinct": "5000019A",
+   "ballots": 3242
+  },
+  {
+   "precinct": "5000029A",
+   "ballots": 2843
+  },
+  {
+   "precinct": "5000035C",
+   "ballots": 298
+  },
+  {
+   "precinct": "5000043B",
+   "ballots": 8
+  },
+  {
+   "precinct": "5000053A",
+   "ballots": 2825
+  },
+  {
+   "precinct": "5000058A",
+   "ballots": 2397
+  },
+  {
+   "precinct": "5000070A",
+   "ballots": 1892
+  },
+  {
+   "precinct": "5000079A",
+   "ballots": 1548
+  },
+  {
+   "precinct": "5000080C",
+   "ballots": 1691
+  },
+  {
+   "precinct": "5000086A",
+   "ballots": 572
+  },
+  {
+   "precinct": "5000119A",
+   "ballots": 431
+  },
+  {
+   "precinct": "5000122A",
+   "ballots": 1998
+  },
+  {
+   "precinct": "5000155A",
+   "ballots": 2414
+  },
+  {
+   "precinct": "5050003A",
+   "ballots": 3789
+  },
+  {
+   "precinct": "5100001A",
+   "ballots": 1226
+  },
+  {
+   "precinct": "5100006A",
+   "ballots": 761
+  },
+  {
+   "precinct": "5100016A",
+   "ballots": 300
+  },
+  {
+   "precinct": "5150001A",
+   "ballots": 6020
+  },
+  {
+   "precinct": "5150007B",
+   "ballots": 1478
+  },
+  {
+   "precinct": "5150029A",
+   "ballots": 1541
+  },
+  {
+   "precinct": "5150061A",
+   "ballots": 2469
+  },
+  {
+   "precinct": "5150065B",
+   "ballots": 2448
+  },
+  {
+   "precinct": "5150071A",
+   "ballots": 1515
+  },
+  {
+   "precinct": "5150072A",
+   "ballots": 325
+  },
+  {
+   "precinct": "5150094A",
+   "ballots": 4752
+  },
+  {
+   "precinct": "5150098A",
+   "ballots": 2200
+  },
+  {
+   "precinct": "5150102A",
+   "ballots": 3688
+  },
+  {
+   "precinct": "5150112A",
+   "ballots": 3534
+  },
+  {
+   "precinct": "5150121A",
+   "ballots": 2703
+  },
+  {
+   "precinct": "5150123A",
+   "ballots": 2645
+  },
+  {
+   "precinct": "5150193A",
+   "ballots": 2533
+  },
+  {
+   "precinct": "5150216A",
+   "ballots": 1092
+  },
+  {
+   "precinct": "5230016A",
+   "ballots": 2162
+  },
+  {
+   "precinct": "5230032A",
+   "ballots": 2110
+  },
+  {
+   "precinct": "5230039A",
+   "ballots": 2250
+  },
+  {
+   "precinct": "5230049A",
+   "ballots": 1772
+  },
+  {
+   "precinct": "5250004A",
+   "ballots": 558
+  },
+  {
+   "precinct": "5250004B",
+   "ballots": 95
+  },
+  {
+   "precinct": "5250006D",
+   "ballots": 319
+  },
+  {
+   "precinct": "5250009A",
+   "ballots": 1395
+  },
+  {
+   "precinct": "5250011E",
+   "ballots": 1461
+  },
+  {
+   "precinct": "5250021B",
+   "ballots": 686
+  },
+  {
+   "precinct": "5250022A",
+   "ballots": 505
+  },
+  {
+   "precinct": "5250024A",
+   "ballots": 322
+  },
+  {
+   "precinct": "5250027B",
+   "ballots": 1949
+  },
+  {
+   "precinct": "5250030A",
+   "ballots": 1050
+  },
+  {
+   "precinct": "5250036D",
+   "ballots": 498
+  },
+  {
+   "precinct": "5250039A",
+   "ballots": 85
+  },
+  {
+   "precinct": "5250040A",
+   "ballots": 1777
+  },
+  {
+   "precinct": "5250042A",
+   "ballots": 1162
+  },
+  {
+   "precinct": "5250044A",
+   "ballots": 27
+  },
+  {
+   "precinct": "5250049A",
+   "ballots": 1175
+  },
+  {
+   "precinct": "5250057A",
+   "ballots": 1082
+  },
+  {
+   "precinct": "5250059A",
+   "ballots": 213
+  },
+  {
+   "precinct": "5250059D",
+   "ballots": 65
+  },
+  {
+   "precinct": "5250060F",
+   "ballots": 53
+  },
+  {
+   "precinct": "5250062A",
+   "ballots": 1574
+  },
+  {
+   "precinct": "5250063B",
+   "ballots": 87
+  },
+  {
+   "precinct": "5250090A",
+   "ballots": 834
+  },
+  {
+   "precinct": "5250096E",
+   "ballots": 1642
+  },
+  {
+   "precinct": "5250147A",
+   "ballots": 1635
+  },
+  {
+   "precinct": "5250152A",
+   "ballots": 960
+  },
+  {
+   "precinct": "5400004A",
+   "ballots": 2409
+  },
+  {
+   "precinct": "5500010A",
+   "ballots": 325
+  },
+  {
+   "precinct": "5500011A",
+   "ballots": 218
+  },
+  {
+   "precinct": "5500012A",
+   "ballots": 2674
+  },
+  {
+   "precinct": "5500035A",
+   "ballots": 10
+  },
+  {
+   "precinct": "5500046A",
+   "ballots": 94
+  },
+  {
+   "precinct": "5500100A",
+   "ballots": 744
+  },
+  {
+   "precinct": "5500103A",
+   "ballots": 148
+  },
+  {
+   "precinct": "5500116B",
+   "ballots": 106
+  },
+  {
+   "precinct": "5530018A",
+   "ballots": 3981
+  },
+  {
+   "precinct": "5530033B",
+   "ballots": 3149
+  },
+  {
+   "precinct": "5530053A",
+   "ballots": 2260
+  },
+  {
+   "precinct": "5530055A",
+   "ballots": 4477
+  },
+  {
+   "precinct": "5550032A",
+   "ballots": 4208
+  },
+  {
+   "precinct": "5550045B",
+   "ballots": 4102
+  },
+  {
+   "precinct": "5750012A",
+   "ballots": 1431
+  },
+  {
+   "precinct": "5750018A",
+   "ballots": 1709
+  },
+  {
+   "precinct": "5750074A",
+   "ballots": 899
+  },
+  {
+   "precinct": "5850005A",
+   "ballots": 1046
+  },
+  {
+   "precinct": "5850077A",
+   "ballots": 1947
+  },
+  {
+   "precinct": "5850207B",
+   "ballots": 331
+  },
+  {
+   "precinct": "5850221A",
+   "ballots": 1808
+  },
+  {
+   "precinct": "5900001A",
+   "ballots": 162
+  },
+  {
+   "precinct": "6000008B",
+   "ballots": 776
+  },
+  {
+   "precinct": "6000010D",
+   "ballots": 528
+  },
+  {
+   "precinct": "6000025A",
+   "ballots": 2518
+  },
+  {
+   "precinct": "6000040A",
+   "ballots": 2018
+  },
+  {
+   "precinct": "6050012A",
+   "ballots": 1252
+  },
+  {
+   "precinct": "6050020A",
+   "ballots": 1687
+  },
+  {
+   "precinct": "6100008A",
+   "ballots": 2139
+  },
+  {
+   "precinct": "6100010A",
+   "ballots": 1990
+  },
+  {
+   "precinct": "6100015A",
+   "ballots": 2447
+  },
+  {
+   "precinct": "6100018B",
+   "ballots": 1533
+  },
+  {
+   "precinct": "6100024A",
+   "ballots": 2152
+  },
+  {
+   "precinct": "6100034A",
+   "ballots": 684
+  },
+  {
+   "precinct": "6200001B",
+   "ballots": 10
+  },
+  {
+   "precinct": "6200016A",
+   "ballots": 2394
+  },
+  {
+   "precinct": "6220012A",
+   "ballots": 2270
+  },
+  {
+   "precinct": "6220018A",
+   "ballots": 3099
+  },
+  {
+   "precinct": "6220029A",
+   "ballots": 1727
+  },
+  {
+   "precinct": "6220034A",
+   "ballots": 846
+  },
+  {
+   "precinct": "6220037B",
+   "ballots": 2912
+  },
+  {
+   "precinct": "6220051A",
+   "ballots": 2587
+  },
+  {
+   "precinct": "6220053E",
+   "ballots": 154
+  },
+  {
+   "precinct": "6220054A",
+   "ballots": 525
+  },
+  {
+   "precinct": "6220057A",
+   "ballots": 3841
+  },
+  {
+   "precinct": "6220062A",
+   "ballots": 951
+  },
+  {
+   "precinct": "6220063A",
+   "ballots": 1258
+  },
+  {
+   "precinct": "6220064A",
+   "ballots": 550
+  },
+  {
+   "precinct": "6220068A",
+   "ballots": 688
+  },
+  {
+   "precinct": "6220070A",
+   "ballots": 1155
+  },
+  {
+   "precinct": "6220073A",
+   "ballots": 206
+  },
+  {
+   "precinct": "6220081C",
+   "ballots": 378
+  },
+  {
+   "precinct": "6220090A",
+   "ballots": 2892
+  },
+  {
+   "precinct": "6220097A",
+   "ballots": 506
+  },
+  {
+   "precinct": "6220101A",
+   "ballots": 1040
+  },
+  {
+   "precinct": "6220103A",
+   "ballots": 3065
+  },
+  {
+   "precinct": "6220108A",
+   "ballots": 3651
+  },
+  {
+   "precinct": "6220110C",
+   "ballots": 18
+  },
+  {
+   "precinct": "6220114F",
+   "ballots": 143
+  },
+  {
+   "precinct": "6220126A",
+   "ballots": 2250
+  },
+  {
+   "precinct": "6220128A",
+   "ballots": 3522
+  },
+  {
+   "precinct": "6220145B",
+   "ballots": 2215
+  },
+  {
+   "precinct": "6220164A",
+   "ballots": 1238
+  },
+  {
+   "precinct": "6220182A",
+   "ballots": 1252
+  },
+  {
+   "precinct": "6220183A",
+   "ballots": 754
+  },
+  {
+   "precinct": "6220210A",
+   "ballots": 1531
+  },
+  {
+   "precinct": "6220237A",
+   "ballots": 117
+  },
+  {
+   "precinct": "6220246C",
+   "ballots": 2
+  },
+  {
+   "precinct": "6220281A",
+   "ballots": 3061
+  },
+  {
+   "precinct": "6220294A",
+   "ballots": 9
+  },
+  {
+   "precinct": "6230011B",
+   "ballots": 4
+  },
+  {
+   "precinct": "6230052B",
+   "ballots": 15
+  },
+  {
+   "precinct": "6250003A",
+   "ballots": 3832
+  },
+  {
+   "precinct": "6250018A",
+   "ballots": 3215
+  },
+  {
+   "precinct": "6250031B",
+   "ballots": 2281
+  },
+  {
+   "precinct": "6250034A",
+   "ballots": 3531
+  },
+  {
+   "precinct": "6250036A",
+   "ballots": 2908
+  },
+  {
+   "precinct": "6250038A",
+   "ballots": 2742
+  },
+  {
+   "precinct": "6250043A",
+   "ballots": 3430
+  },
+  {
+   "precinct": "6250046A",
+   "ballots": 2682
+  },
+  {
+   "precinct": "6250067A",
+   "ballots": 3120
+  },
+  {
+   "precinct": "6250072A",
+   "ballots": 2801
+  },
+  {
+   "precinct": "6250078A",
+   "ballots": 2514
+  },
+  {
+   "precinct": "6300002E",
+   "ballots": 18
+  },
+  {
+   "precinct": "6300006E",
+   "ballots": 124
+  },
+  {
+   "precinct": "6300423D",
+   "ballots": 6
+  },
+  {
+   "precinct": "6300459B",
+   "ballots": 26
+  },
+  {
+   "precinct": "6400008A",
+   "ballots": 125
+  },
+  {
+   "precinct": "6400013A",
+   "ballots": 3553
+  },
+  {
+   "precinct": "6450006B",
+   "ballots": 16
+  },
+  {
+   "precinct": "6450009A",
+   "ballots": 2595
+  },
+  {
+   "precinct": "6530044A",
+   "ballots": 2400
+  },
+  {
+   "precinct": "6550001B",
+   "ballots": 1608
+  },
+  {
+   "precinct": "6550018E",
+   "ballots": 1514
+  },
+  {
+   "precinct": "6550019G",
+   "ballots": 2
+  },
+  {
+   "precinct": "6550028A",
+   "ballots": 1205
+  },
+  {
+   "precinct": "6550035A",
+   "ballots": 1473
+  },
+  {
+   "precinct": "6550050A",
+   "ballots": 1378
+  },
+  {
+   "precinct": "6550052A",
+   "ballots": 1917
+  },
+  {
+   "precinct": "6550062B",
+   "ballots": 754
+  },
+  {
+   "precinct": "6550083A",
+   "ballots": 1244
+  },
+  {
+   "precinct": "6600016A",
+   "ballots": 2789
+  },
+  {
+   "precinct": "6600019A",
+   "ballots": 2631
+  },
+  {
+   "precinct": "6600031A",
+   "ballots": 2901
+  },
+  {
+   "precinct": "6600039A",
+   "ballots": 3116
+  },
+  {
+   "precinct": "6650032B",
+   "ballots": 143
+  },
+  {
+   "precinct": "6650034A",
+   "ballots": 1055
+  },
+  {
+   "precinct": "6700001A",
+   "ballots": 1932
+  },
+  {
+   "precinct": "6700004A",
+   "ballots": 1363
+  },
+  {
+   "precinct": "6700005A",
+   "ballots": 2479
+  },
+  {
+   "precinct": "6700014A",
+   "ballots": 21
+  },
+  {
+   "precinct": "6700014B",
+   "ballots": 2058
+  },
+  {
+   "precinct": "6700024A",
+   "ballots": 311
+  },
+  {
+   "precinct": "6700025A",
+   "ballots": 700
+  },
+  {
+   "precinct": "6700030B",
+   "ballots": 2498
+  },
+  {
+   "precinct": "6700035A",
+   "ballots": 889
+  },
+  {
+   "precinct": "6700040A",
+   "ballots": 1722
+  },
+  {
+   "precinct": "6700045A",
+   "ballots": 401
+  },
+  {
+   "precinct": "6700053A",
+   "ballots": 227
+  },
+  {
+   "precinct": "6700053C",
+   "ballots": 130
+  },
+  {
+   "precinct": "6700054A",
+   "ballots": 2003
+  },
+  {
+   "precinct": "6700062A",
+   "ballots": 435
+  },
+  {
+   "precinct": "6700063A",
+   "ballots": 134
+  },
+  {
+   "precinct": "6700072A",
+   "ballots": 517
+  },
+  {
+   "precinct": "6700076A",
+   "ballots": 114
+  },
+  {
+   "precinct": "6820015A",
+   "ballots": 3208
+  },
+  {
+   "precinct": "6820017B",
+   "ballots": 1639
+  },
+  {
+   "precinct": "6820023A",
+   "ballots": 4585
+  },
+  {
+   "precinct": "6850002B",
+   "ballots": 469
+  },
+  {
+   "precinct": "6850021C",
+   "ballots": 7
+  },
+  {
+   "precinct": "7050068A",
+   "ballots": 2585
+  },
+  {
+   "precinct": "7050076A",
+   "ballots": 2115
+  },
+  {
+   "precinct": "7100004B",
+   "ballots": 3704
+  },
+  {
+   "precinct": "7150006A",
+   "ballots": 3309
+  },
+  {
+   "precinct": "7150008B",
+   "ballots": 2730
+  },
+  {
+   "precinct": "7150025A",
+   "ballots": 3667
+  },
+  {
+   "precinct": "7150029A",
+   "ballots": 674
+  },
+  {
+   "precinct": "7150032A",
+   "ballots": 2525
+  },
+  {
+   "precinct": "7150041A",
+   "ballots": 2809
+  },
+  {
+   "precinct": "7150046A",
+   "ballots": 3976
+  },
+  {
+   "precinct": "7150048A",
+   "ballots": 3210
+  },
+  {
+   "precinct": "7150049C",
+   "ballots": 825
+  },
+  {
+   "precinct": "7150061A",
+   "ballots": 1602
+  },
+  {
+   "precinct": "7150063A",
+   "ballots": 1602
+  },
+  {
+   "precinct": "7150069A",
+   "ballots": 854
+  },
+  {
+   "precinct": "7150078D",
+   "ballots": 1348
+  },
+  {
+   "precinct": "7150097A",
+   "ballots": 3915
+  },
+  {
+   "precinct": "7150108A",
+   "ballots": 3594
+  },
+  {
+   "precinct": "7150115D",
+   "ballots": 29
+  },
+  {
+   "precinct": "7150121A",
+   "ballots": 3268
+  },
+  {
+   "precinct": "7150147A",
+   "ballots": 445
+  },
+  {
+   "precinct": "7360001A",
+   "ballots": 1057
+  },
+  {
+   "precinct": "7360002A",
+   "ballots": 806
+  },
+  {
+   "precinct": "7360005B",
+   "ballots": 619
+  },
+  {
+   "precinct": "7410003B",
+   "ballots": 30
+  },
+  {
+   "precinct": "7410008A",
+   "ballots": 447
+  },
+  {
+   "precinct": "7410029A",
+   "ballots": 1349
+  },
+  {
+   "precinct": "7410030A",
+   "ballots": 1155
+  },
+  {
+   "precinct": "7410033D",
+   "ballots": 7
+  },
+  {
+   "precinct": "7510003C",
+   "ballots": 443
+  },
+  {
+   "precinct": "7600031C",
+   "ballots": 2087
+  },
+  {
+   "precinct": "7600032A",
+   "ballots": 3845
+  },
+  {
+   "precinct": "7600033A",
+   "ballots": 2795
+  },
+  {
+   "precinct": "7650002A",
+   "ballots": 226
+  },
+  {
+   "precinct": "7650004B",
+   "ballots": 1134
+  },
+  {
+   "precinct": "7650005A",
+   "ballots": 1387
+  },
+  {
+   "precinct": "7670003A",
+   "ballots": 752
+  },
+  {
+   "precinct": "7670005A",
+   "ballots": 1278
+  },
+  {
+   "precinct": "7670012A",
+   "ballots": 1920
+  },
+  {
+   "precinct": "7670013A",
+   "ballots": 1537
+  },
+  {
+   "precinct": "7680022A",
+   "ballots": 1707
+  },
+  {
+   "precinct": "7700022A",
+   "ballots": 1909
+  },
+  {
+   "precinct": "7700040A",
+   "ballots": 2643
+  },
+  {
+   "precinct": "7700041A",
+   "ballots": 733
+  },
+  {
+   "precinct": "7700048A",
+   "ballots": 170
+  },
+  {
+   "precinct": "7700050A",
+   "ballots": 476
+  },
+  {
+   "precinct": "7700060A",
+   "ballots": 30
+  },
+  {
+   "precinct": "7700067A",
+   "ballots": 127
+  },
+  {
+   "precinct": "7700151A",
+   "ballots": 2424
+  },
+  {
+   "precinct": "7700155B",
+   "ballots": 3369
+  },
+  {
+   "precinct": "7700161A",
+   "ballots": 136
+  },
+  {
+   "precinct": "7700166A",
+   "ballots": 5
+  },
+  {
+   "precinct": "7750007A",
+   "ballots": 4036
+  },
+  {
+   "precinct": "7750017A",
+   "ballots": 2033
+  },
+  {
+   "precinct": "7750023A",
+   "ballots": 3264
+  },
+  {
+   "precinct": "7750038A",
+   "ballots": 2227
+  },
+  {
+   "precinct": "7750043A",
+   "ballots": 2042
+  },
+  {
+   "precinct": "7770030A",
+   "ballots": 4676
+  },
+  {
+   "precinct": "7800037A",
+   "ballots": 2495
+  },
+  {
+   "precinct": "7800048A",
+   "ballots": 1624
+  },
+  {
+   "precinct": "7800053A",
+   "ballots": 1852
+  },
+  {
+   "precinct": "7800057A",
+   "ballots": 2834
+  },
+  {
+   "precinct": "7800071A",
+   "ballots": 63
+  },
+  {
+   "precinct": "7800144A",
+   "ballots": 1904
+  },
+  {
+   "precinct": "7800149A",
+   "ballots": 1957
+  },
+  {
+   "precinct": "7800165E",
+   "ballots": 17
+  },
+  {
+   "precinct": "7800167B",
+   "ballots": 442
+  },
+  {
+   "precinct": "7800170A",
+   "ballots": 223
+  },
+  {
+   "precinct": "7800172A",
+   "ballots": 808
+  },
+  {
+   "precinct": "7800174A",
+   "ballots": 309
+  },
+  {
+   "precinct": "7800176F",
+   "ballots": 1984
+  },
+  {
+   "precinct": "7850024A",
+   "ballots": 1028
+  },
+  {
+   "precinct": "7850044A",
+   "ballots": 1427
+  },
+  {
+   "precinct": "7900002B",
+   "ballots": 2
+  },
+  {
+   "precinct": "7900006F",
+   "ballots": 28
+  },
+  {
+   "precinct": "9000002B",
+   "ballots": 2752
+  },
+  {
+   "precinct": "9000008A",
+   "ballots": 2160
+  },
+  {
+   "precinct": "9000018A",
+   "ballots": 800
+  },
+  {
+   "precinct": "9000025A",
+   "ballots": 2912
+  },
+  {
+   "precinct": "9000033A",
+   "ballots": 3132
+  },
+  {
+   "precinct": "9000038C",
+   "ballots": 1141
+  },
+  {
+   "precinct": "9000039A",
+   "ballots": 1084
+  },
+  {
+   "precinct": "9000040A",
+   "ballots": 4188
+  },
+  {
+   "precinct": "9000052A",
+   "ballots": 1757
+  },
+  {
+   "precinct": "9000065A",
+   "ballots": 1640
+  },
+  {
+   "precinct": "9000078C",
+   "ballots": 1650
+  },
+  {
+   "precinct": "9000082A",
+   "ballots": 1615
+  },
+  {
+   "precinct": "9000087A",
+   "ballots": 1789
+  },
+  {
+   "precinct": "9000093B",
+   "ballots": 1285
+  },
+  {
+   "precinct": "9000115A",
+   "ballots": 882
+  },
+  {
+   "precinct": "9000118A",
+   "ballots": 2967
+  },
+  {
+   "precinct": "9000126A",
+   "ballots": 1996
+  },
+  {
+   "precinct": "9000127B",
+   "ballots": 3037
+  },
+  {
+   "precinct": "9000130C",
+   "ballots": 264
+  },
+  {
+   "precinct": "9000143A",
+   "ballots": 2
+  },
+  {
+   "precinct": "9000149A",
+   "ballots": 3000
+  },
+  {
+   "precinct": "9000158A",
+   "ballots": 3210
+  },
+  {
+   "precinct": "9000165A",
+   "ballots": 4213
+  },
+  {
+   "precinct": "9000172A",
+   "ballots": 3203
+  },
+  {
+   "precinct": "9000193A",
+   "ballots": 795
+  },
+  {
+   "precinct": "9000207C",
+   "ballots": 2625
+  },
+  {
+   "precinct": "9000212B",
+   "ballots": 4058
+  },
+  {
+   "precinct": "9000236B",
+   "ballots": 2050
+  },
+  {
+   "precinct": "9000239B",
+   "ballots": 1252
+  },
+  {
+   "precinct": "9000249A",
+   "ballots": 1052
+  },
+  {
+   "precinct": "9000256A",
+   "ballots": 377
+  },
+  {
+   "precinct": "9000257A",
+   "ballots": 2696
+  },
+  {
+   "precinct": "9000260A",
+   "ballots": 2970
+  },
+  {
+   "precinct": "9000263A",
+   "ballots": 3689
+  },
+  {
+   "precinct": "9000268A",
+   "ballots": 3711
+  },
+  {
+   "precinct": "9000269B",
+   "ballots": 2241
+  },
+  {
+   "precinct": "9000270A",
+   "ballots": 3184
+  },
+  {
+   "precinct": "9000272A",
+   "ballots": 1508
+  },
+  {
+   "precinct": "9000288A",
+   "ballots": 1279
+  },
+  {
+   "precinct": "9000295A",
+   "ballots": 1182
+  },
+  {
+   "precinct": "9000296B",
+   "ballots": 1499
+  },
+  {
+   "precinct": "9000313B",
+   "ballots": 1144
+  },
+  {
+   "precinct": "9000327A",
+   "ballots": 1457
+  },
+  {
+   "precinct": "9000330A",
+   "ballots": 2036
+  },
+  {
+   "precinct": "9000334A",
+   "ballots": 1763
+  },
+  {
+   "precinct": "9000336B",
+   "ballots": 2123
+  },
+  {
+   "precinct": "9000342B",
+   "ballots": 2770
+  },
+  {
+   "precinct": "9000354A",
+   "ballots": 1045
+  },
+  {
+   "precinct": "9000357A",
+   "ballots": 2489
+  },
+  {
+   "precinct": "9000358B",
+   "ballots": 963
+  },
+  {
+   "precinct": "9000365A",
+   "ballots": 2307
+  },
+  {
+   "precinct": "9000385A",
+   "ballots": 2433
+  },
+  {
+   "precinct": "9000387C",
+   "ballots": 148
+  },
+  {
+   "precinct": "9000388C",
+   "ballots": 2838
+  },
+  {
+   "precinct": "9000392A",
+   "ballots": 3580
+  },
+  {
+   "precinct": "9000398B",
+   "ballots": 2219
+  },
+  {
+   "precinct": "9000402A",
+   "ballots": 3222
+  },
+  {
+   "precinct": "9000405A",
+   "ballots": 2063
+  },
+  {
+   "precinct": "9000416A",
+   "ballots": 1017
+  },
+  {
+   "precinct": "9000419A",
+   "ballots": 1887
+  },
+  {
+   "precinct": "9000422A",
+   "ballots": 3601
+  },
+  {
+   "precinct": "9000424A",
+   "ballots": 1641
+  },
+  {
+   "precinct": "9000426A",
+   "ballots": 2981
+  },
+  {
+   "precinct": "9000429A",
+   "ballots": 4239
+  },
+  {
+   "precinct": "9000437A",
+   "ballots": 1715
+  },
+  {
+   "precinct": "9000449A",
+   "ballots": 2772
+  },
+  {
+   "precinct": "9000453A",
+   "ballots": 30
+  },
+  {
+   "precinct": "9000464B",
+   "ballots": 1558
+  },
+  {
+   "precinct": "9000465A",
+   "ballots": 1646
+  },
+  {
+   "precinct": "9000481A",
+   "ballots": 2904
+  },
+  {
+   "precinct": "9000495A",
+   "ballots": 790
+  },
+  {
+   "precinct": "9000507A",
+   "ballots": 1402
+  },
+  {
+   "precinct": "9000510A",
+   "ballots": 1155
+  },
+  {
+   "precinct": "9000532A",
+   "ballots": 1614
+  },
+  {
+   "precinct": "9000536A",
+   "ballots": 2217
+  },
+  {
+   "precinct": "9000544A",
+   "ballots": 2397
+  },
+  {
+   "precinct": "9000567B",
+   "ballots": 3560
+  },
+  {
+   "precinct": "9000568A",
+   "ballots": 2106
+  },
+  {
+   "precinct": "9000589A",
+   "ballots": 3249
+  },
+  {
+   "precinct": "9000612A",
+   "ballots": 2271
+  },
+  {
+   "precinct": "9000622A",
+   "ballots": 35
+  },
+  {
+   "precinct": "9000631A",
+   "ballots": 1349
+  },
+  {
+   "precinct": "9000634A",
+   "ballots": 1673
+  },
+  {
+   "precinct": "9000682A",
+   "ballots": 1419
+  },
+  {
+   "precinct": "9000694A",
+   "ballots": 4280
+  },
+  {
+   "precinct": "9000699B",
+   "ballots": 2773
+  },
+  {
+   "precinct": "9000700B",
+   "ballots": 197
+  },
+  {
+   "precinct": "9000709A",
+   "ballots": 1937
+  },
+  {
+   "precinct": "9000712A",
+   "ballots": 990
+  },
+  {
+   "precinct": "9000716A",
+   "ballots": 50
+  },
+  {
+   "precinct": "9000731A",
+   "ballots": 1417
+  },
+  {
+   "precinct": "9000733A",
+   "ballots": 2434
+  },
+  {
+   "precinct": "9000766A",
+   "ballots": 1959
+  },
+  {
+   "precinct": "9000780B",
+   "ballots": 3042
+  },
+  {
+   "precinct": "9000784A",
+   "ballots": 695
+  },
+  {
+   "precinct": "9000789B",
+   "ballots": 2401
+  },
+  {
+   "precinct": "9000803D",
+   "ballots": 2164
+  },
+  {
+   "precinct": "9000819A",
+   "ballots": 1524
+  },
+  {
+   "precinct": "9000821A",
+   "ballots": 1772
+  },
+  {
+   "precinct": "9000841A",
+   "ballots": 359
+  },
+  {
+   "precinct": "9000852B",
+   "ballots": 588
+  },
+  {
+   "precinct": "9000855A",
+   "ballots": 3073
+  },
+  {
+   "precinct": "9000866A",
+   "ballots": 2558
+  },
+  {
+   "precinct": "9000874A",
+   "ballots": 3034
+  },
+  {
+   "precinct": "9000882A",
+   "ballots": 2559
+  },
+  {
+   "precinct": "9000885A",
+   "ballots": 1485
+  },
+  {
+   "precinct": "9000896A",
+   "ballots": 1851
+  },
+  {
+   "precinct": "9000913D",
+   "ballots": 1916
+  },
+  {
+   "precinct": "9000922D",
+   "ballots": 1236
+  },
+  {
+   "precinct": "9000956E",
+   "ballots": 157
+  },
+  {
+   "precinct": "9000962A",
+   "ballots": 2815
+  },
+  {
+   "precinct": "9000969A",
+   "ballots": 2703
+  },
+  {
+   "precinct": "9000969C",
+   "ballots": 41
+  },
+  {
+   "precinct": "9000977A",
+   "ballots": 1146
+  },
+  {
+   "precinct": "9000981A",
+   "ballots": 1267
+  },
+  {
+   "precinct": "9000986A",
+   "ballots": 1185
+  },
+  {
+   "precinct": "9001021A",
+   "ballots": 1821
+  },
+  {
+   "precinct": "9001023A",
+   "ballots": 2472
+  },
+  {
+   "precinct": "9001024A",
+   "ballots": 1163
+  },
+  {
+   "precinct": "9001025A",
+   "ballots": 206
+  },
+  {
+   "precinct": "9001030A",
+   "ballots": 1061
+  },
+  {
+   "precinct": "9001041A",
+   "ballots": 2904
+  },
+  {
+   "precinct": "9001062A",
+   "ballots": 1025
+  },
+  {
+   "precinct": "9001073A",
+   "ballots": 944
+  },
+  {
+   "precinct": "9001082A",
+   "ballots": 266
+  },
+  {
+   "precinct": "9001094A",
+   "ballots": 3629
+  },
+  {
+   "precinct": "9001100A",
+   "ballots": 2735
+  },
+  {
+   "precinct": "9001108A",
+   "ballots": 186
+  },
+  {
+   "precinct": "9001120A",
+   "ballots": 4022
+  },
+  {
+   "precinct": "9001134A",
+   "ballots": 1296
+  },
+  {
+   "precinct": "9001173A",
+   "ballots": 4735
+  },
+  {
+   "precinct": "9001175A",
+   "ballots": 2494
+  },
+  {
+   "precinct": "9001180A",
+   "ballots": 1345
+  },
+  {
+   "precinct": "9001195A",
+   "ballots": 1089
+  },
+  {
+   "precinct": "9001199A",
+   "ballots": 3664
+  },
+  {
+   "precinct": "9001201A",
+   "ballots": 3063
+  },
+  {
+   "precinct": "9001276A",
+   "ballots": 1682
+  },
+  {
+   "precinct": "9001290A",
+   "ballots": 2937
+  },
+  {
+   "precinct": "9001329A",
+   "ballots": 1142
+  },
+  {
+   "precinct": "9001334A",
+   "ballots": 3132
+  },
+  {
+   "precinct": "9001364B",
+   "ballots": 2474
+  },
+  {
+   "precinct": "9001366A",
+   "ballots": 3490
+  },
+  {
+   "precinct": "9001367B",
+   "ballots": 3961
+  },
+  {
+   "precinct": "9001382A",
+   "ballots": 2502
+  },
+  {
+   "precinct": "9001390D",
+   "ballots": 23
+  },
+  {
+   "precinct": "9001393C",
+   "ballots": 63
+  },
+  {
+   "precinct": "9001410A",
+   "ballots": 1501
+  },
+  {
+   "precinct": "9001427B",
+   "ballots": 174
+  },
+  {
+   "precinct": "9001428A",
+   "ballots": 2779
+  },
+  {
+   "precinct": "9001441A",
+   "ballots": 3077
+  },
+  {
+   "precinct": "9001454A",
+   "ballots": 3933
+  },
+  {
+   "precinct": "9001474A",
+   "ballots": 2483
+  },
+  {
+   "precinct": "9001479B",
+   "ballots": 2487
+  },
+  {
+   "precinct": "9001480A",
+   "ballots": 3352
+  },
+  {
+   "precinct": "9001487A",
+   "ballots": 2887
+  },
+  {
+   "precinct": "9001497A",
+   "ballots": 1732
+  },
+  {
+   "precinct": "9001521A",
+   "ballots": 416
+  },
+  {
+   "precinct": "9001532A",
+   "ballots": 2293
+  },
+  {
+   "precinct": "9001541A",
+   "ballots": 630
+  },
+  {
+   "precinct": "9001541C",
+   "ballots": 111
+  },
+  {
+   "precinct": "9001543A",
+   "ballots": 1831
+  },
+  {
+   "precinct": "9001547A",
+   "ballots": 2795
+  },
+  {
+   "precinct": "9001553B",
+   "ballots": 4006
+  },
+  {
+   "precinct": "9001565A",
+   "ballots": 3110
+  },
+  {
+   "precinct": "9001569A",
+   "ballots": 3603
+  },
+  {
+   "precinct": "9001577A",
+   "ballots": 1998
+  },
+  {
+   "precinct": "9001590A",
+   "ballots": 1659
+  },
+  {
+   "precinct": "9001591A",
+   "ballots": 1067
+  },
+  {
+   "precinct": "9001599A",
+   "ballots": 1654
+  },
+  {
+   "precinct": "9001605A",
+   "ballots": 3665
+  },
+  {
+   "precinct": "9001620A",
+   "ballots": 296
+  },
+  {
+   "precinct": "9001621B",
+   "ballots": 168
+  },
+  {
+   "precinct": "9001622A",
+   "ballots": 2570
+  },
+  {
+   "precinct": "9001625A",
+   "ballots": 242
+  },
+  {
+   "precinct": "9001628A",
+   "ballots": 1742
+  },
+  {
+   "precinct": "9001629A",
+   "ballots": 449
+  },
+  {
+   "precinct": "9001631A",
+   "ballots": 1272
+  },
+  {
+   "precinct": "9001635B",
+   "ballots": 1572
+  },
+  {
+   "precinct": "9001665A",
+   "ballots": 3873
+  },
+  {
+   "precinct": "9001691A",
+   "ballots": 1078
+  },
+  {
+   "precinct": "9001701B",
+   "ballots": 1049
+  },
+  {
+   "precinct": "9001706A",
+   "ballots": 871
+  },
+  {
+   "precinct": "9001707B",
+   "ballots": 38
+  },
+  {
+   "precinct": "9001708A",
+   "ballots": 1440
+  },
+  {
+   "precinct": "9001711A",
+   "ballots": 1948
+  },
+  {
+   "precinct": "9001720A",
+   "ballots": 1329
+  },
+  {
+   "precinct": "9001724B",
+   "ballots": 1445
+  },
+  {
+   "precinct": "9001725A",
+   "ballots": 1453
+  },
+  {
+   "precinct": "9001727A",
+   "ballots": 513
+  },
+  {
+   "precinct": "9001729A",
+   "ballots": 2157
+  },
+  {
+   "precinct": "9001734A",
+   "ballots": 1436
+  },
+  {
+   "precinct": "9001737A",
+   "ballots": 1228
+  },
+  {
+   "precinct": "9001756A",
+   "ballots": 1435
+  },
+  {
+   "precinct": "9001757A",
+   "ballots": 1375
+  },
+  {
+   "precinct": "9001775A",
+   "ballots": 1222
+  },
+  {
+   "precinct": "9001776A",
+   "ballots": 1905
+  },
+  {
+   "precinct": "9001780A",
+   "ballots": 343
+  },
+  {
+   "precinct": "9001797A",
+   "ballots": 1426
+  },
+  {
+   "precinct": "9001799A",
+   "ballots": 910
+  },
+  {
+   "precinct": "9001808A",
+   "ballots": 1853
+  },
+  {
+   "precinct": "9001810A",
+   "ballots": 1992
+  },
+  {
+   "precinct": "9001826A",
+   "ballots": 2713
+  },
+  {
+   "precinct": "9001833A",
+   "ballots": 4742
+  },
+  {
+   "precinct": "9001846A",
+   "ballots": 1539
+  },
+  {
+   "precinct": "9001852A",
+   "ballots": 666
+  },
+  {
+   "precinct": "9001855B",
+   "ballots": 1642
+  },
+  {
+   "precinct": "9001873A",
+   "ballots": 1342
+  },
+  {
+   "precinct": "9001888A",
+   "ballots": 1517
+  },
+  {
+   "precinct": "9001899A",
+   "ballots": 1170
+  },
+  {
+   "precinct": "9001923A",
+   "ballots": 2218
+  },
+  {
+   "precinct": "9001930A",
+   "ballots": 103
+  },
+  {
+   "precinct": "9001940A",
+   "ballots": 1401
+  },
+  {
+   "precinct": "9001944A",
+   "ballots": 1682
+  },
+  {
+   "precinct": "9001946E",
+   "ballots": 217
+  },
+  {
+   "precinct": "9001946F",
+   "ballots": 82
+  },
+  {
+   "precinct": "9001959A",
+   "ballots": 895
+  },
+  {
+   "precinct": "9001962A",
+   "ballots": 2279
+  },
+  {
+   "precinct": "9001984A",
+   "ballots": 3781
+  },
+  {
+   "precinct": "9001999A",
+   "ballots": 1759
+  },
+  {
+   "precinct": "9002007A",
+   "ballots": 1757
+  },
+  {
+   "precinct": "9002009A",
+   "ballots": 424
+  },
+  {
+   "precinct": "9002017B",
+   "ballots": 1450
+  },
+  {
+   "precinct": "9002025A",
+   "ballots": 1239
+  },
+  {
+   "precinct": "9002036A",
+   "ballots": 1445
+  },
+  {
+   "precinct": "9002039D",
+   "ballots": 1073
+  },
+  {
+   "precinct": "9002042A",
+   "ballots": 1146
+  },
+  {
+   "precinct": "9002050A",
+   "ballots": 972
+  },
+  {
+   "precinct": "9002053A",
+   "ballots": 1650
+  },
+  {
+   "precinct": "9002059A",
+   "ballots": 719
+  },
+  {
+   "precinct": "9002073A",
+   "ballots": 1464
+  },
+  {
+   "precinct": "9002086A",
+   "ballots": 1406
+  },
+  {
+   "precinct": "9002088A",
+   "ballots": 1197
+  },
+  {
+   "precinct": "9002098A",
+   "ballots": 2362
+  },
+  {
+   "precinct": "9002103B",
+   "ballots": 475
+  },
+  {
+   "precinct": "9002113A",
+   "ballots": 1257
+  },
+  {
+   "precinct": "9002119A",
+   "ballots": 1440
+  },
+  {
+   "precinct": "9002130A",
+   "ballots": 1448
+  },
+  {
+   "precinct": "9002131B",
+   "ballots": 1914
+  },
+  {
+   "precinct": "9002132B",
+   "ballots": 1727
+  },
+  {
+   "precinct": "9002133A",
+   "ballots": 1237
+  },
+  {
+   "precinct": "9002144A",
+   "ballots": 1169
+  },
+  {
+   "precinct": "9002157A",
+   "ballots": 1357
+  },
+  {
+   "precinct": "9002159B",
+   "ballots": 2754
+  },
+  {
+   "precinct": "9002170A",
+   "ballots": 2244
+  },
+  {
+   "precinct": "9002176A",
+   "ballots": 1705
+  },
+  {
+   "precinct": "9002182A",
+   "ballots": 2212
+  },
+  {
+   "precinct": "9002199C",
+   "ballots": 26
+  },
+  {
+   "precinct": "9002203A",
+   "ballots": 2089
+  },
+  {
+   "precinct": "9002216A",
+   "ballots": 138
+  },
+  {
+   "precinct": "9002238A",
+   "ballots": 2024
+  },
+  {
+   "precinct": "9002250C",
+   "ballots": 2887
+  },
+  {
+   "precinct": "9002262A",
+   "ballots": 3059
+  },
+  {
+   "precinct": "9002269A",
+   "ballots": 1178
+  },
+  {
+   "precinct": "9002283A",
+   "ballots": 2004
+  },
+  {
+   "precinct": "9002293B",
+   "ballots": 1364
+  },
+  {
+   "precinct": "9002294A",
+   "ballots": 175
+  },
+  {
+   "precinct": "9002297A",
+   "ballots": 2487
+  },
+  {
+   "precinct": "9002319A",
+   "ballots": 996
+  },
+  {
+   "precinct": "9002330A",
+   "ballots": 1638
+  },
+  {
+   "precinct": "9002338A",
+   "ballots": 1292
+  },
+  {
+   "precinct": "9002388A",
+   "ballots": 3537
+  },
+  {
+   "precinct": "9002412A",
+   "ballots": 2359
+  },
+  {
+   "precinct": "9002425B",
+   "ballots": 2461
+  },
+  {
+   "precinct": "9002429A",
+   "ballots": 2759
+  },
+  {
+   "precinct": "9002514A",
+   "ballots": 853
+  },
+  {
+   "precinct": "9002520A",
+   "ballots": 1217
+  },
+  {
+   "precinct": "9002533A",
+   "ballots": 349
+  },
+  {
+   "precinct": "9002542B",
+   "ballots": 851
+  },
+  {
+   "precinct": "9002560A",
+   "ballots": 1185
+  },
+  {
+   "precinct": "9002562B",
+   "ballots": 3981
+  },
+  {
+   "precinct": "9002631A",
+   "ballots": 1455
+  },
+  {
+   "precinct": "9002667B",
+   "ballots": 1716
+  },
+  {
+   "precinct": "9002696A",
+   "ballots": 2
+  },
+  {
+   "precinct": "9002697A",
+   "ballots": 1633
+  },
+  {
+   "precinct": "9002706A",
+   "ballots": 1119
+  },
+  {
+   "precinct": "9002796A",
+   "ballots": 583
+  },
+  {
+   "precinct": "9002809A",
+   "ballots": 1570
+  },
+  {
+   "precinct": "9002829A",
+   "ballots": 80
+  },
+  {
+   "precinct": "9002853A",
+   "ballots": 435
+  },
+  {
+   "precinct": "9002860A",
+   "ballots": 351
+  },
+  {
+   "precinct": "9002868A",
+   "ballots": 570
+  },
+  {
+   "precinct": "9002877B",
+   "ballots": 12
+  },
+  {
+   "precinct": "9002878A",
+   "ballots": 1921
+  },
+  {
+   "precinct": "9002894A",
+   "ballots": 2152
+  },
+  {
+   "precinct": "9002908A",
+   "ballots": 1149
+  },
+  {
+   "precinct": "9002927A",
+   "ballots": 1635
+  },
+  {
+   "precinct": "9002929A",
+   "ballots": 1061
+  },
+  {
+   "precinct": "9002949A",
+   "ballots": 1034
+  },
+  {
+   "precinct": "9002954C",
+   "ballots": 250
+  },
+  {
+   "precinct": "9002978A",
+   "ballots": 1872
+  },
+  {
+   "precinct": "9002992A",
+   "ballots": 2796
+  },
+  {
+   "precinct": "9003004A",
+   "ballots": 2503
+  },
+  {
+   "precinct": "9003013A",
+   "ballots": 5039
+  },
+  {
+   "precinct": "9003070A",
+   "ballots": 1384
+  },
+  {
+   "precinct": "9003185A",
+   "ballots": 1091
+  },
+  {
+   "precinct": "9003188A",
+   "ballots": 3012
+  },
+  {
+   "precinct": "9003190B",
+   "ballots": 11
+  },
+  {
+   "precinct": "9003195A",
+   "ballots": 1910
+  },
+  {
+   "precinct": "9003224A",
+   "ballots": 1090
+  },
+  {
+   "precinct": "9003248A",
+   "ballots": 2
+  },
+  {
+   "precinct": "9003267B",
+   "ballots": 4
+  },
+  {
+   "precinct": "9003298A",
+   "ballots": 71
+  },
+  {
+   "precinct": "9003326A",
+   "ballots": 19
+  },
+  {
+   "precinct": "9003389A",
+   "ballots": 637
+  },
+  {
+   "precinct": "9003432A",
+   "ballots": 39
+  },
+  {
+   "precinct": "9003438A",
+   "ballots": 1367
+  },
+  {
+   "precinct": "9003469A",
+   "ballots": 414
+  },
+  {
+   "precinct": "9003477A",
+   "ballots": 1414
+  },
+  {
+   "precinct": "9003520D",
+   "ballots": 2210
+  },
+  {
+   "precinct": "9003538A",
+   "ballots": 1776
+  },
+  {
+   "precinct": "9003574A",
+   "ballots": 30
+  },
+  {
+   "precinct": "9003587A",
+   "ballots": 677
+  },
+  {
+   "precinct": "9003600B",
+   "ballots": 2045
+  },
+  {
+   "precinct": "9003663B",
+   "ballots": 1768
+  },
+  {
+   "precinct": "9003711A",
+   "ballots": 1520
+  },
+  {
+   "precinct": "9003897A",
+   "ballots": 134
+  },
+  {
+   "precinct": "9003926A",
+   "ballots": 150
+  },
+  {
+   "precinct": "9003937B",
+   "ballots": 214
+  },
+  {
+   "precinct": "9003981D",
+   "ballots": 209
+  },
+  {
+   "precinct": "9003988A",
+   "ballots": 3445
+  },
+  {
+   "precinct": "9003991A",
+   "ballots": 1400
+  },
+  {
+   "precinct": "9004060A",
+   "ballots": 1482
+  },
+  {
+   "precinct": "9004090C",
+   "ballots": 1061
+  },
+  {
+   "precinct": "9004120B",
+   "ballots": 1555
+  },
+  {
+   "precinct": "9004123A",
+   "ballots": 2539
+  },
+  {
+   "precinct": "9004127A",
+   "ballots": 307
+  },
+  {
+   "precinct": "9004205A",
+   "ballots": 2628
+  },
+  {
+   "precinct": "9004215A",
+   "ballots": 2132
+  },
+  {
+   "precinct": "9004216A",
+   "ballots": 423
+  },
+  {
+   "precinct": "9004230A",
+   "ballots": 1664
+  },
+  {
+   "precinct": "9004241A",
+   "ballots": 2103
+  },
+  {
+   "precinct": "9004515A",
+   "ballots": 135
+  },
+  {
+   "precinct": "9005006C",
+   "ballots": 245
+  },
+  {
+   "precinct": "9005007A",
+   "ballots": 681
+  },
+  {
+   "precinct": "9005020A",
+   "ballots": 295
+  },
+  {
+   "precinct": "9005025A",
+   "ballots": 47
+  },
+  {
+   "precinct": "9005106A",
+   "ballots": 2068
+  },
+  {
+   "precinct": "9005139A",
+   "ballots": 3027
+  },
+  {
+   "precinct": "9005152A",
+   "ballots": 4972
+  },
+  {
+   "precinct": "9005161B",
+   "ballots": 213
+  },
+  {
+   "precinct": "9005177A",
+   "ballots": 26
+  },
+  {
+   "precinct": "9005197A",
+   "ballots": 818
+  },
+  {
+   "precinct": "9005205A",
+   "ballots": 1534
+  },
+  {
+   "precinct": "9005206A",
+   "ballots": 1126
+  },
+  {
+   "precinct": "9005424A",
+   "ballots": 3025
+  },
+  {
+   "precinct": "9005520A",
+   "ballots": 3959
+  },
+  {
+   "precinct": "9005670A",
+   "ballots": 1186
+  },
+  {
+   "precinct": "9005816A",
+   "ballots": 1277
+  },
+  {
+   "precinct": "9005919A",
+   "ballots": 4653
+  },
+  {
+   "precinct": "9005929A",
+   "ballots": 3233
+  },
+  {
+   "precinct": "9006197A",
+   "ballots": 2708
+  },
+  {
+   "precinct": "9006212A",
+   "ballots": 2626
+  },
+  {
+   "precinct": "9006220A",
+   "ballots": 2061
+  },
+  {
+   "precinct": "9006222A",
+   "ballots": 2180
+  },
+  {
+   "precinct": "9006246A",
+   "ballots": 3005
+  },
+  {
+   "precinct": "9006269A",
+   "ballots": 4284
+  },
+  {
+   "precinct": "9006274A",
+   "ballots": 1954
+  },
+  {
+   "precinct": "9006288A",
+   "ballots": 2997
+  },
+  {
+   "precinct": "9006302A",
+   "ballots": 1828
+  },
+  {
+   "precinct": "9006326A",
+   "ballots": 130
+  },
+  {
+   "precinct": "9006389A",
+   "ballots": 2161
+  },
+  {
+   "precinct": "9006390A",
+   "ballots": 1785
+  },
+  {
+   "precinct": "9006445A",
+   "ballots": 2354
+  },
+  {
+   "precinct": "9006471B",
+   "ballots": 2546
+  },
+  {
+   "precinct": "9006601B",
+   "ballots": 3255
+  },
+  {
+   "precinct": "9006611A",
+   "ballots": 2372
+  },
+  {
+   "precinct": "9006618C",
+   "ballots": 1680
+  },
+  {
+   "precinct": "9006629A",
+   "ballots": 2911
+  },
+  {
+   "precinct": "9006667A",
+   "ballots": 2682
+  },
+  {
+   "precinct": "9006917A",
+   "ballots": 1004
+  },
+  {
+   "precinct": "9007132A",
+   "ballots": 2835
+  },
+  {
+   "precinct": "9007221A",
+   "ballots": 2226
+  },
+  {
+   "precinct": "9007222B",
+   "ballots": 118
+  },
+  {
+   "precinct": "9007224A",
+   "ballots": 17
+  },
+  {
+   "precinct": "9007311A",
+   "ballots": 2555
+  },
+  {
+   "precinct": "9007388A",
+   "ballots": 3554
+  },
+  {
+   "precinct": "9007674A",
+   "ballots": 3164
+  },
+  {
+   "precinct": "9007693D",
+   "ballots": 3205
+  },
+  {
+   "precinct": "9007745A",
+   "ballots": 2631
+  },
+  {
+   "precinct": "9007838A",
+   "ballots": 2880
+  },
+  {
+   "precinct": "9007857B",
+   "ballots": 1489
+  },
+  {
+   "precinct": "9007884A",
+   "ballots": 2698
+  },
+  {
+   "precinct": "9007888A",
+   "ballots": 2626
+  },
+  {
+   "precinct": "9007902A",
+   "ballots": 632
+  },
+  {
+   "precinct": "9007957A",
+   "ballots": 3746
+  },
+  {
+   "precinct": "9007985A",
+   "ballots": 2711
+  }
+ ],
+ "unmatched_ballots": 1654870,
+ "layer_only": 1367,
+ "city_changed_precincts": 1,
+ "city_changed_ballots": 3,
+ "total_ballots": 3793933,
+ "shapes_written": 1486
+}
