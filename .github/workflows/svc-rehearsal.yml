@@ -3,8 +3,7 @@ name: svc-rehearsal
 # Manual. Runs the whole precinct-to-city pipeline on one county SVC precinct PDF (default: the 2024 general election,
 # a dress rehearsal for 2026). The PDF and the full precinct table stay on the runner. Only small result files are committed:
 #   data/reference/precinct_city_geo.csv     (each precinct's city, found from its shape; about 1 MB)
-#   data/reference/precinct_shapes.geojson   (shapes of the precincts in the file, for the map's precinct layer)
-#   data/rehearsal/<pdf name>/                (checks, city-code names, countywide totals by city, a summary)
+#   data/rehearsal/<pdf name>/                (checks, countywide totals by city, a summary, precinct votes and the shapes of those precincts)
 on:
   workflow_dispatch:
     inputs:
@@ -57,7 +56,7 @@ jobs:
           python -m tools.svc_pipeline "$RUNNER_TEMP/svc.pdf" data/reference/precinct_city_geo.csv "$boundary" "data/rehearsal/$name"
           cat "data/rehearsal/$name/summary.md" >> "$GITHUB_STEP_SUMMARY"
           # shapes of the precincts in this file, for the map's precinct layer
-          python -m tools.precinct_shapes "$RUNNER_TEMP/polygons.json" "data/rehearsal/$name/precinct_votes.csv.gz" data/reference/precinct_shapes.geojson | tee -a "$GITHUB_STEP_SUMMARY"
+          python -m tools.precinct_shapes "$RUNNER_TEMP/polygons.json" "data/rehearsal/$name/precinct_votes.csv.gz" "data/rehearsal/$name/precinct_shapes.geojson" | tee -a "$GITHUB_STEP_SUMMARY"
           test "$(du -sk data/rehearsal/$name data/reference | awk '{s+=$1} END {print s}')" -lt 20000   # stop above about 20 MB
       - name: Commit the results
         run: |

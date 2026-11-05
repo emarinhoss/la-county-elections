@@ -74,6 +74,7 @@ async function ensurePrecincts() {
   renderToolbarState(); update();
 }
 function renderToolbarState() {
+  if (!els.precBtn || els.precBtn.hidden) { els.precNote.textContent = ""; return; }
   const m = modeOf(params), on = params.precincts === "1" && m.type === "cw", b = els.precBtn;
   b.setAttribute("aria-pressed", String(on)); b.disabled = m.type !== "cw";
   b.title = m.type !== "cw" ? "Precinct results are available for countywide contests" : "";
@@ -205,7 +206,9 @@ function build(root, ctx) {
     onChange: (v) => navigate("map", { contest: params.contest, city: v, precincts: params.precincts }) });
   els.legend = h("div", {});
   els.precNote = h("span", { class: "note", role: "status" });
-  els.precBtn = h("button", { class: "chip", type: "button", "aria-pressed": "false", onclick: () => navigate("map", { contest: params.contest, city: params.city, precincts: params.precincts === "1" ? "" : "1" }) }, icon("pin", 14), "Precincts");
+  els.precBtn = h("button", { class: "chip", type: "button", "aria-pressed": "false", hidden: true, onclick: () => navigate("map", { contest: params.contest, city: params.city, precincts: params.precincts === "1" ? "" : "1" }) }, icon("pin", 14), "Precincts");
+  // The precinct layer is only offered when the site was built with precinct data (see sitegen/precincts.py).
+  fetch("data/precincts.geojson", { method: "HEAD" }).then((r) => { if (r.ok) { els.precBtn.hidden = false; renderToolbarState(); ensurePrecincts(); } }).catch(() => {});
   els.panel = h("div", { class: "card panel", "aria-live": "polite" });
   els.mapEl = h("div", { id: "map", role: "region", "aria-label": "Map of Los Angeles County. Use the city search for a keyboard-friendly alternative." });
   els.source = S.totals ? h("button", { class: "chip map-source", type: "button", onclick: ctx.openAbout }, icon("info", 14), "About the by-city numbers") : null;

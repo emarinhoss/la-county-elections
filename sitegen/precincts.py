@@ -3,7 +3,7 @@
 Input
   data/rehearsal/<name>/precinct_votes.csv.gz   every precinct's votes in each countywide contest, columns as printed in the SVC
   data/rehearsal/<name>/precinct_city.csv       the city (found from the shape) of each precinct
-  data/reference/precinct_shapes.geojson        polygons of the precincts in the SVC (saved by the svc-rehearsal workflow)
+  data/rehearsal/<name>/precinct_shapes.geojson polygons of the precincts in that SVC file (saved by the svc-rehearsal workflow)
 The vote columns are put into the API's choice order with the same column mapping city_totals used for that contest, so the
 precinct numbers and the city numbers come from one matching. A contest city_totals left out is left out here too.
 
@@ -16,8 +16,6 @@ from collections import defaultdict
 from pathlib import Path
 
 from sitegen.city_contests import city_key
-
-SHAPES = Path("data/reference/precinct_shapes.geojson")
 
 
 def build(svc_dir, columns):
@@ -42,15 +40,26 @@ def build(svc_dir, columns):
     return {"p": dict(precincts)}
 
 
-def write_precincts(svc_dir, columns, dest):
+# OFF on purpose. The SVC lists about 2,200 consolidated precincts; the county layer holds about 11,800 regular precincts, so an
+# exact-id join draws only one small piece of each consolidated precinct (the map would look mostly empty and mislead). Turn this on
+# only after the layer's regular precincts are mapped to the SVC precincts (see "Precinct layer on the map" in docs/specs/00_spec.md).
+PUBLISH = False
+
+
+def write_precincts(svc_dir, columns, dest, publish=PUBLISH):
     dest = Path(dest)
     svc = Path(svc_dir)
-    if not (svc / "precinct_votes.csv.gz").exists() or not SHAPES.exists():
+    if not publish:
+        for name in ("precincts.json", "precincts.geojson"):
+            (dest / name).unlink(missing_ok=True)
+        return "precinct layer switched off (shapes do not yet cover whole precincts)"
+    shapes_file = svc / "precinct_shapes.geojson"
+    if not (svc / "precinct_votes.csv.gz").exists() or not shapes_file.exists():
         for name in ("precincts.json", "precincts.geojson"):
             (dest / name).unlink(missing_ok=True)
         return "precinct layer not available yet (needs a svc-rehearsal run that saves precinct votes and shapes)"
     data = build(svc, columns)
-    shapes = json.loads(SHAPES.read_text())
+    shapes = json.loads(shapes_file.read_text())
     drawn = {f["properties"]["id"] for f in shapes["features"]}
     data["p"] = {k: v for k, v in data["p"].items() if k in drawn}      # a precinct with no shape cannot be clicked
     shapes["features"] = [f for f in shapes["features"] if f["properties"]["id"] in data["p"]]

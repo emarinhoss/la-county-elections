@@ -101,6 +101,11 @@
       "id": "precinct_layer_city_est_values",
       "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/0/query?where=1%3D1&outFields=CITY_EST&returnDistinctValues=true&returnGeometry=false&f=json",
       "note": "All distinct CITY_EST values: city names, or community names like the SVC LOCATION prefixes?"
+    },
+    {
+      "id": "precinct_layer_carson_fields",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/0/query?where=PRECINCT%20LIKE%20%271030%25%27&outFields=PRECINCT,CITY_EST,SUBCODE,MAP1,ESTAB,PRC_NAME,COMM_NAME,CITY,DST_CITY&returnGeometry=false&resultRecordCount=1000&f=json",
+      "note": "Probe: the SVC lists consolidated precincts but the layer has regular ones. Do ESTAB, PRC_NAME or MAP1 say which regular precincts belong to which SVC precinct? Compare with the Carson ids in the SVC."
     }
   ],
   "svc_discovery": {

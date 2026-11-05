@@ -302,13 +302,23 @@ history chart, About dialog, unknown route). Not verified: other browsers, scree
 ## Precinct layer on the map
 
 - The svc-rehearsal workflow now also saves `precinct_votes.csv.gz` (every precinct's votes in each countywide contest, in the
-  county PDF's column order) and `data/reference/precinct_shapes.geojson` (polygons of only the precincts in that file, from the county
-  precinct layer, joined by exact precinct id). `sitegen/precincts.py` puts the columns in the API's choice order with the same mapping
+  county PDF's column order) and `data/rehearsal/<name>/precinct_shapes.geojson` (polygons of only the precincts in that file, from the county
+  precinct layer, joined by exact precinct id; kept per file because a later run on another file would overwrite a shared one). `sitegen/precincts.py` puts the columns in the API's choice order with the same mapping
   `city_totals` used, so city and precinct numbers share one matching, and writes `site/data/precincts.json` and `precincts.geojson`.
 - The map has a "Precincts" toggle for countywide contests. The data loads only when it is turned on. Clicking a precinct shows its
   result for the selected contest and, in a collapsed list, all countywide contests in that precinct.
 - Scope: countywide contests only (the ones matched to the county API). City, district and school contests by precinct are in the
   PDF but not shown yet. Precincts in the PDF with no polygon in the layer cannot be drawn; the workflow summary lists how many.
-- Tested: Python unit tests (column order, filtering, missing shapes) and the UI in a headless browser on synthetic squares.
-  NOT yet tested on the real county polygons: file size, drawing speed with about 2,000 shapes, how many ids lack a shape.
-
+- **Finding (Nov 5, from the real 2026 run): the join covers only a fraction of each precinct, so the layer is switched off.**
+  The SVC has 2,187 precinct ids (2,144 distinct 7-digit bases). The county layer has 33,219 polygons in 11,816 bases (median 3
+  polygons per base). 2,183 SVC ids match a polygon exactly, but those polygons are one small piece of each consolidated precinct:
+  8,169 of the layer's 33,219 polygons share a base with an SVC precinct, and a map drawn from the exact matches is mostly empty.
+  Vote totals are right (precinct sums are within 0.03% of the city totals; the gap is the 4 ids with no polygon), the shapes are not.
+  Missing: a mapping from the layer's regular precincts to the SVC's consolidated precincts. The layer fields (OBJECTID, PRECINCT,
+  CITY_EST, SUBCODE, MAP1, ESTAB, PRC_NAME, COMM_NAME, CITY, DIST_* and DST_*/DIV_*) include no field named for consolidation. A probe
+  source (`precinct_layer_carson_fields`) now records ESTAB, PRC_NAME and MAP1 for the Carson rows so they can be compared with the
+  SVC's Carson ids. Until a mapping is verified, `sitegen/precincts.PUBLISH` stays False.
+- Side effect to check: each SVC precinct's city comes from one polygon, i.e. one piece of the consolidated precinct. The earlier
+  checks (99.6% agreement with place names; 47 of 49 comparable cities within 1% registration) suggest this is mostly fine.
+- Tested: Python unit tests (column order, filtering, missing shapes, switched off by default) and the UI in a headless browser, on
+  synthetic squares and on the real polygons (draws 2,183 shapes in about 1.3 s).
