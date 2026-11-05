@@ -1,0 +1,200 @@
+{
+  "blocks": 369,
+  "blocks_with_errors": 0,
+  "blocks_with_notes": 168,
+  "unique_precincts": 2580,
+  "precinct_methods": {
+    "geo": 2072,
+    "geo_base": 37,
+    "location": 8,
+    "geo_unincorporated": 439,
+    "unassigned": 9,
+    "geo_unincorporated_base": 15
+  },
+  "precincts_with_geometry": 2563,
+  "precincts_straddling_city_lines_under_90pct": 11,
+  "contest_vs_geometry": {
+    "precincts_compared": 1768,
+    "agree": 1656,
+    "agreement": 0.9367,
+    "top_disagreements": [
+      [
+        "(unincorporated)",
+        "Los Angeles",
+        77
+      ],
+      [
+        "Gardena",
+        "Los Angeles",
+        10
+      ],
+      [
+        "Huntington Park",
+        "Los Angeles",
+        7
+      ],
+      [
+        "Bell",
+        "Los Angeles",
+        6
+      ],
+      [
+        "Long Beach",
+        "Signal Hill",
+        5
+      ],
+      [
+        "Beverly Hills",
+        "Los Angeles",
+        3
+      ],
+      [
+        "Lomita",
+        "Los Angeles",
+        3
+      ],
+      [
+        "Vernon",
+        "Los Angeles",
+        1
+      ]
+    ]
+  },
+  "location_rule_vs_geometry": {
+    "applies": 2110,
+    "correct": 2103,
+    "accuracy": 0.9967
+  },
+  "contests_where_a_precinct_is_in_two_cities": 78,
+  "boundary_cities": 88,
+  "boundary_cities_with_precincts": 87,
+  "countywide_blocks": [
+    {
+      "seq": 353,
+      "title": "DISTRICT ATTORNEY",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 354,
+      "title": "JUDGE OF THE SUPERIOR COURT Office No. 39",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 355,
+      "title": "JUDGE OF THE SUPERIOR COURT Office No. 48",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 356,
+      "title": "JUDGE OF THE SUPERIOR COURT Office No. 97",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 357,
+      "title": "JUDGE OF THE SUPERIOR COURT Office No. 135",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 358,
+      "title": "JUDGE OF THE SUPERIOR COURT Office No. 137",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 359,
+      "title": "COUNTY MEASURE G",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 360,
+      "title": "COUNTY MEASURE A",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 361,
+      "title": "STATE MEASURE 2",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 362,
+      "title": "STATE MEASURE 3",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 363,
+      "title": "STATE MEASURE 4",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 364,
+      "title": "STATE MEASURE 5",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 365,
+      "title": "STATE MEASURE 6",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 366,
+      "title": "STATE MEASURE 32",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 367,
+      "title": "STATE MEASURE 33",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 368,
+      "title": "STATE MEASURE 34",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 369,
+      "title": "STATE MEASURE 35",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 370,
+      "title": "STATE MEASURE 36",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 371,
+      "title": "PRESIDENT AND VICE PRESIDENT",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 372,
+      "title": "Voter Nominated : UNITED STATES SENATOR - Full Term",
+      "match": true,
+      "share_fallback": 0.0039
+    },
+    {
+      "seq": 373,
+      "title": "Voter Nominated : UNITED STATES SENATOR - Short Term (Unexpired term ending January 3, 2025)",
+      "match": true,
+      "share_fallback": 0.0039
+    }
+  ],
+  "countywide_all_match": true
+}
