@@ -1,0 +1,779 @@
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5076331,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statewide Database | 2026 Primary Election Geography and Conversion Files</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <link rel="stylesheet" href='https://statewidedatabase.org/include/style.css'>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+ <!-- Add Google Translate -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+      </head>
+   <body>
+<a class="swdb-skip-link" href="#main-content">Skip to main content</a>
+      <header class="site-banner" id="nav" role="banner">
+        <nav class="navbar navbar-default navbar-fixed-top header" aria-label="Primary site navigation">
+         <div class="container-fluid header-container header-container--shift-left">
+             <div class="navbar-header swdb-navbar-header">
+            <a class="navbar-brand" href='https://statewidedatabase.org/' aria-label="Statewide Database, home">
+            <img src='https://statewidedatabase.org/include/SWDBLogo_sans.png' alt="Statewide Database" decoding="async" class="header-logo-img">
+            </a>
+            <div class="header-translate-wrap">
+            <span id="header-translate-label" class="sr-only">Translate this page (Google Translate)</span>
+            <div id="google_translate_element" class="header-google-translate" role="region" aria-labelledby="header-translate-label"></div>
+            </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle main menu">
+            <span class="icon-bar" aria-hidden="true"></span>
+            <span class="icon-bar" aria-hidden="true"></span>
+            <span class="icon-bar" aria-hidden="true"></span>
+            </button>
+         </div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-right header">
+<li class="nav-header"><a href='https://statewidedatabase.org/'>HOME</a></li>
+
+
+
+<li class="nav-header"><a href='https://statewidedatabase.org/redistricting2021/index.html'>REDISTRICTING</a></li>
+<li class="nav-header"><a href='https://statewidedatabase.org/election.html'>ELECTION DATA</a></li>
+<li class="nav-header"><a href='https://statewidedatabase.org/census.html'>OTHER DATA</a></li>
+<li class="nav-header"><a href='https://statewidedatabase.org/resources.html'>RESOURCES</a></li>
+
+<li class="nav-header"><a href='https://statewidedatabase.org/help.html'>HELP</a></li>
+
+           </ul>
+
+         </div>
+
+       </div>
+        </nav>
+      </header>
+<script>
+$(function () {
+	var $nav = $('#navbar');
+	var $toggle = $('.navbar-toggle');
+	$nav.on('shown.bs.collapse', function () { $toggle.attr('aria-expanded', 'true'); });
+	$nav.on('hidden.bs.collapse', function () { $toggle.attr('aria-expanded', 'false'); });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+	function ensureLabelForControl(el, fallbackText) {
+		if (!el || el.disabled || el.type === 'hidden') return;
+		// If the control is already wrapped in a <label>, it already has an accessible name.
+		if (el.closest && el.closest('label')) return;
+
+		var hasExplicitLabel = false;
+		if (el.id) {
+			hasExplicitLabel = document.querySelector('label[for="' + el.id + '"]') !== null;
+		}
+		var hasAria = el.hasAttribute('aria-label') || el.hasAttribute('aria-labelledby');
+		if (hasExplicitLabel || hasAria) return;
+
+		// Ensure we have an id so we can create a <label for="...">
+		if (!el.id) {
+			el.id = 'auto-labeled-control-' + Math.random().toString(36).slice(2);
+		}
+
+		var label = document.createElement('label');
+		label.setAttribute('for', el.id);
+		label.className = 'sr-only';
+		label.textContent = fallbackText;
+		el.setAttribute('aria-label', fallbackText);
+
+		// Mark so we don't duplicate if this runs again.
+		label.setAttribute('data-a11y-label-created', 'true');
+		el.setAttribute('data-a11y-label-created', 'true');
+
+		// Insert label before the control so it is associated correctly.
+		if (el.parentNode) {
+			el.parentNode.insertBefore(label, el);
+		}
+	}
+
+	function labelControls(root) {
+		var controls = (root || document).querySelectorAll('input, select, textarea');
+		for (var i = 0; i < controls.length; i++) {
+			var el = controls[i];
+			if (!el || el.disabled || el.type === 'hidden') continue;
+			if (el.hasAttribute('data-a11y-label-created')) continue;
+
+			var fallback = el.getAttribute('placeholder') ||
+				el.getAttribute('aria-placeholder') ||
+				el.getAttribute('name') ||
+				el.id ||
+				'Input field';
+
+			if (el.tagName && el.tagName.toLowerCase() === 'select') fallback = fallback || 'Selection field';
+			if (el.tagName && el.tagName.toLowerCase() === 'textarea') fallback = fallback || 'Text input field';
+
+			ensureLabelForControl(el, fallback);
+		}
+	}
+
+	// Initial pass
+	labelControls(document);
+
+	// Also handle late-injected widgets (e.g. translate/select renderers)
+	var observer = new MutationObserver(function (mutations) {
+		for (var m = 0; m < mutations.length; m++) {
+			for (var n = 0; n < mutations[m].addedNodes.length; n++) {
+				if (mutations[m].addedNodes[n].querySelector) {
+					labelControls(mutations[m].addedNodes[n]);
+				}
+			}
+		}
+	});
+	observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+
+   
+
+<div class="container-fluid"><div class="content row"><div class="main-content-container col col-xs-10 col-xs-offset-1 col-md-8 col-lg-8">
+
+<!--<div class="container-fluid"><div class="content row"><div class="main-content-container col col-xs-10 col-xs-offset-1 col-md-8 col-lg-6 col-lg-offset-2">
+-->
+
+
+
+	
+	<link rel="stylesheet" href="d20.css">
+<a class="d20-skip-link" href="#main-content">Skip to main content</a>
+<!-- start content -->
+		<script type="text/javascript">
+			function toggle(id){
+				if (document.all){
+					if(document.all[id].style.display == 'none'){
+						document.all[id].style.display = '';
+					} else {
+						document.all[id].style.display = 'none';
+					}
+				return false;
+				} else if (document.getElementById){
+					if(document.getElementById(id).style.display == 'none'){
+						document.getElementById(id).style.display = 'block';
+					} else {
+						document.getElementById(id).style.display = 'none';
+					}
+				return false;
+				}
+			} 
+		</script>
+
+		<main id="main-content" tabindex="-1" aria-labelledby="page-heading">
+
+		<h1 id="page-heading">2026 Primary Election Geographic Data </h1>
+		
+		<p>From this page you can download precinct boundary files and geographic conversion files for the 2026 Primary Election. </p>
+		<p>Descriptions of each of these files can be found by following the links below. Please note that the BLK files on this page are based on U.S. Census Bureau 2020 TIGER/Line census blocks.</p>
+<!--<p><a href="p26_problems.txt"> 2026 Primary Election Errata.</a></p>
+-->
+
+<!--<p><strong>Precinct Boundary Files</strong></p>
+		<a href="#" onclick="toggle('mprec_cdf'); return false">MPREC_CDF</a><br />
+		<div id="mprec_cdf" style="display: none"><div class="indent">The map precincts boundary file in .cdf file format. The .cdf file is compatible with Maptitude by Caliper GIS software.</div></div>
+		
+		<a href="#" onclick="toggle('mprec_mif'); return false">MPREC_MIF</a><br />
+		<div id="mprec_mif" style="display: none"><div class="indent">The map precincts boundary file in the .mif file format. The .mif file is compatible with MapInfo by Pitney Bowes GIS software.</div></div>
+		
+		<a href="#" onclick="toggle('mprec_shp'); return false">MPREC_SHP</a><br />
+		<div id="mprec_shp" style="display: none"><div class="indent">The map precincts boundary file in the .shp file format. The .shp file is compatible with any ArcGIS program by ESRI. Many open source and low cost GIS platforms are able to view/ open the .shp file type.</div></div>
+		
+		<a href="#" onclick="toggle('ssprec_cdf'); return false">SRPREC_CDF</a><br />
+		<div id="ssprec_cdf" style="display: none"><div class="indent">The sr precincts boundary file in the .cdf file format. The .cdf file is compatible with Maptitude by Caliper GIS software.</div></div>
+		
+		<a href="#" onclick="toggle('ssprec_mif'); return false">SRPREC_MIF</a><br />
+		<div id="ssprec_mif" style="display: none"><div class="indent">The sr precincts boundary file in the .mif file format. The .mif file is compatible with MapInfo by Pitney Bowes GIS software.</div></div>
+		
+		<a href="#" onclick="toggle('ssprec_shp'); return false">SRPREC_SHP</a><br />
+		<div id="ssprec_shp" style="display: none"><div class="indent">The sr precincts boundary file in the .shp file format. The .shp file is compatible with any ArcGIS program by ESRI. Many open source and low cost GIS platforms are able to view/ open the .shp file type.<br />
+		</div></div>
+		
+		<p><strong>Data Conversion Files</strong></p>
+		<a href="#" onclick="toggle('ssp_blk'); return false">SRPREC TO 2010 BLK</a><br />
+		<div id="ssp_blk" style="display: none"><div class="indent">SR Precinct to 2010 Block conversion files delimited with 
+		fields SR Precinct, Block and Share of Precinct.</div></div>
+		
+		<a href="#" onclick="toggle('blk_mp'); return false">2010 BLK TO MPREC</a><br />	
+		<div id="blk_mp" style="display: none"><div class="indent">2010 Block to Map precinct conversion files delimited with fields Block, 
+		Precinct and Share of Block, Share of Precinct. Please note that the share of precinct is not a reliable measure. 
+		Please use the MP_BLK or SSP_BLK files instead.</div></div>
+		
+		<a href="#" onclick="toggle('mp_ssp'); return false">MPREC TO SRPREC</a><br />
+		<div id="mp_ssp" style="display: none"><div class="indent">Map Precinct to SR Precinct conversion files delimited 
+		with fields MPREC and SRPREC.</div></div>
+		
+		<a href="#" onclick="toggle('ssp_city'); return false">SRPREC TO CITY</a>
+		<div id="ssp_city" style="display: none"><div class="indent">SR Precinct to CITY conversion files delimited with 
+		fields srprec, city, n_in_city and n...</div></div>		
+		<p><a href="p18.html">Go to the 2018 Primary Election precinct data</a> for voter registration data and election results by precinct. -->
+
+
+<!-- Define these variables at the top of the election file to get the right tabs
+$electionType = ex. "primary";
+$electionYear = ex. "14"; //String of two digits for year
+$hasSpecial = False; //has a special election
+$onlySpecial = False; //has only special, no primary/general -->
+
+
+
+<div class="row geo-conv-info">
+   <div class="col col-xs-12">
+      <section class="geo-conv-info-section" aria-labelledby="geo-conv-precinct-heading">
+      <h3 id="geo-conv-precinct-heading">Precinct types</h3>
+      <dl class="dl-horizontal">
+         <dt>MPREC</dt><dd>Geography for registration precincts, corresponding with RRPREC tabular data. RRPREC data aggregate the original reported registration data (RGPREC data) into these MPREC geographic precincts.</dd>
+         <dt>SRPREC</dt><dd>Consolidation of registration (RR) and voting (SV) precincts. Both registration and voting data are available as SRPREC tabular datasets.</dd>
+      </dl>
+      </section>
+
+      <section class="geo-conv-info-section" aria-labelledby="geo-conv-boundary-heading">
+		<h3 id="geo-conv-boundary-heading">Boundary file types</h3>
+      <dl class="dl-horizontal">
+         <dt><code>_CDF</code></dt><dd><code>.cdf</code> file format. Compatible with Maptitude by Caliper GIS software.</dd>
+         <dt><code>_MIF</code></dt><dd><code>.mif</code> file format. Compatible with MapInfo by Pitney Bowes GIS software.</dd>
+         <dt><code>_SHP</code></dt><dd><code>.shp</code> file format. Compatible with any ArcGIS program by ESRI. Many open source and low cost GIS platforms are able to view or open the <code>.shp</code> file type.</dd>
+      </dl>
+      </section>
+   </div>
+
+   <div class="col col-xs-12">
+      <section class="geo-conv-info-section" aria-labelledby="geo-conv-conversion-heading">
+      <h3 id="geo-conv-conversion-heading">Data conversion file descriptions</h3>
+      <dl class="dl-horizontal">
+         <dt>SRPREC to 2010 BLK</dt>
+         <dd>SR precinct to 2010 block conversion files delimited with fields SR precinct, block, and share of precinct.</dd>
+         <dt>2010 BLK to MPREC</dt>
+         <dd>2010 block to map precinct conversion files delimited with fields block, precinct, share of block, and share of precinct. Please note that the share of precinct is not a reliable measure. Please use the MP_BLK or SSP_BLK files instead.</dd>
+         <dt>MPREC to SRPREC</dt>
+         <dd>Map precinct to SR precinct conversion files delimited with fields MPREC and SRPREC.</dd>
+         <dt>SRPREC to CITY</dt>
+         <dd>SR precinct to city conversion files delimited with fields SRPREC, city, n_in_city, and n&hellip;</dd>
+      </dl>
+      </section>
+   </div>
+</div>
+
+<br>
+<nav class="data_options_nav" aria-label="Election year and dataset options">
+  <div class="row">
+
+    <div class="col-md-4 mb-3 year_select">
+<div class="form-group">
+<label for="geo-conv-year-select">Year</label>
+
+<select id="geo-conv-year-select" class="form-control" onchange="if (this.value) { window.location.href = this.value; }">
+   <option value='https://statewidedatabase.org/d20/p26.html' selected>2026</option>
+   <option value='https://statewidedatabase.org/d20/s25.html' >2025</option>
+   <option value='https://statewidedatabase.org/d20/p24.html' >2024</option>
+   <option value='https://statewidedatabase.org/d20/p22.html' >2022</option>
+	<option value='https://statewidedatabase.org/d20/s21.html' >2021</option>
+   <option value='https://statewidedatabase.org/d10/p20.html' >2020</option>
+	<option value='https://statewidedatabase.org/d10/p18.html' >2018</option>
+	<option value='https://statewidedatabase.org/d10/p16.html' >2016</option>
+	<option value='https://statewidedatabase.org/d10/p14.html' >2014</option>
+	<option value='https://statewidedatabase.org/d10/p12.html' >2012</option>
+	<option value='https://statewidedatabase.org/d00/p10.html' >2010</option>
+	<option value='https://statewidedatabase.org/d00/p08.html' >2008</option>
+	<option value='https://statewidedatabase.org/d00/p06.html' >2006</option>
+	<option value='https://statewidedatabase.org/d00/s05.html' >2005</option>
+	<option value='https://statewidedatabase.org/d00/p04.html' >2004</option>
+	<option value='https://statewidedatabase.org/d00/s03.html' >2003</option>
+   <option value='https://statewidedatabase.org/d00/p02.html' >2002</option>
+   <option value='https://statewidedatabase.org/d00/1992-2000.html' > 1992-2000</option>
+</select>
+
+
+</div>
+</div>
+
+
+
+
+
+<div class="col-md-4 mb-3 election_type_select">
+<div class="nav_center">
+
+<fieldset class="form-group redistricting-fieldset">
+   <legend class="redistricting-fieldset-legend">Election</legend>
+<div class="radio ">
+  <label>
+    <input type="radio" name="geo-conv-election-type" id="geo-conv-election-primary"
+      value="p26_geo_conv.html"
+      onchange="if (this.checked) { window.location.href = this.value; }"
+      checked
+         
+
+
+    >
+   Primary Election
+   </label>
+</div>
+
+
+
+
+<div class="radio ">
+  <label>
+    <input type="radio" name="geo-conv-election-type" id="geo-conv-election-general"
+    	value="g26_geo_conv.html"
+    	onchange="if (this.checked) { window.location.href = this.value; }"
+    	      
+    	
+    >
+    General Election
+  </label>
+</div>
+
+
+<div class="radio disabled">
+  <label>
+    <input type="radio" name="geo-conv-election-type" id="geo-conv-election-special"
+    	value="s26_geo_conv.html"
+    	onchange="if (this.checked) { window.location.href = this.value; }"
+    	    	disabled       >
+	Special Election
+  </label>
+    </div>
+</fieldset>
+</div>
+</div>
+
+
+<!-- this php code below is for setting the link for election pages-->
+
+
+
+<!-- this php code below is for setting the link for geo_conv files-->
+
+
+
+<div class="col-md-4 mb-3 data_type_select">
+<fieldset class="form-group redistricting-fieldset">
+	<legend class="redistricting-fieldset-legend">Dataset</legend>
+ <div class="radio">
+  <label>
+
+    <input type="radio" name="geo-conv-dataset-type" id="geo-conv-dataset-election"
+      value="p26.html"
+      
+      onchange="if (this.checked) { window.location.href = this.value; }" >
+
+   Election Data by Precinct
+   </label>
+</div>
+
+
+
+
+<div class="radio">
+  <label>
+
+    <input type="radio" name="geo-conv-dataset-type" id="geo-conv-dataset-geo-conv"
+
+      value="p26_geo_conv.html"
+      checked
+
+  onchange="if (this.checked) { window.location.href = this.value; }">
+
+Precinct Boundaries &amp;  Data Conversions
+  </label>
+ </div>
+</fieldset>
+</div>
+
+</div>
+</nav>
+
+      <table class="table table-bordered table-condensed text-center d20-data-table" cellspacing="0">
+      
+	      <caption class="d20-table-caption">File downloads by county: map precincts, SR precincts, and data conversion.</caption><thead><tr>
+<th scope="col"><span class="d20-visually-hidden">County or region</span></th><th scope="col">MAP PRECINCTS</th><th scope="col">SR PRECINCTS</th><th scope="col">DATA CONVERSION</th></tr></thead>
+<tbody>
+<tr>
+<th scope="row">California<br />Statewide</th><td>
+			no data yet<br />
+                <!-- <a class = 'link icon zip-icon' href='/pub/data/P26/state/mprec_state_p26_v01_shp.zip'>MPREC_SHP</a><br/> -->
+                <!-- <a class = 'link icon zip-icon' href='/pub/data/P26/state/mprec_state_p26_v01_mif.zip'>MPREC_MIF</a><br/> -->
+    
+  </td><td>
+			no data yet<br />
+                <!-- <a class = 'link icon zip-icon' href='/pub/data/P26/state/srprec_state_p26_v01_shp.zip'>SRPREC_SHP</a> <br/> -->
+
+		</td><td>
+			no data yet<br />
+	<!-- 
+        <a class= 'link icon csv-icon' href='/pub/data/P26/state/state_p26_rg_blk_map.csv'>RGPREC TO 2020 BLK</a><br />
+        <a class= 'link icon csv-icon' href='/pub/data/P26/state/blk_mprec_state_p26_v01.csv'>MPREC TO 2020 BLK</a><br />
+  		<a class= 'link icon csv-icon'  href='/pub/data/P26/state/state_p26_sr_blk_map.csv'>SRPREC TO 2020 BLK</a><br />
+        <a class='link icon csv-icon'  href='/pub/data/P26/state/state_p26_to_city_by_p26_srprec.csv'>SRPREC to CITY</a><br/>
+        <a class='link icon csv-icon' href='/pub/data/P26/state/mprec_srprec_state_p26_v01.csv'>MPREC to SRPREC</a><br />
+        <a class='link icon csv-icon' href='/pub/data/P26/state/state_rg_rr_sr_svprec_p26_v01.csv'>RG to RR to SR to SVPREC</a><br />
+	 -->
+
+		</td>
+<tr><th scope="row">County 001<br />(Alameda)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c001/mprec_001_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c001/mprec_001_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c001/mprec_001_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c001/srprec_001_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c001/srprec_001_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c001/srprec_001_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c001/c001_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c001/c001_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c001/blk_mprec_001_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c001/c001_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c001/mprec_srprec_001_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c001/c001_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 003<br />(Alpine)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c003/mprec_003_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c003/mprec_003_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c003/mprec_003_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c003/srprec_003_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c003/srprec_003_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c003/srprec_003_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c003/c003_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c003/c003_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c003/blk_mprec_003_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c003/c003_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c003/mprec_srprec_003_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c003/c003_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 005<br />(Amador)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c005/mprec_005_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c005/mprec_005_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c005/mprec_005_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c005/srprec_005_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c005/srprec_005_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c005/srprec_005_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c005/c005_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c005/c005_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c005/blk_mprec_005_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c005/c005_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c005/mprec_srprec_005_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c005/c005_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 007<br />(Butte)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c007/mprec_007_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c007/mprec_007_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c007/mprec_007_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c007/srprec_007_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c007/srprec_007_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c007/srprec_007_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c007/c007_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c007/c007_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c007/blk_mprec_007_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c007/c007_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c007/mprec_srprec_007_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c007/c007_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 009<br />(Calaveras)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c009/mprec_009_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c009/mprec_009_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c009/mprec_009_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c009/srprec_009_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c009/srprec_009_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c009/srprec_009_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c009/c009_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c009/c009_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c009/blk_mprec_009_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c009/c009_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c009/mprec_srprec_009_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c009/c009_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 011<br />(Colusa)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c011/mprec_011_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c011/mprec_011_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c011/mprec_011_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c011/srprec_011_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c011/srprec_011_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c011/srprec_011_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c011/c011_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c011/c011_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c011/blk_mprec_011_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c011/c011_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c011/mprec_srprec_011_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c011/c011_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 013<br />(Contra Costa)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c013/mprec_013_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c013/mprec_013_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c013/mprec_013_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c013/srprec_013_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c013/srprec_013_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c013/srprec_013_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c013/c013_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c013/c013_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c013/blk_mprec_013_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c013/c013_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c013/mprec_srprec_013_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c013/c013_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 015<br />(Del Norte)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c015/mprec_015_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c015/mprec_015_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c015/mprec_015_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c015/srprec_015_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c015/srprec_015_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c015/srprec_015_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c015/c015_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c015/c015_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c015/blk_mprec_015_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c015/c015_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c015/mprec_srprec_015_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c015/c015_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 017<br />(El Dorado)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c017/mprec_017_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c017/mprec_017_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c017/mprec_017_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c017/srprec_017_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c017/srprec_017_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c017/srprec_017_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c017/c017_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c017/c017_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c017/blk_mprec_017_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c017/c017_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c017/mprec_srprec_017_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c017/c017_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 019<br />(Fresno)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c019/mprec_019_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c019/mprec_019_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c019/mprec_019_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c019/srprec_019_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c019/srprec_019_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c019/srprec_019_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c019/c019_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c019/c019_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c019/blk_mprec_019_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c019/c019_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c019/mprec_srprec_019_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c019/c019_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 021<br />(Glenn)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c021/mprec_021_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c021/mprec_021_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c021/mprec_021_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c021/srprec_021_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c021/srprec_021_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c021/srprec_021_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c021/c021_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c021/c021_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c021/blk_mprec_021_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c021/c021_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c021/mprec_srprec_021_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c021/c021_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 023<br />(Humboldt)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c023/mprec_023_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c023/mprec_023_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c023/mprec_023_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c023/srprec_023_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c023/srprec_023_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c023/srprec_023_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c023/c023_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c023/c023_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c023/blk_mprec_023_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c023/c023_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c023/mprec_srprec_023_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c023/c023_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 025<br />(Imperial)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c025/mprec_025_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c025/mprec_025_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c025/mprec_025_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c025/srprec_025_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c025/srprec_025_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c025/srprec_025_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c025/c025_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c025/c025_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c025/blk_mprec_025_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c025/c025_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c025/mprec_srprec_025_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c025/c025_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 027<br />(Inyo)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c027/mprec_027_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c027/mprec_027_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c027/mprec_027_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c027/srprec_027_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c027/srprec_027_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c027/srprec_027_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c027/c027_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c027/c027_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c027/blk_mprec_027_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c027/c027_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c027/mprec_srprec_027_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c027/c027_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 029<br />(Kern)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c029/mprec_029_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c029/mprec_029_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c029/mprec_029_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c029/srprec_029_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c029/srprec_029_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c029/srprec_029_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c029/c029_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c029/c029_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c029/blk_mprec_029_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c029/c029_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c029/mprec_srprec_029_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c029/c029_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 031<br />(Kings)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c031/mprec_031_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c031/mprec_031_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c031/mprec_031_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c031/srprec_031_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c031/srprec_031_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c031/srprec_031_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c031/c031_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c031/c031_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c031/blk_mprec_031_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c031/c031_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c031/mprec_srprec_031_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c031/c031_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 033<br />(Lake)</th><td class="alt">no data yet<br />no data yet<br />no data yet<br /></td><td class="alt">no data yet<br />no data yet<br />no data yet<br /></td><td class="alt">no data yet<br />no data yet<br />no data yet<br />no data yet<br />no data yet<br />no data yet<br /></td></tr>
+<tr><th scope="row">County 035<br />(Lassen)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c035/mprec_035_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c035/mprec_035_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c035/mprec_035_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c035/srprec_035_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c035/srprec_035_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c035/srprec_035_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c035/c035_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c035/c035_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c035/blk_mprec_035_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c035/c035_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c035/mprec_srprec_035_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c035/c035_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 037<br />(Los Angeles)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c037/mprec_037_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c037/mprec_037_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c037/mprec_037_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c037/srprec_037_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c037/srprec_037_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c037/srprec_037_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c037/c037_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c037/c037_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c037/blk_mprec_037_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c037/c037_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c037/mprec_srprec_037_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c037/c037_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 039<br />(Madera)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c039/mprec_039_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c039/mprec_039_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c039/mprec_039_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td>no data yet<br />no data yet<br />no data yet<br /></td><td><a class='link icon csv-icon' href='/pub/data/P26/c039/c039_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c039/c039_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c039/blk_mprec_039_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c039/c039_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/>no data yet<br /><a class='link icon csv-icon' href='/pub/data/P26/c039/c039_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 041<br />(Marin)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c041/mprec_041_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c041/mprec_041_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c041/mprec_041_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c041/srprec_041_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c041/srprec_041_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c041/srprec_041_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c041/c041_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c041/c041_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c041/blk_mprec_041_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c041/c041_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c041/mprec_srprec_041_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c041/c041_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 043<br />(Mariposa)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c043/mprec_043_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c043/mprec_043_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c043/mprec_043_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c043/srprec_043_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c043/srprec_043_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c043/srprec_043_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c043/c043_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c043/c043_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c043/blk_mprec_043_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c043/c043_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c043/mprec_srprec_043_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c043/c043_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 045<br />(Mendocino)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c045/mprec_045_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c045/mprec_045_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c045/mprec_045_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c045/srprec_045_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c045/srprec_045_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c045/srprec_045_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c045/c045_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c045/c045_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c045/blk_mprec_045_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c045/c045_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c045/mprec_srprec_045_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c045/c045_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 047<br />(Merced)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c047/mprec_047_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c047/mprec_047_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c047/mprec_047_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c047/srprec_047_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c047/srprec_047_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c047/srprec_047_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c047/c047_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c047/c047_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c047/blk_mprec_047_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c047/c047_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c047/mprec_srprec_047_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c047/c047_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 049<br />(Modoc)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c049/mprec_049_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c049/mprec_049_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c049/mprec_049_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c049/srprec_049_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c049/srprec_049_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c049/srprec_049_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c049/c049_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c049/c049_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c049/blk_mprec_049_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c049/c049_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c049/mprec_srprec_049_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c049/c049_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 051<br />(Mono)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c051/mprec_051_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c051/mprec_051_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c051/mprec_051_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c051/srprec_051_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c051/srprec_051_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c051/srprec_051_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c051/c051_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c051/c051_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c051/blk_mprec_051_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c051/c051_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c051/mprec_srprec_051_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c051/c051_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 053<br />(Monterey)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c053/mprec_053_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c053/mprec_053_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c053/mprec_053_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c053/srprec_053_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c053/srprec_053_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c053/srprec_053_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c053/c053_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c053/c053_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c053/blk_mprec_053_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c053/c053_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c053/mprec_srprec_053_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c053/c053_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 055<br />(Napa)</th><td>no data yet<br />no data yet<br />no data yet<br /></td><td>no data yet<br />no data yet<br />no data yet<br /></td><td>no data yet<br />no data yet<br />no data yet<br />no data yet<br />no data yet<br />no data yet<br /></td></tr>
+<tr><th scope="row">County 057<br />(Nevada)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c057/mprec_057_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c057/mprec_057_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c057/mprec_057_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c057/srprec_057_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c057/srprec_057_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c057/srprec_057_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c057/c057_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c057/c057_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c057/blk_mprec_057_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c057/c057_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c057/mprec_srprec_057_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c057/c057_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 059<br />(Orange)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c059/mprec_059_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c059/mprec_059_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c059/mprec_059_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c059/srprec_059_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c059/srprec_059_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c059/srprec_059_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c059/c059_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c059/c059_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c059/blk_mprec_059_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c059/c059_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c059/mprec_srprec_059_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c059/c059_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 061<br />(Placer)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c061/mprec_061_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c061/mprec_061_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c061/mprec_061_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c061/srprec_061_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c061/srprec_061_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c061/srprec_061_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c061/c061_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c061/c061_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c061/blk_mprec_061_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c061/c061_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c061/mprec_srprec_061_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c061/c061_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 063<br />(Plumas)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c063/mprec_063_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c063/mprec_063_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c063/mprec_063_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c063/srprec_063_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c063/srprec_063_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c063/srprec_063_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c063/c063_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c063/c063_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c063/blk_mprec_063_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c063/c063_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c063/mprec_srprec_063_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c063/c063_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 065<br />(Riverside)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c065/mprec_065_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c065/mprec_065_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c065/mprec_065_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c065/srprec_065_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c065/srprec_065_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c065/srprec_065_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c065/c065_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c065/c065_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c065/blk_mprec_065_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c065/c065_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c065/mprec_srprec_065_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c065/c065_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 067<br />(Sacramento)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c067/mprec_067_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c067/mprec_067_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c067/mprec_067_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c067/srprec_067_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c067/srprec_067_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c067/srprec_067_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c067/c067_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c067/c067_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c067/blk_mprec_067_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c067/c067_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c067/mprec_srprec_067_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c067/c067_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 069<br />(San Benito)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c069/mprec_069_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c069/mprec_069_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c069/mprec_069_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c069/srprec_069_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c069/srprec_069_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c069/srprec_069_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c069/c069_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c069/c069_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c069/blk_mprec_069_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c069/c069_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c069/mprec_srprec_069_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c069/c069_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 071<br />(San Bernardino)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c071/mprec_071_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c071/mprec_071_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c071/mprec_071_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c071/srprec_071_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c071/srprec_071_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c071/srprec_071_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c071/c071_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c071/c071_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c071/blk_mprec_071_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c071/c071_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c071/mprec_srprec_071_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c071/c071_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 073<br />(San Diego)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c073/mprec_073_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c073/mprec_073_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c073/mprec_073_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c073/srprec_073_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c073/srprec_073_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c073/srprec_073_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c073/c073_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c073/c073_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c073/blk_mprec_073_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c073/c073_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c073/mprec_srprec_073_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c073/c073_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 075<br />(San Francisco)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c075/mprec_075_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c075/mprec_075_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c075/mprec_075_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c075/srprec_075_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c075/srprec_075_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c075/srprec_075_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c075/c075_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c075/c075_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c075/blk_mprec_075_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c075/c075_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c075/mprec_srprec_075_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c075/c075_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 077<br />(San Joaquin)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c077/mprec_077_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c077/mprec_077_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c077/mprec_077_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c077/srprec_077_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c077/srprec_077_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c077/srprec_077_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c077/c077_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c077/c077_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c077/blk_mprec_077_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c077/c077_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c077/mprec_srprec_077_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c077/c077_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 079<br />(San Luis Obispo)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c079/mprec_079_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c079/mprec_079_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c079/mprec_079_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c079/srprec_079_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c079/srprec_079_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c079/srprec_079_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c079/c079_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c079/c079_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c079/blk_mprec_079_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c079/c079_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c079/mprec_srprec_079_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c079/c079_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 081<br />(San Mateo)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c081/mprec_081_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c081/mprec_081_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c081/mprec_081_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c081/srprec_081_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c081/srprec_081_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c081/srprec_081_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c081/c081_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c081/c081_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c081/blk_mprec_081_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c081/c081_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c081/mprec_srprec_081_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c081/c081_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 083<br />(Santa Barbara)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c083/mprec_083_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c083/mprec_083_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c083/mprec_083_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c083/srprec_083_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c083/srprec_083_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c083/srprec_083_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c083/c083_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c083/c083_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c083/blk_mprec_083_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c083/c083_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c083/mprec_srprec_083_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c083/c083_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 085<br />(Santa Clara)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c085/mprec_085_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c085/mprec_085_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c085/mprec_085_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c085/srprec_085_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c085/srprec_085_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c085/srprec_085_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c085/c085_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c085/c085_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c085/blk_mprec_085_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c085/c085_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c085/mprec_srprec_085_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c085/c085_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 087<br />(Santa Cruz)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c087/mprec_087_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c087/mprec_087_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c087/mprec_087_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c087/srprec_087_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c087/srprec_087_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c087/srprec_087_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c087/c087_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c087/c087_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c087/blk_mprec_087_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c087/c087_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c087/mprec_srprec_087_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c087/c087_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 089<br />(Shasta)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c089/mprec_089_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c089/mprec_089_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c089/mprec_089_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c089/srprec_089_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c089/srprec_089_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c089/srprec_089_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c089/c089_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c089/c089_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c089/blk_mprec_089_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c089/c089_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c089/mprec_srprec_089_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c089/c089_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 091<br />(Sierra)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c091/mprec_091_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c091/mprec_091_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c091/mprec_091_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c091/srprec_091_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c091/srprec_091_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c091/srprec_091_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c091/c091_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c091/c091_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c091/blk_mprec_091_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c091/c091_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c091/mprec_srprec_091_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c091/c091_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 093<br />(Siskiyou)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c093/mprec_093_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c093/mprec_093_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c093/mprec_093_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c093/srprec_093_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c093/srprec_093_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c093/srprec_093_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c093/c093_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c093/c093_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c093/blk_mprec_093_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c093/c093_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c093/mprec_srprec_093_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c093/c093_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 095<br />(Solano)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c095/mprec_095_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c095/mprec_095_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c095/mprec_095_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c095/srprec_095_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c095/srprec_095_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c095/srprec_095_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c095/c095_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c095/c095_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c095/blk_mprec_095_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c095/c095_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c095/mprec_srprec_095_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c095/c095_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 097<br />(Sonoma)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c097/mprec_097_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c097/mprec_097_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c097/mprec_097_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c097/srprec_097_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c097/srprec_097_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c097/srprec_097_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c097/c097_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c097/c097_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c097/blk_mprec_097_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c097/c097_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c097/mprec_srprec_097_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c097/c097_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 099<br />(Stanislaus)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c099/mprec_099_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c099/mprec_099_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c099/mprec_099_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c099/srprec_099_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c099/srprec_099_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c099/srprec_099_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c099/c099_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c099/c099_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c099/blk_mprec_099_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c099/c099_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c099/mprec_srprec_099_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c099/c099_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 101<br />(Sutter)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c101/mprec_101_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c101/mprec_101_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c101/mprec_101_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c101/srprec_101_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c101/srprec_101_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c101/srprec_101_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c101/c101_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c101/c101_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c101/blk_mprec_101_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c101/c101_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c101/mprec_srprec_101_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c101/c101_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 103<br />(Tehama)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c103/mprec_103_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c103/mprec_103_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c103/mprec_103_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c103/srprec_103_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c103/srprec_103_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c103/srprec_103_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c103/c103_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c103/c103_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c103/blk_mprec_103_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c103/c103_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c103/mprec_srprec_103_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c103/c103_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 105<br />(Trinity)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c105/mprec_105_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c105/mprec_105_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c105/mprec_105_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c105/srprec_105_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c105/srprec_105_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c105/srprec_105_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c105/c105_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c105/c105_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c105/blk_mprec_105_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c105/c105_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c105/mprec_srprec_105_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c105/c105_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 107<br />(Tulare)</th><td>no data yet<br />no data yet<br />no data yet<br /></td><td>no data yet<br />no data yet<br />no data yet<br /></td><td>no data yet<br />no data yet<br />no data yet<br />no data yet<br />no data yet<br />no data yet<br /></td></tr>
+<tr><th scope="row">County 109<br />(Tuolumne)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c109/mprec_109_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c109/mprec_109_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c109/mprec_109_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c109/srprec_109_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c109/srprec_109_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c109/srprec_109_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c109/c109_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c109/c109_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c109/blk_mprec_109_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c109/c109_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c109/mprec_srprec_109_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c109/c109_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 111<br />(Ventura)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c111/mprec_111_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c111/mprec_111_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c111/mprec_111_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c111/srprec_111_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c111/srprec_111_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c111/srprec_111_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c111/c111_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c111/c111_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c111/blk_mprec_111_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c111/c111_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c111/mprec_srprec_111_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c111/c111_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 113<br />(Yolo)</th><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c113/mprec_113_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c113/mprec_113_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c113/mprec_113_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon zip-icon' href='/pub/data/P26/c113/srprec_113_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c113/srprec_113_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c113/srprec_113_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td class="alt"><a class='link icon csv-icon' href='/pub/data/P26/c113/c113_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c113/c113_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c113/blk_mprec_113_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c113/c113_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c113/mprec_srprec_113_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c113/c113_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+<tr><th scope="row">County 115<br />(Yuba)</th><td><a class='link icon zip-icon' href='/pub/data/P26/c115/mprec_115_p26_v01.gpkg.zip' download>MPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c115/mprec_115_p26_v01.geojson.zip' download>MPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c115/mprec_115_p26_v01_shp.zip' download>MPREC_Shapefile</a><br/></td><td><a class='link icon zip-icon' href='/pub/data/P26/c115/srprec_115_p26_v01.gpkg.zip' download>SRPREC_GeoPackage</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c115/srprec_115_p26_v01.geojson.zip' download>SRPREC_GeoJSON</a><br/><a class='link icon zip-icon' href='/pub/data/P26/c115/srprec_115_p26_v01_shp.zip' download>SRPREC_Shapefile</a><br/></td><td><a class='link icon csv-icon' href='/pub/data/P26/c115/c115_p26_sr_blk_map.csv' download>SRPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c115/c115_p26_rg_blk_map.csv' download>RGPREC TO 2020 BLK</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c115/blk_mprec_115_p26_v01.csv' download>2020 BLK TO MPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c115/c115_rg_rr_sr_svprec_p26.csv' download>RG to RR to SR to SVPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c115/mprec_srprec_115_p26.csv' download>MPREC to SRPREC</a><br/><a class='link icon csv-icon' href='/pub/data/P26/c115/c115_p26_srprec_to_city.csv' download>SRPREC to CITY</a><br/></td></tr>
+</tbody></table>    
+	      </main>
+          <!-- end content -->	
+		
+</div>
+
+
+<aside class="side-bar col hidden-xs hidden-sm col-md-2 col-lg-2" role="complementary" aria-labelledby="swdb-sidebar-related-heading">
+	<div class="side-bar main-container">
+				<div class="side-bar related-links-container">
+			<h3 id="swdb-sidebar-related-heading">Related Links</h3>
+
+			
+
+<a class='link' href='p26_geo_conv.html'>Geographic Data by Census Block</a><p class='related-link-desc'>2026 General Election Precinct conversions for the 2010 census blocks.</p><a class='link' href='https://statewidedatabase.org/updates.html'>Latest Updates</a><p class='related-link-desc'>Access the latest versions of data files.</p><a class='link' href='p26.html'>Precinct Data</a><p class='related-link-desc'>2026 General Election voter registration data and election results by precinct.</p><a class='link' href='https://statewidedatabase.org//d10/Creating%20CA%20Official%20Redistricting%20Database.pdf'>Precinct Boundary Files</a><p class='related-link-desc'>Technical documentation regarding the various precinct types.</p>		</div>
+		
+	</div>
+</aside>
+
+</div>
+</div>
+
+<div role="region" aria-label="Back to top" class="swdb-back-to-top-landmark">
+<a href="#" id="top-anchor-link">
+	<div id="top-anchor" class="text-center">
+		<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+		<p>TOP</p>
+	</div>
+</a>
+</div>
+
+<footer class="container-fluid footer">
+	<div class="footer-row row top">
+
+		<div class="clearfix visible-xs-block"></div>
+		<div class="clearfix visible-sm-block"></div>	
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+		<div class="clearfix xs-bottom-margin visible-xs-block"></div>
+		<div class="clearfix visible-sm-block"></div>
+
+
+
+<div class="col sm-bottom-margin col-sm-10 col-sm-offset-0 col-md-offset-0 col-md-1">
+		
+</div>
+	<div class="col sm-bottom-margin col-sm-10 col-sm-offset-0 col-md-offset-0 col-md-3" id="contact-container">
+		<!-- <a href='https://statewidedatabase.org/'><h6>HOME</h6></a> -->
+		<a href='https://statewidedatabase.org/about.html'>About<br/></a>
+		<a href='https://statewidedatabase.org/contact.html'>Contact Us<br/></a>
+     	<a href='https://statewidedatabase.org/help.html'>Help <br/></a>
+		
+		<a href='https://statewidedatabase.org/faq.html'>FAQs<br/></a>
+		<a href=' https://statewidedatabase.org/metadata.html'>Technical Documentation<br/></a>
+		<a href=' https://statewidedatabase.org/privacy.html'>Privacy Policy<br/></a> 
+
+		<!-- <a href="#">Search SWDB by Category<br/></a> -->
+		<a href="http://law.berkeley.edu">Berkeley School of Law<br/></a>
+		  </div>
+		   <div class="col sm-bottom-margin col-sm-10 col-sm-offset-0 col-md-offset-0 col-md-3" id="contact-container">
+
+			<!-- <a><h6>MAPS</h6></a> -->
+         
+						<a href='https://statewidedatabase.org/redistricting2021/index.html'>2021 Redistricting<br/></a>
+						<a href='https://statewidedatabase.org/redistricting.html'>Historical Redistricting Data<br/></a>
+						<a href='https://statewidedatabase.org/election.html'>Elections Data<br/></a>
+						<a href='https://statewidedatabase.org/census.html'>Other Data<br/></a>
+						<a href='https://statewidedatabase.org/resources.html'>Resources <br/></a>		
+                  <a href='https://statewidedatabase.org/2021_final_maps.html'>2021 Final Maps <br/></a>
+						<a href='https://statewidedatabase.org/redistricting_access_tools/index.php'>Redistricting access tools<br/></a>
+						<a href='https://statewidedatabase.org/redistricting_access_centers/index.php'>Redistricting Access Centers<br/></a>
+						<a href='https://drawmycacommunity.org/'> Draw My CA Community Tool <br/></a> 
+                  <a href='https://drawmycadistricts.org/'> Draw My CA Districts Tool <br/></a>
+
+
+	</div>
+<div class="col sm-bottom-margin col-sm-10 col-sm-offset-0 col-md-offset-0 col-md-3" id="contact-container">
+         <h3>Trouble finding something or have any questions?</h3>
+         <p>We would love to help. Please leave us a message and we will get right back to you:</p>
+      
+<a type="button" href="https://statewidedatabase.org/contact.html" class="btn btn-primary btn-lg btn-block">Contact Us</a>
+    
+   </div>
+	</div>
+	<div class="footer-row row bottom">
+		<div class="col col-xs-12 col-sm-9 col-sm-offset-1" id="container1">
+			<div id="line"></div>
+			<div id="copyright">
+				<a>&copy; 2000-2026 UC Regents. All Rights Reserved.<br/></a>
+
+				<a href="https://berkeley.edu">University of California, Berkeley</a>
+		
+	</div>
+			<a href="https://law.berkeley.edu"><img id="lawlogo" src="https://statewidedatabase.org/include/ucberkeley_law_logo.png" alt="Berkeley Law"></a>
+		</div>
+
+		<div class="col xs-hidden col-sm-1 col-md-1 col-lg-1" id="seal-container">
+			<a href="https://berkeley.edu"><img id="seal" src="https://statewidedatabase.org/include/ucberkeley_seal.png" alt="UC Berkeley"></a>
+		</div>
+	</div>
+</footer>
+
+<div id="cookieConsent" class="swdb-cookie-banner" role="region" aria-label="Privacy and cookies notice" aria-hidden="true">
+	<div class="container-fluid swdb-cookie-inner">
+		<div class="swdb-cookie-text">
+			<p class="swdb-cookie-message">The Statewide Database website does not collect or share personal information. If you submit a question on our <a href="https://statewidedatabase.org/contact.html">Contact page</a>, we will see the name, phone number, and email address you enter on that form, and we will only use them to reply to you.</p>
+		</div>
+		<button type="button" class="swdb-cookie-close" id="closeCookieConsent" aria-label="Dismiss privacy notice">Close</button>
+	</div>
+</div>
+
+<style>
+	
+	/*Cookie Consent Begin*/
+	/* Related Links contrast improvements */
+	.side-bar.related-links-container > h3 {
+		color: #082f52;
+		font-weight: 700;
+	}
+	.side-bar.related-links-container > a.link {
+		color: #0a4d8c;
+		text-decoration: underline !important;
+		text-underline-offset: 0.12em;
+		font-weight: 700;
+	}
+	.side-bar.related-links-container > a.link:hover {
+		color: #062e54;
+	}
+	.side-bar.related-links-container > p.related-link-desc {
+		color: #2b2b2b;
+	}
+	.side-bar.related-links-container > a.link:focus-visible {
+		outline: 2px solid #003262;
+		outline-offset: 2px;
+	}
+
+	#contact-container  > a{
+		color:white;
+
+	}
+	#contact-container  > h6 {
+		color:#f7ac09;
+
+	}
+	.container-fluid {
+		padding-left: 0 !important;
+		padding-right:0 !important ;
+	}
+
+/* Cookie / privacy notice bar — fixed bottom, WCAG-friendly contrast on #003262 */
+#cookieConsent.swdb-cookie-banner {
+	background: #003262;
+	color: #e8edf2;
+	font-size: 0.9375rem;
+	line-height: 1.5;
+	font-family: 'Open Sans', 'Trebuchet MS', Helvetica, sans-serif;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10050;
+	box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.12);
+	display: none;
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+.swdb-cookie-inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem 1.5rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem 1.25rem;
+}
+.swdb-cookie-text {
+	flex: 1 1 280px;
+	margin: 0;
+	min-width: 0;
+}
+.swdb-cookie-message {
+	margin: 0;
+	color: #e8edf2;
+}
+#cookieConsent.swdb-cookie-banner a {
+	color: #f7d97a;
+	font-weight: 600;
+	text-decoration: underline !important;
+	text-underline-offset: 0.15em;
+}
+#cookieConsent.swdb-cookie-banner a:hover {
+	color: #fff3c4;
+}
+#cookieConsent.swdb-cookie-banner a:focus-visible {
+	outline: 2px solid #f7ac09;
+	outline-offset: 3px;
+}
+.swdb-cookie-close {
+	flex: 0 0 auto;
+	background: #fff;
+	color: #003262;
+	border: 2px solid #fff;
+	border-radius: 6px;
+	padding: 0.45rem 1.1rem;
+	font-size: 0.875rem;
+	font-weight: 700;
+	cursor: pointer;
+	letter-spacing: 0.03em;
+	transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.swdb-cookie-close:hover {
+	background: #f0f4f8;
+	border-color: #f0f4f8;
+	color: #001f3d;
+}
+.swdb-cookie-close:focus-visible {
+	outline: 2px solid #f7ac09;
+	outline-offset: 3px;
+}
+/*Cookie Consent End*/
+
+</style>
+<script>
+
+jQuery(function($) {
+  var $bar = $('#cookieConsent');
+  if (getCookie('cookieAccepted') !== null) {
+    return;
+  }
+  setTimeout(function() {
+    /* slideDown applies display:block; fadeIn can fail to override CSS display:none */
+    $bar.slideDown(280, function() {
+      $bar.attr('aria-hidden', 'false');
+    });
+  }, 500);
+  $('#closeCookieConsent').on('click', function() {
+    setCookie('cookieAccepted', 'cookieAccepted', 90);
+    $bar.attr('aria-hidden', 'true').slideUp(220);
+  });
+});
+  
+function setCookie(cname, cvalue, exdays, domain) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires=" + d.toUTCString();
+  var cookieString = cname + "=" + cvalue + ";" + expires + ";path=/;";
+  if(domain && domain != '') {
+    cookieString += "domain="+domain+";"
+  }
+  document.cookie = cookieString;
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return null;
+}
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"fff57065f7f2426898818d1d83603a19","spa":2}' crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+

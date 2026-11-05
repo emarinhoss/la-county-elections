@@ -1,0 +1,9 @@
+{
+  "source_id": "election_precincts_layer_guess",
+  "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Election_Precincts/FeatureServer/0?f=json",
+  "fetched_at": "2026-11-05T20:45:13.467724+00:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 72,
+  "sha256": "a31ec94cbca0664060fef65c5c6de06caf02ae57d608b0197d13ee404fc7cf5b"
+}
