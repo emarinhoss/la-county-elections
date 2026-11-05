@@ -1,0 +1,9 @@
+{
+  "source_id": "precinct_layer_carson_fields",
+  "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/0/query?where=PRECINCT%20LIKE%20%271030%25%27&outFields=PRECINCT,CITY_EST,SUBCODE,MAP1,ESTAB,PRC_NAME,COMM_NAME,CITY,DST_CITY&returnGeometry=false&resultRecordCount=1000&f=json",
+  "fetched_at": "2026-11-05T19:36:08.453999+00:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 55371,
+  "sha256": "57450e77066aa31fa280e17774a0d9ce3d0742a593ea7fe5db219e199aba2e2f"
+}
