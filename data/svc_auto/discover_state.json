@@ -1,0 +1,12 @@
+{
+  "https://content.lavote.gov/docs/rrcc/svc/4348_precinct_public.pdf": {
+    "signature": "44308719|Thu, 05 Nov 2026 00:03:38 GMT",
+    "attempts": 1,
+    "last_attempt": "2026-11-05T15:32:39.186148+00:00"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_precinct_public.pdf": {
+    "signature": "97250712|Thu, 05 Nov 2026 00:03:40 GMT",
+    "attempts": 1,
+    "last_attempt": "2026-11-05T15:32:39.186148+00:00"
+  }
+}

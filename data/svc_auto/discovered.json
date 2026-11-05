@@ -1,0 +1,755 @@
+{
+ "checked_at": "2026-11-05T15:32:39.186148+00:00",
+ "election_id": 4348,
+ "pages_fetched": 40,
+ "svc_links_on_county_pages": [
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_precinct_zbc.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_svc_citycouncil_zbc.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_svc_district_zbc.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_svc_precinct_zbc.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_precinct_zbc.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_svc_citycouncil_zbc.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_svc_district_zbc.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_svc_precinct_zbc.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_city_council.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_final_district.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_final_svc_countywide.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_svc_precinct_public-v2.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4303_final_svc_countywide.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4303_final_svc_district.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4303_final_svc_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4303_precinct_public_v2.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_svc_citycouncil.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_svc_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_svc_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_council_inglewood.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_countywide.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_district.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_svc_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4309_communityb3972932-416d-4d54-afa7-999a71f492db.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4309_final_svc_precinct.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4309_precinct_public62f1c161-1530-4eed-a086-691f8e08a44c.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4309_svc_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4310_communitye1856b7c-c5bb-45a3-ab68-65fa77b8c5e2.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4310_final_svc_precinct.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4310_precinct_publicb0d88e51-12ea-4ae4-a8f6-ab6402621f96.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4310_svc_districts0162819d-d4f1-4b8c-b030-a3436c7920aa.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_community7032415975a46c55bf9dff0f00945460.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_final_svc_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_final_svc_precinct.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_precinct_publice231415975a46c55bf9dff0f00945460.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_svc_citycouncile731415975a46c55bf9dff0f00945460.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_svc_countywide.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_svc_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_svc_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_svc_council_los_angeles.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_svc_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_svc_precinct.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_community66f9435975a46c55bf9dff0f00945460.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_svc_citycounsil.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_svc_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_svc_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_community2ef9435975a46c55bf9dff0f00945460.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_precinct_public_v2.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_citycouncil_v2.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_district_v3.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_precinct_public_v2.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4329_final_svc_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4329_final_svc_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4329_final_svc_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4329_precinct_publicbca4adcf-e1f9-4a44-845c-7127a04077b2.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4331_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_svc_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_svc_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_svc_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_city_council_v3.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_community_v4.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_final_svc_community_v3.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_final_svc_districts_v3.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_final_svc_precinct_public_v3.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_precinct_public_v3.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_city_council.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_community.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_districts.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_precinct_public.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3752_final_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3752_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3752_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3752_final_svcdistrict.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3758_final_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3758_final_precinctbulletin.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3758_final_svc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3758_final_svc_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3791_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3791_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3791_svc_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3791_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3793_Community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3793_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3793_SVC_DistrictTotals_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3793_SVC_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3823_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3843_final_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3843_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3843_final_svc_district_total.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3843_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3861_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3861_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3861_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3861_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3878_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3878_SVC_District_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3878_SVC_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3883_FINAL_Community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3883_FINAL_SVC_District.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3883_FINAL_SVC_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3883__FINAL_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3957_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3957_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3957_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3957_svcbydistrict.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3958_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3958_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3983_final_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3983_final_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3983_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/3983_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4032_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4032_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4032_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4032_svc_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4040_final_community_in_sup_1.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4040_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4040_final_svc_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4040_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4041_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4041_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4041_svc_district_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4041_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4053_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4053_final_svc_bydistrict.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4053_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4058_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4058_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4058_svc_district_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4085_FINAL_SVC_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4085_SVC_District_Final.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4085_final_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4085_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4110_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4110_svc_district_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4110_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4140_final_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4140_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4140_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4178_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4178_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4178_svc_district_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4178_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4193_Community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4193_FINAL_SVC_District_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4193_FINAL_SVC_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4193_Precinct.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4256_FINAL_Community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4256_FINAL_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4256_FINAL_SVC_District.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4256_FINAL_SVC_Precinct_ZBC.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4258_final_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4258_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4258_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4259_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4259_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4259_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4261_community_final.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4261_precinct_zbc_final.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4261_svc_citycouncil_zbc_final.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4261_svc_district_zbc_final.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4261_svc_precinct_zbc_final.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4266_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4266_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4267_final_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4267_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4267_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4271_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4271_final_svc_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4271_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4272_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4272_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4278_final_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4278_final_council.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4278_final_district.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4278_final_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4278_final_svc_precinct_zbc.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4285_community_02242022.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4285_precinct_zbc_02242022.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4285_svc_citycouncil_zbc_02242022.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4285_svc_district_zbc_02242022.pdf",
+  "https://lavote.gov/docs/rrcc/svc/4285_svc_precinct_zbc_02242022.pdf",
+  "https://lavote.gov/docs/rrcc/svc/879_community.pdf",
+  "https://lavote.gov/docs/rrcc/svc/FinalSVC2008General.pdf",
+  "https://lavote.gov/docs/rrcc/svc/FinalprecinctBulletin2008General.pdf",
+  "https://lavote.gov/docs/rrcc/svc/finalcommunity2008general.pdf"
+ ],
+ "urls_probed": 147,
+ "found_200": {
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "1641357",
+   "last_modified": "Sat, 02 Jul 2022 21:45:23 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_precinct_zbc.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "71788440",
+   "last_modified": "Sat, 02 Jul 2022 21:45:56 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_svc_citycouncil_zbc.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "1129909",
+   "last_modified": "Sat, 02 Jul 2022 21:45:23 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_svc_district_zbc.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "15592621",
+   "last_modified": "Sat, 02 Jul 2022 21:45:29 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_svc_precinct_zbc.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "117072153",
+   "last_modified": "Sat, 02 Jul 2022 00:55:24 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4291_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "35511",
+   "last_modified": "Thu, 14 Apr 2022 20:14:12 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4291_precinct_zbc.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "197784",
+   "last_modified": "Thu, 14 Apr 2022 20:14:12 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4291_svc_citycouncil_zbc.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "60477",
+   "last_modified": "Thu, 14 Apr 2022 20:14:12 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4291_svc_district_zbc.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "165620",
+   "last_modified": "Thu, 14 Apr 2022 20:14:12 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4291_svc_precinct_zbc.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "96267",
+   "last_modified": "Thu, 14 Apr 2022 20:14:12 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4300_city_council.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "1514653",
+   "last_modified": "Tue, 06 Dec 2022 18:02:44 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4300_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "1254861",
+   "last_modified": "Tue, 06 Dec 2022 18:02:44 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4300_final_district.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "25182602",
+   "last_modified": "Tue, 06 Dec 2022 18:02:56 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4300_final_svc_countywide.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "3599045",
+   "last_modified": "Tue, 06 Dec 2022 18:02:45 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4300_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "38255862",
+   "last_modified": "Tue, 06 Dec 2022 18:03:06 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4300_svc_precinct_public-v2.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "88708910",
+   "last_modified": "Fri, 09 Dec 2022 18:29:53 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4303_final_svc_countywide.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "20689",
+   "last_modified": "Sat, 11 Feb 2023 00:59:56 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4303_final_svc_district.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "121465",
+   "last_modified": "Fri, 10 Feb 2023 21:08:37 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4303_final_svc_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "28000",
+   "last_modified": "Fri, 10 Feb 2023 21:08:37 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4303_precinct_public_v2.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "27803",
+   "last_modified": "Sat, 11 Feb 2023 00:50:43 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "16109",
+   "last_modified": "Fri, 14 Apr 2023 20:12:10 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "85274",
+   "last_modified": "Fri, 14 Apr 2023 20:12:10 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_svc_citycouncil.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "33458",
+   "last_modified": "Fri, 14 Apr 2023 20:12:10 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_svc_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "200206",
+   "last_modified": "Fri, 14 Apr 2023 20:12:10 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_svc_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "75767",
+   "last_modified": "Fri, 14 Apr 2023 20:37:07 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4307_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "16090",
+   "last_modified": "Fri, 17 Mar 2023 19:10:19 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4307_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "39146",
+   "last_modified": "Fri, 17 Mar 2023 19:10:19 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_council_inglewood.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "20846",
+   "last_modified": "Fri, 17 Mar 2023 19:10:19 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_countywide.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "20822",
+   "last_modified": "Fri, 17 Mar 2023 20:00:09 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_district.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "122068",
+   "last_modified": "Fri, 17 Mar 2023 19:10:19 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "28864",
+   "last_modified": "Fri, 17 Mar 2023 19:10:19 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "15969",
+   "last_modified": "Fri, 12 May 2023 20:12:54 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "120371",
+   "last_modified": "Fri, 12 May 2023 20:12:54 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "22264",
+   "last_modified": "Fri, 12 May 2023 20:12:54 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_svc_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "27967",
+   "last_modified": "Fri, 12 May 2023 20:32:41 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4309_communityb3972932-416d-4d54-afa7-999a71f492db.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "15635",
+   "last_modified": "Fri, 19 May 2023 19:36:14 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4309_final_svc_precinct.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "27876",
+   "last_modified": "Fri, 19 May 2023 19:36:14 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4309_precinct_public62f1c161-1530-4eed-a086-691f8e08a44c.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "32520",
+   "last_modified": "Fri, 19 May 2023 19:36:14 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4309_svc_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "118786",
+   "last_modified": "Fri, 19 May 2023 19:36:13 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4310_communitye1856b7c-c5bb-45a3-ab68-65fa77b8c5e2.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "15705",
+   "last_modified": "Fri, 02 Jun 2023 18:19:20 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4310_final_svc_precinct.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "42406",
+   "last_modified": "Fri, 02 Jun 2023 18:19:20 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4310_precinct_publicb0d88e51-12ea-4ae4-a8f6-ab6402621f96.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "41246",
+   "last_modified": "Fri, 02 Jun 2023 18:19:20 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4310_svc_districts0162819d-d4f1-4b8c-b030-a3436c7920aa.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "158091",
+   "last_modified": "Fri, 02 Jun 2023 18:19:20 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4311_community7032415975a46c55bf9dff0f00945460.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "14033",
+   "last_modified": "Fri, 17 Nov 2023 20:11:12 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4311_final_svc_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "156440",
+   "last_modified": "Fri, 17 Nov 2023 19:57:50 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4311_final_svc_precinct.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "53675",
+   "last_modified": "Fri, 17 Nov 2023 23:29:43 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4311_precinct_publice231415975a46c55bf9dff0f00945460.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "153480",
+   "last_modified": "Fri, 17 Nov 2023 19:57:50 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4311_svc_citycouncile731415975a46c55bf9dff0f00945460.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "19849",
+   "last_modified": "Fri, 17 Nov 2023 19:57:50 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "18504",
+   "last_modified": "Fri, 04 Aug 2023 18:52:22 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "66492",
+   "last_modified": "Fri, 04 Aug 2023 18:52:23 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_svc_countywide.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "9097",
+   "last_modified": "Fri, 04 Aug 2023 18:52:24 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_svc_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "57943",
+   "last_modified": "Fri, 04 Aug 2023 18:52:24 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_svc_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "18702",
+   "last_modified": "Fri, 04 Aug 2023 18:52:24 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "5192",
+   "last_modified": "Fri, 07 Jul 2023 18:38:01 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "201228",
+   "last_modified": "Fri, 07 Jul 2023 18:38:02 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_svc_council_los_angeles.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "8986",
+   "last_modified": "Fri, 07 Jul 2023 18:38:01 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_svc_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "58241",
+   "last_modified": "Fri, 07 Jul 2023 18:38:02 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_svc_precinct.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "28255",
+   "last_modified": "Fri, 07 Jul 2023 18:38:02 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4316_community66f9435975a46c55bf9dff0f00945460.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "1635091",
+   "last_modified": "Fri, 06 Dec 2024 21:37:14 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "36279014",
+   "last_modified": "Sat, 30 Mar 2024 02:05:53 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_svc_citycounsil.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "9491021",
+   "last_modified": "Sat, 30 Mar 2024 02:05:43 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_svc_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "12101497",
+   "last_modified": "Sat, 30 Mar 2024 02:05:44 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_svc_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "49195135",
+   "last_modified": "Sat, 30 Mar 2024 02:05:57 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4324_community2ef9435975a46c55bf9dff0f00945460.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "1053350",
+   "last_modified": "Fri, 06 Dec 2024 21:09:09 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_precinct_public_v2.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "27630560",
+   "last_modified": "Fri, 20 Dec 2024 00:56:08 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_citycouncil_v2.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "10411397",
+   "last_modified": "Fri, 20 Dec 2024 00:56:11 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_district_v3.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "20261256",
+   "last_modified": "Fri, 20 Dec 2024 00:56:12 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_precinct_public_v2.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "59762254",
+   "last_modified": "Fri, 20 Dec 2024 00:56:10 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4329_final_svc_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "9642",
+   "last_modified": "Thu, 12 Jun 2025 16:02:33 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4329_final_svc_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "58175",
+   "last_modified": "Thu, 12 Jun 2025 16:02:33 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4329_final_svc_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "19838",
+   "last_modified": "Thu, 12 Jun 2025 16:02:34 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4329_precinct_publicbca4adcf-e1f9-4a44-845c-7127a04077b2.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "115439",
+   "last_modified": "Thu, 12 Jun 2025 16:02:34 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4331_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "13978",
+   "last_modified": "Wed, 04 Jun 2025 16:02:29 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "12389016",
+   "last_modified": "Tue, 02 Dec 2025 23:39:35 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_svc_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "77824",
+   "last_modified": "Tue, 02 Dec 2025 23:39:32 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_svc_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "189236",
+   "last_modified": "Tue, 02 Dec 2025 23:39:33 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_svc_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "1052759",
+   "last_modified": "Tue, 02 Dec 2025 23:39:34 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4338_city_council_v3.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "2016394",
+   "last_modified": "Sat, 27 Jun 2026 03:48:46 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4338_community_v4.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "2154232",
+   "last_modified": "Wed, 22 Jul 2026 20:30:14 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4338_final_svc_community_v3.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "3971873",
+   "last_modified": "Sat, 27 Jun 2026 03:48:53 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4338_final_svc_districts_v3.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "12619938",
+   "last_modified": "Sat, 27 Jun 2026 03:48:53 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4338_final_svc_precinct_public_v3.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "64459457",
+   "last_modified": "Sat, 27 Jun 2026 03:48:52 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4338_precinct_public_v3.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "47173147",
+   "last_modified": "Sat, 27 Jun 2026 03:48:47 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4348_city_council.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "1897373",
+   "last_modified": "Thu, 05 Nov 2026 00:03:41 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4348_community.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "1898736",
+   "last_modified": "Thu, 05 Nov 2026 00:03:35 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4348_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "44308719",
+   "last_modified": "Thu, 05 Nov 2026 00:03:38 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_countywide.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "3458909",
+   "last_modified": "Thu, 05 Nov 2026 00:03:36 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_districts.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "25255497",
+   "last_modified": "Thu, 05 Nov 2026 00:03:37 GMT"
+  },
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_precinct_public.pdf": {
+   "content_type": "application/pdf",
+   "content_length": "97250712",
+   "last_modified": "Thu, 05 Nov 2026 00:03:40 GMT"
+  }
+ },
+ "first_seen": {
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_precinct_zbc.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_svc_citycouncil_zbc.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_svc_district_zbc.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4269_final_svc_precinct_zbc.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_precinct_zbc.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_svc_citycouncil_zbc.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_svc_district_zbc.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4291_svc_precinct_zbc.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_city_council.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_final_district.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_final_svc_countywide.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4300_svc_precinct_public-v2.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4303_final_svc_countywide.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4303_final_svc_district.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4303_final_svc_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4303_precinct_public_v2.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_svc_citycouncil.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_svc_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4306_final_svc_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_council_inglewood.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_countywide.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_district.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4307_svc_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4308_final_svc_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4309_communityb3972932-416d-4d54-afa7-999a71f492db.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4309_final_svc_precinct.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4309_precinct_public62f1c161-1530-4eed-a086-691f8e08a44c.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4309_svc_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4310_communitye1856b7c-c5bb-45a3-ab68-65fa77b8c5e2.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4310_final_svc_precinct.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4310_precinct_publicb0d88e51-12ea-4ae4-a8f6-ab6402621f96.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4310_svc_districts0162819d-d4f1-4b8c-b030-a3436c7920aa.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_community7032415975a46c55bf9dff0f00945460.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_final_svc_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_final_svc_precinct.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_precinct_publice231415975a46c55bf9dff0f00945460.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4311_svc_citycouncile731415975a46c55bf9dff0f00945460.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_svc_countywide.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_svc_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4312_final_svc_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_svc_council_los_angeles.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_svc_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4313_final_svc_precinct.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_community66f9435975a46c55bf9dff0f00945460.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_svc_citycounsil.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_svc_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4316_final_svc_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_community2ef9435975a46c55bf9dff0f00945460.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_precinct_public_v2.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_citycouncil_v2.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_district_v3.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4324_final_svc_precinct_public_v2.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4329_final_svc_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4329_final_svc_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4329_final_svc_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4329_precinct_publicbca4adcf-e1f9-4a44-845c-7127a04077b2.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4331_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_svc_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_svc_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4337_final_svc_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_city_council_v3.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_community_v4.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_final_svc_community_v3.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_final_svc_districts_v3.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_final_svc_precinct_public_v3.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4338_precinct_public_v3.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_city_council.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_community.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_countywide.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_districts.pdf": "2026-11-05T15:32:39.186148+00:00",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_precinct_public.pdf": "2026-11-05T15:32:39.186148+00:00"
+ },
+ "started_now": [
+  "https://content.lavote.gov/docs/rrcc/svc/4348_precinct_public.pdf",
+  "https://content.lavote.gov/docs/rrcc/svc/4348_svc_precinct_public.pdf"
+ ]
+}
