@@ -116,6 +116,26 @@
       "id": "precinct_attr_desc_item",
       "url": "https://www.arcgis.com/sharing/rest/content/items/506f6654ac494cc8b1a89c1a37aef6d9?f=json",
       "note": "The other linked county item. Metadata only."
+    },
+    {
+      "id": "rrcc_services_directory",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services?f=json",
+      "note": "Probe: every service in the county RRCC ArcGIS org, to find the exact name of the Election Precincts (consolidated precincts) service. Web search (Nov 5) says the hub dataset 'Registrar Recorder Election Precincts' has 2,853 records with ids like 6220036A, the SVC id format."
+    },
+    {
+      "id": "election_precincts_layer_guess",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Election_Precincts/FeatureServer/0?f=json",
+      "note": "GUESSED service name (hub slug registrar-recorder-election-precincts-). If 400/404, read rrcc_services_directory and fix the name."
+    },
+    {
+      "id": "election_precincts_sample_guess",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Election_Precincts/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=25&f=json",
+      "note": "GUESSED, as above. 25 attribute rows: which field holds the consolidated precinct id, and does it match SVC ids?"
+    },
+    {
+      "id": "swdb_p26_geo_conv_page",
+      "url": "https://www.statewidedatabase.org/d20/p26_geo_conv.html",
+      "note": "Fallback: UC Berkeley Statewide Database page listing precinct shapefiles and RG-RR-SR-SV conversion files per county (2026 primary; the general appears months after the election). HTML, kept to record file URLs."
     }
   ],
   "svc_discovery": {

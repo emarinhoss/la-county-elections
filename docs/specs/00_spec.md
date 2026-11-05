@@ -328,6 +328,10 @@ history chart, About dialog, unknown route). Not verified: other browsers, scree
   ("Precinct Information File Attribute Descriptions", 7 columns of district descriptions; "Attribute Columns", 2 columns). Neither is a
   consolidation list. No public source found so far maps regular precincts to the SVC's consolidated precincts. Remaining options: ask the
   county (the layer's GIS contact is listed in its metadata), or show precinct results without shapes.
+- **Research (Nov 5, web search):** the county publishes a separate hub layer, "Registrar Recorder Election Precincts": the
+  *consolidated* precincts (2,853 records, ids like `6220036A`, i.e. the SVC format, updated before each election). The layer we
+  joined to is the *established* precincts, which the county says are "not for reporting voting results". Plan and tasks in
+  `docs/plans/precinct_map.md`; probes `rrcc_services_directory`, `election_precincts_*_guess` and `swdb_p26_geo_conv_page` added.
 - Side effect to check: each SVC precinct's city comes from one polygon, i.e. one piece of the consolidated precinct. The earlier
   checks (99.6% agreement with place names; 47 of 49 comparable cities within 1% registration) suggest this is mostly fine.
 - Tested: Python unit tests (column order, filtering, missing shapes, switched off by default) and the UI in a headless browser, on
