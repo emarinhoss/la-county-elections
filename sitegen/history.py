@@ -25,9 +25,26 @@ def county_iso(text):
         return None
 
 
+def drop_repeat_tallies(results):
+    """Keep a snapshot only if its county time or any vote differs from the previous kept snapshot.
+    The county API sometimes serves the same tally again (rows in a different order), which would show as a phantom tally."""
+    by_snap = defaultdict(list)
+    for r in results:
+        by_snap[r["snapshot"]].append(r)
+    kept, last = set(), None
+    for snap in sorted(by_snap):
+        rows = by_snap[snap]
+        sig = (rows[0]["county_time"], tuple(sorted((r["choice_id"], r["votes"]) for r in rows)))
+        if sig != last:
+            kept.add(snap)
+            last = sig
+    return [r for r in results if r["snapshot"] in kept]
+
+
 def build(tidy_dir):
     tidy = Path(tidy_dir)
     results = read_csv(tidy / "results.csv")
+    results = drop_repeat_tallies(results)
     snapshots = sorted({r["snapshot"] for r in results})
     index = {s: i for i, s in enumerate(snapshots)}
     n = len(snapshots)
@@ -39,12 +56,12 @@ def build(tidy_dir):
 
     ballots = defaultdict(lambda: [None] * n)  # contest_id -> CBLT per tally
     for r in read_csv(tidy / "contest_counters.csv"):
-        if r["counter"] == "CBLT":
+        if r["counter"] == "CBLT" and r["snapshot"] in index:  # snapshots dropped as repeats have no column
             ballots[r["contest_id"]][index[r["snapshot"]]] = int(r["value"])
 
     total = [None] * n
     for r in read_csv(tidy / "election_counters.csv"):
-        if r["counter"] == "EBLT":
+        if r["counter"] == "EBLT" and r["snapshot"] in index:
             total[index[r["snapshot"]]] = int(r["value"])
 
     contests = {}

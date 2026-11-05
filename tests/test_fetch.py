@@ -99,3 +99,43 @@ def test_file_over_size_cap_is_not_saved(tmp_path):
     server.shutdown()
     assert entry["result"] == "too_large"
     assert not (tmp_path / "raw" / "t" / "p").exists()
+
+
+# ---- canonical JSON: the county API reorders rows between requests ----
+def test_same_rows_in_a_different_order_is_unchanged_but_a_new_value_is_saved(tmp_path):
+    src = tmp_path / "api.json"
+    cfg = tmp_path / "s.json"
+    cfg.write_text(json.dumps({"election": "t", "sources": [{"id": "api", "url": src.as_uri(), "canonical_json": True}]}))
+    root = tmp_path / "raw"
+    src.write_text(json.dumps({"TimeStamp": "t1", "Data": [{"id": 1, "v": 5}, {"id": 2, "v": 7}]}))
+    assert results(run(cfg, root)) == {"api": "saved"}
+    src.write_text(json.dumps({"TimeStamp": "t1", "Data": [{"id": 2, "v": 7}, {"id": 1, "v": 5}]}))  # same rows, reordered
+    assert results(run(cfg, root)) == {"api": "unchanged"}
+    src.write_text(json.dumps({"TimeStamp": "t1", "Data": [{"id": 2, "v": 8}, {"id": 1, "v": 5}]}))  # one value changed
+    assert results(run(cfg, root)) == {"api": "saved"}
+    assert len(list((root / "t" / "api").iterdir())) == 2
+
+
+def test_without_the_flag_a_reordered_file_still_counts_as_changed(tmp_path):
+    src = tmp_path / "api.json"
+    cfg = tmp_path / "s.json"
+    cfg.write_text(json.dumps({"election": "t", "sources": [{"id": "api", "url": src.as_uri()}]}))
+    root = tmp_path / "raw"
+    src.write_text('{"Data":[1,2]}')
+    run(cfg, root)
+    src.write_text('{"Data":[2,1]}')
+    assert results(run(cfg, root)) == {"api": "saved"}
+
+
+def test_ignored_key_does_not_cause_a_new_snapshot_but_other_changes_do(tmp_path):
+    src = tmp_path / "api.json"
+    cfg = tmp_path / "s.json"
+    cfg.write_text(json.dumps({"election": "t", "sources": [
+        {"id": "api", "url": src.as_uri(), "canonical_json": True, "ignore_keys": ["TimeStamp"]}]}))
+    root = tmp_path / "raw"
+    src.write_text(json.dumps({"TimeStamp": "9:59", "Data": [1, 2]}))
+    assert results(run(cfg, root)) == {"api": "saved"}
+    src.write_text(json.dumps({"TimeStamp": "10:10", "Data": [2, 1]}))  # only the stamp (and row order) changed
+    assert results(run(cfg, root)) == {"api": "unchanged"}
+    src.write_text(json.dumps({"TimeStamp": "10:20", "Data": [1, 2, 3]}))
+    assert results(run(cfg, root)) == {"api": "saved"}

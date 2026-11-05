@@ -21,13 +21,40 @@ def now_utc():
     return datetime.now(timezone.utc)
 
 
-def latest_hash(source_dir):
-    """sha256 of the newest saved snapshot for a source, or None."""
+def canonical(obj):
+    """Order-independent form of JSON: object keys sorted, and every list sorted by its items' text.
+    The county API returns the same rows in a different order from one request to the next, so comparing raw bytes
+    reports a change when nothing changed."""
+    if isinstance(obj, dict):
+        return {k: canonical(v) for k, v in sorted(obj.items())}
+    if isinstance(obj, list):
+        return sorted((canonical(x) for x in obj), key=lambda x: json.dumps(x, sort_keys=True))
+    return obj
+
+
+def digest(body, is_json_canonical, ignore_keys=()):
+    """sha256 of the body, or of its canonical JSON form if the source is flagged canonical_json.
+    ignore_keys: top-level keys left out of the comparison (e.g. the county's own publish TimeStamp on static structure data)."""
+    if is_json_canonical:
+        try:
+            obj = json.loads(body)
+            if isinstance(obj, dict):
+                obj = {k: v for k, v in obj.items() if k not in ignore_keys}
+            body = json.dumps(canonical(obj), sort_keys=True, separators=(",", ":")).encode()
+        except ValueError:
+            pass  # not valid JSON: fall back to the raw bytes
+    return hashlib.sha256(body).hexdigest()
+
+
+def latest_hash(source_dir, is_json_canonical=False, ignore_keys=()):
+    """Digest of the newest saved snapshot for a source (same method as digest()), or None."""
     if not source_dir.exists():
         return None
-    snaps = sorted(p for p in source_dir.iterdir() if (p / "manifest.json").exists())
+    snaps = sorted(p for p in source_dir.iterdir() if (p / "manifest.json").exists() and (p / "body").exists())
     if not snaps:
         return None
+    if is_json_canonical:
+        return digest((snaps[-1] / "body").read_bytes(), True, ignore_keys)
     return json.loads((snaps[-1] / "manifest.json").read_text())["sha256"]
 
 
@@ -65,10 +92,12 @@ def fetch_source(source, election_dir, now=None):
                      content_length=headers.get("Content-Length"), error=f"more than {max_bytes} bytes, not saved")
         return entry
 
-    digest = hashlib.sha256(body).hexdigest()
-    entry.update(http_status=status, content_type=ctype, bytes=len(body), sha256=digest)
+    canon = source.get("canonical_json", False)
+    sha = hashlib.sha256(body).hexdigest()  # always the raw bytes, so the manifest describes the saved file
+    entry.update(http_status=status, content_type=ctype, bytes=len(body), sha256=sha)
     source_dir = election_dir / source["id"]
-    if digest == latest_hash(source_dir):
+    ignore = tuple(source.get("ignore_keys", ()))
+    if digest(body, canon, ignore) == latest_hash(source_dir, canon, ignore):
         entry["result"] = "unchanged"
         return entry
 

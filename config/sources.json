@@ -19,17 +19,26 @@
     {
       "id": "rrcc_api_election_data",
       "url": "https://results.lavote.gov/ElectionResults/GetElectionData?electionID=4348",
-      "note": "Results for election 4348 (2026-11-03 general). Format not yet inspected."
+      "note": "Results for election 4348 (2026-11-03 general). Format not yet inspected.",
+      "canonical_json": true,
+      "ignore_keys": [
+        "TimeStamp"
+      ]
     },
     {
       "id": "rrcc_api_counter_data",
       "url": "https://results.lavote.gov/ElectionResults/GetCounterData?electionID=4348",
-      "note": "Turnout / ballot counters for election 4348. Format not yet inspected."
+      "note": "Turnout / ballot counters for election 4348. Format not yet inspected.",
+      "canonical_json": true
     },
     {
       "id": "rrcc_api_menu_groups",
       "url": "https://results.lavote.gov/ElectionResults/GetMenuGroups?electionID=4348",
-      "note": "Contest groups for election 4348."
+      "note": "Contest groups for election 4348.",
+      "canonical_json": true,
+      "ignore_keys": [
+        "TimeStamp"
+      ]
     },
     {
       "id": "city_boundary_layer_meta",
