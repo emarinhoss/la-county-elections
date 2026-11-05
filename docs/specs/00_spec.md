@@ -230,3 +230,17 @@ Known risks: the file name is a guess (`4348_final_svc_precinct_public.pdf`). Th
 `4291_svc_precinct_zbc`, `4324_final_svc_district_v3`), so if the real 2026 name differs the probe never fires and the pipeline is
 started by hand with the real URL. `city_totals` finds the output folder by `<election id>_*precinct*`, preferring a whole-word "final".
 Self-test: run fetch manually with "test_dispatch" ticked; it starts svc-rehearsal for the published 2024 file.
+
+### Daily search for the real 2026 file name (Nov 5, 2026)
+
+`svc-discover.yml` runs once a day (and on demand). `tools/svc_discover.py` (1) reads a few county pages (seeds in
+`config/sources.json` under `svc_discovery`; county hosts only, at most 40 pages, depth 2) and collects links to
+`/docs/rrcc/svc/` PDFs, and (2) HEAD-probes those links plus 60 systematic names built from the real names seen so far
+(`<id>_[final|semifinal|semi_final]_svc_<precinct|countywide|district>[_public|_v2|_v3|_v4]`; a test checks the generator reproduces every real
+name we have seen). It starts `svc-rehearsal` only for a PRECINCT report of THIS election that is HTTP 200, a PDF, at least 1 MB,
+and not a "zbc" file (the zero-ballot report made before the election), once per version and with the retry limits of
+`tools/svc_auto.py`. The guessed name that `fetch.yml` already watches is left to `fetch.yml` so one file is never started twice.
+Everything it finds is recorded in `data/svc_auto/discovered.json`, including countywide and district reports.
+Limits: it can only find names inside the guessed pattern space or linked from a county page it can reach; whether any county
+page links to these files is unknown (no page I have seen does). If neither method finds the file, start `svc-rehearsal` by hand
+with the real URL.

@@ -1,0 +1,51 @@
+name: svc-discover
+
+# Once a day: look for the real file name of this election's SVC precinct PDF (tools/svc_discover.py).
+# fetch.yml watches one guessed name; this reads a few county pages for links to the SVC files and probes a systematic set of
+# likely names. If it finds this election's precinct report, it starts svc-rehearsal for it (once per version, with retry limits).
+# What it found is committed in data/svc_auto/discovered.json.
+on:
+  schedule:
+    - cron: "17 14 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: svc-discover
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write   # to start svc-rehearsal
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Look for the real file
+        id: find
+        run: |
+          python -m tools.svc_discover 2026-11-03-general "$GITHUB_OUTPUT" | tee "$RUNNER_TEMP/discover.log"
+          { echo '## SVC file discovery'; echo '```'; cat "$RUNNER_TEMP/discover.log"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit what was found
+        run: |
+          git config user.name "election-collector"
+          git config user.email "actions@users.noreply.github.com"
+          # add only paths that exist: a missing path makes `git add` fail
+          for d in data/svc_auto; do [ -e "$d" ] && git add "$d"; done
+          if git diff --cached --quiet; then
+            echo "nothing new"
+          else
+            git commit -m "data: SVC file discovery $(date -u +%Y-%m-%d)"
+            for i in 1 2 3 4; do git pull --rebase && git push && break; sleep $((i * 5)); done
+          fi
+      - name: Start the SVC pipeline for a newly found file
+        if: steps.find.outputs.any == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          URLS: ${{ steps.find.outputs.urls }}   # only URLs that passed tools.svc_discover.acceptable(): no spaces or quotes possible
+        run: for u in $URLS; do gh workflow run svc-rehearsal.yml --ref main -f url="$u"; done

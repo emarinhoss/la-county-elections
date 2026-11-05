@@ -102,5 +102,14 @@
       "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/0/query?where=1%3D1&outFields=CITY_EST&returnDistinctValues=true&returnGeometry=false&f=json",
       "note": "All distinct CITY_EST values: city names, or community names like the SVC LOCATION prefixes?"
     }
-  ]
+  ],
+  "svc_discovery": {
+    "note": "Pages read once a day by tools/svc_discover.py to find links to this election's SVC files. Link-following is limited to the county's own hosts, 40 pages, depth 2.",
+    "seed_pages": [
+      "https://lavote.gov/historical-election-results/pdownrslt.html-ssi",
+      "https://lavote.gov/site-map",
+      "https://results.lavote.gov/election-list",
+      "https://www.lavote.gov"
+    ]
+  }
 }
