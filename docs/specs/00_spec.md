@@ -332,6 +332,14 @@ history chart, About dialog, unknown route). Not verified: other browsers, scree
   *consolidated* precincts (2,853 records, ids like `6220036A`, i.e. the SVC format, updated before each election). The layer we
   joined to is the *established* precincts, which the county says are "not for reporting voting results". Plan and tasks in
   `docs/plans/precinct_map.md`; probes `rrcc_services_directory`, `election_precincts_*_guess` and `swdb_p26_geo_conv_page` added.
+- **Layer identified (Nov 5 probes):** `Registrar_Recorder_Precincts_Election` (FeatureServer/0): polygons, 2,853 records (the 2024
+  general layer `Election_Precincts_112024` has 3,087), fields `Precinct` (ids like `6220036A`), `VoteByMail`, `BallotGroup`,
+  `SerialNumber`, `VBMVoters`, `PollVoters`. First 2,000 of its rows contain 1,517 of the SVC's 2,187 ids (69.4%); 483 of the layer's
+  rows are absent from the SVC (all `VoteByMail=1`, 283 with zero voters). That is a partial check (the probe is capped at 2,000 rows),
+  not the verdict. `tools/election_precincts.py` now pages the whole layer in the svc-rehearsal workflow, reports matched / unmatched ids
+  with ballots, writes the consolidated shapes, and lists precincts whose city changes. Its output decides whether `PUBLISH` can be
+  turned on (acceptance: >= 99% of ids matched, < 1% of ballots change city). The layer is a 2026 layer, so a run on the 2024 PDF will
+  show poor matches by design.
 - Side effect to check: each SVC precinct's city comes from one polygon, i.e. one piece of the consolidated precinct. The earlier
   checks (99.6% agreement with place names; 47 of 49 comparable cities within 1% registration) suggest this is mostly fine.
 - Tested: Python unit tests (column order, filtering, missing shapes, switched off by default) and the UI in a headless browser, on

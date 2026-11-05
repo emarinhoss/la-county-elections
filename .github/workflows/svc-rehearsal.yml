@@ -42,7 +42,7 @@ jobs:
         run: |
           mkdir -p data/reference
           boundary="$(ls data/raw/*/city_boundary_geojson/*/body | sort | tail -1)"
-          python -m tools.precinct_geo "$boundary" data/reference/precinct_city_geo.csv "$RUNNER_TEMP/polygons.json"
+          python -m tools.precinct_geo "$boundary" data/reference/precinct_city_geo.csv
       - name: Download the PDF (kept on the runner only)
         run: |
           curl -fL --retry 3 --max-filesize 300000000 -A "la-county-elections-collector (public research project)" \
@@ -55,8 +55,8 @@ jobs:
           echo "boundary file: $boundary"
           python -m tools.svc_pipeline "$RUNNER_TEMP/svc.pdf" data/reference/precinct_city_geo.csv "$boundary" "data/rehearsal/$name"
           cat "data/rehearsal/$name/summary.md" >> "$GITHUB_STEP_SUMMARY"
-          # shapes of the precincts in this file, for the map's precinct layer
-          python -m tools.precinct_shapes "$RUNNER_TEMP/polygons.json" "data/rehearsal/$name/precinct_votes.csv.gz" "data/rehearsal/$name/precinct_shapes.geojson" | tee -a "$GITHUB_STEP_SUMMARY"
+          # consolidated precinct shapes (the county's Election Precincts layer), id match against this file, and each precinct's city from those shapes
+          python -m tools.election_precincts "$boundary" "data/rehearsal/$name" | tee -a "$GITHUB_STEP_SUMMARY"
           test "$(du -sk data/rehearsal/$name data/reference | awk '{s+=$1} END {print s}')" -lt 20000   # stop above about 20 MB
       - name: Commit the results
         run: |
