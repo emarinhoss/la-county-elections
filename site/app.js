@@ -4,7 +4,7 @@
 // Text is added with textContent (never innerHTML) so county text can never inject markup.
 
 const BLUE = "#1f6fb2", ORANGE = "#d9822b", GREY = "#c9ced6";
-let map, layer, cityView, data, selectedKey = null, colorContestId = "";
+let map, layer, cityView, data, cityTotals = null, selectedKey = null, colorContestId = "";
 const byKey = {};
 
 function el(tag, className, text) {
@@ -41,7 +41,30 @@ function contestColor(contest) {
   }
   return shade(BLUE, 0.35 + 0.65 * Math.min(top.share, 1));
 }
+// ---- countywide contests by city (data/city_totals.json, from the county's precinct-level results) -------------------
+// kind "measure": blue where YES leads, orange where NO leads. Two candidates: blue where the county-wide leader is ahead
+// in that city, orange where the other is. More than two: shade of blue shows the county leader's share.
+function cwContest() {
+  if (!colorContestId.startsWith("cw:") || !cityTotals || !cityTotals.available) return null;
+  return cityTotals.contests.find((c) => "cw:" + c.id === colorContestId) || null;
+}
+function cwLeader(cw) {
+  return cw.choices.reduce((best, c, i) => (c.county_votes > cw.choices[best].county_votes ? i : best), 0);
+}
+function cwColor(cw, entry) {
+  const total = entry.votes.reduce((s, v) => s + v, 0);
+  if (!total) return GREY;
+  const focus = cw.kind === "measure" ? Math.max(0, cw.choices.findIndex((c) => c.name.toUpperCase() === "YES")) : cwLeader(cw);
+  const share = entry.votes[focus] / total;
+  if (cw.kind === "measure" || cw.choices.length === 2) {
+    const d = Math.min(Math.abs(share - 0.5) / 0.3, 1);
+    return shade(share >= 0.5 ? BLUE : ORANGE, 0.35 + 0.65 * d);
+  }
+  return shade(BLUE, 0.35 + 0.65 * Math.min(share, 1));
+}
 function featureColor(props) {
+  const cw = cwContest();
+  if (cw) { const e = cw.cities[props.key]; return e ? cwColor(cw, e) : GREY; }
   const city = byKey[props.key];
   if (!city) return GREY;
   if (colorContestId) {
@@ -51,8 +74,9 @@ function featureColor(props) {
   return shade(BLUE, 0.35 + 0.65 * Math.min(city.contests.length / 6, 1));
 }
 function style(feature) {
-  const p = feature.properties, picked = p.key === selectedKey;
-  return { fillColor: featureColor(p), fillOpacity: p.has_contests ? 0.9 : 0.35,
+  const p = feature.properties, picked = p.key === selectedKey, cw = cwContest();
+  const filled = cw ? !!cw.cities[p.key] : p.has_contests;
+  return { fillColor: featureColor(p), fillOpacity: filled ? 0.9 : 0.35,
            color: picked ? "#000" : "#6b7480", weight: picked ? 2.5 : 0.7 };
 }
 
@@ -66,6 +90,14 @@ function drawLegend() {
     box.append(row);
   };
   if (!colorContestId) { add(BLUE, "City with contests (darker = more)"); add(GREY, "No contests on this ballot"); return; }
+  const cw = cwContest();
+  if (cw) {
+    if (cw.kind === "measure") { add(BLUE, "YES leads"); add(ORANGE, "NO leads"); }
+    else if (cw.choices.length === 2) { const l = cwLeader(cw); add(BLUE, cw.choices[l].name + " ahead"); add(ORANGE, cw.choices[1 - l].name + " ahead"); }
+    else add(BLUE, cw.choices[cwLeader(cw)].name + "'s share (darker = larger)");
+    add(GREY, "No precinct data");
+    return;
+  }
   const c = Object.values(byKey).flatMap((x) => x.contests).find((x) => String(x.id) === colorContestId);
   if (c && c.kind === "measure") { add(BLUE, "YES leads"); add(ORANGE, "NO leads"); add(GREY, "Other cities"); }
   else { add(BLUE, "Leader's share (darker = larger)"); add(GREY, "Other cities"); }
@@ -194,16 +226,42 @@ function renderContest(c) {
   box.append(lazyHistory("Count over time", (body, h) => drawContestHistory(body, c, h)));
   return box;
 }
+// The selected countywide contest's result in one area, with how sure we are about where its ballots belong.
+function renderCwResult(cw, key) {
+  const box = el("div", "contest cw");
+  box.append(el("h3", null, cw.label + " (countywide contest, this area)"));
+  const e = cw.cities[key];
+  if (!e) { box.append(el("div", "meta", "No precinct-level data for this area.")); return box; }
+  const bits = [num(e.ballots) + " ballots", num(e.registration) + " registered", "from precinct results"];
+  if (e.fallback_ballots > 0) bits.push(pct(e.fallback_ballots / e.ballots) + " of these ballots placed by place name (no precinct shape found)");
+  box.append(el("div", "meta", bits.join(" · ")));
+  const total = e.votes.reduce((s, v) => s + v, 0), top = Math.max(...e.votes);
+  cw.choices.map((c, i) => ({ c, v: e.votes[i] })).sort((x, y) => y.v - x.v).forEach(({ c, v }) => {
+    const row = el("div", "choice" + (v === top && top > 0 ? " top" : ""));
+    const name = c.party && c.party !== "Non Partisan" ? `${c.name} (${c.party})` : c.name;
+    row.append(el("span", null, name), el("span", null, `${num(v)} · ${pct(total ? v / total : null)}`));
+    const bar = el("div", "bar"), fill = el("span");
+    fill.style.width = (total ? (v / total) * 100 : 0) + "%";
+    bar.append(fill); row.append(bar); box.append(row);
+  });
+  return box;
+}
 function showCity(key) {
   selectedKey = key;
-  document.getElementById("city-select").value = key || "";
+  const sel = document.getElementById("city-select");
+  sel.value = [...sel.options].some((o) => o.value === key) ? key : "";
   const panel = document.getElementById("contests");
   panel.replaceChildren();
-  const city = byKey[key];
-  if (!city) { panel.append(el("p", "muted", "Choose a city on the map or from the list.")); }
-  else {
-    panel.append(el("h2", null, city.name));
-    city.contests.forEach((c) => panel.append(renderContest(c)));
+  const city = byKey[key], cw = cwContest();
+  const cwName = cw && cw.cities[key] ? cw.cities[key].name : null;
+  if (!city && !cwName) {
+    panel.append(el("p", "muted", "Choose a city on the map or from the list."));
+    if (cw) panel.append(el("p", "muted", "Countywide results by city come from the county's precinct-level results: each precinct is placed in the city whose boundary " +
+      "contains it. " + num(cw.unassigned_ballots) + " ballots in this contest could not be placed in any city or unincorporated area."));
+  } else {
+    panel.append(el("h2", null, city ? city.name : cwName));
+    if (cw) panel.append(renderCwResult(cw, key));
+    if (city) city.contests.forEach((c) => panel.append(renderContest(c)));
   }
   if (layer) layer.setStyle(style);
 }
@@ -223,10 +281,20 @@ function fillSelects() {
     city.contests.forEach((c) => group.append(new Option(c.label, String(c.id))));
     cSel.append(group);
   }
+  const cwGroup = document.createElement("optgroup");
+  cwGroup.label = "Countywide contests, by city (from precinct results)";
+  if (cityTotals && cityTotals.available) cityTotals.contests.forEach((c) => cwGroup.append(new Option(c.label, "cw:" + c.id)));
+  else cwGroup.append(Object.assign(new Option("Not published by the county yet", ""), { disabled: true }));
+  cSel.append(cwGroup);
+  if (cityTotals && cityTotals.available) { // cities with no contest of their own can still have countywide results
+    const known = new Set(data.cities.map((c) => c.key)), extra = {};
+    cityTotals.contests.forEach((c) => Object.entries(c.cities).forEach(([k, v]) => { if (!known.has(k)) extra[k] = v.name; }));
+    Object.entries(extra).sort((x, y) => x[1].localeCompare(y[1])).forEach(([k, name]) => citySel.append(new Option(name + " (countywide only)", k)));
+  }
   cSel.addEventListener("change", () => {
     colorContestId = cSel.value;
     const owner = data.cities.find((city) => city.contests.some((c) => String(c.id) === colorContestId));
-    if (owner) showCity(owner.key); else if (layer) layer.setStyle(style);
+    if (owner) showCity(owner.key); else showCity(selectedKey);
     drawLegend();
   });
 }
@@ -280,6 +348,7 @@ async function start() {
   document.getElementById("tab-city").addEventListener("click", () => showTab("city"));
   document.getElementById("tab-county").addEventListener("click", () => showTab("county"));
   data = await getJSON("data/city_contests.json");
+  cityTotals = await getJSON("data/city_totals.json").catch(() => null);
   data.cities.forEach((c) => (byKey[c.key] = c));
   const nCity = data.cities.reduce((n, c) => n + c.contests.length, 0);
   const setStatus = (nOther) => {
@@ -307,7 +376,10 @@ async function start() {
     style,
     onEachFeature: (f, lyr) => {
       lyr.bindTooltip(f.properties.name, { sticky: true });
-      lyr.on("click", () => { if (byKey[f.properties.key]) showCity(f.properties.key); });
+      lyr.on("click", () => {
+        const cw = cwContest();
+        if (byKey[f.properties.key] || (cw && cw.cities[f.properties.key])) showCity(f.properties.key);
+      });
     },
   }).addTo(map);
   // Fit the view to cities that have contests, so remote areas and offshore islands do not shrink the map.

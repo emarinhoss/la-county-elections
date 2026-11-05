@@ -4,7 +4,7 @@ name: pages
 # Needs Settings > Pages > Source = "GitHub Actions" (one-time setup).
 on:
   workflow_run:
-    workflows: ["fetch"]
+    workflows: ["fetch", "svc-rehearsal"]
     types: [completed]
   workflow_dispatch:
 
@@ -38,6 +38,7 @@ jobs:
           python -m sitegen.city_contests 2026-11-03-general
           python -m sitegen.county_contests 2026-11-03-general
           python -m sitegen.history 2026-11-03-general
+          python -m sitegen.city_totals 2026-11-03-general
           python -m sitegen.boundaries 2026-11-03-general
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

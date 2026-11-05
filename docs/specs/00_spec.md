@@ -202,3 +202,17 @@ geometry assigned to it, so mismatches show up without manual inspection.
 
 What is NOT done: the 2026 SVC does not exist yet. Still to build once it does: matching SVC contest titles to API contests and SVC
 vote columns to API choices (by matching the county totals, not by assuming column order), and showing city totals on the map.
+
+### Countywide contests by city: built, waiting for the 2026 file (Nov 5, 2026)
+
+Chain once the county publishes `4348_final_svc_precinct_public.pdf`: run the `svc-rehearsal` workflow with that URL (it writes
+`data/rehearsal/4348_final_svc_precinct_public/`), then the `pages` workflow runs `python -m sitegen.city_totals`, which
+  1. matches SVC contests to API contests by normalised title (no fuzzy matching; unmatched titles are listed in `city_totals_report.json`),
+  2. matches SVC vote columns to API choices by the county totals, not by column order; equal non-zero totals are refused, and a
+     contest whose totals differ (the live count moved past the certified file) is left out and reported, never shown mismatched,
+  3. sums unincorporated places into one "Unincorporated areas" entry and only counts ballots that could not be placed.
+The site then lists those contests under "Countywide contests, by city" in the map's colour menu; before that it says
+"Not published by the county yet". Tested end to end on the real 2024 file's numbers with made-up choice names (kept out of the
+repo): all 21 countywide contests joined, including ones whose API choice order was reversed.
+Unverified until the real file exists: that 2026 contest titles match the API's wording, and the file layout (candidate-name
+columns, multi-seat or retention contests) is the same as 2024. The pipeline stops with an error rather than guess on a new layout.
