@@ -40,10 +40,9 @@ def build(svc_dir, columns):
     return {"p": dict(precincts)}
 
 
-# OFF on purpose. The SVC lists about 2,200 consolidated precincts; the county layer holds about 11,800 regular precincts, so an
-# exact-id join draws only one small piece of each consolidated precinct (the map would look mostly empty and mislead). Turn this on
-# only after the layer's regular precincts are mapped to the SVC precincts (see "Precinct layer on the map" in docs/specs/00_spec.md).
-PUBLISH = False
+# The shapes are the county's consolidated Election Precincts (the unit the SVC reports); tools/election_precincts.py checks that every
+# SVC precinct id has a polygon and writes election_layer_match.json. Set to False to hide the layer without deleting anything.
+PUBLISH = True
 
 
 def write_precincts(svc_dir, columns, dest, publish=PUBLISH):
@@ -52,7 +51,7 @@ def write_precincts(svc_dir, columns, dest, publish=PUBLISH):
     if not publish:
         for name in ("precincts.json", "precincts.geojson"):
             (dest / name).unlink(missing_ok=True)
-        return "precinct layer switched off (shapes do not yet cover whole precincts)"
+        return "precinct layer switched off (PUBLISH is False)"
     shapes_file = svc / "precinct_shapes.geojson"
     if not (svc / "precinct_votes.csv.gz").exists() or not shapes_file.exists():
         for name in ("precincts.json", "precincts.geojson"):

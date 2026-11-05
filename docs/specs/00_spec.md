@@ -301,6 +301,8 @@ history chart, About dialog, unknown route). Not verified: other browsers, scree
 
 ## Precinct layer on the map
 
+**Status (Nov 5): ON.** Resolved by switching to the county's consolidated layer; the notes below are the history of how, kept because they explain the checks.
+
 - The svc-rehearsal workflow now also saves `precinct_votes.csv.gz` (every precinct's votes in each countywide contest, in the
   county PDF's column order) and `data/rehearsal/<name>/precinct_shapes.geojson` (polygons of only the precincts in that file, from the county
   precinct layer, joined by exact precinct id; kept per file because a later run on another file would overwrite a shared one). `sitegen/precincts.py` puts the columns in the API's choice order with the same mapping
@@ -344,3 +346,16 @@ history chart, About dialog, unknown route). Not verified: other browsers, scree
   checks (99.6% agreement with place names; 47 of 49 comparable cities within 1% registration) suggest this is mostly fine.
 - Tested: Python unit tests (column order, filtering, missing shapes, switched off by default) and the UI in a headless browser, on
   synthetic squares and on the real polygons (draws 2,183 shapes in about 1.3 s).
+
+### Result of the consolidated-layer run (svc-rehearsal on `4348_svc_precinct_public.pdf`, Nov 5, 22:44 UTC)
+
+From `data/rehearsal/4348_svc_precinct_public/election_layer_match.json`:
+- SVC precincts 2,187; layer precincts 2,853; **matched 2,187 (100%)**; unmatched ballots 0; layer-only precincts 666 (not in the SVC).
+- Precincts whose city changes when derived from the consolidated shape instead of the earlier piece: **0**. The earlier city totals stand.
+- Shapes written: 2,187 (1.7 MB). Votes file: `precinct_votes.csv.gz`.
+- Rebuilt site data: 2,187 precincts x 50 countywide contests (`precincts.json` 3.0 MB, `precincts.geojson` 1.7 MB).
+- Reconciliation: for every one of the 50 contests the sum over precincts equals the sum over cities exactly.
+- Browser test on the real shapes: 2,187 shapes drawn in about 1.1 s; click, panel, all-contests list, shared link all pass; the 11 earlier UI checks pass; 92 Python tests pass.
+- Not verified: individual precinct rows against the PDF by eye (the parser's contest totals equal the PDF's printed GRAND TOTALs, which checks sums, not each row); other browsers; phones on the live site.
+- Acceptance thresholds set in advance (>= 99% ids matched, < 1% of ballots changing city) were met. `PUBLISH = True`.
+

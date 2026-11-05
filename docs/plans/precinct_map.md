@@ -1,5 +1,7 @@
 # Plan: precinct-level results on the map
 
+**Status Nov 5: tasks 1-5 done (100% of SVC ids matched the consolidated layer; 0 precincts changed city; layer on). Task 6 (deploy and verify) in progress; task 7 not needed.**
+
 Problem (found Nov 5, 2026): the county's precinct Statement of Votes Cast (SVC) reports **consolidated** election precincts
 (2,187 ids in the 2026 file; the election data says 2,853 exist), while the shape layer we joined to is the county's
 **established** precincts (33,219 polygons, 11,816 base numbers). An exact-id join draws one small piece of each consolidated

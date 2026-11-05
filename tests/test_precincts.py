@@ -53,11 +53,10 @@ def test_write_keeps_only_precincts_with_a_shape(tmp_path):
     assert list(json.loads((dest / "precincts.json").read_text())["p"]) == ["1030003A"]
 
 
-def test_switched_off_by_default(tmp_path):
+def test_can_be_switched_off(tmp_path):
     d = make_svc(tmp_path)
     (d / "precinct_shapes.geojson").write_text(json.dumps({"type": "FeatureCollection", "features": []}))
     dest = tmp_path / "site"
     dest.mkdir()
-    assert precincts.PUBLISH is False
-    assert "switched off" in precincts.write_precincts(d, [("5", 777, [0, 1], 2)], dest)
+    assert "switched off" in precincts.write_precincts(d, [("5", 777, [0, 1], 2)], dest, publish=False)
     assert not (dest / "precincts.json").exists()

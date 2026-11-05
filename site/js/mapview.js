@@ -149,7 +149,7 @@ function precinctPanel(m, id) {
   const others = S.cwList.filter((cw) => p.v[String(cw.id)] && (m.type !== "cw" || cw.id !== m.cw.id));
   if (others.length) box.append(h("details", { class: "more" }, h("summary", {}, `All ${others.length + (row ? 1 : 0)} countywide contests in this precinct`),
     h("div", { class: "more-body stack" }, others.map((cw) => one(cw, p.v[String(cw.id)], true)))));
-  box.append(h("p", { class: "note" }, "From the county's precinct-level Statement of Votes Cast. Precincts are the county's current shapes, matched to the file by precinct number. Small precincts have small counts, so shares can swing widely."));
+  box.append(h("p", { class: "note" }, "From the county's precinct-level Statement of Votes Cast, at the same tally as the city numbers (which can trail the live count). Shapes are the county's consolidated election precincts, matched by precinct number. Small precincts have small counts, so shares can swing widely."));
 }
 function renderPanel() {
   const m = modeOf(params), key = params.city || "", box = els.panel;
