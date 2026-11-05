@@ -318,6 +318,12 @@ history chart, About dialog, unknown route). Not verified: other browsers, scree
   CITY_EST, SUBCODE, MAP1, ESTAB, PRC_NAME, COMM_NAME, CITY, DIST_* and DST_*/DIV_*) include no field named for consolidation. A probe
   source (`precinct_layer_carson_fields`) now records ESTAB, PRC_NAME and MAP1 for the Carson rows so they can be compared with the
   SVC's Carson ids. Until a mapping is verified, `sitegen/precincts.PUBLISH` stays False.
+- **Probe result (Carson, 321 layer rows, Nov 5):** `ESTAB` is only the last 4 digits of the base id (119 distinct values), `PRC_NAME`
+  is the constant "CARSON" and `MAP1` is the constant 0. None links regular precincts to SVC precincts. Carson has 119 regular
+  precinct numbers and 23 SVC ids starting 1030 (the mayor contest lists 26), about 5 regular precincts per consolidated one, which
+  fits consolidation but proves nothing about membership. A guess such as "a consolidated precinct covers the base numbers from its
+  own id up to the next SVC id" is NOT used: it is unverified. Next probe: the county items linked from the layer description
+  (Precinct Information File, Attribute Descriptions), see sources `precinct_info_file_item` and `precinct_attr_desc_item`.
 - Side effect to check: each SVC precinct's city comes from one polygon, i.e. one piece of the consolidated precinct. The earlier
   checks (99.6% agreement with place names; 47 of 49 comparable cities within 1% registration) suggest this is mostly fine.
 - Tested: Python unit tests (column order, filtering, missing shapes, switched off by default) and the UI in a headless browser, on

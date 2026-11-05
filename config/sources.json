@@ -106,6 +106,16 @@
       "id": "precinct_layer_carson_fields",
       "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/0/query?where=PRECINCT%20LIKE%20%271030%25%27&outFields=PRECINCT,CITY_EST,SUBCODE,MAP1,ESTAB,PRC_NAME,COMM_NAME,CITY,DST_CITY&returnGeometry=false&resultRecordCount=1000&f=json",
       "note": "Probe: the SVC lists consolidated precincts but the layer has regular ones. Do ESTAB, PRC_NAME or MAP1 say which regular precincts belong to which SVC precinct? Compare with the Carson ids in the SVC."
+    },
+    {
+      "id": "precinct_info_file_item",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/cff9421b413c4a40b591d94297d995bf?f=json",
+      "note": "County item linked from the precinct layer description (one of: Precinct Information File / Attribute Descriptions). Metadata only: title, type, file name, size."
+    },
+    {
+      "id": "precinct_attr_desc_item",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/506f6654ac494cc8b1a89c1a37aef6d9?f=json",
+      "note": "The other linked county item. Metadata only."
     }
   ],
   "svc_discovery": {
