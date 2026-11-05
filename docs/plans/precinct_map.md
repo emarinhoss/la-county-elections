@@ -27,7 +27,11 @@ and [established precincts](https://www.arcgis.com/home/item.html?id=78445639645
 
 Each task has an acceptance test. A task that fails its test is reported, not worked around.
 
-1. **Find the election-precincts service** (probes added to `config/sources.json`: `rrcc_services_directory`,
+1. **Find the election-precincts service.** DONE in part (Nov 5): the services directory lists `Registrar_Recorder_Precincts_Election`
+   (likely the consolidated layer), `Election_Precincts_112024` (Nov 2024), `November_2024_Election_Precincts_WFL1` and
+   `Subprecincts_For_General_Election_2024`. My guessed name `Registrar_Recorder_Election_Precincts` returned HTTP 400, so the guess probes
+   were replaced by `rrcc_election_precincts_*` (info, count, sample, all ids) and the 2024 equivalents. Original wording:
+   **Find the election-precincts service** (probes added to `config/sources.json`: `rrcc_services_directory`,
    `election_precincts_layer_guess`, `election_precincts_sample_guess`). Run the fetch workflow.
    Accept: the services directory names a service for election/consolidated precincts; the layer metadata lists its fields;
    25 sample rows show the consolidated id field. Record the exact service URL and field names in `docs/specs/00_spec.md`.

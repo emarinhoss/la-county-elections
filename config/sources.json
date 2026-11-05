@@ -123,19 +123,45 @@
       "note": "Probe: every service in the county RRCC ArcGIS org, to find the exact name of the Election Precincts (consolidated precincts) service. Web search (Nov 5) says the hub dataset 'Registrar Recorder Election Precincts' has 2,853 records with ids like 6220036A, the SVC id format."
     },
     {
-      "id": "election_precincts_layer_guess",
-      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Election_Precincts/FeatureServer/0?f=json",
-      "note": "GUESSED service name (hub slug registrar-recorder-election-precincts-). If 400/404, read rrcc_services_directory and fix the name."
-    },
-    {
-      "id": "election_precincts_sample_guess",
-      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Election_Precincts/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=25&f=json",
-      "note": "GUESSED, as above. 25 attribute rows: which field holds the consolidated precinct id, and does it match SVC ids?"
-    },
-    {
       "id": "swdb_p26_geo_conv_page",
       "url": "https://www.statewidedatabase.org/d20/p26_geo_conv.html",
       "note": "Fallback: UC Berkeley Statewide Database page listing precinct shapefiles and RG-RR-SR-SV conversion files per county (2026 primary; the general appears months after the election). HTML, kept to record file URLs."
+    },
+    {
+      "id": "rrcc_election_precincts_info",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts_Election/FeatureServer/0?f=json",
+      "note": "Layer metadata (fields, geometry type, record count limits) for the consolidated Election Precincts layer (name taken from the services directory probe)."
+    },
+    {
+      "id": "rrcc_election_precincts_count",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts_Election/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+      "note": "Record count of the consolidated Election Precincts layer (name taken from the services directory probe)."
+    },
+    {
+      "id": "rrcc_election_precincts_sample",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts_Election/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=25&f=json",
+      "note": "25 attribute rows of the consolidated Election Precincts layer (name taken from the services directory probe): which field holds the SVC-format precinct id?"
+    },
+    {
+      "id": "rrcc_election_precincts_112024_info",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Election_Precincts_112024/FeatureServer/0?f=json",
+      "note": "Layer metadata (fields, geometry type, record count limits) for consolidated precincts for the Nov 2024 general (rehearsal / comparison)."
+    },
+    {
+      "id": "rrcc_election_precincts_112024_count",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Election_Precincts_112024/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+      "note": "Record count of consolidated precincts for the Nov 2024 general (rehearsal / comparison)."
+    },
+    {
+      "id": "rrcc_election_precincts_112024_sample",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Election_Precincts_112024/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=25&f=json",
+      "note": "25 attribute rows of consolidated precincts for the Nov 2024 general (rehearsal / comparison): which field holds the SVC-format precinct id?"
+    },
+    {
+      "id": "rrcc_election_precincts_ids",
+      "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts_Election/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=2000&f=json",
+      "max_bytes": 10000000,
+      "note": "All attribute rows (no shapes) of the consolidated layer, to check every SVC precinct id against it."
     }
   ],
   "svc_discovery": {
