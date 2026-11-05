@@ -285,3 +285,16 @@ Changes:
 - The site shows when the page was built.
 Known gaps: nothing alerts if collection stalls. A stall shows as the last data commit getting old, or as failed poll/fetch runs. The attempt log is only committed
 together with a real change, so "nothing changed" cycles leave no trace in the repository.
+
+## Front end (site/)
+
+Static, no build step: `index.html`, `style.css`, ES modules in `site/js/`, Leaflet and the Inter font vendored in `site/vendor/`.
+Three views chosen by the address bar (`#/overview`, `#/map?contest=cw:<id>|c:<id>&city=<key>`, `#/contests?topic=<id>&q=<text>`),
+so every state can be shared and the back button works. Light and dark themes follow the system and can be toggled.
+Modules: `store.js` (loads data, lookups), `util.js` (DOM helper, formatting, palette), `components.js` (result rows, contest card,
+searchable picker), `chart.js` (line chart with hover, keyboard and table view), `overview.js`, `mapview.js`, `contests.js`, `topics.js`
+(groups the county's 22 contest groups into 7 topics; unknown groups fall into "Other"), `router.js`, `app.js`.
+Honesty notes kept on screen: results are unofficial and partial, tally time is the county's clock, by-city numbers come from the
+precinct file matched to a saved tally and may trail the live count, and ballots placed by place name are flagged.
+Verified locally in a headless browser against the data built from the repo (light, dark, 390px wide; picker, search, selection,
+history chart, About dialog, unknown route). Not verified: other browsers, screen readers, the live GitHub Pages deploy until it runs.

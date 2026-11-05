@@ -3,53 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>LA County Election Results</title>
+<meta name="description" content="Unofficial results for the Los Angeles County general election: key races, a city-by-city map, and every contest on the ballot.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232a78d6'/%3E%3Cpath d='M9 17l4.5 4.5L23 11' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preload" href="vendor/inter/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="style.css">
+<script>
+  // Apply a saved theme before the page paints, so a dark-mode reader does not see a white flash.
+  try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 </head>
 <body>
-<header>
-  <h1>LA County election results</h1>
-  <p id="status" role="status">Loading…</p>
-  <div id="tabs" role="tablist" aria-label="Views">
-    <button role="tab" id="tab-city" aria-controls="view-city" aria-selected="true">City contests (map)</button>
-    <button role="tab" id="tab-county" aria-controls="view-county" aria-selected="false">County, state &amp; district contests</button>
+<a class="skip" href="#app">Skip to results</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#/overview" aria-label="LA County election results, home">
+      <span class="brand-mark" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4.5 4.5L19 7"/></svg></span>
+      <span class="brand-name">LA County Election Results<span class="brand-sub" id="brand-sub">General Election</span></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#/overview" data-nav="overview">Overview</a>
+      <a href="#/map" data-nav="map">Map</a>
+      <a href="#/contests" data-nav="contests">All contests</a>
+    </nav>
+    <div class="top-actions">
+      <span class="status-chip" id="status-chip" role="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Loading…</span></span>
+      <button class="icon-btn" id="about-btn" type="button" aria-label="About these numbers" title="About these numbers">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+      </button>
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="Switch between light and dark" title="Light / dark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+      </button>
+    </div>
   </div>
 </header>
-<main id="view-city" role="tabpanel" aria-labelledby="tab-city">
-  <section id="map-wrap" aria-label="Map of Los Angeles County cities">
-    <div id="map"></div>
-    <div id="legend"></div>
-  </section>
-  <section id="panel">
-    <div class="controls">
-      <label for="city-select">City</label>
-      <select id="city-select"></select>
-      <label for="contest-select">Color map by</label>
-      <select id="contest-select"></select>
-    </div>
-    <div id="contests"></div>
-  </section>
+
+<main class="page" id="app" tabindex="-1">
+  <section class="view" id="view-overview" aria-label="Overview"></section>
+  <section class="view" id="view-map" aria-label="Results map" hidden></section>
+  <section class="view" id="view-contests" aria-label="All contests" hidden></section>
 </main>
-<main id="view-county" role="tabpanel" aria-labelledby="tab-county" hidden>
-  <section id="county-panel">
-    <div id="totals"></div>
-    <div class="controls">
-      <label for="group-select">Contest group</label>
-      <select id="group-select"></select>
-      <label for="county-filter">Filter by name</label>
-      <input id="county-filter" type="search" placeholder="e.g. Measure, Assembly, Judge">
-    </div>
-    <p class="muted" id="county-note"></p>
-    <div id="county-contests"></div>
-  </section>
-</main>
-<footer>
-  <p>Unofficial partial results from the LA County Registrar-Recorder/County Clerk, collected by
-  <a href="https://github.com/emarinhoss/la-county-elections">this open project</a>. Counts change until the county
-  certifies the election. Bars show each choice's share of votes counted so far in that contest, not of all ballots.</p>
+
+<footer class="site">
+  Unofficial results from the LA County Registrar-Recorder/County Clerk, collected by
+  <a href="https://github.com/emarinhoss/la-county-elections">this open project</a>. Counts change until the county certifies the election.
 </footer>
+
+<dialog id="about" aria-labelledby="about-title">
+  <div class="dialog-head"><h2 id="about-title" style="font-size:18px;font-weight:680;letter-spacing:-.01em">About these numbers</h2>
+    <button class="icon-btn" type="button" id="about-close" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="dialog-body" id="about-body"></div>
+</dialog>
+
 <script src="vendor/leaflet/leaflet.js"></script>
-<script src="app.js"></script>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
