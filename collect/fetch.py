@@ -6,7 +6,11 @@ Raw snapshots are never edited after they are written.
 """
 import hashlib
 import json
+import http.client
+import socket
+import ssl
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -66,6 +70,30 @@ def download(url, method="GET", max_bytes=DEFAULT_MAX_BYTES):
         return resp.status, resp.headers, body
 
 
+TRANSIENT = (TimeoutError, ConnectionError, socket.gaierror, ssl.SSLError, http.client.HTTPException)
+
+
+def download_with_retry(url, method, max_bytes, attempts=3):
+    """download(), retried after network errors and HTTP 429/5xx (a busy county server). 4xx answers are final, because several
+    sources are probed on purpose for files that do not exist yet (400/404)."""
+    for i in range(attempts):
+        try:
+            return download(url, method, max_bytes)
+        except urllib.error.HTTPError as e:
+            if e.code < 500 and e.code != 429:
+                raise
+            last = e
+        except urllib.error.URLError as e:  # the network, not the answer: only transient kinds are worth retrying
+            if not isinstance(e.reason, TRANSIENT):
+                raise
+            last = e
+        except TRANSIENT as e:
+            last = e
+        if i < attempts - 1:
+            time.sleep(2 * (i + 1))
+    raise last
+
+
 def fetch_source(source, election_dir, now=None):
     """Fetch one source. Returns the log entry (a dict)."""
     now = now or now_utc()
@@ -74,7 +102,7 @@ def fetch_source(source, election_dir, now=None):
     probe = source.get("head", False)  # probe only: record status and size, never store the body
     max_bytes = source.get("max_bytes", DEFAULT_MAX_BYTES)
     try:
-        status, headers, body = download(source["url"], "HEAD" if probe else "GET", max_bytes)
+        status, headers, body = download_with_retry(source["url"], "HEAD" if probe else "GET", max_bytes)
     except urllib.error.HTTPError as e:  # e.g. 404 for a file the county has not published yet
         entry.update(result="error", http_status=e.code, error=f"HTTPError: HTTP Error {e.code}: {e.reason}")
         return entry

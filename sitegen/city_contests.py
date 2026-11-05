@@ -11,6 +11,7 @@ import json
 import re
 import sys
 import unicodedata
+from datetime import datetime, timezone
 from collections import defaultdict
 from pathlib import Path
 
@@ -103,7 +104,7 @@ def build(tidy_dir):
         city["contests"].sort(key=lambda x: (x["kind"] != "candidate", x["label"]))
     return {
         "election": {"title": info["title"], "date": info["date"]},
-        "county_time": county_time, "snapshot": latest,
+        "county_time": county_time, "snapshot": latest, "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "cities": sorted(cities.values(), key=lambda c: c["name"]),
         "unparsed_titles": unparsed,
     }

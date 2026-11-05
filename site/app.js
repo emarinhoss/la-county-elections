@@ -370,7 +370,8 @@ async function start() {
     document.getElementById("status").textContent =
       `${data.election.title}, ${data.election.date} · ${nCity} city contests in ${data.cities.length} cities` +
       (nOther === null ? "" : ` · ${nOther} county, state and district contests`) +
-      ` · county tally time: ${data.county_time} (county clock)`;
+      ` · county tally time: ${data.county_time} (county clock)` +
+      (data.built_at ? ` · page built ${data.built_at.slice(0, 16).replace("T", " ")} UTC` : "");
   };
   setStatus(null);
   fillSelects();

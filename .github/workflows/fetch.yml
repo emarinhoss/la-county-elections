@@ -1,11 +1,12 @@
 name: fetch
 
-# Collection does not run the tests: a failing test must never stop data collection during an election.
-# Tests run in ci.yml.
+# One collection cycle (tools/fetch_cycle.sh), twice an hour, at off-peak minutes (GitHub delays or drops scheduled runs that
+# start at :00, :15, :30 and :45). This is the BACKSTOP for poll.yml, which collects every few minutes. A failing test or a
+# failing parse must never stop collection, so tests live in ci.yml and every step after the fetch may fail on its own.
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "7,37 * * * *"
   workflow_dispatch:
     inputs:
       test_dispatch:
@@ -13,14 +14,14 @@ on:
         type: boolean
         default: false
 
-# One run at a time so two runs never push at once.
+# One at a time, so two runs never fetch and push at once.
 concurrency:
   group: fetch
   cancel-in-progress: false
 
 permissions:
   contents: write
-  actions: write   # to start the svc-rehearsal workflow when the 2026 SVC file appears
+  actions: write   # to start pages.yml and svc-rehearsal.yml
 
 jobs:
   fetch:
@@ -31,35 +32,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Fetch sources
-        run: python -m collect.fetch config/sources.json data/raw
-      - name: Parse snapshots into tidy tables
-        # A parse problem must not stop the raw snapshots from being committed. The step still shows as failed.
-        continue-on-error: true
-        run: python -m parse.election 2026-11-03-general
-      - name: Decide whether the 2026 SVC precinct file has appeared (see tools/svc_auto.py)
-        id: svc
-        continue-on-error: true
-        run: python -m tools.svc_auto config/sources.json data/raw/2026-11-03-general/fetch_log.jsonl data/svc_auto/state.json data/rehearsal "$GITHUB_OUTPUT"
-      - name: Commit new snapshots
-        run: |
-          git config user.name "election-collector"
-          git config user.email "actions@users.noreply.github.com"
-          # add only paths that exist: a missing path makes `git add` fail and would stop every snapshot from being saved
-          for d in data/raw data/tidy data/svc_auto; do [ -e "$d" ] && git add "$d"; done
-          if git diff --cached --quiet; then
-            echo "nothing new"
-          else
-            git commit -m "data: new raw snapshots $(date -u +%Y-%m-%dT%H:%MZ)"
-            for i in 1 2 3 4; do git pull --rebase && git push && break; sleep $((i * 5)); done
-          fi
-      - name: Start the SVC pipeline (the county published the file)
-        if: steps.svc.outputs.trigger == 'true'
-        continue-on-error: true
+      - name: One collection cycle
         env:
           GH_TOKEN: ${{ github.token }}
-          SVC_URL: ${{ steps.svc.outputs.url }}
-        run: gh workflow run svc-rehearsal.yml --ref main -f url="$SVC_URL"
+        run: bash tools/fetch_cycle.sh
       - name: Self-test of the dispatch (manual runs with test_dispatch ticked only)
         if: inputs.test_dispatch == true
         continue-on-error: true

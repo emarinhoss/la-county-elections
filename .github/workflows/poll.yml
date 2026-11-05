@@ -1,0 +1,59 @@
+name: poll
+
+# The reliable collector. GitHub's scheduler is best-effort (it ran this repository's 15-minute fetch only a few times a day), so
+# this job does its own timing: it runs one collection cycle (tools/fetch_cycle.sh) every POLL_SECONDS for about 5 h 40 min, then
+# starts the next poller and ends. A scheduled backstop starts a poller if none is running (the chain broke or was cancelled).
+# Stops after POLL_UNTIL. To stop it earlier: disable this workflow in the Actions tab and cancel the running one.
+# Cost: this uses runner time all day. It is free for a public repository; for a private one it is about 700 minutes a day.
+
+on:
+  schedule:
+    - cron: "12,42 * * * *"
+  workflow_dispatch:
+    inputs:
+      handover:
+        description: "Set by the previous poller when it starts the next one; skips the 'already running?' check"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      POLL_SECONDS: "300"
+      POLL_UNTIL: "2026-12-20"   # UTC date; no cycle starts and no new poller is chained on or after it
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Is another poller already running?
+        id: guard
+        if: inputs.handover != true
+        run: |
+          others="$(gh run list --workflow poll.yml --limit 30 --json databaseId,status \
+            --jq "[.[] | select((.status==\"in_progress\" or .status==\"queued\" or .status==\"pending\" or .status==\"waiting\") and .databaseId != $GITHUB_RUN_ID)] | length")"
+          echo "other active pollers: $others"
+          if [ "${others:-0}" -gt 0 ]; then echo "skip=true" >> "$GITHUB_OUTPUT"; else echo "skip=false" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != 'true'
+      - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip != 'true'
+        with:
+          python-version: "3.12"
+      - name: Collect every few minutes
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          end=$(( $(date +%s) + 340 * 60 ))
+          while [ "$(date +%s)" -lt "$end" ] && [[ "$(date -u +%F)" < "$POLL_UNTIL" ]]; do
+            # the script is read again every cycle (it also resets the checkout to origin), so a fix pushed meanwhile is used
+            bash -c "$(cat tools/fetch_cycle.sh)" || echo "cycle returned an error; carrying on"
+            sleep "$POLL_SECONDS"
+          done
+      - name: Start the next poller
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          if [[ "$(date -u +%F)" < "$POLL_UNTIL" ]]; then gh workflow run poll.yml --ref main -f handover=true; else echo "past POLL_UNTIL: not chaining"; fi

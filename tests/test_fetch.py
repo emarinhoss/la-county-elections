@@ -139,3 +139,69 @@ def test_ignored_key_does_not_cause_a_new_snapshot_but_other_changes_do(tmp_path
     assert results(run(cfg, root)) == {"api": "unchanged"}
     src.write_text(json.dumps({"TimeStamp": "10:20", "Data": [1, 2, 3]}))
     assert results(run(cfg, root)) == {"api": "saved"}
+
+
+# ---- retries: a busy server is retried, a deliberate "not there yet" is not ----
+class Flaky(SimpleHTTPRequestHandler):
+    plan = []   # status codes to answer with, in order; then 200
+    hits = []
+
+    def do_GET(self):
+        Flaky.hits.append(self.path)
+        code = Flaky.plan.pop(0) if Flaky.plan else 200
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json")
+        self.end_headers()
+        if code == 200:
+            self.wfile.write(b'{"ok": true}')
+
+    def log_message(self, *args):
+        pass
+
+
+def flaky_run(tmp_path, plan, monkeypatch):
+    monkeypatch.setattr("collect.fetch.time.sleep", lambda s: None)  # do not really wait between attempts
+    Flaky.plan, Flaky.hits = list(plan), []
+    server = HTTPServer(("127.0.0.1", 0), Flaky)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    try:
+        return run_one(tmp_path, {"id": "p", "url": f"http://127.0.0.1:{server.server_port}/x"})
+    finally:
+        server.shutdown()
+
+
+def test_a_busy_server_is_retried_until_it_answers(tmp_path, monkeypatch):
+    entry = flaky_run(tmp_path, [503, 429], monkeypatch)
+    assert entry["result"] == "saved" and len(Flaky.hits) == 3
+
+
+def test_a_server_that_stays_down_gives_up_after_three_attempts(tmp_path, monkeypatch):
+    entry = flaky_run(tmp_path, [503, 503, 503, 503], monkeypatch)
+    assert entry["result"] == "error" and entry["http_status"] == 503 and len(Flaky.hits) == 3
+
+
+def test_a_400_or_404_is_not_retried(tmp_path, monkeypatch):
+    entry = flaky_run(tmp_path, [404], monkeypatch)
+    assert entry["result"] == "error" and entry["http_status"] == 404 and len(Flaky.hits) == 1
+
+
+def test_a_missing_local_file_is_not_retried(tmp_path, monkeypatch):
+    waits = []
+    monkeypatch.setattr("collect.fetch.time.sleep", lambda s: waits.append(s))
+    entry = run_one(tmp_path, {"id": "p", "url": (tmp_path / "does-not-exist").as_uri()})
+    assert entry["result"] == "error" and waits == []  # FileNotFoundError can never succeed on a retry
+
+
+def test_a_dropped_connection_is_retried(tmp_path, monkeypatch):
+    import urllib.error
+    calls = []
+    monkeypatch.setattr("collect.fetch.time.sleep", lambda s: None)
+
+    def flaky(url, method="GET", max_bytes=100):
+        calls.append(1)
+        if len(calls) < 3:
+            raise urllib.error.URLError(ConnectionResetError("reset by peer"))
+        return 200, {"Content-Type": "text/plain"}, b"fine"
+    monkeypatch.setattr("collect.fetch.download", flaky)
+    entry = run_one(tmp_path, {"id": "p", "url": "http://example.invalid/x"})
+    assert entry["result"] == "saved" and len(calls) == 3

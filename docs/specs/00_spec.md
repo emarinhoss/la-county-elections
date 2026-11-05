@@ -267,3 +267,21 @@ What did not join, and why (all found by running it, none by assumption):
   statewide contests; retention questions wrapping over several lines. The parser now keeps the whole header text and the API's contest title is
   found in it as a whole-word phrase (retention contests: the part before " - " and the name). `STATE MEASURE 1` does not match `STATE MEASURE 10`.
 - `4348_precinct_public.pdf` is not the by-contest report. Automatic starts now require "svc" and "precinct" in the name.
+
+### A more reliable collector (Nov 5, 2026)
+
+Problem: GitHub's scheduler is best-effort. The 15-minute fetch ran about twice in 12 hours, so county tallies posted in between were never saved
+(the first SVC file was cut from a tally we never saved), and later county files can only be joined to the live feed if a nearby tally was saved.
+Changes:
+- `poll.yml` does its own timing: one collection cycle every 5 minutes for about 5 h 40 min, then it starts the next poller (`handover`); a scheduled
+  backstop (`12,42 * * * *`) starts one if none is running. It stops on 2026-12-20 (UTC). Free for a public repository; about 700 runner minutes a day if the
+  repository were private. Stop it earlier by disabling the workflow and cancelling the running job.
+- `fetch.yml` remains as a backstop twice an hour at off-peak minutes (`7,37 * * * *`).
+- Both run `tools/fetch_cycle.sh`: reset to origin, fetch, parse, decide whether the SVC file appeared, commit and push ONLY when something other than the
+  attempt log changed (otherwise there would be a commit every few minutes), rebuild the site after a new county tally, start the SVC pipeline when the file
+  appears. Tested against a local bare repository with a fake `gh`, including a mutation check: removing the reset or the log-only rule makes tests fail.
+- The collector retries a request after a dropped connection, a timeout, HTTP 429 or 5xx (three attempts); a 4xx answer is never retried, because some sources
+  are probed on purpose for files that do not exist yet. A missing local file is not retried either.
+- The site shows when the page was built.
+Known gaps: nothing alerts if collection stalls. A stall shows as the last data commit getting old, or as failed poll/fetch runs. The attempt log is only committed
+together with a real change, so "nothing changed" cycles leave no trace in the repository.
