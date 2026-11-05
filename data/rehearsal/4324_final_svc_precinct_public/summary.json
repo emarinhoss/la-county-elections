@@ -15,8 +15,8 @@
   "precincts_straddling_city_lines_under_90pct": 11,
   "contest_vs_geometry": {
     "precincts_compared": 1768,
-    "agree": 1656,
-    "agreement": 0.9367,
+    "agree": 1661,
+    "agreement": 0.9395,
     "top_disagreements": [
       [
         "(unincorporated)",
@@ -39,11 +39,6 @@
         6
       ],
       [
-        "Long Beach",
-        "Signal Hill",
-        5
-      ],
-      [
         "Beverly Hills",
         "Los Angeles",
         3
@@ -62,12 +57,59 @@
   },
   "location_rule_vs_geometry": {
     "applies": 2110,
-    "correct": 2103,
-    "accuracy": 0.9967
+    "correct": 2108,
+    "accuracy": 0.9991
   },
   "contests_where_a_precinct_is_in_two_cities": 78,
+  "reconciliation": {
+    "cities": 63,
+    "within_1pct": 56,
+    "within_5pct": 56,
+    "largest_differences": [
+      [
+        "Santa Clarita",
+        540.86
+      ],
+      [
+        "Lomita",
+        424.41
+      ],
+      [
+        "West Covina",
+        399.48
+      ],
+      [
+        "Alhambra",
+        395.51
+      ],
+      [
+        "Arcadia",
+        393.85
+      ],
+      [
+        "La Mirada",
+        380.46
+      ],
+      [
+        "Claremont",
+        318.07
+      ],
+      [
+        "Long Beach",
+        0.41
+      ],
+      [
+        "Irwindale",
+        -0.38
+      ],
+      [
+        "Compton",
+        -0.05
+      ]
+    ]
+  },
   "boundary_cities": 88,
-  "boundary_cities_with_precincts": 87,
+  "boundary_cities_with_precincts": 88,
   "countywide_blocks": [
     {
       "seq": 353,

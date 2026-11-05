@@ -15444,47 +15444,47 @@ PRECINCT,city,overlap_share
 6400013C,Sierra Madre,1.0
 6400016A,Sierra Madre,1.0
 6400016B,Sierra Madre,0.9994
-6450001A,Long Beach,1.0
-6450001B,Long Beach,1.0
-6450001C,Long Beach,1.0
-6450001D,Long Beach,1.0
-6450013B,Long Beach,1.0
-6450013A,Long Beach,1.0
-6450002C,Long Beach,1.0
-6450012A,Long Beach,1.0
-6450003B,Long Beach,1.0
-6450012B,Long Beach,1.0
-6450002G,Long Beach,1.0
-6450002H,Long Beach,1.0
-6450003A,Long Beach,1.0
-6450011C,Long Beach,1.0
-6450003C,Long Beach,1.0
-6450011A,Long Beach,1.0
-6450016B,Long Beach,1.0
-6450011B,Long Beach,1.0
-6450004A,Long Beach,1.0
-6450004B,Long Beach,1.0
-6450004C,Long Beach,1.0
-6450004D,Long Beach,1.0
-6450004E,Long Beach,1.0
-6450009A,Long Beach,1.0
-6450009C,Long Beach,1.0
-6450009B,Long Beach,1.0
-6450005A,Long Beach,1.0
-6450016A,Long Beach,1.0
-6450016C,Long Beach,1.0
-6450006A,Long Beach,1.0
-6450006B,Long Beach,1.0
-6450010A,Long Beach,1.0
-6450006D,Long Beach,1.0
-6450015A,Long Beach,1.0
-6450010B,Long Beach,1.0
-6450015B,Long Beach,1.0
-6450015C,Long Beach,1.0
+6450001A,Signal Hill,1.0
+6450001B,Signal Hill,1.0
+6450001C,Signal Hill,0.9849
+6450001D,Signal Hill,0.9982
+6450013B,Signal Hill,1.0
+6450013A,Signal Hill,0.9994
+6450002C,Signal Hill,1.0
+6450012A,Signal Hill,1.0
+6450003B,Signal Hill,1.0
+6450012B,Signal Hill,1.0
+6450002G,Signal Hill,1.0
+6450002H,Signal Hill,1.0
+6450003A,Signal Hill,1.0
+6450011C,Signal Hill,1.0
+6450003C,Signal Hill,1.0
+6450011A,Signal Hill,1.0
+6450016B,Signal Hill,1.0
+6450011B,Signal Hill,1.0
+6450004A,Signal Hill,0.9987
+6450004B,Signal Hill,1.0
+6450004C,Signal Hill,0.9992
+6450004D,Signal Hill,0.9678
+6450004E,Signal Hill,0.9354
+6450009A,Signal Hill,1.0
+6450009C,Signal Hill,1.0
+6450009B,Signal Hill,1.0
+6450005A,Signal Hill,0.9995
+6450016A,Signal Hill,1.0
+6450016C,Signal Hill,1.0
+6450006A,Signal Hill,1.0
+6450006B,Signal Hill,0.9405
+6450010A,Signal Hill,1.0
+6450006D,Signal Hill,1.0
+6450015A,Signal Hill,1.0
+6450010B,Signal Hill,1.0
+6450015B,Signal Hill,1.0
+6450015C,Signal Hill,1.0
 6450007A,Long Beach,1.0
-6450008A,Long Beach,1.0
-6450008B,Long Beach,1.0
-6450014A,Long Beach,1.0
+6450008A,Signal Hill,0.9998
+6450008B,Signal Hill,1.0
+6450014A,Signal Hill,0.9956
 6530001A,South El Monte,0.991
 6530001B,South El Monte,1.0
 6530001D,South El Monte,1.0
@@ -30658,7 +30658,7 @@ PRECINCT,city,overlap_share
 3550125A,Lancaster,0.9989
 9000499B,Los Angeles,1.0
 2550077F,Glendale,1.0
-6450004M,Long Beach,1.0
+6450004M,Signal Hill,0.9204
 9000583B,Los Angeles,1.0
 3550100D,Lancaster,1.0
 9001741C,Los Angeles,1.0
@@ -32008,7 +32008,7 @@ PRECINCT,city,overlap_share
 2250004A,El Segundo,1.0
 3850354B,Long Beach,1.0
 2250004C,El Segundo,1.0
-6450004F,Long Beach,1.0
+6450004F,Signal Hill,0.8849
 2250015C,El Segundo,1.0
 9001332F,Los Angeles,0.999
 2500047C,Gardena,1.0

@@ -1514,11 +1514,11 @@ precinct,location,city,method,share,contest_city
 6400008A,SIERRA MADRE,Sierra Madre,geo,0.9944,Sierra Madre
 6400010A,SIERRA MADRE,Sierra Madre,geo,1.0,Sierra Madre
 6400013A,SIERRA MADRE,Sierra Madre,geo,1.0,Sierra Madre
-6450002C,SIGNAL HILL,Long Beach,geo,1.0,Signal Hill
-6450004A,SIGNAL HILL,Long Beach,geo,1.0,Signal Hill
-6450005A,SIGNAL HILL,Long Beach,geo,1.0,Signal Hill
-6450006B,SIGNAL HILL,Long Beach,geo,1.0,Signal Hill
-6450009A,SIGNAL HILL,Long Beach,geo,1.0,Signal Hill
+6450002C,SIGNAL HILL,Signal Hill,geo,1.0,Signal Hill
+6450004A,SIGNAL HILL,Signal Hill,geo,0.9987,Signal Hill
+6450005A,SIGNAL HILL,Signal Hill,geo,0.9995,Signal Hill
+6450006B,SIGNAL HILL,Signal Hill,geo,0.9405,Signal Hill
+6450009A,SIGNAL HILL,Signal Hill,geo,1.0,Signal Hill
 6530002A,SOUTH EL MONTE,South El Monte,geo,0.9811,South El Monte
 6530040A,SOUTH EL MONTE,South El Monte,geo,1.0,South El Monte
 6530044A,SOUTH EL MONTE,South El Monte,geo,1.0,South El Monte
