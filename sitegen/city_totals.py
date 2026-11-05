@@ -145,7 +145,8 @@ def pick_tally(structure, tallies, checks):
     return best
 
 
-def build(svc_dir, tidy_dir):
+def build(svc_dir, tidy_dir, columns=None):
+    """columns: optional list; each included contest appends (svc seq, contest id, column->choice mapping, number of choices)."""
     svc, tidy = Path(svc_dir), Path(tidy_dir)
     checks = read_csv(svc / "countywide_checks.csv")
     by_seq = defaultdict(list)
@@ -173,6 +174,8 @@ def build(svc_dir, tidy_dir):
         if mapping is None:
             report["refused"].append({"title": match["title"], "reason": status, "printed": printed, "api": [c["votes"] for c in match["choices"]]})
             continue
+        if columns is not None:
+            columns.append((chk["seq"], match["id"], mapping, len(match["choices"])))
         gaps.append(gap)
         statuses.add(chk.get("status") or "")
         n = len(match["choices"])
@@ -229,7 +232,10 @@ if __name__ == "__main__":
         (dest / "city_totals.json").write_text(json.dumps({"available": False, "reason": "The county has not published the precinct-level Statement of Votes Cast for this election yet."}))
         print("no SVC output for this election yet: city totals not available")
         sys.exit(0)
-    out, report = build(svc, tidy)
+    columns = []
+    out, report = build(svc, tidy, columns)
+    from sitegen.precincts import write_precincts   # the map's precinct layer; needs the shapes the svc-rehearsal workflow saves
+    print(write_precincts(svc, columns, dest))
     (dest / "city_totals.json").write_text(json.dumps(out, separators=(",", ":")))
     (dest / "city_totals_report.json").write_text(json.dumps(report, indent=1) + "\n")
     print(f"{report['included']} countywide contests with city totals; unmatched titles: {len(report['unmatched_svc_titles'])}; refused: {len(report['refused'])}")

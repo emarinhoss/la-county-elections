@@ -52,7 +52,7 @@ export function utcStamp(iso) {
   return isNaN(d) ? "" : d.toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
 }
 export const plural = (n, one, many) => `${num(n)} ${n === 1 ? one : many || one + "s"}`;
-const SMALL = new Set(["of", "the", "and", "for", "to", "in", "a", "an", "or"]);
+const SMALL = new Set(["of", "the", "and", "for", "to", "in", "or"]);
 export const titleCase = (s) => (s === s.toUpperCase()
   ? s.toLowerCase().replace(/\b[a-z]+/g, (w, at) => (at > 0 && SMALL.has(w) ? w : w[0].toUpperCase() + w.slice(1)))
   : s);

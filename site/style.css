@@ -185,7 +185,11 @@ table.data th { color: var(--text-3); font-weight: 600; }
 .combo .empty { padding: 12px; color: var(--text-3); font-size: 14px; }
 
 /* ---- map view ------------------------------------------------------------------------------------------------------------ */
-.toolbar { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) auto; gap: 12px; align-items: end; padding: 14px 16px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; padding: 14px 16px; }
+.toolbar .field { flex: 1 1 240px; min-width: 0; }
+.toolbar .field:first-child { flex-grow: 1.6; }
+.toolbar > .note { flex-basis: 100%; margin: -4px 0 0; }
+.toolbar > .note:empty { display: none; }
 .map-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(340px, 1fr); gap: 16px; align-items: start; }
 .map-card { position: relative; overflow: hidden; }
 #map { height: clamp(380px, 68vh, 760px); background: var(--surface-2); }
@@ -234,7 +238,6 @@ footer.site { max-width: 1320px; margin: 0 auto; padding: 0 20px 40px; color: va
 @media (max-width: 980px) {
   .hero { grid-template-columns: 1fr; } .hero-side { border-left: 0; border-top: 1px solid var(--line); }
   .map-layout { grid-template-columns: 1fr; } .panel { position: static; max-height: none; }
-  .toolbar { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .page { padding: 16px 14px 40px; } .topbar-in { padding: 8px 14px; gap: 10px; }

@@ -4,6 +4,11 @@ import { getJSON, titleCase } from "./util.js";
 export const S = { city: null, county: null, totals: null, shapes: null, cwList: [], cwById: {}, cityByKey: {}, countyList: [], byId: {}, cityContests: [] };
 let historyPromise = null;
 export const getHistory = () => (historyPromise ||= getJSON("data/history.json"));
+// Precinct votes and shapes are large, so they load only when someone turns the precinct layer on. Resolves to null if the
+// county's precinct file has not been processed yet.
+let precinctPromise = null;
+export const getPrecincts = () => (precinctPromise ||= Promise.all([getJSON("data/precincts.json"), getJSON("data/precincts.geojson")])
+  .then(([votes, shapes]) => ({ votes: votes.p, shapes })).catch(() => null));
 
 export async function load() {
   // city_contests.json is required; everything else may be missing and the views say so.

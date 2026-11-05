@@ -101,10 +101,15 @@ def assign_cities(features, cities):
 
 if __name__ == "__main__":
     boundary, out_csv = sys.argv[1:3]
+    save_polygons = sys.argv[3] if len(sys.argv) > 3 else None   # optional: keep the downloaded polygons for tools.precinct_shapes
     cities = city_polygons(boundary)
     for share, a, b in overlapping_pairs(cities):
         print(f"NOTE: city polygons overlap: {a} / {b} ({share:.0%} of the smaller); the smaller city wins for precincts inside both")
-    rows = assign_cities(download_polygons(), cities)
+    features = download_polygons()
+    if save_polygons:
+        with open(save_polygons, "w") as f:
+            json.dump(features, f, separators=(",", ":"))
+    rows = assign_cities(features, cities)
     with open(out_csv, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["PRECINCT", "city", "overlap_share"])

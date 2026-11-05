@@ -298,3 +298,17 @@ Honesty notes kept on screen: results are unofficial and partial, tally time is 
 precinct file matched to a saved tally and may trail the live count, and ballots placed by place name are flagged.
 Verified locally in a headless browser against the data built from the repo (light, dark, 390px wide; picker, search, selection,
 history chart, About dialog, unknown route). Not verified: other browsers, screen readers, the live GitHub Pages deploy until it runs.
+
+## Precinct layer on the map
+
+- The svc-rehearsal workflow now also saves `precinct_votes.csv.gz` (every precinct's votes in each countywide contest, in the
+  county PDF's column order) and `data/reference/precinct_shapes.geojson` (polygons of only the precincts in that file, from the county
+  precinct layer, joined by exact precinct id). `sitegen/precincts.py` puts the columns in the API's choice order with the same mapping
+  `city_totals` used, so city and precinct numbers share one matching, and writes `site/data/precincts.json` and `precincts.geojson`.
+- The map has a "Precincts" toggle for countywide contests. The data loads only when it is turned on. Clicking a precinct shows its
+  result for the selected contest and, in a collapsed list, all countywide contests in that precinct.
+- Scope: countywide contests only (the ones matched to the county API). City, district and school contests by precinct are in the
+  PDF but not shown yet. Precincts in the PDF with no polygon in the layer cannot be drawn; the workflow summary lists how many.
+- Tested: Python unit tests (column order, filtering, missing shapes) and the UI in a headless browser on synthetic squares.
+  NOT yet tested on the real county polygons: file size, drawing speed with about 2,000 shapes, how many ids lack a shape.
+

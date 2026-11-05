@@ -1,11 +1,11 @@
 // The map view: color every city by one contest, search for a city, read the details in the side panel.
 import { h, num, pct, countyTime, icon, palette, mix, diverging, choiceColor, leaderIndex, titleCase } from "./util.js";
-import { S, cityName } from "./store.js";
+import { S, cityName, getPrecincts } from "./store.js";
 import { combobox, contestCard, resultRows } from "./components.js";
 import { TOPICS, topicOf } from "./topics.js";
 import { navigate, hashFor } from "./router.js";
 
-let built = false, map = null, layer = null, fitBounds = null, params = {}, els = {}, contestBox, cityBox;
+let built = false, map = null, layer = null, precLayer = null, prec = null, precLoading = false, precFailed = false, fitBounds = null, params = {}, els = {}, contestBox, cityBox;
 
 // ---- what is being shown ---------------------------------------------------------------------------------------------------
 function defaultContest() {
@@ -35,7 +35,49 @@ function cellFor(key, m, P) { // {fill, data}
 }
 function styleFor(feature) {
   const P = palette(), m = modeOf(params), key = feature.properties.key, cell = cellFor(key, m, P), picked = key === params.city;
+  if (precinctsOn(m)) return { fillColor: cell.fill, fillOpacity: 0.12, color: picked ? P.text : P.line, weight: picked ? 2.5 : 1.1, opacity: 1 };
   return { fillColor: cell.fill, fillOpacity: cell.data ? 0.95 : 0.55, color: picked ? P.text : P.line, weight: picked ? 2.5 : 0.6, opacity: 1 };
+}
+// ---- precinct layer --------------------------------------------------------------------------------------------------------------
+const precinctsOn = (m) => params.precincts === "1" && m.type === "cw" && !!prec;
+const precinctRow = (m, id) => (prec && prec.votes[id] && prec.votes[id].v[String(m.cw.id)]) || null;   // [registration, ballots, votes...]
+function precinctStyle(feature) {
+  const P = palette(), m = modeOf(params), id = feature.properties.id, row = m.type === "cw" ? precinctRow(m, id) : null, picked = id === params.precinct;
+  const votes = row ? row.slice(2) : [];
+  return { fillColor: row && row[1] > 0 ? fillFor(m.cw, votes, P) : P.nodata, fillOpacity: row && row[1] > 0 ? 0.95 : 0.5, color: picked ? P.text : P.line, weight: picked ? 2.5 : 0.3, opacity: 1 };
+}
+function precinctTooltip(feature) {
+  const m = modeOf(params), id = feature.properties.id, row = precinctRow(m, id), p = prec.votes[id];
+  const box = h("div", {}, h("b", {}, `Precinct ${id}`), h("div", { class: "muted" }, p && p.city ? cityName(p.city) || "" : ""));
+  if (!row || !row[1]) { box.append(h("div", { class: "muted" }, "No ballots counted here")); return box; }
+  const votes = row.slice(2), total = votes.reduce((a, b) => a + b, 0), i = votes.indexOf(Math.max(...votes));
+  box.append(h("div", {}, `${m.cw.choices[i].name} ${pct(total ? votes[i] / total : null)}`), h("div", { class: "muted" }, `${num(row[1])} ballots`));
+  return box;
+}
+function drawPrecincts() {
+  if (precLayer) { map.removeLayer(precLayer); precLayer = null; }
+  const m = modeOf(params);
+  if (!map || !precinctsOn(m)) return;
+  precLayer = L.geoJSON(prec.shapes, {
+    style: precinctStyle,
+    onEachFeature: (f, lyr) => {
+      lyr.bindTooltip(() => precinctTooltip(f), { sticky: true });
+      lyr.on("click", (e) => { L.DomEvent.stopPropagation(e); const p = prec.votes[f.properties.id]; navigate("map", { contest: params.contest, city: p && p.city, precincts: "1", precinct: f.properties.id }); });
+      lyr.on("mouseover", () => lyr.setStyle({ weight: 1.6 })); lyr.on("mouseout", () => precLayer.resetStyle(lyr));
+    },
+  }).addTo(map);
+}
+async function ensurePrecincts() {
+  if (params.precincts !== "1" || prec || precLoading || precFailed) return;
+  precLoading = true; renderToolbarState();
+  prec = await getPrecincts(); precLoading = false; precFailed = !prec;
+  renderToolbarState(); update();
+}
+function renderToolbarState() {
+  const m = modeOf(params), on = params.precincts === "1" && m.type === "cw", b = els.precBtn;
+  b.setAttribute("aria-pressed", String(on)); b.disabled = m.type !== "cw";
+  b.title = m.type !== "cw" ? "Precinct results are available for countywide contests" : "";
+  els.precNote.textContent = precLoading ? "Loading precincts…" : precFailed && params.precincts === "1" ? "Precinct results have not been published to this site yet." : m.type !== "cw" ? "Precincts: pick a countywide contest" : "";
 }
 function tooltipFor(feature) {
   const m = modeOf(params), key = feature.properties.key, name = feature.properties.name === "Unincorporated" ? "Unincorporated areas" : feature.properties.name;
@@ -89,9 +131,29 @@ function cwCity(cw, key) {
   card.append(h("details", { class: "more" }, h("summary", {}, "About these numbers"), h("p", { class: "note more-body" }, sourceNote())));
   return card;
 }
+function precinctPanel(m, id) {
+  const p = prec && prec.votes[id], box = els.panel, name = p && p.city ? cityName(p.city) : null;
+  box.append(h("div", { class: "stack" }, h("p", { class: "tag" }, "Precinct"), h("h2", { class: "panel-title" }, id),
+    h("div", { class: "muted" }, name ? (p.city === "unincorporated" ? "Unincorporated areas" : name) : ""),
+    h("div", {}, h("a", { class: "btn small", href: hashFor("map", { contest: params.contest, city: params.city, precincts: "1" }) }, "Back to " + (name || "the map")))));
+  if (!p) { box.append(h("p", { class: "note" }, "No results for this precinct.")); return; }
+  const one = (cw, row, title) => {
+    const votes = row.slice(2), total = votes.reduce((a, b) => a + b, 0);
+    return h("div", { class: "inline-card" + (title ? "" : " accent") }, h("h3", { class: "contest-title" }, titleCase(cw.label)),
+      row[1] ? resultRows(cw.choices.map((c, i) => ({ name: c.name, party: c.party, votes: votes[i], share: total ? votes[i] / total : null, color: choiceColor(cw, i) }))) : h("p", { class: "note" }, "No ballots counted in this precinct."),
+      h("div", { class: "contest-meta" }, h("span", {}, `${num(row[1])} ballots`), h("span", {}, `${num(row[0])} registered`)));
+  };
+  const row = m.type === "cw" && precinctRow(m, id);
+  if (row) box.append(one(m.cw, row, false));
+  const others = S.cwList.filter((cw) => p.v[String(cw.id)] && (m.type !== "cw" || cw.id !== m.cw.id));
+  if (others.length) box.append(h("details", { class: "more" }, h("summary", {}, `All ${others.length + (row ? 1 : 0)} countywide contests in this precinct`),
+    h("div", { class: "more-body stack" }, others.map((cw) => one(cw, p.v[String(cw.id)], true)))));
+  box.append(h("p", { class: "note" }, "From the county's precinct-level Statement of Votes Cast. Precincts are the county's current shapes, matched to the file by precinct number. Small precincts have small counts, so shares can swing widely."));
+}
 function renderPanel() {
   const m = modeOf(params), key = params.city || "", box = els.panel;
   box.replaceChildren();
+  if (params.precinct && precinctsOn(m) && prec.votes[params.precinct]) { precinctPanel(m, params.precinct); return; }
   const name = key ? cityName(key) : null;
   if (!key || !name) {
     box.append(h("h2", { class: "panel-title" }, "Pick an area"));
@@ -106,7 +168,7 @@ function renderPanel() {
   }
   const city = S.cityByKey[key];
   box.append(h("div", { class: "stack" }, h("h2", { class: "panel-title" }, name),
-    h("div", {}, h("a", { class: "btn small", href: hashFor("map", { contest: params.contest }) }, "Clear selection"))));
+    h("div", {}, h("a", { class: "btn small", href: hashFor("map", { contest: params.contest, precincts: params.precincts }) }, "Clear selection"))));
   if (m.type === "cw") box.append(cwCity(m.cw, key));
   if (city) {
     const contests = [...city.contests].sort((a, b) => (m.type === "city" && a.id === m.contest.id ? -1 : 0) - (m.type === "city" && b.id === m.contest.id ? -1 : 0));
@@ -131,22 +193,25 @@ function contestGroups() {
   for (const city of S.city.cities) groups.push({ label: `${city.name}: city contests`, options: city.contests.map((c) => ({ value: "c:" + c.id, label: `${city.name}: ${titleCase(c.label)}` })) });
   return groups;
 }
-function restyle() { if (layer) layer.setStyle(styleFor); }
+function restyle() { if (layer) layer.setStyle(styleFor); if (precLayer) precLayer.setStyle(precinctStyle); }
+function update() { drawPrecincts(); restyle(); renderLegend(); renderPanel(); renderToolbarState(); }
 function renderLegend() { els.legend.replaceChildren(legendFor(modeOf(params))); }
 
 function build(root, ctx) {
   built = true;
   contestBox = combobox({ label: "Show on the map", placeholder: "Search contests, e.g. Governor, Measure A, Mayor", groups: contestGroups, value: modeOf(params).value,
-    onChange: (v) => navigate("map", { contest: v, city: params.city }) });
+    onChange: (v) => navigate("map", { contest: v, city: params.city, precincts: params.precincts }) });
   cityBox = combobox({ label: "Find a city", placeholder: "Search cities", groups: cityOptions, value: params.city || "", emptyText: "No city with that name",
-    onChange: (v) => navigate("map", { contest: params.contest, city: v }) });
+    onChange: (v) => navigate("map", { contest: params.contest, city: v, precincts: params.precincts }) });
   els.legend = h("div", {});
+  els.precNote = h("span", { class: "note", role: "status" });
+  els.precBtn = h("button", { class: "chip", type: "button", "aria-pressed": "false", onclick: () => navigate("map", { contest: params.contest, city: params.city, precincts: params.precincts === "1" ? "" : "1" }) }, icon("pin", 14), "Precincts");
   els.panel = h("div", { class: "card panel", "aria-live": "polite" });
   els.mapEl = h("div", { id: "map", role: "region", "aria-label": "Map of Los Angeles County. Use the city search for a keyboard-friendly alternative." });
   els.source = S.totals ? h("button", { class: "chip map-source", type: "button", onclick: ctx.openAbout }, icon("info", 14), "About the by-city numbers") : null;
   root.replaceChildren(
     h("div", {}, h("h1", { class: "page-title" }, "Results map"), h("p", { class: "page-lede" }, "Color the map by any contest and click a city for its numbers. Countywide contests are summed from the county's precinct results.")),
-    h("div", { class: "card toolbar" }, contestBox.el, cityBox.el, h("button", { class: "btn", type: "button", onclick: () => map && fitBounds && map.fitBounds(fitBounds) }, icon("reset", 16), "Reset view")),
+    h("div", { class: "card toolbar" }, contestBox.el, cityBox.el, els.precBtn, els.precNote, h("button", { class: "btn", type: "button", onclick: () => map && fitBounds && map.fitBounds(fitBounds) }, icon("reset", 16), "Reset view")),
     h("div", { class: "map-layout" }, h("div", { class: "card map-card" }, els.mapEl, els.legend, els.source), els.panel));
   if (!S.shapes) { els.mapEl.append(h("div", { class: "empty-state" }, h("p", {}, "The city boundaries are not available right now. The city search and the results panel still work."))); return; }
   map = L.map(els.mapEl, { zoomSnap: 0.25, zoomDelta: 0.5, attributionControl: false });
@@ -162,6 +227,7 @@ function build(root, ctx) {
   layer.eachLayer((l) => { if (l.feature.properties.has_contests) view.extend(l.getBounds()); });
   fitBounds = view.isValid() ? view.pad(0.03) : layer.getBounds();
   window.addEventListener("themechange", () => { restyle(); renderLegend(); });
+  // precinct state is not carried when switching contests unless it still applies
 }
 
 export function updateMap(root, p, ctx) {
@@ -170,6 +236,10 @@ export function updateMap(root, p, ctx) {
   if (first) build(root, ctx);
   const m = modeOf(params);
   contestBox.set(m.value); cityBox.set(params.city || "");
-  restyle(); renderLegend(); renderPanel();
-  if (map) { map.invalidateSize(); if (first) map.fitBounds(fitBounds); }
+  update(); ensurePrecincts();
+  if (map) {
+    map.invalidateSize();
+    if (first) map.fitBounds(fitBounds);
+    if (params.precinct && precLayer) { const lyr = precLayer.getLayers().find((l) => l.feature.properties.id === params.precinct); if (lyr) map.fitBounds(lyr.getBounds().pad(1.5), { maxZoom: 15 }); }
+  }
 }
