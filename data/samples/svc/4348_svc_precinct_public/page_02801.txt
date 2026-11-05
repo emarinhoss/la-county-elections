@@ -1,0 +1,55 @@
+COUNTY OF LOS ANGELES                     11/03/26           GENERAL ELECTION         365.106   -Page- 2801
+
+                                                             COUNTY MEASURE A
+
+
+SEMIFINAL OFFICIAL CANVASS V2
+STATEMENT OF VOTES CAST
+  BY PRECINCT
+
+
+                                                  Ballots
+Location                           Registration     Cast            YES          NO
+WEST COVINA - 7700164A                                 207         119          68
+ VOTE BY MAIL        SERIAL 7434                       408         278          90
+TOTAL                                    1,931         615         397          158
+WEST COVINA - 7700169A                                  24          10          12
+ VOTE BY MAIL        SERIAL 7436                       108          80          12
+TOTAL                                      431         132          90          24
+WEST COVINA - 7700170A                                 262         166          73
+ VOTE BY MAIL        SERIAL 7437                       622         383          145
+TOTAL                                    2,369         884         549          218
+WEST COVINA - 7700313A                                  27          14            9
+ VOTE BY MAIL        SERIAL 7438                        69          45          14
+TOTAL                                      315          96          59          23
+WEST COVINA - 7700313B                                  18           5          11
+ VOTE BY MAIL        SERIAL 7439                        44          34            9
+TOTAL                                      245          62          39          20
+WEST HOLLYWOOD - 7750002A                               79          36          32
+ VOTE BY MAIL        SERIAL 7440                       273         151          73
+TOTAL                                      827         352         187          105
+WEST HOLLYWOOD - 7750003A                              689         340          269
+ VOTE BY MAIL        SERIAL 0652                     1,415         749          513
+TOTAL                                    5,501       2,104       1,089          782
+WEST HOLLYWOOD - 7750005A                              491         263          162
+ VOTE BY MAIL        SERIAL 0653                     1,768       1,044          447
+TOTAL                                    5,154       2,259       1,307          609
+WEST HOLLYWOOD - 7750016A                              261         124          108
+ VOTE BY MAIL        SERIAL 7441                       845         527          221
+TOTAL                                    2,555       1,106         651          329
+WEST HOLLYWOOD - 7750023B                              350         176          139
+ VOTE BY MAIL        SERIAL 0654                     1,427         787          468
+TOTAL                                    4,016       1,777         963          607
+WEST HOLLYWOOD - 7750024A                              308         139          125
+ VOTE BY MAIL        SERIAL 0655                       813         426          303
+TOTAL                                    3,012       1,121         565          428
+WEST HOLLYWOOD - 7750070A                              389         202          129
+ VOTE BY MAIL        SERIAL 0656                     1,720       1,002          471
+TOTAL                                    4,743       2,109       1,204          600
+WEST HOLLYWOOD - 7750078A                               82          45          31
+ VOTE BY MAIL        SERIAL 7442                       244         131          83
+TOTAL                                      968         326         176          114
+WEST HILLS - 7760001A                                   43          21          15
+ VOTE BY MAIL        SERIAL 7443                       135          88          12
+TOTAL                                      377         178         109          27
+

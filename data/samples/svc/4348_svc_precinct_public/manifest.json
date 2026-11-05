@@ -1,0 +1,33 @@
+{
+  "source_url": "https://content.lavote.gov/docs/rrcc/svc/4348_svc_precinct_public.pdf",
+  "bytes": 97250712,
+  "sha256": "a6e57231b62a16a20748381ce0c975f19435e6f527065ece52f4c24a3649c40a",
+  "pages": 9805,
+  "sampled_pages": [
+    1,
+    2,
+    3,
+    1401,
+    2801,
+    4202,
+    5603,
+    7004,
+    8404,
+    9804,
+    9805
+  ],
+  "non_blank_chars_per_sampled_page": {
+    "1": 4315,
+    "2": 3394,
+    "3": 772,
+    "1401": 3988,
+    "2801": 3911,
+    "4202": 4680,
+    "5603": 4111,
+    "7004": 4370,
+    "8404": 4274,
+    "9804": 1522,
+    "9805": 1001
+  },
+  "text_extraction": "pdftotext -layout (poppler)"
+}

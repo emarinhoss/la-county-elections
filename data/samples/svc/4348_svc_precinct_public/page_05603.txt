@@ -1,0 +1,55 @@
+COUNTY OF LOS ANGELES                       11/03/26              GENERAL ELECTION         383.64   -Page- 5603
+
+                        Los Angeles County Results Only           STATE MEASURE 39
+
+
+SEMIFINAL OFFICIAL CANVASS V2
+STATEMENT OF VOTES CAST
+  BY PRECINCT
+
+
+                                                    Ballots
+Location                             Registration     Cast               YES          NO
+MANHATTAN BEACH - 4100019A                                454           227          205
+ VOTE BY MAIL          SERIAL 0405                     1,808            678     1,076
+TOTAL                                      5,011       2,262            905     1,281
+MANHATTAN BEACH - 4100026A                                428           249          169
+ VOTE BY MAIL          SERIAL 0406                     2,036            800     1,172
+TOTAL                                      4,835       2,464          1,049     1,341
+MANHATTAN BEACH - 4100040A                                413           219          180
+ VOTE BY MAIL          SERIAL 0407                     1,878            700     1,131
+TOTAL                                      5,092       2,291            919     1,311
+MANHATTAN BEACH - 4100061A                                577           311          251
+ VOTE BY MAIL          SERIAL 0408                     1,995            798     1,139
+TOTAL                                      5,875       2,572          1,109     1,390
+MARINA DEL REY - 4150010A                                 640           267          343
+ VOTE BY MAIL          SERIAL 0409                     2,133            602     1,448
+TOTAL                                      7,284       2,773            869     1,791
+MAYWOOD - 4200005A                                        244            78          156
+ VOTE BY MAIL          SERIAL 0410                        437           122          295
+TOTAL                                      2,261          681           200          451
+MAYWOOD - 4200011A                                        324            88          225
+ VOTE BY MAIL          SERIAL 0411                        465            97          359
+TOTAL                                      2,647          789           185          584
+MAYWOOD - 4200012A                                        493           135          346
+ VOTE BY MAIL          SERIAL 0412                        716           148          543
+TOTAL                                      3,652       1,209            283          889
+MAYWOOD - 4200013A                                        293            79          202
+ VOTE BY MAIL          SERIAL 0413                        489           104          378
+TOTAL                                      2,713          782           183          580
+MONROVIA - 4400001A                                       554           293          247
+ VOTE BY MAIL          SERIAL 0414                     1,427            468          917
+TOTAL                                      4,156       1,981            761     1,164
+MONROVIA - 4400008A*                                      315           177          128
+ VOTE BY MAIL          SERIAL 6870                        985           352          598
+TOTAL                                      2,611       1,300            529          726
+MONROVIA - 4400018A*                                          7           7            0
+ VOTE BY MAIL          SERIAL 6872                        26              8          16
+TOTAL                                         91          33             15          16
+MONROVIA - 4400019A*                                          0           0            0
+ VOTE BY MAIL          SERIAL 6873                        29              9          19
+TOTAL                                         81          29              9          19
+MONROVIA - 4400037A                                       693           343          330
+ VOTE BY MAIL          SERIAL 0415                     1,538            440     1,043
+TOTAL                                      5,664       2,231            783     1,373
+

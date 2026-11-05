@@ -1,0 +1,55 @@
+COUNTY OF LOS ANGELES                     11/03/26           GENERAL ELECTION                                           291.34   -Page- 1401
+
+                                                             LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LA
+
+
+SEMIFINAL OFFICIAL CANVASS V2
+STATEMENT OF VOTES CAST
+  BY PRECINCT
+
+
+                                                  Ballots
+Location                           Registration     Cast            YES          NO
+LOS ANGELES - 9002555A                                 260         150          74
+ VOTE BY MAIL        SERIAL 1041                       350         190          113
+TOTAL                                    2,750         610         340          187
+LOS ANGELES - 9002562A                                 676         274          322
+ VOTE BY MAIL        SERIAL 1042                     2,145       1,084          773
+TOTAL                                    5,683       2,821       1,358     1,095
+LOS ANGELES - 9002566A                                 237         149          64
+ VOTE BY MAIL        SERIAL 1043                       324         180          110
+TOTAL                                    2,499         561         329          174
+LOS ANGELES - 9002568A                                 403         241          115
+ VOTE BY MAIL        SERIAL 1044                       384         208          147
+TOTAL                                    3,558         787         449          262
+LOS ANGELES - 9002572A                                 346         191          110
+ VOTE BY MAIL        SERIAL 1045                       469         230          166
+TOTAL                                    3,027         815         421          276
+LOS ANGELES - 9002587A                                 157          87          49
+ VOTE BY MAIL        SERIAL 7599                       237         113          86
+TOTAL                                    1,540         394         200          135
+LOS ANGELES - 9002591A                                 156          88          53
+ VOTE BY MAIL        SERIAL 7600                       293         136          122
+TOTAL                                    1,720         449         224          175
+LOS ANGELES - 9002597A                                 374         176          164
+ VOTE BY MAIL        SERIAL 1046                       629         288          296
+TOTAL                                    3,490       1,003         464          460
+LOS ANGELES - 9002600A                                  69          33          29
+ VOTE BY MAIL        SERIAL 7601                       243         137          75
+TOTAL                                      711         312         170          104
+LOS ANGELES - 9002607A                                 409         205          151
+ VOTE BY MAIL        SERIAL 7602                     1,370         775          410
+TOTAL                                    4,212       1,779         980          561
+LOS ANGELES - 9002621A                                 372         187          148
+ VOTE BY MAIL        SERIAL 1047                       456         246          176
+TOTAL                                    3,195         828         433          324
+LOS ANGELES - 9002628A                                  73          44          18
+ VOTE BY MAIL        SERIAL 7603                        98          57          32
+TOTAL                                      533         171         101          50
+LOS ANGELES - 9002636A                                 326         177          111
+ VOTE BY MAIL        SERIAL 1048                       490         233          210
+TOTAL                                    3,199         816         410          321
+LOS ANGELES - 9002667A                                 328         158          132
+ VOTE BY MAIL        SERIAL 1049                       548         300          197
+TOTAL                                    3,224         876         458          329
+
