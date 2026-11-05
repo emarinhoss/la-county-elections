@@ -1,0 +1,441 @@
+{
+  "blocks": 409,
+  "blocks_with_errors": 0,
+  "blocks_with_notes": 278,
+  "unique_precincts": 2187,
+  "precinct_methods": {
+    "geo": 1811,
+    "geo_unincorporated": 372,
+    "location": 4
+  },
+  "precincts_with_geometry": 2183,
+  "precincts_straddling_city_lines_under_90pct": 6,
+  "contest_vs_geometry": {
+    "precincts_compared": 1372,
+    "agree": 1283,
+    "agreement": 0.9351,
+    "top_disagreements": [
+      [
+        "(unincorporated)",
+        "Los Angeles",
+        60
+      ],
+      [
+        "Gardena",
+        "Los Angeles",
+        9
+      ],
+      [
+        "Bell",
+        "Los Angeles",
+        6
+      ],
+      [
+        "(unincorporated)",
+        "Whittier",
+        4
+      ],
+      [
+        "Lomita",
+        "Los Angeles",
+        3
+      ],
+      [
+        "San Fernando",
+        "Los Angeles",
+        3
+      ],
+      [
+        "Beverly Hills",
+        "Los Angeles",
+        1
+      ],
+      [
+        "Long Beach",
+        "Los Angeles",
+        1
+      ],
+      [
+        "Torrance",
+        "Los Angeles",
+        1
+      ],
+      [
+        "Vernon",
+        "Los Angeles",
+        1
+      ]
+    ]
+  },
+  "location_rule_vs_geometry": {
+    "applies": 1817,
+    "correct": 1810,
+    "accuracy": 0.9961
+  },
+  "contests_where_a_precinct_is_in_two_cities": 67,
+  "reconciliation": {
+    "cities": 59,
+    "comparable": 49,
+    "district_only_not_comparable": [
+      "Arcadia",
+      "Azusa",
+      "Bellflower",
+      "Claremont",
+      "Downey",
+      "Duarte",
+      "Glendora",
+      "La Verne",
+      "Pomona",
+      "Santa Clarita"
+    ],
+    "within_1pct": 47,
+    "within_5pct": 49,
+    "largest_differences": [
+      [
+        "Irwindale",
+        -1.7
+      ],
+      [
+        "Whittier",
+        -1.24
+      ],
+      [
+        "Santa Fe Springs",
+        -0.79
+      ],
+      [
+        "Commerce",
+        -0.53
+      ],
+      [
+        "Hawthorne",
+        -0.29
+      ],
+      [
+        "El Monte",
+        -0.28
+      ],
+      [
+        "Monrovia",
+        -0.19
+      ],
+      [
+        "Montebello",
+        -0.17
+      ],
+      [
+        "El Segundo",
+        -0.16
+      ],
+      [
+        "West Covina",
+        -0.07
+      ]
+    ]
+  },
+  "boundary_cities": 88,
+  "boundary_cities_with_precincts": 88,
+  "countywide_blocks": [
+    {
+      "seq": 360,
+      "title": "SHERIFF",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 361,
+      "title": "JUDGE OF THE SUPERIOR COURT Office No. 64",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 362,
+      "title": "JUDGE OF THE SUPERIOR COURT Office No. 65",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 363,
+      "title": "JUDGE OF THE SUPERIOR COURT Office No. 87",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 364,
+      "title": "JUDGE OF THE SUPERIOR COURT Office No. 131",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 365,
+      "title": "COUNTY MEASURE A",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 366,
+      "title": "COUNTY MEASURE E",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 367,
+      "title": "Voter Nominated :",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 368,
+      "title": "Voter Nominated :",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 369,
+      "title": "Voter Nominated :",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 370,
+      "title": "Voter Nominated :",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 371,
+      "title": "Voter Nominated :",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 372,
+      "title": "Voter Nominated :",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 373,
+      "title": "Voter Nominated :",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 374,
+      "title": "Voter Nominated :",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 375,
+      "title": "Los Angeles County Results Only SUPERINTENDENT OF PUBLIC INSTRUCTION",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 376,
+      "title": "Los Angeles County Results Only STATE MEASURE 1",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 377,
+      "title": "Los Angeles County Results Only STATE MEASURE 2",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 378,
+      "title": "Los Angeles County Results Only STATE MEASURE 3",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 379,
+      "title": "Los Angeles County Results Only STATE MEASURE 4",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 380,
+      "title": "Los Angeles County Results Only STATE MEASURE 5",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 381,
+      "title": "Los Angeles County Results Only STATE MEASURE 37",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 382,
+      "title": "Los Angeles County Results Only STATE MEASURE 38",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 383,
+      "title": "Los Angeles County Results Only STATE MEASURE 39",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 384,
+      "title": "Los Angeles County Results Only STATE MEASURE 40",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 385,
+      "title": "Los Angeles County Results Only STATE MEASURE 41",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 386,
+      "title": "Los Angeles County Results Only STATE MEASURE 42",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 387,
+      "title": "Los Angeles County Results Only STATE MEASURE 43",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 388,
+      "title": "Los Angeles County Results Only STATE MEASURE 44",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 389,
+      "title": "Los Angeles County Results Only STATE MEASURE 45",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 390,
+      "title": "For Associate Justice of the Supreme Court Shall Associate Justice of the Supreme Court JOSHUA GROBAN be elected to the",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 391,
+      "title": "For Associate Justice of the Supreme Court Shall Associate Justice of the Supreme Court KELLI M. EVANS be elected to the",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 392,
+      "title": "For Presiding Justice, Court of Appeal, Second District, Division Three Shall Presiding Justice RASHIDA A. ADAMS be elected",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 393,
+      "title": "For Presiding Justice, Court of Appeal, Second District, Division Four Shall Presiding Justice HELEN ZUKIN be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 394,
+      "title": "For Presiding Justice, Court of Appeal, Second District, Division Five Shall Presiding Justice BRIAN M. HOFFSTADT be",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 395,
+      "title": "For Presiding Justice, Court of Appeal, Second District, Division Six Shall Presiding Justice TARI L. CODY be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 396,
+      "title": "For Presiding Justice, Court of Appeal, Second District, Division Seven Shall Presiding Justice GONZALO C. MARTINEZ be",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 397,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division One Shall Associate Justice MICHELLE C. KIM be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 398,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division One Shall Associate Justice GREGORY J. WEINGART be",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 399,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Two Shall Associate Justice ANNE RICHARDSON be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 400,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Two Shall Associate Justice STEVE GOORVITCH be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 401,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Three Shall Associate Justice MARK HANASONO be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 402,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice NICHOLAS DAUM be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 403,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice AUDRA M. MORI be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 404,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice ARMEN TAMZARIAN be elected",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 405,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Six Shall Associate Justice KENNETH R. YEGAN be elected",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 406,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Seven Shall Associate Justice NATALIE STONE be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 407,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice JOHN WILEY be elected to",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 408,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice MATTHEW A. SCHERB be",
+      "match": true,
+      "share_fallback": 0.0004
+    },
+    {
+      "seq": 409,
+      "title": "For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice VICTOR G. VIRAMONTES be",
+      "match": true,
+      "share_fallback": 0.0004
+    }
+  ],
+  "countywide_all_match": true
+}
