@@ -1,0 +1,9 @@
+{
+  "source_id": "rrcc_election_precincts_count",
+  "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts_Election/FeatureServer/0/query?where=1%3D1&returnCountOnly=true&f=json",
+  "fetched_at": "2026-11-05T21:16:05.487948+00:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 14,
+  "sha256": "2c1f15915169bc0e950a976a996d962df038e4dbaefc8e1ed9abcf94b3f91e80"
+}

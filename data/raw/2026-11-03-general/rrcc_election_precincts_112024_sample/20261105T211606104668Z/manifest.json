@@ -1,0 +1,9 @@
+{
+  "source_id": "rrcc_election_precincts_112024_sample",
+  "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Election_Precincts_112024/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=25&f=json",
+  "fetched_at": "2026-11-05T21:16:06.104668+00:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 38728,
+  "sha256": "d6521469ef421635bf88cb25503aa16ad69dcd4da74a9538c4a24ea642375370"
+}
