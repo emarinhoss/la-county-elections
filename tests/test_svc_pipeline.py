@@ -156,6 +156,7 @@ def test_full_run_checks_sums_against_printed_totals(tmp_path):
     assert recon["Carson"]["difference_pct"] == "40.0"
     assert recon["Los Angeles"]["reference_registration"] == "200" and recon["Los Angeles"]["geometric_registration"] == "200"
     assert summary["reconciliation"]["cities"] == 2 and summary["reconciliation"]["within_1pct"] == 1
+    assert recon["Carson"]["comparable"] == "True" and summary["reconciliation"]["district_only_not_comparable"] == []
     for name in ("summary.md", "precinct_city.csv", "geo_vs_contest.csv", "city_reconciliation.csv"):
         assert (tmp_path / "out" / name).exists()
 
@@ -168,3 +169,14 @@ def test_a_corrupted_printed_total_is_caught(tmp_path):
     lines[grand] = lines[grand].rsplit("   ", 1)[0] + "   9999"  # printed total for the last choice is now wrong
     summary = run("\n".join(lines), geo, gj, tmp_path / "out2")
     assert summary["countywide_all_match"] is False
+
+
+def test_a_city_with_only_district_contests_is_not_compared(tmp_path):
+    geo, gj = write_inputs(tmp_path)
+    text = make_svc_text([
+        (1, "CARSON CITY GENERAL MUNICIPAL ELECTION Member of the City Council, 2nd District", [("CARSON", "1030003A", *ROW)]),
+        (2, "COUNTY MEASURE G", [("CARSON", p, *ROW) for p in CARSON_LISTED])])
+    summary = run(text, geo, gj, tmp_path / "out3")
+    recon = {r["city"]: r for r in csv.DictReader(open(tmp_path / "out3" / "city_reconciliation.csv"))}
+    assert recon["Carson"]["comparable"] == "False" and recon["Carson"]["difference_pct"] == "400.0"
+    assert summary["reconciliation"]["comparable"] == 0 and summary["reconciliation"]["district_only_not_comparable"] == ["Carson"]

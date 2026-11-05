@@ -187,3 +187,18 @@ committed run-3 output in `data/rehearsal/` has Signal Hill missing and Long Bea
 
 Added: `city_reconciliation.csv`, which compares each city's own-contest registration with the registration of the precincts the
 geometry assigned to it, so mismatches show up without manual inspection.
+
+### Rehearsal run 4 (Signal Hill fixed): validated (Nov 5, 2026)
+
+- All 88 boundary cities now have precincts (Signal Hill: 5 precincts that were in Long Beach).
+- Place-name rule vs geometry: 2,108 of 2,110 (99.9%). Contest listing vs geometry: 1,661 of 1,768 (94.0%); the rest is the wide
+  Measure LL listing unincorporated precincts and parts of Gardena, Huntington Park, Bell, Beverly Hills and Lomita under "Los Angeles".
+- Registration reconciliation: of 63 cities with contests, 56 have a citywide contest to compare with, and all 56 match within 1%
+  (45 exactly). The other 7 (Santa Clarita, Lomita, West Covina, Alhambra, Arcadia, La Mirada, Claremont) have only council-district
+  contests in the 2024 file, so the reference is one district and the check cannot test them. They were off by 318-541%, which is
+  what a single district against a whole city looks like. This is now reported as "not comparable", not as a failure.
+- The 2026 file will test a different set of cities (59 cities have 2026 contests, 167 contests). Cities with no citywide contest
+  stay unverified by reconciliation and rest on the geometry plus the place-name cross-check (99.9% agreement here).
+
+What is NOT done: the 2026 SVC does not exist yet. Still to build once it does: matching SVC contest titles to API contests and SVC
+vote columns to API choices (by matching the county totals, not by assuming column order), and showing city totals on the map.
