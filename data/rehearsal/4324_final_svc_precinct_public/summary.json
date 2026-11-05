@@ -63,37 +63,19 @@
   "contests_where_a_precinct_is_in_two_cities": 78,
   "reconciliation": {
     "cities": 63,
+    "comparable": 56,
+    "district_only_not_comparable": [
+      "Alhambra",
+      "Arcadia",
+      "Claremont",
+      "La Mirada",
+      "Lomita",
+      "Santa Clarita",
+      "West Covina"
+    ],
     "within_1pct": 56,
     "within_5pct": 56,
     "largest_differences": [
-      [
-        "Santa Clarita",
-        540.86
-      ],
-      [
-        "Lomita",
-        424.41
-      ],
-      [
-        "West Covina",
-        399.48
-      ],
-      [
-        "Alhambra",
-        395.51
-      ],
-      [
-        "Arcadia",
-        393.85
-      ],
-      [
-        "La Mirada",
-        380.46
-      ],
-      [
-        "Claremont",
-        318.07
-      ],
       [
         "Long Beach",
         0.41
@@ -105,6 +87,34 @@
       [
         "Compton",
         -0.05
+      ],
+      [
+        "Commerce",
+        -0.03
+      ],
+      [
+        "Hawthorne",
+        -0.02
+      ],
+      [
+        "Monterey Park",
+        -0.02
+      ],
+      [
+        "Santa Fe Springs",
+        -0.02
+      ],
+      [
+        "El Monte",
+        -0.01
+      ],
+      [
+        "El Segundo",
+        -0.01
+      ],
+      [
+        "Paramount",
+        -0.01
       ]
     ]
   },

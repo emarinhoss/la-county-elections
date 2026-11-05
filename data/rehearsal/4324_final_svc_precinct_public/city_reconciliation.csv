@@ -1,64 +1,64 @@
-city,contests,reference_registration,largest_contest_registration,geometric_registration,difference_pct
-Agoura Hills,1,15178,15178,15178,0.0
-Alhambra,2,9374,9374,46449,395.51
-Arcadia,2,6699,6699,33083,393.85
-Artesia,3,8898,8898,8898,0.0
-Azusa,4,24863,24863,24863,0.0
-Baldwin Park,1,36125,36125,36125,0.0
-Bell Gardens,2,16516,16516,16516,0.0
-Bellflower,4,42223,42223,42223,0.0
-Burbank,1,70474,70474,70474,0.0
-Carson,3,63517,63517,63516,-0.0
-Claremont,2,5623,5623,23508,318.07
-Commerce,1,7300,7300,7298,-0.03
-Compton,4,49959,49959,49936,-0.05
-Cudahy,2,9224,9224,9224,0.0
-Culver City,1,28553,28553,28553,0.0
-Downey,4,66088,66088,66088,0.0
-Duarte,4,13668,13668,13668,0.0
-El Monte,5,45620,45620,45616,-0.01
-El Segundo,1,12409,12409,12408,-0.01
-Glendora,2,35463,35463,35463,0.0
-Hawaiian Gardens,1,6280,6280,6280,0.0
-Hawthorne,2,43865,43865,43855,-0.02
-Hermosa Beach,3,14374,14374,14374,0.0
-Hidden Hills,1,1342,1342,1342,0.0
-Inglewood,4,64416,64416,64413,-0.0
-Irwindale,2,1051,1051,1047,-0.38
-La Habra Heights,1,4117,4117,4117,0.0
-La Mirada,1,6643,6643,31917,380.46
-Lancaster,1,94165,94165,94165,0.0
-Lawndale,2,16410,16410,16410,0.0
-Lomita,2,2458,2458,12890,424.41
-Long Beach,4,272914,272914,274023,0.41
-Los Angeles,9,2160494,2563280,2160483,-0.0
-Lynwood,3,30698,30698,30698,0.0
-Malibu,1,7798,7798,7798,0.0
-Manhattan Beach,3,26630,26630,26630,0.0
-Maywood,3,10853,10853,10853,0.0
-Montebello,3,33595,33595,33595,0.0
-Monterey Park,5,32031,32031,32026,-0.02
-Norwalk,1,58277,58277,58277,0.0
-Palmdale,3,91869,91869,91865,-0.0
-Palos Verdes Estates,2,10854,10854,10854,0.0
-Paramount,1,25801,25801,25799,-0.01
-Pasadena,6,89696,89696,89696,0.0
-Pico Rivera,1,37321,37321,37319,-0.01
-Pomona,4,76938,76938,76937,-0.0
-Rancho Palos Verdes,1,30718,30718,30718,0.0
-Redondo Beach,3,48549,48549,48549,0.0
-San Fernando,1,12495,12495,12495,0.0
-San Gabriel,1,19787,19787,19787,0.0
-San Marino,2,9198,9198,9198,0.0
-Santa Clarita,1,23054,23054,147745,540.86
-Santa Fe Springs,2,11464,11464,11462,-0.02
-Santa Monica,4,69038,69038,69038,0.0
-Sierra Madre,2,8596,8596,8596,0.0
-Signal Hill,2,7409,7409,7409,0.0
-South El Monte,3,9154,9154,9154,0.0
-South Gate,1,47034,47034,47034,0.0
-South Pasadena,4,17756,17756,17756,0.0
-Torrance,1,94215,94215,94214,-0.0
-Walnut,1,19486,19486,19486,0.0
-West Covina,2,12774,12774,63804,399.48
-West Hollywood,2,26394,26394,26394,0.0
+city,contests,comparable,reference_registration,largest_contest_registration,geometric_registration,difference_pct
+Agoura Hills,1,True,15178,15178,15178,0.0
+Alhambra,2,False,9374,9374,46449,395.51
+Arcadia,2,False,6699,6699,33083,393.85
+Artesia,3,True,8898,8898,8898,0.0
+Azusa,4,True,24863,24863,24863,0.0
+Baldwin Park,1,True,36125,36125,36125,0.0
+Bell Gardens,2,True,16516,16516,16516,0.0
+Bellflower,4,True,42223,42223,42223,0.0
+Burbank,1,True,70474,70474,70474,0.0
+Carson,3,True,63517,63517,63516,-0.0
+Claremont,2,False,5623,5623,23508,318.07
+Commerce,1,True,7300,7300,7298,-0.03
+Compton,4,True,49959,49959,49936,-0.05
+Cudahy,2,True,9224,9224,9224,0.0
+Culver City,1,True,28553,28553,28553,0.0
+Downey,4,True,66088,66088,66088,0.0
+Duarte,4,True,13668,13668,13668,0.0
+El Monte,5,True,45620,45620,45616,-0.01
+El Segundo,1,True,12409,12409,12408,-0.01
+Glendora,2,True,35463,35463,35463,0.0
+Hawaiian Gardens,1,True,6280,6280,6280,0.0
+Hawthorne,2,True,43865,43865,43855,-0.02
+Hermosa Beach,3,True,14374,14374,14374,0.0
+Hidden Hills,1,True,1342,1342,1342,0.0
+Inglewood,4,True,64416,64416,64413,-0.0
+Irwindale,2,True,1051,1051,1047,-0.38
+La Habra Heights,1,True,4117,4117,4117,0.0
+La Mirada,1,False,6643,6643,31917,380.46
+Lancaster,1,True,94165,94165,94165,0.0
+Lawndale,2,True,16410,16410,16410,0.0
+Lomita,2,False,2458,2458,12890,424.41
+Long Beach,4,True,272914,272914,274023,0.41
+Los Angeles,9,True,2160494,2563280,2160483,-0.0
+Lynwood,3,True,30698,30698,30698,0.0
+Malibu,1,True,7798,7798,7798,0.0
+Manhattan Beach,3,True,26630,26630,26630,0.0
+Maywood,3,True,10853,10853,10853,0.0
+Montebello,3,True,33595,33595,33595,0.0
+Monterey Park,5,True,32031,32031,32026,-0.02
+Norwalk,1,True,58277,58277,58277,0.0
+Palmdale,3,True,91869,91869,91865,-0.0
+Palos Verdes Estates,2,True,10854,10854,10854,0.0
+Paramount,1,True,25801,25801,25799,-0.01
+Pasadena,6,True,89696,89696,89696,0.0
+Pico Rivera,1,True,37321,37321,37319,-0.01
+Pomona,4,True,76938,76938,76937,-0.0
+Rancho Palos Verdes,1,True,30718,30718,30718,0.0
+Redondo Beach,3,True,48549,48549,48549,0.0
+San Fernando,1,True,12495,12495,12495,0.0
+San Gabriel,1,True,19787,19787,19787,0.0
+San Marino,2,True,9198,9198,9198,0.0
+Santa Clarita,1,False,23054,23054,147745,540.86
+Santa Fe Springs,2,True,11464,11464,11462,-0.02
+Santa Monica,4,True,69038,69038,69038,0.0
+Sierra Madre,2,True,8596,8596,8596,0.0
+Signal Hill,2,True,7409,7409,7409,0.0
+South El Monte,3,True,9154,9154,9154,0.0
+South Gate,1,True,47034,47034,47034,0.0
+South Pasadena,4,True,17756,17756,17756,0.0
+Torrance,1,True,94215,94215,94214,-0.0
+Walnut,1,True,19486,19486,19486,0.0
+West Covina,2,False,12774,12774,63804,399.48
+West Hollywood,2,True,26394,26394,26394,0.0
