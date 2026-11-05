@@ -5,7 +5,7 @@ fetch.yml probes one guessed name every run. The county's real names vary betwee
   1. harvest: read a few county pages and follow links on the county's own hosts (bounded: MAX_PAGES pages, depth 2) and collect
      every link to a PDF under /docs/rrcc/svc/;
   2. probe: HEAD-check those links plus a systematic set of likely names built from the patterns above.
-A file is started only if it is for THIS election, is a precinct report, is not a "zbc" file (zero-ballot report, produced before
+A file is started only if it is for THIS election, is the SVC precinct report (name contains svc and precinct), is not a "zbc" file (zero-ballot report, produced before
 the election), and looks like the real PDF (HTTP 200, PDF type, at least 1 MB). It then goes through the same once-per-version and
 retry-limit rules as tools.svc_auto. A name that fetch.yml already watches is left to fetch.yml.
 
@@ -41,8 +41,11 @@ def candidate_urls(election_id):
 
 
 def acceptable(url, election_id):
-    """Only a precinct report of this election, never a zero-ballot (zbc) file."""
-    return bool(re.fullmatch(rf"{re.escape(SVC_PREFIX)}{election_id}_[A-Za-z0-9_]*precinct[A-Za-z0-9_]*\.pdf", url)) and "zbc" not in url.lower()
+    """Only the by-contest Statement of Votes Cast precinct report of this election: the name must contain "svc" and "precinct".
+    Never a zero-ballot (zbc) file, and never the county's other precinct report (4348_precinct_public.pdf has no contest blocks:
+    the pipeline stopped on it with "layout not known")."""
+    return (bool(re.fullmatch(rf"{re.escape(SVC_PREFIX)}{election_id}_[A-Za-z0-9_]*svc[A-Za-z0-9_]*precinct[A-Za-z0-9_-]*\.pdf", url))
+            and "zbc" not in url.lower())
 
 
 def harvest(get_text, seeds, max_pages=MAX_PAGES, max_depth=2):

@@ -200,7 +200,7 @@ def run(text, geo_csv, boundary_geojson, out_dir):
         printed = b["totals"].get("GRAND TOTAL")
         ballots = sum(v["ballots"] for v in agg.values())
         fallback = sum(v["by_method"]["location"] + v["by_method"]["unassigned"] for v in agg.values())
-        sumchecks.append({"seq": b["seq"], "title": b["title"], "choices": width, "printed_votes": (printed or [])[2:], "summed_votes": summed,
+        sumchecks.append({"seq": b["seq"], "title": b["title"], "header": b["header"], "status": b["status"], "choices": width, "printed_votes": (printed or [])[2:], "summed_votes": summed,
                           "votes_match_printed": bool(printed) and printed[2:] == summed,
                           "share_fallback": round(fallback / ballots, 4) if ballots else None})
         for city, v in sorted(agg.items()):
@@ -225,13 +225,14 @@ def run(text, geo_csv, boundary_geojson, out_dir):
     write("city_reconciliation.csv", recon, ["city", "contests", "comparable", "reference_registration",
                                              "largest_contest_registration", "geometric_registration", "difference_pct"])
     write("countywide_checks.csv", [{**x, "printed_votes": json.dumps(x["printed_votes"]), "summed_votes": json.dumps(x["summed_votes"])} for x in sumchecks],
-          ["seq", "title", "choices", "printed_votes", "summed_votes", "votes_match_printed", "share_fallback"])
+          ["seq", "title", "header", "status", "choices", "printed_votes", "summed_votes", "votes_match_printed", "share_fallback"])
 
     comp = [r for r in recon if r["comparable"]]
     methods = Counter(t["method"] for t in table.values())
     rate = lambda a, b: round(a / b, 4) if b else None
     disagreements = [(g, c, n) for (g, c), n in diag["contest_pairs"].most_common() if g != c]
     summary = {
+        "status_labels": dict(Counter(b["status"] for b in blocks)),
         "blocks": len(blocks), "blocks_with_errors": sum(c["errors"] > 0 for c in checks), "blocks_with_notes": sum(c["notes"] > 0 for c in checks),
         "unique_precincts": len(table), "precinct_methods": dict(methods),
         "precincts_with_geometry": sum(1 for t in table.values() if t["method"].startswith("geo")),
@@ -256,6 +257,7 @@ def run(text, geo_csv, boundary_geojson, out_dir):
     cv, lr = summary["contest_vs_geometry"], summary["location_rule_vs_geometry"]
     lines = ["## SVC rehearsal (city from precinct geometry)",
              f"- contest blocks parsed: **{summary['blocks']}** ({summary['blocks_with_errors']} with errors, {summary['blocks_with_notes']} with notes)",
+             f"- the county labels this file: {summary['status_labels']}",
              f"- unique precincts: {len(table):,}; assigned by: {dict(methods)}",
              f"- precincts under 90% inside their city (straddle a city line): {diag['straddling']}",
              f"- contest evidence vs geometry: {cv['agree']}/{cv['precincts_compared']} agree ({cv['agreement']}); top disagreements (geometry, contest, n): {cv['top_disagreements'][:6]}",

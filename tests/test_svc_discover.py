@@ -23,8 +23,11 @@ def test_generated_names_cover_every_real_county_name_we_have_seen():
 def test_only_a_precinct_report_of_this_election_is_acceptable():
     assert acceptable(f"{SVC_PREFIX}4348_final_svc_precinct_public.pdf", 4348)
     assert acceptable(f"{SVC_PREFIX}4348_semifinal_svc_precinct_v2.pdf", 4348)
+    assert acceptable(f"{SVC_PREFIX}4348_svc_precinct_public.pdf", 4348)        # the real 2026 name
+    assert acceptable(f"{SVC_PREFIX}4300_svc_precinct_public-v2.pdf".replace("4300", "4348"), 4348)  # hyphenated version suffix, as in 2022
     for bad in [f"{SVC_PREFIX}4324_final_svc_precinct_public.pdf",      # another election
                 f"{SVC_PREFIX}4348_final_svc_countywide.pdf",           # not the precinct report
+                f"{SVC_PREFIX}4348_precinct_public.pdf",                # the county's other precinct report: not by contest
                 f"{SVC_PREFIX}4348_svc_precinct_zbc.pdf",               # zero-ballot report
                 f"{SVC_PREFIX}4348_final_svc_precinct.pdf?x=1",
                 "https://example.com/docs/rrcc/svc/4348_final_svc_precinct.pdf"]:

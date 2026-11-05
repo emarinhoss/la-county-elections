@@ -226,6 +226,17 @@ function renderContest(c) {
   box.append(lazyHistory("Count over time", (body, h) => drawContestHistory(body, c, h)));
   return box;
 }
+// What the countywide-by-city numbers are: the county's precinct file, which is frozen at one moment of the count.
+function cwSourceNote() {
+  const t = cityTotals.tally || {};
+  const status = (t.svc_status || []).join(", ") || "precinct file";
+  let s = `Source: the county's precinct-level Statement of Votes Cast (${status}), matched to the county tally of ${t.county_time}`;
+  if (t.largest_difference) s += ` (every total within ${(t.largest_difference * 100).toFixed(2)}%)`;
+  s += ".";
+  if (t.is_latest === false) s += ` The live county totals are newer (${t.latest_county_time}), so these city numbers trail them.`;
+  return s;
+}
+
 // The selected countywide contest's result in one area, with how sure we are about where its ballots belong.
 function renderCwResult(cw, key) {
   const box = el("div", "contest cw");
@@ -235,6 +246,7 @@ function renderCwResult(cw, key) {
   const bits = [num(e.ballots) + " ballots", num(e.registration) + " registered", "from precinct results"];
   if (e.fallback_ballots > 0) bits.push(pct(e.fallback_ballots / e.ballots) + " of these ballots placed by place name (no precinct shape found)");
   box.append(el("div", "meta", bits.join(" · ")));
+  box.append(el("div", "meta", cwSourceNote()));
   const total = e.votes.reduce((s, v) => s + v, 0), top = Math.max(...e.votes);
   cw.choices.map((c, i) => ({ c, v: e.votes[i] })).sort((x, y) => y.v - x.v).forEach(({ c, v }) => {
     const row = el("div", "choice" + (v === top && top > 0 ? " top" : ""));
@@ -256,8 +268,11 @@ function showCity(key) {
   const cwName = cw && cw.cities[key] ? cw.cities[key].name : null;
   if (!city && !cwName) {
     panel.append(el("p", "muted", "Choose a city on the map or from the list."));
-    if (cw) panel.append(el("p", "muted", "Countywide results by city come from the county's precinct-level results: each precinct is placed in the city whose boundary " +
-      "contains it. " + num(cw.unassigned_ballots) + " ballots in this contest could not be placed in any city or unincorporated area."));
+    if (cw) {
+      panel.append(el("p", "muted", cwSourceNote()));
+      panel.append(el("p", "muted", "Each precinct is placed in the city whose boundary covers most of it, or in unincorporated areas. " +
+        num(cw.unassigned_ballots) + " ballots in this contest could not be placed in any city or unincorporated area."));
+    }
   } else {
     panel.append(el("h2", null, city ? city.name : cwName));
     if (cw) panel.append(renderCwResult(cw, key));

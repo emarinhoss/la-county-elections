@@ -2,7 +2,11 @@
 
 Layout seen in the 2024 general election file (read from real sample pages):
   - every page starts with:  COUNTY OF LOS ANGELES  <date>  <election>   <contest#>.<page#>   -Page- <n>
-  - the first non-blank line after that is the contest title (maybe prefixed "Voter Nominated :")
+  - the lines after that, up to the "Location  Registration" column header, are the HEADER: the contest title plus a status label
+    ("FINAL OFFICIAL V2", "SEMIFINAL OFFICIAL CANVASS V2") and fragments of candidate names. Layouts differ between elections:
+    2024 puts the title on one line, sometimes with "Voter Nominated :" in front; 2026 puts "Voter Nominated :" on a line of its
+    own, adds "Los Angeles County Results Only" for statewide contests, and wraps retention questions over several lines.
+    So we keep the whole header text and match it to the API's contest titles later, instead of guessing which line is the title.
   - each precinct is three rows:
         <LOCATION> - <PRECINCT>[*]      ballots  vote1 vote2 ...       (in-person)
          VOTE BY MAIL   SERIAL nnnn     ballots  vote1 vote2 ...
@@ -21,6 +25,9 @@ NUMS = r"(?P<nums>(?:\d[\d,]*\s*)*)"
 PRECINCT_ROW = re.compile(r"^(?P<loc>[A-Z0-9][A-Z0-9 .&'/()-]*?) - (?P<pid>\d{6,8}[A-Z]?)(?P<star>\*?)\s*" + NUMS + r"$")
 VBM_ROW = re.compile(r"^\s*VOTE BY MAIL\s+SERIAL\s+(?P<serial>\d+)\s*" + NUMS + r"$")
 TOTAL_ROW = re.compile(r"^TOTAL\s+" + NUMS + r"$")
+STATUS_LINE = re.compile(r"^\s*((?:SEMIFINAL|FINAL|PRELIMINARY|UNOFFICIAL)\b[A-Z0-9 ]*)$")
+BOILERPLATE = re.compile(r"^\s*(STATEMENT OF VOTES CAST|BY PRECINCT|Ballots\b)")
+HEADER_END = re.compile(r"^Location\s+Registration")
 SUM_ROW = re.compile(r"^(?P<kind>PRECINCT TOTAL|VBM TOTAL|GRAND TOTAL)\s+" + NUMS + r"$")
 
 
@@ -35,8 +42,8 @@ def normalize_title(title):
 
 
 def parse(text):
-    """Yield one dict per contest block: seq, title, precincts, totals."""
-    block, pending, want_title = None, None, False
+    """Yield one dict per contest block: seq, title (first header line), header (all header text), status, precincts, totals."""
+    block, pending, collecting = None, None, False
     for raw in text.splitlines():
         line = raw.rstrip().replace("\f", "")
         m = PAGE.match(line)
@@ -45,16 +52,27 @@ def parse(text):
             if block is None or seq != block["seq"]:
                 if block:
                     yield block
-                block = {"seq": seq, "title": None, "precincts": [], "totals": {}}
+                block = {"seq": seq, "title": None, "header": "", "status": "", "precincts": [], "totals": {}}
                 pending = None
-            want_title = block["title"] is None
+            collecting = block["title"] is None  # the header is read from the first page of a contest only
             continue
         if block is None or not line.strip():
             continue
-        if want_title:
-            block["title"] = re.sub(r"\s+", " ", line.strip())
-            want_title = False
-            continue
+        if collecting:
+            if HEADER_END.match(line) or PRECINCT_ROW.match(line):
+                collecting = False
+                if HEADER_END.match(line):
+                    continue
+            elif STATUS_LINE.match(line):
+                block["status"] = block["status"] or line.strip()
+                continue
+            elif BOILERPLATE.match(line):
+                continue
+            else:
+                text_line = re.sub(r"\s+", " ", line.strip())
+                block["title"] = block["title"] or text_line
+                block["header"] = (block["header"] + " " + text_line).strip()
+                continue
         m = SUM_ROW.match(line)
         if m:
             block["totals"][m.group("kind")] = ints(m.group("nums"))

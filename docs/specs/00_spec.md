@@ -244,3 +244,26 @@ Everything it finds is recorded in `data/svc_auto/discovered.json`, including co
 Limits: it can only find names inside the guessed pattern space or linked from a county page it can reach; whether any county
 page links to these files is unknown (no page I have seen does). If neither method finds the file, start `svc-rehearsal` by hand
 with the real URL.
+
+### The real 2026 files are already published (found by the daily discovery, Nov 5, 2026)
+
+The county published its precinct-level files at 00:03 UTC on Nov 5 (4:03 PM Pacific, Nov 4), for the unofficial count, under names
+my guess did not match. Real names: `4348_svc_precinct_public.pdf` (97 MB, 9,805 pages, the by-contest SVC), `4348_precinct_public.pdf` (44 MB, a
+different report: the pipeline stopped with "layout not known"), `4348_svc_countywide.pdf`, `4348_svc_districts.pdf`, `4348_city_council.pdf`,
+`4348_community.pdf`. The county's own pages list 205 SVC links across elections, so new versions will be found. Earlier elections show
+later versions under new names (`4338_..._v3`, `_v4`; `4324_final_svc_precinct_public_v2`; `4300_svc_precinct_public-v2`).
+The file is labelled "SEMIFINAL OFFICIAL CANVASS V2": a preliminary canvass, not the final one.
+
+Pipeline on the real 2026 file: 409 contest blocks (the API has 409 contests), 0 parse errors, 50 countywide blocks whose vote totals equal the printed
+GRAND TOTAL exactly, 88 of 88 boundary cities with precincts, registration within 1% of each city's own contests for 47 of 49 comparable cities (all 49
+within 5%), place-name rule vs geometry 99.6%.
+
+What did not join, and why (all found by running it, none by assumption):
+- The file is cut from a tally slightly earlier than the earliest one we saved (our collector began saving at 10:54 AM Pacific). Real example, Sheriff:
+  file 1,330,305 / 610,722 vs our 3:11:55 AM tally 1,330,743 / 611,041 (0.03-0.05% apart). So exact matching of column totals finds nothing.
+  Now: totals are matched to the nearest saved tally within 0.5% (or 3 votes), every value needs exactly one counterpart, and contests whose values are
+  close enough to be swapped are refused. The gap is stored per contest and shown on the site.
+- 2026 header layouts differ from 2024: "Voter Nominated :" alone on a line with the title on the next; a "Los Angeles County Results Only" prefix on
+  statewide contests; retention questions wrapping over several lines. The parser now keeps the whole header text and the API's contest title is
+  found in it as a whole-word phrase (retention contests: the part before " - " and the name). `STATE MEASURE 1` does not match `STATE MEASURE 10`.
+- `4348_precinct_public.pdf` is not the by-contest report. Automatic starts now require "svc" and "precinct" in the name.

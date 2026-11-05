@@ -2,6 +2,8 @@ from pathlib import Path
 
 from tools.svc_parse import by_location, check_block, normalize_title, parse
 
+FIX26 = Path(__file__).parent / "fixtures" / "svc2026"
+
 FIX = Path(__file__).parent / "fixtures" / "svc"
 
 
@@ -58,3 +60,39 @@ def test_by_location_sums_precincts():
     carson = by_location(b)["CARSON"]
     assert carson["ballots"] == sum(r["total"][0] for r in b["precincts"])
     assert carson["votes"] == [sum(r["total"][1 + i] for r in b["precincts"]) for i in range(2)]
+
+
+def blocks26(name):
+    return list(parse((FIX26 / name).read_text()))
+
+
+def test_2026_plain_title_and_status_label():
+    (b,) = blocks26("compton_mayor_page1.txt")
+    assert b["title"] == "CITY OF COMPTON GENERAL MUNICIPAL ELECTION Mayor"
+    assert b["status"] == "SEMIFINAL OFFICIAL CANVASS V2"
+    assert b["header"].startswith("CITY OF COMPTON GENERAL MUNICIPAL ELECTION Mayor") and "EMMA SHARIF" in b["header"]
+    assert b["precincts"][0]["location"] == "COMPTON" and b["precincts"][0]["precinct"] == "1450006A" and b["precincts"][0]["star"] is True
+
+
+def test_2026_voter_nominated_title_is_on_the_next_line_and_stays_in_the_header():
+    (b,) = blocks26("voter_nominated_boe_page.txt")
+    assert b["title"] == "Voter Nominated :"  # the first line alone is not the title...
+    assert "MEMBER STATE BOARD OF EQUALIZATION 3rd District" in b["header"]  # ...but the whole header holds it
+    assert b["header"].index("Voter Nominated :") < b["header"].index("MEMBER STATE BOARD")
+    assert b["status"] == "SEMIFINAL OFFICIAL CANVASS V2"
+
+
+def test_2026_results_only_prefix_and_retention_question_are_in_the_header():
+    (m,) = blocks26("results_only_state_measure_39_page.txt")
+    assert "Los Angeles County Results Only" in m["header"] and "STATE MEASURE 39" in m["header"]
+    (r,) = blocks26("retention_presiding_justice_page.txt")
+    assert "For Presiding Justice, Court of Appeal, Second District, Division Three Shall Presiding Justice RASHIDA A. ADAMS be elected" in r["header"]
+    assert "to the office for the term provided by law?" in r["header"] and "Results Only" in r["header"]
+    assert r["precincts"] and len(r["precincts"][0]["total"]) == 3  # ballots cast, YES, NO
+
+
+def test_the_header_is_read_from_the_first_page_of_a_contest_only():
+    text = (FIX26 / "compton_mayor_page1.txt").read_text()
+    second_page = text.replace("1.1   -Page- 1", "1.2   -Page- 2")  # same contest number, next page: header must not be added again
+    (b,) = list(parse(text + "\n" + second_page))
+    assert b["header"].count("EMMA SHARIF") == 1 and len(b["precincts"]) == 2 * len(blocks26("compton_mayor_page1.txt")[0]["precincts"])
