@@ -145,3 +145,23 @@ direct (listed in that city's own contest) > pure code (at least 3 direct precin
 a boundary city > otherwise "UNINCORPORATED OR UNKNOWN: <place>". The fallback rules are scored on precincts whose answer is
 known, and the score is reported. Remaining weakness: a city with no contest this year can only be named by its code or its
 place name, and a place name is not always the city (Sunland is in Los Angeles; Lomita-named precincts can be in Los Angeles).
+
+### Rehearsal run 2: the second approach also failed, for a different reason (Nov 5, 2026)
+
+Run 2 (direct contest evidence, then "pure" layer codes, then place names) reported 100% on its own score and put the
+unincorporated communities (Ramona, South Whittier, Hacienda Heights, Castaic...) in Los Angeles. Cause: the score only tests
+precincts that appear in some city's contest, and unincorporated precincts never do (selection bias). Also, the contest titled
+"LOS ANGELES CITY ... MEASURE LL" lists 986 precincts while the other Los Angeles measures list 805, and its rows include
+SOUTH GATE, LOMITA and unincorporated places, so it is wider than the city. A contest title does not describe its geography.
+Lesson: a check that is blind to the failure it is meant to catch, and a source that agrees with itself, prove nothing.
+
+Third approach (tools/precinct_geo.py, tools/svc_pipeline.py): the city of a precinct is decided by its SHAPE. The county
+precinct layer's polygons are intersected with the county city-boundary polygons; the city covering most of the precinct wins,
+and a precinct with under half of itself in any city is unincorporated. Contest evidence and place names are only cross-checks,
+scored against the geometry over ALL geometry-known precincts, and their disagreements are listed. Precincts absent from the
+2026 layer (about 1% in the 2024 file) fall back to the place name if it equals a city, else "UNASSIGNED: <place>".
+
+Collector fixes found on the way (county API behaviour): it returns the same rows in a different order between requests, and
+re-stamps its structure data every few minutes with nothing else changed, so byte comparison saved duplicate snapshots. The
+collector now compares an order-independent form (`canonical_json`) and ignores the county's `TimeStamp` for the two
+structure endpoints (`ignore_keys`). The history chart drops consecutive repeated tallies.

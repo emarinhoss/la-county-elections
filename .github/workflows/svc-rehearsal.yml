@@ -2,7 +2,7 @@ name: svc-rehearsal
 
 # Manual. Runs the whole precinct-to-city pipeline on one county SVC precinct PDF (default: the 2024 general election,
 # a dress rehearsal for 2026). The PDF and the full precinct table stay on the runner. Only small result files are committed:
-#   data/reference/precinct_layer.csv        (the county precinct layer's id -> city code table, about 1-2 MB)
+#   data/reference/precinct_city_geo.csv     (each precinct's city, found from its shape; about 1 MB)
 #   data/rehearsal/<pdf name>/                (checks, city-code names, countywide totals by city, a summary)
 on:
   workflow_dispatch:
@@ -35,10 +35,13 @@ jobs:
         run: python -c "import os; from tools.svc_sample import check_url; check_url(os.environ['SVC_URL'])"
       - name: Install poppler
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
-      - name: Download the precinct layer attributes (paged, checked against the layer's own count)
+      - name: Install shapely
+        run: python -m pip install shapely
+      - name: Find each precinct's city from its shape (downloads the precinct polygons, paged and checked against the layer's count)
         run: |
           mkdir -p data/reference
-          python -m tools.arcgis_attrs data/reference/precinct_layer.csv
+          boundary="$(ls data/raw/*/city_boundary_geojson/*/body | sort | tail -1)"
+          python -m tools.precinct_geo "$boundary" data/reference/precinct_city_geo.csv
       - name: Download the PDF (kept on the runner only)
         run: |
           curl -fL --retry 3 --max-filesize 300000000 -A "la-county-elections-collector (public research project)" \
@@ -49,7 +52,7 @@ jobs:
           name="$(basename "$SVC_URL" .pdf)"
           boundary="$(ls data/raw/*/city_boundary_geojson/*/body | sort | tail -1)"
           echo "boundary file: $boundary"
-          python -m tools.svc_pipeline "$RUNNER_TEMP/svc.pdf" data/reference/precinct_layer.csv "$boundary" "data/rehearsal/$name"
+          python -m tools.svc_pipeline "$RUNNER_TEMP/svc.pdf" data/reference/precinct_city_geo.csv "$boundary" "data/rehearsal/$name"
           cat "data/rehearsal/$name/summary.md" >> "$GITHUB_STEP_SUMMARY"
           test "$(du -sk data/rehearsal/$name data/reference | awk '{s+=$1} END {print s}')" -lt 20000   # stop above about 20 MB
       - name: Commit the results

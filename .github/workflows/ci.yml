@@ -18,8 +18,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install poppler (for the PDF tests) and pytest
+      - name: Install poppler (PDF tests), pytest and shapely (geometry tests)
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
-          python -m pip install pytest
+          python -m pip install pytest shapely
       - run: python -m pytest -q

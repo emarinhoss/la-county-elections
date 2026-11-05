@@ -1,19 +1,20 @@
 """Statement of Votes Cast (precinct PDF) -> city totals for countywide contests, with checks.
 
-Every precinct gets a city (or an honest "unincorporated or unknown" label) one precinct at a time:
- 1. direct:   the precinct is listed in a city's own contest ("CARSON CITY GENERAL MUNICIPAL ELECTION ...").
-              A precinct inside a city's contest belongs to that city. This beats any code or place name.
- 2. code:     else, the precinct layer's city CODE (DST_CITY), but only if that code is "pure": at least 3 directly
-              evidenced precincts carry it and at least 98% of them are the same city. Mixed codes are not used.
-              (2024 rehearsal: code ZZ is the unincorporated catch-all and LM mixes Lomita with Los Angeles.)
- 3. location: else, the precinct's LOCATION text if it equals a boundary-layer city name.
- 4. otherwise it stays "UNINCORPORATED OR UNKNOWN: <LOCATION>". It is never guessed into a city.
-The fallback rules (2 and 3) are scored on precincts where the direct answer is known, and that score is reported.
-A block is "countywide" if it covers at least 90% of all precincts in the file. For each, we sum precincts by city and
-require the vote columns to equal the PDF's printed GRAND TOTAL exactly. That check proves the parse is complete; it does
-not prove the city assignment, which is what the direct/fallback score is for.
+City of each precinct = where its SHAPE sits (tools.precinct_geo): the city polygon covering most of it, or unincorporated.
+Contest titles, layer city codes and place names are NOT used to decide, because each proved unreliable on the 2024 file:
+  - a contest titled "LOS ANGELES CITY ..." (Measure LL) lists 986 precincts where the other Los Angeles measures list 805,
+    and includes South Gate precincts and unincorporated areas, so appearing in it does not mean being in the city;
+  - the layer's city code ZZ is the unincorporated catch-all and LM mixes Lomita with Los Angeles.
+They are kept only as cross-checks, and we report how often they agree with the geometry:
+  - contest check: precincts listed in a city's own contest vs the geometric city (disagreements are listed);
+  - location rule:  precinct LOCATION text equal to a city name vs the geometric city.
+A precinct missing from the layer falls back to its LOCATION text if that equals a city name, else "UNASSIGNED: <place>".
 
-Usage: python -m tools.svc_pipeline <pdf> <precinct_layer.csv> <boundary_geojson> <out_dir>
+A block is "countywide" if it covers at least 90% of all precincts in the file. For each we sum precincts by city and
+require the vote columns to equal the PDF's printed GRAND TOTAL exactly. That proves the parse is complete; it does not
+prove the city assignment (that is what the geometry and the cross-checks are for).
+
+Usage: python -m tools.svc_pipeline <pdf> <precinct_city_geo.csv> <boundary_geojson> <out_dir>
 """
 import csv
 import json
@@ -26,31 +27,34 @@ from pathlib import Path
 from sitegen.city_contests import city_key, parse_city_title
 from tools.svc_parse import check_block, parse
 
-BLANK = "(blank)"
+UNINC = "UNINCORPORATED: "
+UNASSIGNED = "UNASSIGNED: "
 
 
-def load_layer(path):
-    """(exact id -> code, 7-digit base -> most common code)."""
-    by_id, by_base = {}, defaultdict(Counter)
+def load_geo(path):
+    """(exact id -> (city or None, share), 7-digit base -> set of cities). A blank city means unincorporated."""
+    by_id, by_base = {}, defaultdict(set)
     with open(path, newline="") as f:
         for r in csv.DictReader(f):
-            code = r["DST_CITY"] or BLANK
-            by_id[r["PRECINCT"]] = code
-            by_base[r["CITY_EST"]][code] += 1
-    return by_id, {k: c.most_common(1)[0][0] for k, c in by_base.items()}
+            city = r["city"] or None
+            by_id[r["PRECINCT"]] = (city, float(r["overlap_share"] or 0))
+            by_base[r["PRECINCT"][:7]].add(city)
+    return by_id, by_base
 
 
-def map_precinct(pid, layer):
-    by_id, by_base = layer
+def geo_lookup(pid, geo):
+    """(city or None, share, 'exact'|'base') or None. Base fallback only if every layer precinct with that base agrees."""
+    by_id, by_base = geo
     if pid in by_id:
-        return by_id[pid], "exact"
-    if pid[:7] in by_base:
-        return by_base[pid[:7]], "base"
-    return None, "unmatched"
+        return by_id[pid][0], by_id[pid][1], "exact"
+    cities = by_base.get(pid[:7])
+    if cities and len(cities) == 1:
+        return next(iter(cities)), None, "base"
+    return None
 
 
 def load_boundary_cities(geojson_path):
-    """{city key: city name} for the 88 incorporated cities in the boundary layer."""
+    """{city key: city name} for the incorporated cities in the boundary layer."""
     data = json.loads(Path(geojson_path).read_text())
     names = {f["properties"]["CITY_NAME"] for f in data["features"] if f["properties"].get("CITY_TYPE") == "City"}
     return {city_key(n): n for n in names}
@@ -61,8 +65,7 @@ def city_from_title(title, boundary):
     parsed = parse_city_title(title)
     if not parsed:
         return None
-    name = parsed[0]
-    for candidate in (name, name + " CITY"):  # "CARSON CITY ..." can mean Carson; "CULVER CITY ..." means Culver City
+    for candidate in (parsed[0], parsed[0] + " CITY"):  # "CARSON CITY ..." can mean Carson; "CULVER CITY ..." means Culver City
         if city_key(candidate) in boundary:
             return boundary[city_key(candidate)]
     return None
@@ -80,89 +83,53 @@ def countywide_blocks(blocks, threshold=0.9):
     return out
 
 
-MIN_DIRECT_FOR_PURE, PURE_SHARE = 3, 0.98
-UNASSIGNED = "UNINCORPORATED OR UNKNOWN: "
-
-
-def direct_assignments(blocks, boundary):
-    """{precinct id: city} from precincts listed in a city's own contest, plus {precinct id: {city: n}} for conflicts."""
+def contest_evidence(blocks, boundary):
+    """{precinct: city} for precincts listed in exactly one city's own contest (a cross-check only), and the conflicts."""
     seen = defaultdict(Counter)
     for b in blocks:
         city = city_from_title(b["title"], boundary)
         if city:
             for r in b["precincts"]:
                 seen[r["precinct"]][city] += 1
-    direct = {p: next(iter(c)) for p, c in seen.items() if len(c) == 1}
-    conflicts = {p: dict(c) for p, c in seen.items() if len(c) > 1}
-    return direct, conflicts
+    return ({p: next(iter(c)) for p, c in seen.items() if len(c) == 1},
+            {p: dict(c) for p, c in seen.items() if len(c) > 1})
 
 
-def code_purity(direct, layer):
-    """{code: {"precincts": n, "top_city", "top_share", "pure": bool, "cities": {...}}} from directly evidenced precincts."""
-    by_code = defaultdict(Counter)
-    for pid, city in direct.items():
-        code, _ = map_precinct(pid, layer)
-        if code is not None:
-            by_code[code][city] += 1
-    out = {}
-    for code, c in by_code.items():
-        n, (top, k) = sum(c.values()), c.most_common(1)[0]
-        out[code] = {"precincts": n, "top_city": top, "top_share": round(k / n, 3), "cities": dict(c),
-                     "pure": n >= MIN_DIRECT_FOR_PURE and k / n >= PURE_SHARE}
-    return out
-
-
-def fallback_city(code, location, purity, boundary, loo_city=None):
-    """Rule 2 then rule 3. Returns (city, method) or (None, None). loo_city removes that precinct from the code evidence."""
-    if code is not None and code in purity:
-        cities = Counter(purity[code]["cities"])
-        if loo_city:
-            cities[loo_city] -= 1
-        n = sum(v for v in cities.values() if v > 0)
-        if n >= MIN_DIRECT_FOR_PURE:
-            top, k = cities.most_common(1)[0]
-            if k / n >= PURE_SHARE:
-                return top, "code"
-    if city_key(location) in boundary:
-        return boundary[city_key(location)], "location"
-    return None, None
-
-
-def assign_all(blocks, layer, boundary):
-    """{precinct id: {"location", "code", "city", "method"}} for every precinct in the file, plus diagnostics."""
-    direct, conflicts = direct_assignments(blocks, boundary)
+def assign_all(blocks, geo, boundary):
+    """{precinct: {location, city, method, share, contest_city}} for every precinct, plus the cross-check numbers."""
+    contest, conflicts = contest_evidence(blocks, boundary)
     locs = defaultdict(Counter)
     for b in blocks:
         for r in b["precincts"]:
             locs[r["precinct"]][r["location"]] += 1
-    purity = code_purity(direct, layer)
-    table, disagree = {}, 0
+    table = {}
     for pid, c in locs.items():
         location = c.most_common(1)[0][0]
-        code, _ = map_precinct(pid, layer)
-        if pid in direct:
-            city, method = direct[pid], "direct"
+        hit = geo_lookup(pid, geo)
+        if hit:
+            city, share, how = hit
+            suffix = "" if how == "exact" else "_base"
+            label, method = (city, "geo" + suffix) if city else (UNINC + location, "geo_unincorporated" + suffix)
+        elif city_key(location) in boundary:
+            label, method, share = boundary[city_key(location)], "location", None
         else:
-            city, method = fallback_city(code, location, purity, boundary)
-            if method == "code" and city_key(location) in boundary and boundary[city_key(location)] != city:
-                disagree += 1
-            if city is None:
-                city, method = UNASSIGNED + location, "unassigned"
-        table[pid] = {"location": location, "code": code or "", "city": city, "method": method}
-    # score the fallback rules where the direct answer is known (leave this precinct out of the code evidence)
-    score = {"code_applies": 0, "code_correct": 0, "location_applies": 0, "location_correct": 0}
-    for pid, city in direct.items():
-        code, _ = map_precinct(pid, layer)
-        location = table[pid]["location"]
-        got, method = fallback_city(code, location, purity, {}, loo_city=city)  # code rule only
-        if method == "code":
-            score["code_applies"] += 1
-            score["code_correct"] += got == city
-        if city_key(location) in boundary:
-            score["location_applies"] += 1
-            score["location_correct"] += boundary[city_key(location)] == city
-    return table, {"conflicts": conflicts, "purity": purity, "code_vs_location_disagreements": disagree, "fallback_score": score,
-                   "direct_precincts": len(direct)}
+            label, method, share = UNASSIGNED + location, "unassigned", None
+        table[pid] = {"location": location, "city": label, "method": method, "share": share, "contest_city": contest.get(pid, "")}
+
+    def geo_city(t):  # the geometric city, or "(unincorporated)"
+        return "(unincorporated)" if t["city"].startswith(UNINC) else t["city"]
+    geo_known = {p: t for p, t in table.items() if t["method"].startswith("geo")}
+    pairs, agree, both = Counter(), 0, 0
+    for p, t in geo_known.items():
+        if t["contest_city"]:
+            both += 1
+            pairs[(geo_city(t), t["contest_city"])] += 1
+            agree += geo_city(t) == t["contest_city"]
+    loc_applies = [t for t in geo_known.values() if city_key(t["location"]) in boundary]
+    loc_correct = sum(boundary[city_key(t["location"])] == t["city"] for t in loc_applies)
+    straddling = sum(1 for t in geo_known.values() if t["share"] is not None and t["share"] < 0.9 and not t["city"].startswith(UNINC))
+    return table, {"conflicts": conflicts, "contest_pairs": pairs, "contest_both": both, "contest_agree": agree,
+                   "location_applies": len(loc_applies), "location_correct": loc_correct, "straddling": straddling}
 
 
 def aggregate_by_city(block, table):
@@ -180,10 +147,10 @@ def aggregate_by_city(block, table):
     return dict(out)
 
 
-def run(text, layer_csv, boundary_geojson, out_dir):
+def run(text, geo_csv, boundary_geojson, out_dir):
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
-    layer, boundary = load_layer(layer_csv), load_boundary_cities(boundary_geojson)
+    geo, boundary = load_geo(geo_csv), load_boundary_cities(boundary_geojson)
     blocks = list(parse(text))
     if not blocks:
         raise SystemExit("no contest blocks found: the PDF layout is not the one this parser knows")
@@ -193,7 +160,7 @@ def run(text, layer_csv, boundary_geojson, out_dir):
         errors, notes = check_block(b)
         checks.append({"seq": b["seq"], "title": b["title"], "precincts": len(b["precincts"]), "precinct_share": None,
                        "errors": len(errors), "notes": len(notes), "first_error": (errors[0] if errors else "")[:160]})
-    table, diag = assign_all(blocks, layer, boundary)
+    table, diag = assign_all(blocks, geo, boundary)
     county = countywide_blocks(blocks)
     for c, b in zip(checks, blocks):
         c["precinct_share"] = b["precinct_share"]
@@ -205,17 +172,14 @@ def run(text, layer_csv, boundary_geojson, out_dir):
         summed = [sum(v["votes"][i] for v in agg.values()) for i in range(width)]
         printed = b["totals"].get("GRAND TOTAL")
         ballots = sum(v["ballots"] for v in agg.values())
-        weak = sum(v["by_method"]["unassigned"] for v in agg.values())
-        inferred = sum(v["by_method"]["code"] + v["by_method"]["location"] for v in agg.values())
-        sumchecks.append({"seq": b["seq"], "title": b["title"], "choices": width, "printed_votes": (printed or [])[2:],
-                          "summed_votes": summed, "votes_match_printed": bool(printed) and printed[2:] == summed,
-                          "share_unassigned": round(weak / ballots, 4) if ballots else None,
-                          "share_inferred": round(inferred / ballots, 4) if ballots else None})
+        fallback = sum(v["by_method"]["location"] + v["by_method"]["unassigned"] for v in agg.values())
+        sumchecks.append({"seq": b["seq"], "title": b["title"], "choices": width, "printed_votes": (printed or [])[2:], "summed_votes": summed,
+                          "votes_match_printed": bool(printed) and printed[2:] == summed,
+                          "share_fallback": round(fallback / ballots, 4) if ballots else None})
         for city, v in sorted(agg.items()):
+            geo_b = sum(n for m, n in v["by_method"].items() if m.startswith("geo"))
             rows.append({"seq": b["seq"], "title": b["title"], "city": city, "precincts": v["precincts"],
-                         "registration": v["registration"], "ballots": v["ballots"],
-                         "ballots_direct": v["by_method"]["direct"], "ballots_inferred": v["by_method"]["code"] + v["by_method"]["location"],
-                         "ballots_unassigned": v["by_method"]["unassigned"],
+                         "registration": v["registration"], "ballots": v["ballots"], "ballots_geo": geo_b, "ballots_fallback": v["ballots"] - geo_b,
                          **{f"choice_{i + 1}": x for i, x in enumerate(v["votes"])}})
 
     def write(name, data, fields):
@@ -225,47 +189,42 @@ def run(text, layer_csv, boundary_geojson, out_dir):
             w.writerows(data)
     maxc = max((r["choices"] for r in sumchecks), default=0)
     write("block_checks.csv", checks, ["seq", "title", "precincts", "precinct_share", "errors", "notes", "first_error"])
-    write("precinct_city.csv", [{"precinct": p, **t} for p, t in sorted(table.items())], ["precinct", "location", "code", "city", "method"])
-    write("code_purity.csv", [{"code": c, **{k: (json.dumps(v) if k == "cities" else v) for k, v in d.items()}} for c, d in sorted(diag["purity"].items())],
-          ["code", "precincts", "top_city", "top_share", "pure", "cities"])
-    write("countywide_by_city.csv", rows, ["seq", "title", "city", "precincts", "registration", "ballots", "ballots_direct",
-                                           "ballots_inferred", "ballots_unassigned"] + [f"choice_{i + 1}" for i in range(maxc)])
+    write("precinct_city.csv", [{"precinct": p, **t} for p, t in sorted(table.items())], ["precinct", "location", "city", "method", "share", "contest_city"])
+    write("geo_vs_contest.csv", [{"geometric_city": g, "contest_city": c, "precincts": n} for (g, c), n in diag["contest_pairs"].most_common()],
+          ["geometric_city", "contest_city", "precincts"])
+    write("countywide_by_city.csv", rows, ["seq", "title", "city", "precincts", "registration", "ballots", "ballots_geo", "ballots_fallback"]
+          + [f"choice_{i + 1}" for i in range(maxc)])
     write("countywide_checks.csv", [{**x, "printed_votes": json.dumps(x["printed_votes"]), "summed_votes": json.dumps(x["summed_votes"])} for x in sumchecks],
-          ["seq", "title", "choices", "printed_votes", "summed_votes", "votes_match_printed", "share_unassigned", "share_inferred"])
+          ["seq", "title", "choices", "printed_votes", "summed_votes", "votes_match_printed", "share_fallback"])
 
     methods = Counter(t["method"] for t in table.values())
-    sc = diag["fallback_score"]
     rate = lambda a, b: round(a / b, 4) if b else None
-    cities_used = {t["city"] for t in table.values() if t["method"] != "unassigned"}
-    unassigned = Counter()
-    for r in rows:
-        if r["seq"] == county[0]["seq"] and r["city"].startswith(UNASSIGNED):
-            unassigned[r["city"][len(UNASSIGNED):]] += r["ballots"]
+    disagreements = [(g, c, n) for (g, c), n in diag["contest_pairs"].most_common() if g != c]
     summary = {
         "blocks": len(blocks), "blocks_with_errors": sum(c["errors"] > 0 for c in checks), "blocks_with_notes": sum(c["notes"] > 0 for c in checks),
         "unique_precincts": len(table), "precinct_methods": dict(methods),
-        "precincts_not_in_layer": sum(1 for t in table.values() if not t["code"]),
-        "direct_conflicts": len(diag["conflicts"]), "code_vs_location_disagreements": diag["code_vs_location_disagreements"],
-        "codes_pure": sorted(c for c, d in diag["purity"].items() if d["pure"]),
-        "codes_mixed": sorted(c for c, d in diag["purity"].items() if not d["pure"] and d["precincts"] >= MIN_DIRECT_FOR_PURE),
-        "fallback_score": {**sc, "code_accuracy": rate(sc["code_correct"], sc["code_applies"]),
-                           "location_accuracy": rate(sc["location_correct"], sc["location_applies"])},
-        "boundary_cities": len(boundary), "boundary_cities_with_precincts": len({c for c in cities_used if city_key(c) in boundary}),
-        "top_unassigned_in_first_countywide_block": unassigned.most_common(12),
-        "countywide_blocks": [{"seq": x["seq"], "title": x["title"], "match": x["votes_match_printed"], "share_inferred": x["share_inferred"],
-                               "share_unassigned": x["share_unassigned"]} for x in sumchecks],
+        "precincts_with_geometry": sum(1 for t in table.values() if t["method"].startswith("geo")),
+        "precincts_straddling_city_lines_under_90pct": diag["straddling"],
+        "contest_vs_geometry": {"precincts_compared": diag["contest_both"], "agree": diag["contest_agree"],
+                                "agreement": rate(diag["contest_agree"], diag["contest_both"]), "top_disagreements": disagreements[:12]},
+        "location_rule_vs_geometry": {"applies": diag["location_applies"], "correct": diag["location_correct"],
+                                      "accuracy": rate(diag["location_correct"], diag["location_applies"])},
+        "contests_where_a_precinct_is_in_two_cities": len(diag["conflicts"]),
+        "boundary_cities": len(boundary),
+        "boundary_cities_with_precincts": len({t["city"] for t in table.values() if t["city"] in boundary.values()}),
+        "countywide_blocks": [{"seq": x["seq"], "title": x["title"], "match": x["votes_match_printed"], "share_fallback": x["share_fallback"]} for x in sumchecks],
         "countywide_all_match": all(x["votes_match_printed"] for x in sumchecks) if sumchecks else False,
     }
     (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
-    lines = ["## SVC rehearsal", f"- contest blocks parsed: **{summary['blocks']}** ({summary['blocks_with_errors']} with errors, {summary['blocks_with_notes']} with notes)",
-             f"- unique precincts: {len(table):,}; city assigned by: {dict(methods)}; not in the precinct layer: {summary['precincts_not_in_layer']}",
-             f"- precincts in two different cities' contests (conflicts): {summary['direct_conflicts']}",
-             f"- pure city codes: {len(summary['codes_pure'])}; mixed codes (not used): {', '.join(summary['codes_mixed']) or 'none'}",
-             f"- fallback rules scored on precincts with a known answer: code rule {sc['code_correct']}/{sc['code_applies']} correct, "
-             f"location-text rule {sc['location_correct']}/{sc['location_applies']} correct",
+    cv, lr = summary["contest_vs_geometry"], summary["location_rule_vs_geometry"]
+    lines = ["## SVC rehearsal (city from precinct geometry)",
+             f"- contest blocks parsed: **{summary['blocks']}** ({summary['blocks_with_errors']} with errors, {summary['blocks_with_notes']} with notes)",
+             f"- unique precincts: {len(table):,}; assigned by: {dict(methods)}",
+             f"- precincts under 90% inside their city (straddle a city line): {diag['straddling']}",
+             f"- contest evidence vs geometry: {cv['agree']}/{cv['precincts_compared']} agree ({cv['agreement']}); top disagreements (geometry, contest, n): {cv['top_disagreements'][:6]}",
+             f"- place-name rule vs geometry: {lr['correct']}/{lr['applies']} correct ({lr['accuracy']})",
              f"- boundary cities with at least one precinct: {summary['boundary_cities_with_precincts']} of {summary['boundary_cities']}",
-             f"- countywide blocks: {len(sumchecks)}; vote totals equal the printed GRAND TOTAL in all: **{summary['countywide_all_match']}**",
-             f"- biggest unincorporated-or-unknown places (ballots, first countywide contest): {summary['top_unassigned_in_first_countywide_block']}"]
+             f"- countywide blocks: {len(sumchecks)}; vote totals equal the printed GRAND TOTAL in all: **{summary['countywide_all_match']}**"]
     (out / "summary.md").write_text("\n".join(lines) + "\n")
     return summary
 
@@ -277,6 +236,6 @@ def pdf_text(pdf):
 
 
 if __name__ == "__main__":
-    pdf, layer_csv, boundary, out_dir = sys.argv[1:5]
-    s = run(pdf_text(pdf), layer_csv, boundary, out_dir)
+    pdf, geo_csv, boundary, out_dir = sys.argv[1:5]
+    run(pdf_text(pdf), geo_csv, boundary, out_dir)
     print((Path(out_dir) / "summary.md").read_text())
