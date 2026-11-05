@@ -132,6 +132,26 @@ def assign_all(blocks, geo, boundary):
                    "location_applies": len(loc_applies), "location_correct": loc_correct, "straddling": straddling}
 
 
+def city_reconciliation(blocks, boundary, geo_registration):
+    """For each city with contests in the file, compare the registration its own contests report with the registration of the
+    precincts the geometry put in that city. Reference = the most common registration among the city's larger contests (a
+    district-only or wider contest differs from it and is outvoted); ties go to the larger number."""
+    by_city = defaultdict(list)
+    for b in blocks:
+        city = city_from_title(b["title"], boundary)
+        if city and b["precincts"]:
+            grand = b["totals"].get("GRAND TOTAL")
+            by_city[city].append((grand[0] if grand else sum(r["registration"] for r in b["precincts"]), b["title"]))
+    rows = []
+    for city, items in sorted(by_city.items()):
+        top = max(reg for reg, _ in items)
+        ref = max(Counter(reg for reg, _ in items if reg >= 0.5 * top).items(), key=lambda kv: (kv[1], kv[0]))[0]
+        geo = geo_registration.get(city, 0)
+        rows.append({"city": city, "contests": len(items), "reference_registration": ref, "largest_contest_registration": top,
+                     "geometric_registration": geo, "difference_pct": round(100 * (geo - ref) / ref, 2) if ref else None})
+    return rows
+
+
 def aggregate_by_city(block, table):
     """Sum a block's precincts by assigned city. Also tracks ballots by assignment method."""
     out = defaultdict(lambda: {"registration": 0, "ballots": 0, "votes": None, "precincts": 0, "by_method": Counter()})
@@ -166,8 +186,11 @@ def run(text, geo_csv, boundary_geojson, out_dir):
         c["precinct_share"] = b["precinct_share"]
 
     rows, sumchecks = [], []
-    for b in county:
+    geo_registration = {}
+    for k, b in enumerate(county):
         agg = aggregate_by_city(b, table)
+        if k == 0:
+            geo_registration = {c: v["registration"] for c, v in agg.items()}
         width = max(len(v["votes"]) for v in agg.values())
         summed = [sum(v["votes"][i] for v in agg.values()) for i in range(width)]
         printed = b["totals"].get("GRAND TOTAL")
@@ -194,6 +217,9 @@ def run(text, geo_csv, boundary_geojson, out_dir):
           ["geometric_city", "contest_city", "precincts"])
     write("countywide_by_city.csv", rows, ["seq", "title", "city", "precincts", "registration", "ballots", "ballots_geo", "ballots_fallback"]
           + [f"choice_{i + 1}" for i in range(maxc)])
+    recon = city_reconciliation(blocks, boundary, geo_registration)
+    write("city_reconciliation.csv", recon, ["city", "contests", "reference_registration", "largest_contest_registration",
+                                             "geometric_registration", "difference_pct"])
     write("countywide_checks.csv", [{**x, "printed_votes": json.dumps(x["printed_votes"]), "summed_votes": json.dumps(x["summed_votes"])} for x in sumchecks],
           ["seq", "title", "choices", "printed_votes", "summed_votes", "votes_match_printed", "share_fallback"])
 
@@ -210,6 +236,11 @@ def run(text, geo_csv, boundary_geojson, out_dir):
         "location_rule_vs_geometry": {"applies": diag["location_applies"], "correct": diag["location_correct"],
                                       "accuracy": rate(diag["location_correct"], diag["location_applies"])},
         "contests_where_a_precinct_is_in_two_cities": len(diag["conflicts"]),
+        "reconciliation": {"cities": len(recon),
+                           "within_1pct": sum(1 for r in recon if r["difference_pct"] is not None and abs(r["difference_pct"]) <= 1),
+                           "within_5pct": sum(1 for r in recon if r["difference_pct"] is not None and abs(r["difference_pct"]) <= 5),
+                           "largest_differences": [(r["city"], r["difference_pct"]) for r in sorted(
+                               recon, key=lambda r: -abs(r["difference_pct"] or 0))[:10]]},
         "boundary_cities": len(boundary),
         "boundary_cities_with_precincts": len({t["city"] for t in table.values() if t["city"] in boundary.values()}),
         "countywide_blocks": [{"seq": x["seq"], "title": x["title"], "match": x["votes_match_printed"], "share_fallback": x["share_fallback"]} for x in sumchecks],
@@ -222,6 +253,9 @@ def run(text, geo_csv, boundary_geojson, out_dir):
              f"- unique precincts: {len(table):,}; assigned by: {dict(methods)}",
              f"- precincts under 90% inside their city (straddle a city line): {diag['straddling']}",
              f"- contest evidence vs geometry: {cv['agree']}/{cv['precincts_compared']} agree ({cv['agreement']}); top disagreements (geometry, contest, n): {cv['top_disagreements'][:6]}",
+             f"- registration in each city's own contests vs the geometric city: {summary['reconciliation']['within_1pct']} of "
+             f"{summary['reconciliation']['cities']} within 1%, {summary['reconciliation']['within_5pct']} within 5%; largest differences: "
+             f"{summary['reconciliation']['largest_differences'][:6]}",
              f"- place-name rule vs geometry: {lr['correct']}/{lr['applies']} correct ({lr['accuracy']})",
              f"- boundary cities with at least one precinct: {summary['boundary_cities_with_precincts']} of {summary['boundary_cities']}",
              f"- countywide blocks: {len(sumchecks)}; vote totals equal the printed GRAND TOTAL in all: **{summary['countywide_all_match']}**"]

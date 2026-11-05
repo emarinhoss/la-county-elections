@@ -151,7 +151,12 @@ def test_full_run_checks_sums_against_printed_totals(tmp_path):
     assert only["match"] is True  # every group (cities and unincorporated places) adds up to the printed GRAND TOTAL
     rows = list(csv.DictReader(open(tmp_path / "out" / "countywide_by_city.csv")))
     assert {r["city"] for r in rows} == {"Carson", "Los Angeles", "Lomita", UNINC + "LENNOX", UNINC + "WEST ATHENS"}
-    for name in ("summary.md", "precinct_city.csv", "geo_vs_contest.csv"):
+    recon = {r["city"]: r for r in csv.DictReader(open(tmp_path / "out" / "city_reconciliation.csv"))}
+    assert recon["Carson"]["reference_registration"] == "500" and recon["Carson"]["geometric_registration"] == "700"  # 2 shape-only precincts
+    assert recon["Carson"]["difference_pct"] == "40.0"
+    assert recon["Los Angeles"]["reference_registration"] == "200" and recon["Los Angeles"]["geometric_registration"] == "200"
+    assert summary["reconciliation"]["cities"] == 2 and summary["reconciliation"]["within_1pct"] == 1
+    for name in ("summary.md", "precinct_city.csv", "geo_vs_contest.csv", "city_reconciliation.csv"):
         assert (tmp_path / "out" / name).exists()
 
 

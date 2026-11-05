@@ -165,3 +165,25 @@ Collector fixes found on the way (county API behaviour): it returns the same row
 re-stamps its structure data every few minutes with nothing else changed, so byte comparison saved duplicate snapshots. The
 collector now compares an order-independent form (`canonical_json`) and ignores the county's `TimeStamp` for the two
 structure endpoints (`ignore_keys`). The history chart drops consecutive repeated tallies.
+
+### Rehearsal run 3 (city from geometry): results and one bug (Nov 5, 2026)
+
+Checks that do not depend on the geometry itself:
+- Los Angeles: geometry put exactly 805 precincts in the city, the same number the five unambiguous Los Angeles measures list.
+  Measure LL lists 986 (it is wider than the city), which the old approaches could not tell apart.
+- Carson: 26 precincts, registration 63,516, the same as the sum of its own mayor contest's precinct rows.
+- Place-name rule vs geometry: 2,103 of 2,110 precincts agree (99.7%).
+- Contest listing vs geometry: 1,656 of 1,768 agree (93.7%). The disagreements are almost all the wide Measure LL listing
+  unincorporated precincts (77) and parts of Gardena, Huntington Park, Bell and Beverly Hills (26) under "Los Angeles".
+- 2,115 of 2,580 precincts (82%) had a shape match by exact id and 52 by 7-digit base; 17 were not in the 2026 layer and fell
+  back to place names (8) or "UNASSIGNED" (9). That is a 2024-file vs 2026-layer effect; the 2026 file should match better.
+- All 21 countywide contests: vote totals equal the printed GRAND TOTAL exactly.
+
+Bug found by looking for the one boundary city with no precincts (Signal Hill, 87 of 88): the county's Long Beach polygon contains
+all of Signal Hill with no hole cut out, so a Signal Hill precinct was covered completely by both cities and Long Beach won the tie.
+Place name and the city's own contest both said Signal Hill. Fixed: when several cities each cover at least half a precinct,
+the smallest wins (and the tool prints a note for every overlapping pair; Long Beach / Signal Hill is the only one). The
+committed run-3 output in `data/rehearsal/` has Signal Hill missing and Long Beach 5 precincts too high until the next run.
+
+Added: `city_reconciliation.csv`, which compares each city's own-contest registration with the registration of the precincts the
+geometry assigned to it, so mismatches show up without manual inspection.

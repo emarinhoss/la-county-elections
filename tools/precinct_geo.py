@@ -1,7 +1,8 @@
 """Find each precinct's city from its SHAPE, using the county precinct layer and the county city-boundary layer.
 
-A precinct is assigned to the city polygon that covers the largest share of it. If no city covers at least half of it,
-it is unincorporated (blank city). This does not depend on contest titles, city codes or place names, so it is the
+A precinct is assigned to a city polygon that covers at least half of it. If several qualify (the county's Long Beach polygon
+contains all of Signal Hill with no hole, so both cover a Signal Hill precinct completely), the SMALLEST city wins: it is the
+more specific one. If no city covers at least half of it, the precinct is unincorporated (blank city). This does not depend on contest titles, city codes or place names, so it is the
 reference the other signals are checked against.
 
 Output CSV: PRECINCT, city (blank = unincorporated), overlap_share (share of the precinct inside that city; 0 if none).
@@ -64,8 +65,21 @@ def city_polygons(boundary_geojson):
     return {name: unary_union(g) for name, g in pieces.items()}
 
 
+def overlapping_pairs(cities, min_share=0.2):
+    """[(share of the smaller city, name, name)] for city polygons that overlap. Normally empty or an enclave like Signal Hill."""
+    names = sorted(cities)
+    out = []
+    for i, a in enumerate(names):
+        for b in names[i + 1:]:
+            if cities[a].intersects(cities[b]):
+                share = cities[a].intersection(cities[b]).area / min(cities[a].area, cities[b].area)
+                if share > min_share:
+                    out.append((round(share, 3), a, b))
+    return sorted(out, reverse=True)
+
+
 def assign_cities(features, cities):
-    """[(precinct, city or '', overlap_share)] using the largest-overlap rule."""
+    """[(precinct, city or '', overlap_share)]: the smallest city covering at least half of the precinct, else unincorporated."""
     names = list(cities)
     geoms = [cities[n] for n in names]
     tree = STRtree(geoms)
@@ -75,21 +89,22 @@ def assign_cities(features, cities):
         if not poly.is_valid:
             poly = poly.buffer(0)
         area = poly.area
-        best, best_share = "", 0.0
+        best, best_share, best_area = "", 0.0, None
         if area > 0:
             for i in tree.query(poly, predicate="intersects"):
                 share = poly.intersection(geoms[i]).area / area
-                if share > best_share:
-                    best, best_share = names[i], share
-        if best_share < MIN_SHARE:
-            best = ""
-        out.append((f["properties"]["PRECINCT"], best, round(best_share if best else 0.0, 4)))
+                if share >= MIN_SHARE and (best_area is None or geoms[i].area < best_area):
+                    best, best_share, best_area = names[i], share, geoms[i].area
+        out.append((f["properties"]["PRECINCT"], best, round(best_share, 4)))
     return out
 
 
 if __name__ == "__main__":
     boundary, out_csv = sys.argv[1:3]
-    rows = assign_cities(download_polygons(), city_polygons(boundary))
+    cities = city_polygons(boundary)
+    for share, a, b in overlapping_pairs(cities):
+        print(f"NOTE: city polygons overlap: {a} / {b} ({share:.0%} of the smaller); the smaller city wins for precincts inside both")
+    rows = assign_cities(download_polygons(), cities)
     with open(out_csv, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["PRECINCT", "city", "overlap_share"])

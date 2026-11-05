@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from tools.precinct_geo import PAGE, assign_cities, city_polygons, download_polygons
+from tools.precinct_geo import PAGE, assign_cities, city_polygons, download_polygons, overlapping_pairs
 
 
 def box(x0, y0, x1, y1):
@@ -48,6 +48,19 @@ def test_a_precinct_needs_at_least_half_of_itself_inside_a_city(tmp_path):
     assert assign_one(c, "half", box(8, 1, 28, 3)) == ("Beta", 0.5)
     # x 9.5..32 is 22.5 wide: 0.5 in Alpha, 10 in Beta, 12 outside -> Beta covers 44%: unincorporated
     assert assign_one(c, "under half", box(9.5, 1, 32, 3)) == ("", 0.0)
+
+
+def test_enclave_inside_a_bigger_city_polygon_gets_its_own_precincts():
+    from shapely.geometry import shape
+    # like Long Beach and Signal Hill: the big city's polygon has no hole where the small city is
+    cities = {"Big": shape(box(0, 0, 10, 10)), "Small": shape(box(4, 4, 6, 6))}
+    assert assign_one(cities, "inside the small city", box(4.5, 4.5, 5.5, 5.5)) == ("Small", 1.0)
+    assert assign_one(cities, "next to it, in the big city", box(1, 1, 3, 3)) == ("Big", 1.0)
+    # x 2.5..4.5 is 2 wide and only 0.5 of it (25%) is inside the small city: it stays with the big city
+    assert assign_one(cities, "mostly outside the small city", box(2.5, 4, 4.5, 6)) == ("Big", 1.0)
+    # exactly half inside the small city counts as inside it
+    assert assign_one(cities, "half inside the small city", box(3, 4, 5, 6)) == ("Small", 0.5)
+    assert overlapping_pairs(cities) == [(1.0, "Big", "Small")]
 
 
 def fake_layer(n):
