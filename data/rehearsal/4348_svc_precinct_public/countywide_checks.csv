@@ -1,51 +1,51 @@
-seq,title,choices,printed_votes,summed_votes,votes_match_printed,share_fallback
-360,SHERIFF,2,"[1330305, 610722]","[1330305, 610722]",True,0.0004
-361,JUDGE OF THE SUPERIOR COURT Office No. 64,2,"[804035, 947708]","[804035, 947708]",True,0.0004
-362,JUDGE OF THE SUPERIOR COURT Office No. 65,2,"[927162, 746690]","[927162, 746690]",True,0.0004
-363,JUDGE OF THE SUPERIOR COURT Office No. 87,2,"[766578, 915471]","[766578, 915471]",True,0.0004
-364,JUDGE OF THE SUPERIOR COURT Office No. 131,2,"[777535, 858991]","[777535, 858991]",True,0.0004
-365,COUNTY MEASURE A,2,"[1195663, 657265]","[1195663, 657265]",True,0.0004
-366,COUNTY MEASURE E,2,"[1333348, 496532]","[1333348, 496532]",True,0.0004
-367,Voter Nominated :,2,"[609710, 1494119]","[609710, 1494119]",True,0.0004
-368,Voter Nominated :,2,"[608461, 1462941]","[608461, 1462941]",True,0.0004
-369,Voter Nominated :,2,"[579997, 1486829]","[579997, 1486829]",True,0.0004
-370,Voter Nominated :,2,"[1459223, 596843]","[1459223, 596843]",True,0.0004
-371,Voter Nominated :,2,"[590767, 1464180]","[590767, 1464180]",True,0.0004
-372,Voter Nominated :,2,"[1468234, 596173]","[1468234, 596173]",True,0.0004
-373,Voter Nominated :,2,"[990076, 866946]","[990076, 866946]",True,0.0004
-374,Voter Nominated :,2,"[707225, 1038370]","[707225, 1038370]",True,0.0004
-375,Los Angeles County Results Only SUPERINTENDENT OF PUBLIC INSTRUCTION,2,"[686199, 1138856]","[686199, 1138856]",True,0.0004
-376,Los Angeles County Results Only STATE MEASURE 1,2,"[1327043, 713702]","[1327043, 713702]",True,0.0004
-377,Los Angeles County Results Only STATE MEASURE 2,2,"[1362381, 677955]","[1362381, 677955]",True,0.0004
-378,Los Angeles County Results Only STATE MEASURE 3,2,"[1315529, 740108]","[1315529, 740108]",True,0.0004
-379,Los Angeles County Results Only STATE MEASURE 4,2,"[1091741, 915653]","[1091741, 915653]",True,0.0004
-380,Los Angeles County Results Only STATE MEASURE 5,2,"[1116894, 843472]","[1116894, 843472]",True,0.0004
-381,Los Angeles County Results Only STATE MEASURE 37,2,"[1324571, 703186]","[1324571, 703186]",True,0.0004
-382,Los Angeles County Results Only STATE MEASURE 38,2,"[1106838, 928796]","[1106838, 928796]",True,0.0004
-383,Los Angeles County Results Only STATE MEASURE 39,2,"[735625, 1331399]","[735625, 1331399]",True,0.0004
-384,Los Angeles County Results Only STATE MEASURE 40,2,"[1059361, 1014016]","[1059361, 1014016]",True,0.0004
-385,Los Angeles County Results Only STATE MEASURE 41,2,"[851169, 1183457]","[851169, 1183457]",True,0.0004
-386,Los Angeles County Results Only STATE MEASURE 42,2,"[997993, 1059509]","[997993, 1059509]",True,0.0004
-387,Los Angeles County Results Only STATE MEASURE 43,2,"[797051, 1223859]","[797051, 1223859]",True,0.0004
-388,Los Angeles County Results Only STATE MEASURE 44,2,"[373396, 1646374]","[373396, 1646374]",True,0.0004
-389,Los Angeles County Results Only STATE MEASURE 45,2,"[838889, 1170253]","[838889, 1170253]",True,0.0004
-390,For Associate Justice of the Supreme Court Shall Associate Justice of the Supreme Court JOSHUA GROBAN be elected to the,2,"[1211441, 435587]","[1211441, 435587]",True,0.0004
-391,For Associate Justice of the Supreme Court Shall Associate Justice of the Supreme Court KELLI M. EVANS be elected to the,2,"[1238400, 403191]","[1238400, 403191]",True,0.0004
-392,"For Presiding Justice, Court of Appeal, Second District, Division Three Shall Presiding Justice RASHIDA A. ADAMS be elected",2,"[1214539, 408650]","[1214539, 408650]",True,0.0004
-393,"For Presiding Justice, Court of Appeal, Second District, Division Four Shall Presiding Justice HELEN ZUKIN be elected to",2,"[1186343, 417143]","[1186343, 417143]",True,0.0004
-394,"For Presiding Justice, Court of Appeal, Second District, Division Five Shall Presiding Justice BRIAN M. HOFFSTADT be",2,"[1078518, 505189]","[1078518, 505189]",True,0.0004
-395,"For Presiding Justice, Court of Appeal, Second District, Division Six Shall Presiding Justice TARI L. CODY be elected to",2,"[1197068, 385046]","[1197068, 385046]",True,0.0004
-396,"For Presiding Justice, Court of Appeal, Second District, Division Seven Shall Presiding Justice GONZALO C. MARTINEZ be",2,"[1191271, 389595]","[1191271, 389595]",True,0.0004
-397,"For Associate Justice, Court of Appeal, Second District, Division One Shall Associate Justice MICHELLE C. KIM be elected to",2,"[1208320, 375278]","[1208320, 375278]",True,0.0004
-398,"For Associate Justice, Court of Appeal, Second District, Division One Shall Associate Justice GREGORY J. WEINGART be",2,"[1050386, 508930]","[1050386, 508930]",True,0.0004
-399,"For Associate Justice, Court of Appeal, Second District, Division Two Shall Associate Justice ANNE RICHARDSON be elected to",2,"[1210006, 359427]","[1210006, 359427]",True,0.0004
-400,"For Associate Justice, Court of Appeal, Second District, Division Two Shall Associate Justice STEVE GOORVITCH be elected to",2,"[1020758, 529538]","[1020758, 529538]",True,0.0004
-401,"For Associate Justice, Court of Appeal, Second District, Division Three Shall Associate Justice MARK HANASONO be elected to",2,"[1165862, 391890]","[1165862, 391890]",True,0.0004
-402,"For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice NICHOLAS DAUM be elected to",2,"[1095489, 450975]","[1095489, 450975]",True,0.0004
-403,"For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice AUDRA M. MORI be elected to",2,"[1127236, 427438]","[1127236, 427438]",True,0.0004
-404,"For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice ARMEN TAMZARIAN be elected",2,"[1082269, 473282]","[1082269, 473282]",True,0.0004
-405,"For Associate Justice, Court of Appeal, Second District, Division Six Shall Associate Justice KENNETH R. YEGAN be elected",2,"[1026642, 522071]","[1026642, 522071]",True,0.0004
-406,"For Associate Justice, Court of Appeal, Second District, Division Seven Shall Associate Justice NATALIE STONE be elected to",2,"[1170851, 381924]","[1170851, 381924]",True,0.0004
-407,"For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice JOHN WILEY be elected to",2,"[1069777, 475350]","[1069777, 475350]",True,0.0004
-408,"For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice MATTHEW A. SCHERB be",2,"[1131098, 413671]","[1131098, 413671]",True,0.0004
-409,"For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice VICTOR G. VIRAMONTES be",2,"[1176658, 387215]","[1176658, 387215]",True,0.0004
+seq,title,header,status,choices,printed_votes,summed_votes,votes_match_printed,share_fallback
+360,SHERIFF,SHERIFF ROBERT G LUNA ALEX VILLANUEVA,SEMIFINAL OFFICIAL CANVASS V2,2,"[1330305, 610722]","[1330305, 610722]",True,0.0004
+361,JUDGE OF THE SUPERIOR COURT Office No. 64,JUDGE OF THE SUPERIOR COURT Office No. 64 RHONDA A HAYMON MARIA GHOBADI,SEMIFINAL OFFICIAL CANVASS V2,2,"[804035, 947708]","[804035, 947708]",True,0.0004
+362,JUDGE OF THE SUPERIOR COURT Office No. 65,JUDGE OF THE SUPERIOR COURT Office No. 65 JUSTIN A CLAYTON ANNA S REITANO,SEMIFINAL OFFICIAL CANVASS V2,2,"[927162, 746690]","[927162, 746690]",True,0.0004
+363,JUDGE OF THE SUPERIOR COURT Office No. 87,JUDGE OF THE SUPERIOR COURT Office No. 87 ANTHONY BAYNE DAVID DEJUTE,SEMIFINAL OFFICIAL CANVASS V2,2,"[766578, 915471]","[766578, 915471]",True,0.0004
+364,JUDGE OF THE SUPERIOR COURT Office No. 131,JUDGE OF THE SUPERIOR COURT Office No. 131 DONNA TRYFMAN DAVID ROSS,SEMIFINAL OFFICIAL CANVASS V2,2,"[777535, 858991]","[777535, 858991]",True,0.0004
+365,COUNTY MEASURE A,COUNTY MEASURE A,SEMIFINAL OFFICIAL CANVASS V2,2,"[1195663, 657265]","[1195663, 657265]",True,0.0004
+366,COUNTY MEASURE E,COUNTY MEASURE E,SEMIFINAL OFFICIAL CANVASS V2,2,"[1333348, 496532]","[1333348, 496532]",True,0.0004
+367,Voter Nominated :,Voter Nominated : GOVERNOR Los Angeles County Results Only XAVIER BECERRA STEVE HILTON,SEMIFINAL OFFICIAL CANVASS V2,2,"[609710, 1494119]","[609710, 1494119]",True,0.0004
+368,Voter Nominated :,Voter Nominated : LIEUTENANT GOVERNOR Los Angeles County Results Only GLORIA ROMERO,SEMIFINAL OFFICIAL CANVASS V2,2,"[608461, 1462941]","[608461, 1462941]",True,0.0004
+369,Voter Nominated :,Voter Nominated : SECRETARY OF STATE Los Angeles County Results Only DONALD P WAGNER SHIRLEY N WEBER,SEMIFINAL OFFICIAL CANVASS V2,2,"[579997, 1486829]","[579997, 1486829]",True,0.0004
+370,Voter Nominated :,Voter Nominated : CONTROLLER Los Angeles County Results Only MALIA M COHEN HERB W MORGAN,SEMIFINAL OFFICIAL CANVASS V2,2,"[1459223, 596843]","[1459223, 596843]",True,0.0004
+371,Voter Nominated :,Voter Nominated : TREASURER Los Angeles County Results Only JENNIFER HAWKS ELENI KOUNALAKIS,SEMIFINAL OFFICIAL CANVASS V2,2,"[590767, 1464180]","[590767, 1464180]",True,0.0004
+372,Voter Nominated :,Voter Nominated : ATTORNEY GENERAL Los Angeles County Results Only MICHAEL E GATES,SEMIFINAL OFFICIAL CANVASS V2,2,"[1468234, 596173]","[1468234, 596173]",True,0.0004
+373,Voter Nominated :,Voter Nominated : INSURANCE COMMISSIONER Los Angeles County Results Only,SEMIFINAL OFFICIAL CANVASS V2,2,"[990076, 866946]","[990076, 866946]",True,0.0004
+374,Voter Nominated :,Voter Nominated : MEMBER STATE BOARD OF EQUALIZATION 3rd District SAMUEL P SUKATON MIKE GIPSON,SEMIFINAL OFFICIAL CANVASS V2,2,"[707225, 1038370]","[707225, 1038370]",True,0.0004
+375,Los Angeles County Results Only SUPERINTENDENT OF PUBLIC INSTRUCTION,Los Angeles County Results Only SUPERINTENDENT OF PUBLIC INSTRUCTION RICHARD BARRERA SONJA SHAW,SEMIFINAL OFFICIAL CANVASS V2,2,"[686199, 1138856]","[686199, 1138856]",True,0.0004
+376,Los Angeles County Results Only STATE MEASURE 1,Los Angeles County Results Only STATE MEASURE 1,SEMIFINAL OFFICIAL CANVASS V2,2,"[1327043, 713702]","[1327043, 713702]",True,0.0004
+377,Los Angeles County Results Only STATE MEASURE 2,Los Angeles County Results Only STATE MEASURE 2,SEMIFINAL OFFICIAL CANVASS V2,2,"[1362381, 677955]","[1362381, 677955]",True,0.0004
+378,Los Angeles County Results Only STATE MEASURE 3,Los Angeles County Results Only STATE MEASURE 3,SEMIFINAL OFFICIAL CANVASS V2,2,"[1315529, 740108]","[1315529, 740108]",True,0.0004
+379,Los Angeles County Results Only STATE MEASURE 4,Los Angeles County Results Only STATE MEASURE 4,SEMIFINAL OFFICIAL CANVASS V2,2,"[1091741, 915653]","[1091741, 915653]",True,0.0004
+380,Los Angeles County Results Only STATE MEASURE 5,Los Angeles County Results Only STATE MEASURE 5,SEMIFINAL OFFICIAL CANVASS V2,2,"[1116894, 843472]","[1116894, 843472]",True,0.0004
+381,Los Angeles County Results Only STATE MEASURE 37,Los Angeles County Results Only STATE MEASURE 37,SEMIFINAL OFFICIAL CANVASS V2,2,"[1324571, 703186]","[1324571, 703186]",True,0.0004
+382,Los Angeles County Results Only STATE MEASURE 38,Los Angeles County Results Only STATE MEASURE 38,SEMIFINAL OFFICIAL CANVASS V2,2,"[1106838, 928796]","[1106838, 928796]",True,0.0004
+383,Los Angeles County Results Only STATE MEASURE 39,Los Angeles County Results Only STATE MEASURE 39,SEMIFINAL OFFICIAL CANVASS V2,2,"[735625, 1331399]","[735625, 1331399]",True,0.0004
+384,Los Angeles County Results Only STATE MEASURE 40,Los Angeles County Results Only STATE MEASURE 40,SEMIFINAL OFFICIAL CANVASS V2,2,"[1059361, 1014016]","[1059361, 1014016]",True,0.0004
+385,Los Angeles County Results Only STATE MEASURE 41,Los Angeles County Results Only STATE MEASURE 41,SEMIFINAL OFFICIAL CANVASS V2,2,"[851169, 1183457]","[851169, 1183457]",True,0.0004
+386,Los Angeles County Results Only STATE MEASURE 42,Los Angeles County Results Only STATE MEASURE 42,SEMIFINAL OFFICIAL CANVASS V2,2,"[997993, 1059509]","[997993, 1059509]",True,0.0004
+387,Los Angeles County Results Only STATE MEASURE 43,Los Angeles County Results Only STATE MEASURE 43,SEMIFINAL OFFICIAL CANVASS V2,2,"[797051, 1223859]","[797051, 1223859]",True,0.0004
+388,Los Angeles County Results Only STATE MEASURE 44,Los Angeles County Results Only STATE MEASURE 44,SEMIFINAL OFFICIAL CANVASS V2,2,"[373396, 1646374]","[373396, 1646374]",True,0.0004
+389,Los Angeles County Results Only STATE MEASURE 45,Los Angeles County Results Only STATE MEASURE 45,SEMIFINAL OFFICIAL CANVASS V2,2,"[838889, 1170253]","[838889, 1170253]",True,0.0004
+390,For Associate Justice of the Supreme Court Shall Associate Justice of the Supreme Court JOSHUA GROBAN be elected to the,For Associate Justice of the Supreme Court Shall Associate Justice of the Supreme Court JOSHUA GROBAN be elected to the Los Angeles County Results Only office for the term provided by law?,SEMIFINAL OFFICIAL CANVASS V2,2,"[1211441, 435587]","[1211441, 435587]",True,0.0004
+391,For Associate Justice of the Supreme Court Shall Associate Justice of the Supreme Court KELLI M. EVANS be elected to the,For Associate Justice of the Supreme Court Shall Associate Justice of the Supreme Court KELLI M. EVANS be elected to the Los Angeles County Results Only office for the term provided by law?,SEMIFINAL OFFICIAL CANVASS V2,2,"[1238400, 403191]","[1238400, 403191]",True,0.0004
+392,"For Presiding Justice, Court of Appeal, Second District, Division Three Shall Presiding Justice RASHIDA A. ADAMS be elected","For Presiding Justice, Court of Appeal, Second District, Division Three Shall Presiding Justice RASHIDA A. ADAMS be elected Los Angeles County Results Only to the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1214539, 408650]","[1214539, 408650]",True,0.0004
+393,"For Presiding Justice, Court of Appeal, Second District, Division Four Shall Presiding Justice HELEN ZUKIN be elected to","For Presiding Justice, Court of Appeal, Second District, Division Four Shall Presiding Justice HELEN ZUKIN be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1186343, 417143]","[1186343, 417143]",True,0.0004
+394,"For Presiding Justice, Court of Appeal, Second District, Division Five Shall Presiding Justice BRIAN M. HOFFSTADT be","For Presiding Justice, Court of Appeal, Second District, Division Five Shall Presiding Justice BRIAN M. HOFFSTADT be Los Angeles County Results Only elected to the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1078518, 505189]","[1078518, 505189]",True,0.0004
+395,"For Presiding Justice, Court of Appeal, Second District, Division Six Shall Presiding Justice TARI L. CODY be elected to","For Presiding Justice, Court of Appeal, Second District, Division Six Shall Presiding Justice TARI L. CODY be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1197068, 385046]","[1197068, 385046]",True,0.0004
+396,"For Presiding Justice, Court of Appeal, Second District, Division Seven Shall Presiding Justice GONZALO C. MARTINEZ be","For Presiding Justice, Court of Appeal, Second District, Division Seven Shall Presiding Justice GONZALO C. MARTINEZ be Los Angeles County Results Only elected to the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1191271, 389595]","[1191271, 389595]",True,0.0004
+397,"For Associate Justice, Court of Appeal, Second District, Division One Shall Associate Justice MICHELLE C. KIM be elected to","For Associate Justice, Court of Appeal, Second District, Division One Shall Associate Justice MICHELLE C. KIM be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1208320, 375278]","[1208320, 375278]",True,0.0004
+398,"For Associate Justice, Court of Appeal, Second District, Division One Shall Associate Justice GREGORY J. WEINGART be","For Associate Justice, Court of Appeal, Second District, Division One Shall Associate Justice GREGORY J. WEINGART be Los Angeles County Results Only elected to the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1050386, 508930]","[1050386, 508930]",True,0.0004
+399,"For Associate Justice, Court of Appeal, Second District, Division Two Shall Associate Justice ANNE RICHARDSON be elected to","For Associate Justice, Court of Appeal, Second District, Division Two Shall Associate Justice ANNE RICHARDSON be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1210006, 359427]","[1210006, 359427]",True,0.0004
+400,"For Associate Justice, Court of Appeal, Second District, Division Two Shall Associate Justice STEVE GOORVITCH be elected to","For Associate Justice, Court of Appeal, Second District, Division Two Shall Associate Justice STEVE GOORVITCH be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1020758, 529538]","[1020758, 529538]",True,0.0004
+401,"For Associate Justice, Court of Appeal, Second District, Division Three Shall Associate Justice MARK HANASONO be elected to","For Associate Justice, Court of Appeal, Second District, Division Three Shall Associate Justice MARK HANASONO be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1165862, 391890]","[1165862, 391890]",True,0.0004
+402,"For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice NICHOLAS DAUM be elected to","For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice NICHOLAS DAUM be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1095489, 450975]","[1095489, 450975]",True,0.0004
+403,"For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice AUDRA M. MORI be elected to","For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice AUDRA M. MORI be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1127236, 427438]","[1127236, 427438]",True,0.0004
+404,"For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice ARMEN TAMZARIAN be elected","For Associate Justice, Court of Appeal, Second District, Division Four Shall Associate Justice ARMEN TAMZARIAN be elected Los Angeles County Results Only to the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1082269, 473282]","[1082269, 473282]",True,0.0004
+405,"For Associate Justice, Court of Appeal, Second District, Division Six Shall Associate Justice KENNETH R. YEGAN be elected","For Associate Justice, Court of Appeal, Second District, Division Six Shall Associate Justice KENNETH R. YEGAN be elected Los Angeles County Results Only to the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1026642, 522071]","[1026642, 522071]",True,0.0004
+406,"For Associate Justice, Court of Appeal, Second District, Division Seven Shall Associate Justice NATALIE STONE be elected to","For Associate Justice, Court of Appeal, Second District, Division Seven Shall Associate Justice NATALIE STONE be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1170851, 381924]","[1170851, 381924]",True,0.0004
+407,"For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice JOHN WILEY be elected to","For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice JOHN WILEY be elected to Los Angeles County Results Only the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1069777, 475350]","[1069777, 475350]",True,0.0004
+408,"For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice MATTHEW A. SCHERB be","For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice MATTHEW A. SCHERB be Los Angeles County Results Only elected to the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1131098, 413671]","[1131098, 413671]",True,0.0004
+409,"For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice VICTOR G. VIRAMONTES be","For Associate Justice, Court of Appeal, Second District, Division Eight Shall Associate Justice VICTOR G. VIRAMONTES be Los Angeles County Results Only elected to the office for the term provided by law?",SEMIFINAL OFFICIAL CANVASS V2,2,"[1176658, 387215]","[1176658, 387215]",True,0.0004

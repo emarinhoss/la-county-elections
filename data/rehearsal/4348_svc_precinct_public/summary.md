@@ -1,5 +1,6 @@
 ## SVC rehearsal (city from precinct geometry)
 - contest blocks parsed: **409** (0 with errors, 278 with notes)
+- the county labels this file: {'SEMIFINAL OFFICIAL CANVASS V2': 409}
 - unique precincts: 2,187; assigned by: {'geo': 1811, 'geo_unincorporated': 372, 'location': 4}
 - precincts under 90% inside their city (straddle a city line): 6
 - contest evidence vs geometry: 1283/1372 agree (0.9351); top disagreements (geometry, contest, n): [('(unincorporated)', 'Los Angeles', 60), ('Gardena', 'Los Angeles', 9), ('Bell', 'Los Angeles', 6), ('(unincorporated)', 'Whittier', 4), ('Lomita', 'Los Angeles', 3), ('San Fernando', 'Los Angeles', 3)]
