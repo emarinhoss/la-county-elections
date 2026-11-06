@@ -396,3 +396,17 @@ From `data/rehearsal/4348_svc_precinct_public/election_layer_match.json`:
   state and school measures. Titles that came from the ballot question (not a headline) read as the question itself ("Shall the ...").
   98 Python tests pass (5 for the extractor); browser checks pass on a local copy. Not verified: the live site, other browsers, phones.
 
+### Analysis 1: turnout by precinct (added Nov 6)
+
+- `site/js/analysis.js` (pure functions, tested by `tests/js/analysis.test.mjs` through `tests/test_js_analysis.py`): turnout per precinct =
+  ballots cast / registered voters. Ballots cast in a precinct = the most ballots any countywide contest recorded there. Checked on the
+  2026 file: the sum over precincts is 2,147,447 against the county's own ballots-counted of 2,147,243 at the same tally (0.01% apart);
+  Governor alone is lower in 669 of 2,187 precincts, so it would understate. Registration is identical across countywide contests.
+- File-wide: 36.4% (2,147,447 of 5,905,261 registered), at the Nov 4, 3:11 AM tally, so it trails the live count. Precinct range 9.3% to
+  105.6% (one precinct above 100%, registration likely out of date); 5th and 95th percentiles 24.7% and 49.8%.
+- Map mode "Turnout by precinct" (picker group "Precinct analyses", shown only when the precinct file exists): sequential colour from the 5th to the
+  95th percentile of precincts with >= 200 registered voters; tooltip; panel with the overall or selected city's turnout, and the five highest
+  and lowest precincts among those with >= 500 registered voters (a handful of voters cannot top a list). City totals reconcile with the
+  contest cards (Carson: 65,384 registered in both).
+- Not verified: the live site, other browsers, phones. Turnout is "among registered voters in the file", not an official figure.
+

@@ -1,12 +1,13 @@
 // The map view: color every city by one contest, search for a city, read the details in the side panel.
 import { h, num, pct, countyTime, icon, palette, mix, diverging, choiceColor, leaderIndex, titleCase } from "./util.js";
 import { S, cityName, getPrecincts } from "./store.js";
-import { combobox, contestCard, resultRows, measureTitleLine } from "./components.js";
+import { combobox, contestCard, resultRows, measureTitleLine, meter } from "./components.js";
+import { turnoutByPrecinct, turnoutOf, extremes, scale, MIN_RANK } from "./analysis.js";
 import { TOPICS, topicOf } from "./topics.js";
 import { navigate, hashFor } from "./router.js";
 
 const REFERENCE_POINT = [34.00929527935462, -118.32913315320754];   // a fixed reference dot, requested by the project owner
-let refDot = null;
+let refDot = null, turnout = null, precAvailable = false;
 let built = false, lastContest = null, lastPrecincts = null, map = null, layer = null, lineLayer = null, precLayer = null, prec = null, precLoading = false, precFailed = false, fitBounds = null, params = {}, els = {}, contestBox, cityBox;
 
 // ---- what is being shown ---------------------------------------------------------------------------------------------------
@@ -16,6 +17,7 @@ function defaultContest() {
 }
 function modeOf(p) {
   const v = p.contest || defaultContest();
+  if (v === "turnout") return { type: "turnout", value: "turnout" };
   if (v.startsWith("cw:") && S.cwById[v.slice(3)]) return { type: "cw", value: v, cw: S.cwById[v.slice(3)] };
   if (v.startsWith("c:") && S.byId["c" + v.slice(2)]) return { type: "city", value: v, contest: S.byId["c" + v.slice(2)] };
   return { type: "count", value: "count" };
@@ -31,6 +33,7 @@ function fillFor(contest, votes, P) {
   return mix(P.seqLo, P.seqHi, Math.min(share / 0.6, 1));
 }
 function cellFor(key, m, P) { // {fill, data}
+  if (m.type === "turnout") return { fill: P.nodata, data: false };   // the turnout map is coloured by precinct; cities only show their outline
   if (m.type === "count") { const c = S.cityByKey[key]; return c ? { fill: mix(P.seqLo, P.seqHi, Math.min((c.contests.length - 1) / 5, 1)), data: true } : { fill: P.nodata, data: false }; }
   if (m.type === "cw") { const e = m.cw.cities[key]; return e ? { fill: fillFor(m.cw, e.votes, P), data: true } : { fill: P.nodata, data: false }; }
   return key === m.contest.cityKey ? { fill: fillFor(m.contest, m.contest.choices.map((c) => c.votes), P), data: true } : { fill: P.nodata, data: false };
@@ -50,15 +53,26 @@ function contestFor(id) {
   return c && names && names.length === c.choices.length && names.every((n, i) => n === c.choices[i].name) ? c : null;
 }
 const hasPrecinctData = (m) => { const c = modeContest(m); return !!(c && prec && contestFor(c.id)); };
-const precinctsOn = (m) => params.precincts === "1" && hasPrecinctData(m);
+const precinctsOn = (m) => (m.type === "turnout" ? !!prec : params.precincts === "1" && hasPrecinctData(m));   // the turnout map is always by precinct
 const precinctRow = (m, id) => (prec && prec.votes[id] && modeContest(m) && prec.votes[id].v[String(modeContest(m).id)]) || null;   // [registration, ballots, votes...]
 function precinctStyle(feature) {
-  const P = palette(), m = modeOf(params), id = feature.properties.id, row = precinctRow(m, id), picked = id === params.precinct;
+  const P = palette(), m = modeOf(params), id = feature.properties.id, picked = id === params.precinct;
+  if (m.type === "turnout") {
+    const x = turnout && turnout.rows.get(id), ok = x && x.rate !== null;
+    return { fillColor: ok ? mix(P.seqLo, P.seqHi, scale(x.rate, turnout.lo, turnout.hi)) : P.nodata, fillOpacity: ok ? 0.95 : 0.5, color: picked ? P.text : P.line, weight: picked ? 2.5 : 0.3, opacity: 1 };
+  }
+  const row = precinctRow(m, id);
   const votes = row ? row.slice(2) : [];
   return { fillColor: row && row[1] > 0 ? fillFor(modeContest(m), votes, P) : P.nodata, fillOpacity: row && row[1] > 0 ? 0.95 : 0.5, color: picked ? P.text : P.line, weight: picked ? 2.5 : 0.3, opacity: 1 };
 }
 function precinctTooltip(feature) {
-  const m = modeOf(params), id = feature.properties.id, row = precinctRow(m, id), p = prec.votes[id];
+  const m = modeOf(params), id = feature.properties.id, p = prec.votes[id];
+  if (m.type === "turnout") {
+    const x = turnout && turnout.rows.get(id), box = h("div", {}, h("b", {}, `Precinct ${id}`), h("div", { class: "muted" }, p && p.city ? cityName(p.city) || "" : ""));
+    box.append(x && x.rate !== null ? h("div", {}, `${pct(x.rate)} turnout`) : h("div", { class: "muted" }, "No registered voters"), x ? h("div", { class: "muted" }, `${num(x.ballots)} of ${num(x.reg)} registered`) : null);
+    return box;
+  }
+  const row = precinctRow(m, id);
   const box = h("div", {}, h("b", {}, `Precinct ${id}`), h("div", { class: "muted" }, p && p.city ? cityName(p.city) || "" : ""));
   if (!row || !row[1]) { box.append(h("div", { class: "muted" }, "No ballots counted here")); return box; }
   const votes = row.slice(2), total = votes.reduce((a, b) => a + b, 0), i = votes.indexOf(Math.max(...votes));
@@ -82,7 +96,7 @@ function drawPrecincts() {
   const m = modeOf(params);
   if (!map || !precinctsOn(m)) return;
   precLayer = L.geoJSON(prec.shapes, {
-    filter: (f) => m.type === "cw" || !!precinctRow(m, f.properties.id),
+    filter: (f) => m.type === "cw" || m.type === "turnout" || !!precinctRow(m, f.properties.id),
     style: precinctStyle,
     onEachFeature: (f, lyr) => {
       lyr.bindTooltip(() => precinctTooltip(f), { sticky: true });
@@ -92,14 +106,16 @@ function drawPrecincts() {
   }).addTo(map);
 }
 async function ensurePrecincts() {
-  if (params.precincts !== "1" || prec || precLoading || precFailed) return;
+  if ((params.precincts !== "1" && modeOf(params).type !== "turnout") || prec || precLoading || precFailed) return;
   precLoading = true; renderToolbarState();
   prec = await getPrecincts(); precLoading = false; precFailed = !prec;
+  if (prec) turnout = turnoutByPrecinct(prec, S.cwList.map((c) => c.id));
   renderToolbarState(); update();
 }
 function renderToolbarState() {
   if (!els.precBtn || els.precBtn.hidden) { els.precNote.textContent = ""; return; }
   const m = modeOf(params), c = modeContest(m), b = els.precBtn, wanted = params.precincts === "1";
+  if (m.type === "turnout") { b.setAttribute("aria-pressed", "true"); b.disabled = true; b.title = "The turnout map is always shown by precinct"; els.precNote.textContent = precLoading ? "Loading precincts…" : precFailed ? "Precinct data has not been published to this site yet." : ""; return; }
   const missing = !!prec && !!c && !hasPrecinctData(m);          // loaded, but this contest is not in the precinct file
   b.setAttribute("aria-pressed", String(wanted && !missing)); b.disabled = !c || missing;
   b.title = !c ? "Pick a contest to see it by precinct" : missing ? "No precinct results for this contest" : "";
@@ -110,7 +126,10 @@ function tooltipFor(feature) {
   const m = modeOf(params), key = feature.properties.key, name = feature.properties.name === "Unincorporated" ? "Unincorporated areas" : feature.properties.name;
   const box = h("div", {}, h("b", {}, name));
   if (m.type === "count") { const c = S.cityByKey[key]; box.append(h("div", { class: "muted" }, c ? `${c.contests.length} city contest${c.contests.length === 1 ? "" : "s"}` : "No city contests")); }
-  else if (m.type === "cw") {
+  else if (m.type === "turnout") {
+    const t = turnout && turnoutOf(turnout, (x) => x.city === key);
+    box.append(t && t.n ? h("div", {}, `${pct(t.rate)} turnout`) : h("div", { class: "muted" }, "No precinct data"), t && t.n ? h("div", { class: "muted" }, `${num(t.ballots)} of ${num(t.reg)} registered`) : null);
+  } else if (m.type === "cw") {
     const e = m.cw.cities[key];
     if (!e) box.append(h("div", { class: "muted" }, "No precinct data"));
     else { const total = e.votes.reduce((s, v) => s + v, 0), i = e.votes.indexOf(Math.max(...e.votes)); box.append(h("div", {}, `${m.cw.choices[i].name} ${pct(total ? e.votes[i] / total : null)}`), h("div", { class: "muted" }, `${num(e.ballots)} ballots`)); }
@@ -125,6 +144,13 @@ function legendFor(m) {
   const P = palette(), box = h("div", { class: "map-legend" });
   const item = (color, text) => h("div", { class: "legend-item" }, h("span", { class: "key", style: { background: color } }), text);
   const ramp = (css, left, right, mid) => h("div", {}, h("div", { class: "ramp", style: { background: css } }), h("div", { class: "ramp-labels" }, h("span", {}, left), mid && h("span", {}, mid), h("span", {}, right)));
+  if (m.type === "turnout") {
+    box.append(h("div", { class: "title" }, "Turnout by precinct"));
+    if (turnout) box.append(ramp(`linear-gradient(90deg, ${P.seqLo}, ${P.seqHi})`, pct(turnout.lo, 0), pct(turnout.hi, 0)), h("div", { class: "note" }, "Ballots cast as a share of registered voters. The scale runs from the 5th to the 95th percentile of precincts."));
+    else box.append(h("div", { class: "note" }, "Loading…"));
+    box.append(item(P.nodata, "No registered voters"), h("div", { class: "legend-item" }, h("span", { class: "key", style: { background: "transparent", borderTop: `2px solid ${P.text}`, height: "0", borderRadius: "0" } }), "City boundary"));
+    return box;
+  }
   if (m.type === "count") box.append(h("div", { class: "title" }, "Cities with their own contests"), ramp(`linear-gradient(90deg, ${P.seqLo}, ${P.seqHi})`, "1 contest", "6 or more"), item(P.nodata, "No contests on this ballot"));
   else {
     const c = m.type === "cw" ? m.cw : m.contest, f = focusIndex(c);
@@ -159,6 +185,30 @@ function cwCity(cw, key) {
   card.append(h("details", { class: "more" }, h("summary", {}, "About these numbers"), h("p", { class: "note more-body" }, sourceNote())));
   return card;
 }
+// ---- turnout panel ----------------------------------------------------------------------------------------------------------------
+function turnoutCard(rate, reg, ballots, label) {
+  return h("div", { class: "inline-card accent" }, h("div", { class: "tag" }, label),
+    h("div", { class: "num", style: { fontSize: "34px", fontWeight: "680", letterSpacing: "-.02em", lineHeight: "1.1" } }, pct(rate)),
+    meter(rate || 0, "Share of registered voters who cast a ballot"),
+    h("div", { class: "contest-meta" }, h("span", {}, `${num(ballots)} ballots`), h("span", {}, `${num(reg)} registered`)));
+}
+function turnoutPanel(key) {
+  const box = els.panel, name = key ? cityName(key) : null;
+  if (!turnout) { box.append(h("h2", { class: "panel-title" }, "Turnout"), h("p", { class: "note" }, precFailed ? "Precinct data has not been published to this site yet." : "Loading precincts…")); return; }
+  const inCity = key ? (x) => x.city === key : null, t = turnoutOf(turnout, inCity), county = turnoutOf(turnout);
+  box.append(h("div", { class: "stack" }, h("h2", { class: "panel-title" }, name || "Turnout by precinct"),
+    key ? h("div", {}, h("a", { class: "btn small", href: hashFor("map", { contest: "turnout" }) }, "Clear selection")) : null));
+  box.append(turnoutCard(t.rate, t.reg, t.ballots, key ? `${name}: ${num(t.n)} precincts` : `All ${num(county.n)} precincts`));
+  if (key) box.append(h("p", { class: "note" }, `County overall in the same file: ${pct(county.rate)}.`));
+  const e = extremes(turnout, 5, inCity);
+  const list = (title, items) => h("div", { class: "stack" }, h("h3", { class: "section-title", style: { fontSize: "15px" } }, title),
+    h("div", { class: "rank-list" }, items.map((x) => h("a", { class: "rank-row", href: hashFor("map", { contest: "turnout", city: x.city, precinct: x.id }) },
+      h("span", {}, h("b", {}, x.id), h("small", {}, x.city ? cityName(x.city) || "" : "")), h("span", { class: "num" }, `${pct(x.rate)}`, h("small", {}, `${num(x.ballots)} of ${num(x.reg)}`))))));
+  if (e.eligible >= 2) box.append(list("Highest turnout", e.highest), list("Lowest turnout", e.lowest),
+    h("p", { class: "note" }, `Lists include precincts with at least ${num(MIN_RANK)} registered voters (${num(e.eligible)} ${key ? "here" : "in all"}), so a handful of voters cannot top them.`));
+  box.append(h("p", { class: "note" }, `Ballots cast in a precinct is the most ballots any countywide contest recorded there; across the county that matches the county's own ballots-counted at this tally to within 0.01%. From the county's precinct-level Statement of Votes Cast, at the tally of ${countyTime(((S.totals || {}).tally || {}).county_time)}, which trails the live count, so turnout will be higher once counting finishes. Turnout above 100% can occur where registration is out of date.`));
+  if (key && S.cityByKey[key]) box.append(h("h3", { class: "section-title", style: { fontSize: "15px" } }, `City contests in ${name}`, h("small", {}, String(S.cityByKey[key].contests.length))), ...S.cityByKey[key].contests.map((c) => contestCard(c, {})));
+}
 function precinctPanel(m, id) {
   const p = prec && prec.votes[id], box = els.panel, name = p && p.city ? cityName(p.city) : null;
   box.append(h("div", { class: "stack" }, h("p", { class: "tag" }, "Precinct"), h("h2", { class: "panel-title" }, id),
@@ -171,6 +221,10 @@ function precinctPanel(m, id) {
       row[1] ? resultRows(cw.choices.map((c, i) => ({ name: c.name, party: c.party, votes: votes[i], share: total ? votes[i] / total : null, color: choiceColor(cw, i) }))) : h("p", { class: "note" }, "No ballots counted in this precinct."),
       h("div", { class: "contest-meta" }, h("span", {}, `${num(row[1])} ballots`), h("span", {}, `${num(row[0])} registered`)));
   };
+  if (m.type === "turnout") {
+    const x = turnout && turnout.rows.get(id);
+    if (x) box.append(turnoutCard(x.rate, x.reg, x.ballots, "Turnout in this precinct"), h("p", { class: "note" }, `County overall in the same file: ${pct(turnoutOf(turnout).rate)}.`));
+  }
   const row = precinctRow(m, id), shown = modeContest(m);
   if (row && shown) box.append(one(shown, row, false));
   const others = Object.keys(p.v).map((cid) => contestFor(cid)).filter((c) => c && (!shown || c.id !== shown.id))
@@ -183,6 +237,7 @@ function renderPanel() {
   const m = modeOf(params), key = params.city || "", box = els.panel;
   box.replaceChildren();
   if (params.precinct && precinctsOn(m) && prec.votes[params.precinct]) { precinctPanel(m, params.precinct); return; }
+  if (m.type === "turnout") { turnoutPanel(key); return; }
   const name = key ? cityName(key) : null;
   if (!key || !name) {
     box.append(h("h2", { class: "panel-title" }, "Pick an area"));
@@ -214,6 +269,7 @@ function cityOptions() {
 }
 function contestGroups() {
   const groups = [{ label: "", options: [{ value: "count", label: "Which cities have their own contests" }] }];
+  if (precAvailable) groups.push({ label: "Precinct analyses", options: [{ value: "turnout", label: "Turnout by precinct" }] });
   if (S.cwList.length) {
     const by = {};
     for (const cw of S.cwList) (by[topicOf(cw.group)] ||= []).push(cw);
@@ -236,7 +292,7 @@ function build(root, ctx) {
   els.precNote = h("span", { class: "note", role: "status" });
   els.precBtn = h("button", { class: "chip", type: "button", "aria-pressed": "false", hidden: true, onclick: () => navigate("map", { contest: params.contest, city: params.city, precincts: params.precincts === "1" ? "" : "1" }) }, icon("pin", 14), "Precincts");
   // The precinct layer is only offered when the site was built with precinct data (see sitegen/precincts.py).
-  fetch("data/precincts.geojson", { method: "HEAD" }).then((r) => { if (r.ok) { els.precBtn.hidden = false; renderToolbarState(); ensurePrecincts(); } }).catch(() => {});
+  fetch("data/precincts.geojson", { method: "HEAD" }).then((r) => { if (r.ok) { precAvailable = true; els.precBtn.hidden = false; contestBox.refresh(); renderToolbarState(); ensurePrecincts(); } }).catch(() => {});
   els.panel = h("div", { class: "card panel", "aria-live": "polite" });
   els.mapEl = h("div", { id: "map", role: "region", "aria-label": "Map of Los Angeles County. Use the city search for a keyboard-friendly alternative." });
   els.source = S.totals ? h("button", { class: "chip map-source", type: "button", onclick: ctx.openAbout }, icon("info", 14), "About the by-city numbers") : null;
@@ -250,7 +306,7 @@ function build(root, ctx) {
     style: styleFor,
     onEachFeature: (f, lyr) => {
       lyr.bindTooltip(() => tooltipFor(f), { sticky: true });
-      lyr.on("click", () => { const m = modeOf(params), k = f.properties.key; if (S.cityByKey[k] || (m.type === "cw" && m.cw.cities[k]) || k === "unincorporated") navigate("map", { contest: params.contest, city: k }); });
+      lyr.on("click", () => { const m = modeOf(params), k = f.properties.key; if (S.cityByKey[k] || m.type === "turnout" || (m.type === "cw" && m.cw.cities[k]) || k === "unincorporated") navigate("map", { contest: params.contest, city: k }); });
       lyr.on("mouseover", () => lyr.setStyle({ weight: 1.6 })); lyr.on("mouseout", () => layer.resetStyle(lyr));
     },
   }).addTo(map);
