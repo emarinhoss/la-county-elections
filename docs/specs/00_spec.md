@@ -371,6 +371,15 @@ From `data/rehearsal/4348_svc_precinct_public/election_layer_match.json`:
   names it already has for that contest, so a vote order it cannot verify is never shown.
 - Map: city contests (e.g. "Los Angeles: Mayor") can be shown by precinct. Only precincts that voted in the contest are drawn; the map
   zooms to the city (all of its shapes, as a city can be several pieces); the precinct panel lists every contest that precinct voted in.
-- Tested on synthetic city-contest votes in the UI and on a fixture for the matching; NOT yet run on the real PDF. The
-  svc-rehearsal workflow must be re-run on the 2026 file, then `precincts_report.json` read for how many city contests matched.
+- **Result of the real run (Nov 6, `4348_svc_precinct_public`):** 359 non-countywide blocks; **160 matched** city contests, **7 refused**
+  (Burbank, Commerce, Irwindale and West Hollywood council: totals differ; El Segundo, San Marino and Santa Fe Springs council: two
+  values close enough to swap), 192 blocks with no city-contest title (school, judicial and district contests, not shown). Matched +
+  refused = 167 = all the API's city contests. The precinct file now has 210 contests (50 countywide + 160 city); `precincts.json`
+  3.2 MB, `precinct_votes.csv.gz` 1.5 MB.
+- LA Mayor by precinct: 652 precincts, all geometrically in Los Angeles; precinct sums Bass 360,840 / Raman 377,439 at the file's
+  tally, against 379,069 / 405,193 in the live API (the file is the older Nov 4 3:11 AM tally; the live count is about 6-8% higher
+  for city contests, matching the gap for the whole county). Raman leads in both. For all 160 matched city contests the largest gap
+  between precinct sums and live votes is 8.5% of the contest's votes (Monterey Park clerk and treasurer), the same lag.
+- Browser test on the real data: 652 precincts drawn, click opens the panel with the Mayor result and 59 other contests, no console
+  errors; the 11 earlier UI checks pass; 93 Python tests pass. Not verified: other browsers, phones, the live site.
 
