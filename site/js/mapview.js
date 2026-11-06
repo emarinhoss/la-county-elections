@@ -260,8 +260,7 @@ function build(root, ctx) {
   // Reference dot, above the precincts and city lines. Small, with a surface-coloured ring so it reads on any fill, light or dark.
   const refStyle = () => { const P = palette(); return { radius: 5, color: P.surface || "#fff", weight: 2, fillColor: P.text, fillOpacity: 1, opacity: 1 }; };
   map.createPane("refPoint").style.zIndex = 480;
-  refDot = L.circleMarker(REFERENCE_POINT, { ...refStyle(), pane: "refPoint" }).addTo(map)
-    .bindTooltip(`Reference point<br>${REFERENCE_POINT[0].toFixed(5)}, ${REFERENCE_POINT[1].toFixed(5)}`, { direction: "top", offset: [0, -6] });
+  refDot = L.circleMarker(REFERENCE_POINT, { ...refStyle(), pane: "refPoint", interactive: false }).addTo(map);   // just a dot: no label, clicks pass through
   window.addEventListener("themechange", () => { restyle(); renderLegend(); refDot.setStyle(refStyle()); });
   // precinct state is not carried when switching contests unless it still applies
 }
