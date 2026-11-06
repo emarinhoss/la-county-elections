@@ -257,3 +257,11 @@ footer.site { max-width: 1320px; margin: 0 auto; padding: 0 20px 40px; color: va
 .rank-row small { display: block; color: var(--text-3); font-size: 12px; }
 .rank-row span:last-child { text-align: right; font-weight: 620; }
 .rank-row span:first-child small { display: inline; }
+
+.split { overflow-x: auto; }
+.split-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.split-table th { text-align: right; font-weight: 600; color: var(--text-2); padding: 4px 6px; border-bottom: 1px solid var(--line); }
+.split-table th:first-child, .split-table td:first-child { text-align: left; }
+.split-table td { padding: 5px 6px; border-bottom: 1px solid var(--line); }
+.split-table td.num { text-align: right; }
+.split-table tr.total td { color: var(--text-2); border-bottom: 0; }

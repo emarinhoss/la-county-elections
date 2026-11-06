@@ -410,3 +410,24 @@ From `data/rehearsal/4348_svc_precinct_public/election_layer_match.json`:
   contest cards (Carson: 65,384 registered in both).
 - Not verified: the live site, other browsers, phones. Turnout is "among registered voters in the file", not an official figure.
 
+### Analysis 2: vote by mail versus in person (added Nov 6)
+
+- The county PDF prints in-person, vote-by-mail and total rows per precinct; the parser already checked in-person + vote-by-mail = total.
+  `precinct_votes.csv.gz` now also keeps `vbm_ballots` and `vbm_choice_i` (in person = total - mail). `sitegen/precincts.build(vbm=True)` puts
+  the mail columns in API choice order and writes `site/data/precincts_method.json` (2.6 MB; loaded only by these views).
+- Reconciliation (real 2026 file): mail ballots summed over precincts 1,511,870 against the county's own mail counter (MBLT) of 1,511,407 at the same
+  tally (0.03% apart); in person 635,577 against the county's 635,836. Mail share 70.4% at the Nov 4 3:11 AM tally (the live county figure is
+  higher, 74.9% on Nov 5, because late mail ballots keep being counted). No precinct has more mail than total ballots.
+- Map views (`site/js/analysis.js` + `mapview.js`; unit tests in `tests/js/analysis.test.mjs`):
+  1. mode "Vote-by-mail share of ballots" (picker group "Precinct analyses"): sequential colour from the 5th to the 95th percentile (56% to 80%);
+     panel with the overall or city share and the precincts with the most mail and most in-person ballots (>= 200 ballots).
+  2. for any contest shown by precinct (countywide or city), a "Ballots" setting: All ballots / Vote by mail only / In person only /
+     In person minus mail. The last colours each precinct by how many points better the shown choice (YES, or the county leader) did
+     in person than by mail (blue = better in person, orange = better by mail, full colour at a 30-point gap; grey where either group has no votes).
+     The setting is in the address bar (`method=`), so views can be shared; it survives changing contest, city or precinct.
+  3. the precinct panel shows a table of every choice's share of votes among all / mail / in-person ballots, with the ballot counts.
+- Caveats shown or to keep in mind: the split describes ballots counted at that tally, not the final electorate (late mail is still arriving);
+  precinct patterns are not individual behaviour; small precincts swing widely.
+- Tested: 100 Python tests (including pipeline and builder tests for the new columns), 16 checks in a headless browser on the real data in
+  light and dark mode. Not verified: the live site, other browsers, phones.
+

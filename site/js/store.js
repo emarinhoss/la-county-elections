@@ -34,3 +34,7 @@ export const countyContest = (id) => S.byId["k" + id] || null;
 // The one-sentence title of a measure (the county's own headline or first sentence). Countywide-by-city contests carry no text of their
 // own, so they borrow it from the county contest with the same id.
 export const measureTitleOf = (c) => c.measure_title || (S.byId["k" + c.id] || {}).measure_title || null;
+
+// The vote-by-mail part of every precinct row, loaded only when an analysis needs it. Resolves to {precinct id: {contest id: [vbm ballots, vbm votes...]}} or null.
+let methodPromise = null;
+export const getPrecinctMethod = () => (methodPromise ||= getJSON("data/precincts_method.json").then((d) => d.p).catch(() => null));
