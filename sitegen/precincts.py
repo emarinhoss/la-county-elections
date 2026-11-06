@@ -15,7 +15,8 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-from sitegen.city_contests import city_key
+from sitegen.city_contests import city_key, read_csv
+from sitegen.city_totals import api_contests, match_columns, match_contest, saved_tallies
 
 
 def build(svc_dir, columns):
@@ -24,7 +25,7 @@ def build(svc_dir, columns):
     for r in csv.DictReader(open(svc / "precinct_city.csv", newline="")):
         c = r["city"]
         where[r["precinct"]] = "" if c.startswith("UNASSIGNED: ") else "unincorporated" if c.startswith("UNINCORPORATED: ") else city_key(c)
-    by_seq = {seq: (cid, mapping, n) for seq, cid, mapping, n in columns}
+    by_seq = {c[0]: c[1:4] for c in columns}
     precincts = defaultdict(lambda: {"city": "", "v": {}})
     with gzip.open(svc / "precinct_votes.csv.gz", "rt", newline="") as f:
         for r in csv.DictReader(f):
@@ -45,7 +46,44 @@ def build(svc_dir, columns):
 PUBLISH = True
 
 
-def write_precincts(svc_dir, columns, dest, publish=PUBLISH):
+def city_columns(svc_dir, tidy_dir, snapshot, skip_seqs):
+    """Match the SVC's non-countywide blocks (city contests) to the API's city contests, the same safe way city_totals does it:
+    the API title must appear in the block's header text, and the vote columns are matched by county total at the saved tally the
+    SVC equals. A block that matches no contest, or whose totals disagree, is left out and counted in the report.
+    Returns ([(seq, contest id, mapping, n, names)], report)."""
+    svc, tidy = Path(svc_dir), Path(tidy_dir)
+    checks = svc / "all_blocks_check.csv"
+    report = {"city_blocks_seen": 0, "matched": 0, "unmatched_header": 0, "refused_totals": 0, "refused_examples": []}
+    if not checks.exists():
+        return [], {**report, "note": "all_blocks_check.csv missing: rerun svc-rehearsal"}
+    choices = defaultdict(list)
+    for ch in read_csv(tidy / "choices.csv"):
+        choices[ch["contest_id"]].append(ch)
+    cities = [c for c in read_csv(tidy / "contests.csv") if c["group"] == "Cities"]
+    votes = saved_tallies(tidy)[snapshot][1]
+    api, _dupes = api_contests((cities, choices), votes)
+    out, seen = [], set()
+    for chk in read_csv(checks):
+        if chk["seq"] in skip_seqs:
+            continue
+        report["city_blocks_seen"] += 1
+        match, _why = match_contest(api, chk["header"] or chk["title"])
+        if not match or match["id"] in seen:
+            report["unmatched_header"] += 1
+            continue
+        mapping, status, _gap = match_columns(json.loads(chk["printed_votes"]), [c["votes"] for c in match["choices"]])
+        if mapping is None or chk["votes_match_printed"] != "True":
+            report["refused_totals"] += 1
+            if len(report["refused_examples"]) < 10:
+                report["refused_examples"].append({"title": match["title"], "reason": status if mapping is None else "precinct rows do not add to the printed total"})
+            continue
+        seen.add(match["id"])
+        out.append((chk["seq"], match["id"], mapping, len(match["choices"]), [c["name"] for c in match["choices"]]))
+        report["matched"] += 1
+    return out, report
+
+
+def write_precincts(svc_dir, columns, dest, publish=PUBLISH, report=None):
     dest = Path(dest)
     svc = Path(svc_dir)
     if not publish:
@@ -58,10 +96,12 @@ def write_precincts(svc_dir, columns, dest, publish=PUBLISH):
             (dest / name).unlink(missing_ok=True)
         return "precinct layer not available yet (needs a svc-rehearsal run that saves precinct votes and shapes)"
     data = build(svc, columns)
+    data["names"] = {str(c[1]): c[4] for c in columns if len(c) > 4}      # choice names in the order of each contest's vote list
     shapes = json.loads(shapes_file.read_text())
     drawn = {f["properties"]["id"] for f in shapes["features"]}
     data["p"] = {k: v for k, v in data["p"].items() if k in drawn}      # a precinct with no shape cannot be clicked
     shapes["features"] = [f for f in shapes["features"] if f["properties"]["id"] in data["p"]]
     (dest / "precincts.json").write_text(json.dumps(data, separators=(",", ":")))
     (dest / "precincts.geojson").write_text(json.dumps(shapes, separators=(",", ":")))
-    return f"precinct layer: {len(data['p'])} precincts with a shape and votes in {len(columns)} countywide contests"
+    (dest / "precincts_report.json").write_text(json.dumps({"precincts": len(data["p"]), "contests": len(data["names"]), "city_contests": report}, indent=1) + "\n")
+    return f"precinct layer: {len(data['p'])} precincts with a shape, {len(columns)} contests with precinct votes" + (f"; city contests: {report['matched']} matched, {report['unmatched_header']} no title match, {report['refused_totals']} refused" if report else "")

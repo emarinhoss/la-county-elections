@@ -175,7 +175,7 @@ def build(svc_dir, tidy_dir, columns=None):
             report["refused"].append({"title": match["title"], "reason": status, "printed": printed, "api": [c["votes"] for c in match["choices"]]})
             continue
         if columns is not None:
-            columns.append((chk["seq"], match["id"], mapping, len(match["choices"])))
+            columns.append((chk["seq"], match["id"], mapping, len(match["choices"]), [c["name"] for c in match["choices"]]))
         gaps.append(gap)
         statuses.add(chk.get("status") or "")
         n = len(match["choices"])
@@ -235,7 +235,9 @@ if __name__ == "__main__":
     columns = []
     out, report = build(svc, tidy, columns)
     from sitegen.precincts import write_precincts   # the map's precinct layer; needs the shapes the svc-rehearsal workflow saves
-    print(write_precincts(svc, columns, dest))
+    from sitegen.precincts import city_columns
+    extra, city_report = city_columns(svc, tidy, out["tally"]["snapshot"], {c[0] for c in columns})
+    print(write_precincts(svc, columns + extra, dest, report=city_report))
     (dest / "city_totals.json").write_text(json.dumps(out, separators=(",", ":")))
     (dest / "city_totals_report.json").write_text(json.dumps(report, indent=1) + "\n")
     print(f"{report['included']} countywide contests with city totals; unmatched titles: {len(report['unmatched_svc_titles'])}; refused: {len(report['refused'])}")

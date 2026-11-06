@@ -359,3 +359,18 @@ From `data/rehearsal/4348_svc_precinct_public/election_layer_match.json`:
 - Not verified: individual precinct rows against the PDF by eye (the parser's contest totals equal the PDF's printed GRAND TOTALs, which checks sums, not each row); other browsers; phones on the live site.
 - Acceptance thresholds set in advance (>= 99% ids matched, < 1% of ballots changing city) were met. `PUBLISH = True`.
 
+### City contests by precinct (added Nov 6)
+
+- `tools/svc_pipeline.py` now saves every contest block's precinct votes (`precinct_votes.csv.gz`, all ~409 blocks, not just the 50
+  countywide ones) and `all_blocks_check.csv` (each block's printed GRAND TOTAL next to the sum of its precinct rows).
+- `sitegen/precincts.city_columns` matches those blocks to the API's city contests with the same two rules as the countywide
+  contests: the API title must appear in the block header, and the vote columns are matched by county total at the saved tally the SVC
+  equals (refused when totals disagree or two values are close enough to swap). Unmatched and refused blocks are counted in
+  `site/data/precincts_report.json`, not shown.
+- `precincts.json` carries each contest's choice names in vote order (`names`). The site only uses a contest if those names equal the
+  names it already has for that contest, so a vote order it cannot verify is never shown.
+- Map: city contests (e.g. "Los Angeles: Mayor") can be shown by precinct. Only precincts that voted in the contest are drawn; the map
+  zooms to the city (all of its shapes, as a city can be several pieces); the precinct panel lists every contest that precinct voted in.
+- Tested on synthetic city-contest votes in the UI and on a fixture for the matching; NOT yet run on the real PDF. The
+  svc-rehearsal workflow must be re-run on the 2026 file, then `precincts_report.json` read for how many city contests matched.
+

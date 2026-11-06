@@ -8,7 +8,7 @@ export const getHistory = () => (historyPromise ||= getJSON("data/history.json")
 // county's precinct file has not been processed yet.
 let precinctPromise = null;
 export const getPrecincts = () => (precinctPromise ||= Promise.all([getJSON("data/precincts.json"), getJSON("data/precincts.geojson")])
-  .then(([votes, shapes]) => ({ votes: votes.p, shapes })).catch(() => null));
+  .then(([votes, shapes]) => ({ votes: votes.p, names: votes.names || {}, shapes })).catch(() => null));
 
 export async function load() {
   // city_contests.json is required; everything else may be missing and the views say so.

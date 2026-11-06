@@ -5,7 +5,7 @@ import { combobox, contestCard, resultRows } from "./components.js";
 import { TOPICS, topicOf } from "./topics.js";
 import { navigate, hashFor } from "./router.js";
 
-let built = false, map = null, layer = null, lineLayer = null, precLayer = null, prec = null, precLoading = false, precFailed = false, fitBounds = null, params = {}, els = {}, contestBox, cityBox;
+let built = false, lastContest = null, lastPrecincts = null, map = null, layer = null, lineLayer = null, precLayer = null, prec = null, precLoading = false, precFailed = false, fitBounds = null, params = {}, els = {}, contestBox, cityBox;
 
 // ---- what is being shown ---------------------------------------------------------------------------------------------------
 function defaultContest() {
@@ -39,19 +39,28 @@ function styleFor(feature) {
   return { fillColor: cell.fill, fillOpacity: cell.data ? 0.95 : 0.55, color: picked ? P.text : P.line, weight: picked ? 2.5 : 0.6, opacity: 1 };
 }
 // ---- precinct layer --------------------------------------------------------------------------------------------------------------
-const precinctsOn = (m) => params.precincts === "1" && m.type === "cw" && !!prec;
-const precinctRow = (m, id) => (prec && prec.votes[id] && prec.votes[id].v[String(m.cw.id)]) || null;   // [registration, ballots, votes...]
+// The contest a mode shows by precinct: a countywide contest or a city contest, if the precinct file has votes for it.
+const modeContest = (m) => (m.type === "cw" ? m.cw : m.type === "city" ? m.contest : null);
+// A contest object for a contest id in the precinct file, or null when the vote order cannot be trusted: the file lists each
+// contest's choice names in the order of its vote list, and they must equal the site's names for that contest.
+function contestFor(id) {
+  const c = S.cwById[id] || S.byId["c" + id], names = prec && prec.names && prec.names[String(id)];
+  return c && names && names.length === c.choices.length && names.every((n, i) => n === c.choices[i].name) ? c : null;
+}
+const hasPrecinctData = (m) => { const c = modeContest(m); return !!(c && prec && contestFor(c.id)); };
+const precinctsOn = (m) => params.precincts === "1" && hasPrecinctData(m);
+const precinctRow = (m, id) => (prec && prec.votes[id] && modeContest(m) && prec.votes[id].v[String(modeContest(m).id)]) || null;   // [registration, ballots, votes...]
 function precinctStyle(feature) {
-  const P = palette(), m = modeOf(params), id = feature.properties.id, row = m.type === "cw" ? precinctRow(m, id) : null, picked = id === params.precinct;
+  const P = palette(), m = modeOf(params), id = feature.properties.id, row = precinctRow(m, id), picked = id === params.precinct;
   const votes = row ? row.slice(2) : [];
-  return { fillColor: row && row[1] > 0 ? fillFor(m.cw, votes, P) : P.nodata, fillOpacity: row && row[1] > 0 ? 0.95 : 0.5, color: picked ? P.text : P.line, weight: picked ? 2.5 : 0.3, opacity: 1 };
+  return { fillColor: row && row[1] > 0 ? fillFor(modeContest(m), votes, P) : P.nodata, fillOpacity: row && row[1] > 0 ? 0.95 : 0.5, color: picked ? P.text : P.line, weight: picked ? 2.5 : 0.3, opacity: 1 };
 }
 function precinctTooltip(feature) {
   const m = modeOf(params), id = feature.properties.id, row = precinctRow(m, id), p = prec.votes[id];
   const box = h("div", {}, h("b", {}, `Precinct ${id}`), h("div", { class: "muted" }, p && p.city ? cityName(p.city) || "" : ""));
   if (!row || !row[1]) { box.append(h("div", { class: "muted" }, "No ballots counted here")); return box; }
   const votes = row.slice(2), total = votes.reduce((a, b) => a + b, 0), i = votes.indexOf(Math.max(...votes));
-  box.append(h("div", {}, `${m.cw.choices[i].name} ${pct(total ? votes[i] / total : null)}`), h("div", { class: "muted" }, `${num(row[1])} ballots`));
+  box.append(h("div", {}, `${modeContest(m).choices[i].name} ${pct(total ? votes[i] / total : null)}`), h("div", { class: "muted" }, `${num(row[1])} ballots`));
   return box;
 }
 // City boundary lines drawn ABOVE the precincts (the precincts would otherwise hide them). Not clickable: clicks go to the precinct below.
@@ -71,6 +80,7 @@ function drawPrecincts() {
   const m = modeOf(params);
   if (!map || !precinctsOn(m)) return;
   precLayer = L.geoJSON(prec.shapes, {
+    filter: (f) => m.type === "cw" || !!precinctRow(m, f.properties.id),
     style: precinctStyle,
     onEachFeature: (f, lyr) => {
       lyr.bindTooltip(() => precinctTooltip(f), { sticky: true });
@@ -87,10 +97,12 @@ async function ensurePrecincts() {
 }
 function renderToolbarState() {
   if (!els.precBtn || els.precBtn.hidden) { els.precNote.textContent = ""; return; }
-  const m = modeOf(params), on = params.precincts === "1" && m.type === "cw", b = els.precBtn;
-  b.setAttribute("aria-pressed", String(on)); b.disabled = m.type !== "cw";
-  b.title = m.type !== "cw" ? "Precinct results are available for countywide contests" : "";
-  els.precNote.textContent = precLoading ? "Loading precincts…" : precFailed && params.precincts === "1" ? "Precinct results have not been published to this site yet." : m.type !== "cw" ? "Precincts: pick a countywide contest" : "";
+  const m = modeOf(params), c = modeContest(m), b = els.precBtn, wanted = params.precincts === "1";
+  const missing = !!prec && !!c && !hasPrecinctData(m);          // loaded, but this contest is not in the precinct file
+  b.setAttribute("aria-pressed", String(wanted && !missing)); b.disabled = !c || missing;
+  b.title = !c ? "Pick a contest to see it by precinct" : missing ? "No precinct results for this contest" : "";
+  els.precNote.textContent = precLoading ? "Loading precincts…" : precFailed && wanted ? "Precinct results have not been published to this site yet."
+    : !c ? "Precincts: pick a contest" : missing ? "No precinct results for this contest" : "";
 }
 function tooltipFor(feature) {
   const m = modeOf(params), key = feature.properties.key, name = feature.properties.name === "Unincorporated" ? "Unincorporated areas" : feature.properties.name;
@@ -157,11 +169,12 @@ function precinctPanel(m, id) {
       row[1] ? resultRows(cw.choices.map((c, i) => ({ name: c.name, party: c.party, votes: votes[i], share: total ? votes[i] / total : null, color: choiceColor(cw, i) }))) : h("p", { class: "note" }, "No ballots counted in this precinct."),
       h("div", { class: "contest-meta" }, h("span", {}, `${num(row[1])} ballots`), h("span", {}, `${num(row[0])} registered`)));
   };
-  const row = m.type === "cw" && precinctRow(m, id);
-  if (row) box.append(one(m.cw, row, false));
-  const others = S.cwList.filter((cw) => p.v[String(cw.id)] && (m.type !== "cw" || cw.id !== m.cw.id));
-  if (others.length) box.append(h("details", { class: "more" }, h("summary", {}, `All ${others.length + (row ? 1 : 0)} countywide contests in this precinct`),
-    h("div", { class: "more-body stack" }, others.map((cw) => one(cw, p.v[String(cw.id)], true)))));
+  const row = precinctRow(m, id), shown = modeContest(m);
+  if (row && shown) box.append(one(shown, row, false));
+  const others = Object.keys(p.v).map((cid) => contestFor(cid)).filter((c) => c && (!shown || c.id !== shown.id))
+    .sort((a, b) => (a.cityKey ? 1 : 0) - (b.cityKey ? 1 : 0) || titleCase(a.label).localeCompare(titleCase(b.label)));
+  if (others.length) box.append(h("details", { class: "more" }, h("summary", {}, `All ${others.length + (row ? 1 : 0)} contests in this precinct`),
+    h("div", { class: "more-body stack" }, others.map((c) => { const card = one(c, p.v[String(c.id)], true); if (c.city) card.prepend(h("span", { class: "tag" }, c.city)); return card; }))));
   box.append(h("p", { class: "note" }, "From the county's precinct-level Statement of Votes Cast, at the same tally as the city numbers (which can trail the live count). Shapes are the county's consolidated election precincts, matched by precinct number. Small precincts have small counts, so shares can swing widely."));
 }
 function renderPanel() {
@@ -252,10 +265,16 @@ export function updateMap(root, p, ctx) {
   if (first) build(root, ctx);
   const m = modeOf(params);
   contestBox.set(m.value); cityBox.set(params.city || "");
+  const contestChanged = lastContest !== params.contest || lastPrecincts !== params.precincts; lastContest = params.contest; lastPrecincts = params.precincts;
   update(); ensurePrecincts();
   if (map) {
     map.invalidateSize();
     if (first) map.fitBounds(fitBounds);
+    if ((first || contestChanged) && m.type === "city" && params.precincts === "1" && !params.precinct) {   // a city contest by precinct: zoom to that city
+      const box = L.latLngBounds([]);     // a city can be several shapes (Los Angeles has a harbor strip): use all of them
+      if (layer) layer.eachLayer((l) => { if (l.feature.properties.key === m.contest.cityKey) box.extend(l.getBounds()); });
+      if (box.isValid()) map.fitBounds(box.pad(0.05));
+    }
     if (params.precinct && precLayer) { const lyr = precLayer.getLayers().find((l) => l.feature.properties.id === params.precinct); if (lyr) map.fitBounds(lyr.getBounds().pad(1.5), { maxZoom: 15 }); }
   }
 }

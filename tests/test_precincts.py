@@ -60,3 +60,43 @@ def test_can_be_switched_off(tmp_path):
     dest.mkdir()
     assert "switched off" in precincts.write_precincts(d, [("5", 777, [0, 1], 2)], dest, publish=False)
     assert not (dest / "precincts.json").exists()
+
+
+def make_tidy(tmp_path):
+    t = tmp_path / "tidy"
+    t.mkdir()
+    def w(name, fields, rows):
+        with open(t / name, "w", newline="") as f:
+            wr = csv.DictWriter(f, fieldnames=fields)
+            wr.writeheader()
+            wr.writerows(rows)
+    w("contests.csv", ["contest_id", "group", "group_order", "title", "type", "vote_for", "pass_rate", "measure_text"],
+      [{"contest_id": 1, "group": "Cities", "group_order": 1, "title": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Mayor", "type": "Candidate", "vote_for": 1},
+       {"contest_id": 2, "group": "Cities", "group_order": 1, "title": "CITY OF CARSON GENERAL MUNICIPAL ELECTION Mayor", "type": "Candidate", "vote_for": 1}])
+    w("choices.csv", ["contest_id", "choice_id", "name", "party"],
+      [{"contest_id": 1, "choice_id": 11, "name": "BASS", "party": ""}, {"contest_id": 1, "choice_id": 12, "name": "RAMAN", "party": ""},
+       {"contest_id": 2, "choice_id": 21, "name": "SHARIF", "party": ""}, {"contest_id": 2, "choice_id": 22, "name": "SPICER", "party": ""}])
+    w("results.csv", ["snapshot", "county_time", "choice_id", "votes"],
+      [{"snapshot": "s1", "county_time": "t", "choice_id": c, "votes": v} for c, v in [(11, 700), (12, 300), (21, 90), (22, 60)]])
+    return t
+
+
+def test_city_contests_are_matched_by_title_and_totals(tmp_path):
+    d = tmp_path / "svc"
+    d.mkdir()
+    rows = [
+        {"seq": "5", "title": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Mayor", "header": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION Mayor", "status": "S", "choices": 2,
+         "printed_votes": "[300, 700]", "summed_votes": "[300, 700]", "votes_match_printed": True},                       # columns in the other order
+        {"seq": "6", "title": "CITY OF CARSON GENERAL MUNICIPAL ELECTION Mayor", "header": "CITY OF CARSON GENERAL MUNICIPAL ELECTION Mayor", "status": "S", "choices": 2,
+         "printed_votes": "[900, 10]", "summed_votes": "[900, 10]", "votes_match_printed": True},                         # totals disagree with the API: refused
+        {"seq": "7", "title": "SOMEWHERE ELSE Mayor", "header": "SOMEWHERE ELSE Mayor", "status": "S", "choices": 2,
+         "printed_votes": "[1, 2]", "summed_votes": "[1, 2]", "votes_match_printed": True},                                 # no API title: unmatched
+        {"seq": "1", "title": "COUNTYWIDE", "header": "COUNTYWIDE", "status": "S", "choices": 2, "printed_votes": "[1, 2]", "summed_votes": "[1, 2]", "votes_match_printed": True},
+    ]
+    with open(d / "all_blocks_check.csv", "w", newline="") as f:
+        wr = csv.DictWriter(f, fieldnames=list(rows[0]))
+        wr.writeheader()
+        wr.writerows(rows)
+    out, report = precincts.city_columns(d, make_tidy(tmp_path), "s1", {"1"})
+    assert out == [("5", 1, [1, 0], 2, ["BASS", "RAMAN"])]
+    assert report["city_blocks_seen"] == 3 and report["matched"] == 1 and report["unmatched_header"] == 1 and report["refused_totals"] == 1

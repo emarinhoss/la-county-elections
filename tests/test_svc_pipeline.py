@@ -159,7 +159,9 @@ def test_full_run_checks_sums_against_printed_totals(tmp_path):
     assert recon["Carson"]["comparable"] == "True" and summary["reconciliation"]["district_only_not_comparable"] == []
     import gzip
     pv = list(csv.DictReader(gzip.open(tmp_path / "out" / "precinct_votes.csv.gz", "rt", newline="")))
-    assert len(pv) == 13 and {r["seq"] for r in pv} == {str(only["seq"])} and pv[0]["ballots"] == "30" and pv[0]["choice_1"] == "18"   # 6 in person + 12 by mail
+    assert len(pv) > 13 and str(only["seq"]) in {r["seq"] for r in pv} and pv[0]["ballots"] == "30" and pv[0]["choice_1"] == "18"   # 6 in person + 12 by mail
+    abc = list(csv.DictReader(open(tmp_path / "out" / "all_blocks_check.csv")))
+    assert len(abc) == 3 and all(r["votes_match_printed"] == "True" for r in abc)
     for name in ("summary.md", "precinct_city.csv", "geo_vs_contest.csv", "city_reconciliation.csv"):
         assert (tmp_path / "out" / name).exists()
 

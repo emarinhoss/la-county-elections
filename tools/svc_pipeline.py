@@ -222,13 +222,24 @@ def run(text, geo_csv, boundary_geojson, out_dir):
           ["geometric_city", "contest_city", "precincts"])
     write("countywide_by_city.csv", rows, ["seq", "title", "city", "precincts", "registration", "ballots", "ballots_geo", "ballots_fallback"]
           + [f"choice_{i + 1}" for i in range(maxc)])
-    # Every precinct's own votes in each countywide contest (the map's precinct layer reads these). Gzipped: about 100,000 rows.
-    pv_rows = [{"seq": b["seq"], "precinct": r["precinct"], "registration": r["registration"], "ballots": r["total"][0],
-                **{f"choice_{i + 1}": x for i, x in enumerate(r["total"][1:])}} for b in county for r in b["precincts"]]
+    # Every precinct's own votes in EVERY contest block (countywide, city, district): the map's precinct layer reads these. Gzipped.
+    maxall = max((len(r["total"]) - 1 for b in blocks for r in b["precincts"]), default=0)
     with gzip.open(out / "precinct_votes.csv.gz", "wt", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["seq", "precinct", "registration", "ballots"] + [f"choice_{i + 1}" for i in range(maxc)], extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=["seq", "precinct", "registration", "ballots"] + [f"choice_{i + 1}" for i in range(maxall)], extrasaction="ignore")
         w.writeheader()
-        w.writerows(pv_rows)
+        for b in blocks:
+            for r in b["precincts"]:
+                w.writerow({"seq": b["seq"], "precinct": r["precinct"], "registration": r["registration"], "ballots": r["total"][0],
+                            **{f"choice_{i + 1}": x for i, x in enumerate(r["total"][1:])}})
+    # For every block, the printed GRAND TOTAL next to the sum of its precinct rows: the check that lets a block be matched to a county contest.
+    all_rows = []
+    for b in blocks:
+        width = max((len(r["total"]) - 1 for r in b["precincts"]), default=0)
+        summed = [sum(r["total"][1 + i] for r in b["precincts"] if len(r["total"]) > 1 + i) for i in range(width)]
+        printed = (b["totals"].get("GRAND TOTAL") or [])[2:]
+        all_rows.append({"seq": b["seq"], "title": b["title"], "header": b["header"], "status": b["status"], "choices": width,
+                         "printed_votes": json.dumps(printed), "summed_votes": json.dumps(summed), "votes_match_printed": bool(printed) and printed == summed})
+    write("all_blocks_check.csv", all_rows, ["seq", "title", "header", "status", "choices", "printed_votes", "summed_votes", "votes_match_printed"])
     recon = city_reconciliation(blocks, boundary, geo_registration)
     write("city_reconciliation.csv", recon, ["city", "contests", "comparable", "reference_registration",
                                              "largest_contest_registration", "geometric_registration", "difference_pct"])
