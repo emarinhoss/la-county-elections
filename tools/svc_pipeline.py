@@ -223,14 +223,20 @@ def run(text, geo_csv, boundary_geojson, out_dir):
     write("countywide_by_city.csv", rows, ["seq", "title", "city", "precincts", "registration", "ballots", "ballots_geo", "ballots_fallback"]
           + [f"choice_{i + 1}" for i in range(maxc)])
     # Every precinct's own votes in EVERY contest block (countywide, city, district): the map's precinct layer reads these. Gzipped.
+    # choice_i = all ballots; vbm_ballots / vbm_choice_i = the vote-by-mail part (the PDF prints in-person, vote-by-mail and total rows,
+    # and the parser checks in-person + vote-by-mail = total), so in-person = choice_i - vbm_choice_i.
     maxall = max((len(r["total"]) - 1 for b in blocks for r in b["precincts"]), default=0)
+    fields = ["seq", "precinct", "registration", "ballots", "vbm_ballots"] + [f"choice_{i + 1}" for i in range(maxall)] + [f"vbm_choice_{i + 1}" for i in range(maxall)]
     with gzip.open(out / "precinct_votes.csv.gz", "wt", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["seq", "precinct", "registration", "ballots"] + [f"choice_{i + 1}" for i in range(maxall)], extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         w.writeheader()
         for b in blocks:
             for r in b["precincts"]:
+                vbm = r.get("vbm") or []
                 w.writerow({"seq": b["seq"], "precinct": r["precinct"], "registration": r["registration"], "ballots": r["total"][0],
-                            **{f"choice_{i + 1}": x for i, x in enumerate(r["total"][1:])}})
+                            "vbm_ballots": vbm[0] if vbm else "",
+                            **{f"choice_{i + 1}": x for i, x in enumerate(r["total"][1:])},
+                            **{f"vbm_choice_{i + 1}": x for i, x in enumerate(vbm[1:])}})
     # For every block, the printed GRAND TOTAL next to the sum of its precinct rows: the check that lets a block be matched to a county contest.
     all_rows = []
     for b in blocks:

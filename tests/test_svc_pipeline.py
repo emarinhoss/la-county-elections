@@ -160,6 +160,8 @@ def test_full_run_checks_sums_against_printed_totals(tmp_path):
     import gzip
     pv = list(csv.DictReader(gzip.open(tmp_path / "out" / "precinct_votes.csv.gz", "rt", newline="")))
     assert len(pv) > 13 and str(only["seq"]) in {r["seq"] for r in pv} and pv[0]["ballots"] == "30" and pv[0]["choice_1"] == "18"   # 6 in person + 12 by mail
+    assert pv[0]["vbm_ballots"] == "20" and pv[0]["vbm_choice_1"] == "12" and pv[0]["vbm_choice_2"] == "8"   # the fixture's vote-by-mail row: [20, 12, 8]
+    assert int(pv[0]["ballots"]) - int(pv[0]["vbm_ballots"]) == 10                                      # in person = total - vote by mail
     abc = list(csv.DictReader(open(tmp_path / "out" / "all_blocks_check.csv")))
     assert len(abc) == 3 and all(r["votes_match_printed"] == "True" for r in abc)
     for name in ("summary.md", "precinct_city.csv", "geo_vs_contest.csv", "city_reconciliation.csv"):

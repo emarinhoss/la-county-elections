@@ -15,8 +15,8 @@ def make_svc(tmp_path):
         w.writerows([["1030003A", "CARSON", "Carson", "geo", 1, ""], ["3670013A", "LENNOX", "UNINCORPORATED: LENNOX", "geo_unincorporated", 0, ""]])
     with gzip.open(d / "precinct_votes.csv.gz", "wt", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["seq", "precinct", "registration", "ballots", "choice_1", "choice_2"])
-        w.writerows([[5, "1030003A", 100, 30, 10, 20], [5, "3670013A", 80, 20, 15, 5], [6, "1030003A", 100, 30, 1, 2]])  # seq 6 not matched
+        w.writerow(["seq", "precinct", "registration", "ballots", "vbm_ballots", "choice_1", "choice_2", "vbm_choice_1", "vbm_choice_2"])
+        w.writerows([[5, "1030003A", 100, 30, 18, 10, 20, 4, 14], [5, "3670013A", 80, 20, 12, 15, 5, 9, 3], [6, "1030003A", 100, 30, 20, 1, 2, 1, 1]])  # seq 6 not matched
     return d
 
 
@@ -100,3 +100,15 @@ def test_city_contests_are_matched_by_title_and_totals(tmp_path):
     out, report = precincts.city_columns(d, make_tidy(tmp_path), "s1", {"1"})
     assert out == [("5", 1, [1, 0], 2, ["BASS", "RAMAN"])]
     assert report["city_blocks_seen"] == 3 and report["matched"] == 1 and report["unmatched_header"] == 1 and report["refused_totals"] == 1
+
+
+def test_vote_by_mail_rows_are_in_api_order_and_missing_columns_are_skipped(tmp_path):
+    d = make_svc(tmp_path)
+    out = precincts.build(d, [("5", 777, [1, 0], 2)], vbm=True)       # SVC column 1 is API choice 2
+    assert out["p"]["1030003A"]["v"]["777"] == [18, 14, 4] and out["p"]["3670013A"]["v"]["777"] == [12, 3, 9]
+    old = tmp_path / "old"
+    old.mkdir()
+    (old / "precinct_city.csv").write_text((d / "precinct_city.csv").read_text())
+    with gzip.open(old / "precinct_votes.csv.gz", "wt", newline="") as f:     # a file from before the vote-by-mail columns existed
+        f.write("seq,precinct,registration,ballots,choice_1,choice_2\n5,1030003A,100,30,10,20\n")
+    assert precincts.build(old, [("5", 777, [0, 1], 2)], vbm=True)["p"] == {}

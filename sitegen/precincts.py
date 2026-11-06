@@ -19,7 +19,9 @@ from sitegen.city_contests import city_key, read_csv
 from sitegen.city_totals import api_contests, match_columns, match_contest, saved_tallies
 
 
-def build(svc_dir, columns):
+def build(svc_dir, columns, vbm=False):
+    """{"p": {precinct id: {"city": key, "v": {contest id: row}}}}. row = [registration, ballots, votes in API choice order] for all
+    ballots, or [vbm ballots, vbm votes in API choice order] when vbm=True (empty if the file predates the vote-by-mail columns)."""
     svc = Path(svc_dir)
     where = {}
     for r in csv.DictReader(open(svc / "precinct_city.csv", newline="")):
@@ -31,13 +33,15 @@ def build(svc_dir, columns):
         for r in csv.DictReader(f):
             if r["seq"] not in by_seq:
                 continue
+            if vbm and r.get("vbm_ballots", "") == "":
+                continue
             cid, mapping, n = by_seq[r["seq"]]
             votes = [0] * n
             for col, j in enumerate(mapping):
-                votes[j] = int(r[f"choice_{col + 1}"])
+                votes[j] = int(r[f"{'vbm_' if vbm else ''}choice_{col + 1}"])
             p = precincts[r["precinct"]]
             p["city"] = where.get(r["precinct"], "")
-            p["v"][str(cid)] = [int(r["registration"]), int(r["ballots"]), *votes]
+            p["v"][str(cid)] = [int(r["vbm_ballots"]), *votes] if vbm else [int(r["registration"]), int(r["ballots"]), *votes]
     return {"p": dict(precincts)}
 
 
@@ -87,12 +91,12 @@ def write_precincts(svc_dir, columns, dest, publish=PUBLISH, report=None):
     dest = Path(dest)
     svc = Path(svc_dir)
     if not publish:
-        for name in ("precincts.json", "precincts.geojson"):
+        for name in ("precincts.json", "precincts.geojson", "precincts_method.json"):
             (dest / name).unlink(missing_ok=True)
         return "precinct layer switched off (PUBLISH is False)"
     shapes_file = svc / "precinct_shapes.geojson"
     if not (svc / "precinct_votes.csv.gz").exists() or not shapes_file.exists():
-        for name in ("precincts.json", "precincts.geojson"):
+        for name in ("precincts.json", "precincts.geojson", "precincts_method.json"):
             (dest / name).unlink(missing_ok=True)
         return "precinct layer not available yet (needs a svc-rehearsal run that saves precinct votes and shapes)"
     data = build(svc, columns)
@@ -102,6 +106,13 @@ def write_precincts(svc_dir, columns, dest, publish=PUBLISH, report=None):
     data["p"] = {k: v for k, v in data["p"].items() if k in drawn}      # a precinct with no shape cannot be clicked
     shapes["features"] = [f for f in shapes["features"] if f["properties"]["id"] in data["p"]]
     (dest / "precincts.json").write_text(json.dumps(data, separators=(",", ":")))
+    # The vote-by-mail part of every row, in a separate file the site loads only for the vote-by-mail analyses.
+    method = build(svc, columns, vbm=True)
+    method["p"] = {k: v for k, v in method["p"].items() if k in data["p"]}
+    if method["p"]:
+        (dest / "precincts_method.json").write_text(json.dumps({"p": {k: v["v"] for k, v in method["p"].items()}}, separators=(",", ":")))
+    else:
+        (dest / "precincts_method.json").unlink(missing_ok=True)
     (dest / "precincts.geojson").write_text(json.dumps(shapes, separators=(",", ":")))
     (dest / "precincts_report.json").write_text(json.dumps({"precincts": len(data["p"]), "contests": len(data["names"]), "city_contests": report}, indent=1) + "\n")
     return f"precinct layer: {len(data['p'])} precincts with a shape, {len(columns)} contests with precinct votes" + (f"; city contests: {report['matched']} matched, {report['unmatched_header']} no title match, {report['refused_totals']} refused" if report else "")
