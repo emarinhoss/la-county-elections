@@ -1,7 +1,7 @@
 // Pieces used by more than one view: result rows, the contest card, the searchable picker, meter and segmented bar.
 import { h, num, pct, titleCase, choiceColor, countyTime } from "./util.js";
 import { lineChart } from "./chart.js";
-import { S, getHistory } from "./store.js";
+import { S, getHistory, measureTitleOf } from "./store.js";
 
 // ---- result rows -----------------------------------------------------------------------------------------------------------
 // items: [{name, party, votes, share, color}] in any order. The leader gets the accent; a row never relies on color alone:
@@ -53,6 +53,12 @@ function historyBody(contest) {
   };
 }
 
+// What a measure is, in one sentence, under its name ("Measure A" says nothing by itself). Null for candidate races.
+export function measureTitleLine(contest) {
+  const t = contest.kind === "measure" ? measureTitleOf(contest) : null;
+  return t ? h("p", { class: "measure-title" }, t) : null;
+}
+
 // ---- contest card -----------------------------------------------------------------------------------------------------------
 // contest: {id, label, kind, vote_for, pass_rate, ballots_cast, choices:[{name, party, votes, share}], measure_text?}
 export function contestCard(contest, o = {}) {
@@ -61,7 +67,7 @@ export function contestCard(contest, o = {}) {
   if (contest.kind === "measure" && contest.pass_rate) meta.push(`Passes with: ${contest.pass_rate.toLowerCase()}`);
   if (contest.ballots_cast) meta.push(`${num(contest.ballots_cast)} ballots counted`);
   const card = h("article", { class: "card contest" },
-    h("div", { class: "contest-head" }, o.kicker && h("span", { class: "tag" }, o.kicker), h("h3", { class: "contest-title" }, titleCase(contest.label)), h("div", { class: "contest-meta" }, meta.map((m) => h("span", {}, m)))),
+    h("div", { class: "contest-head" }, o.kicker && h("span", { class: "tag" }, o.kicker), h("h3", { class: "contest-title" }, titleCase(contest.label)), measureTitleLine(contest), h("div", { class: "contest-meta" }, meta.map((m) => h("span", {}, m)))),
     resultRows(itemsOf(contest)));
   const foot = h("div", { class: "contest-foot" });
   const cw = o.kind === "county" && S.cwById[contest.id];

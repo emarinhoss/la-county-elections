@@ -15,6 +15,8 @@ from datetime import datetime, timezone
 from collections import defaultdict
 from pathlib import Path
 
+from sitegen.measure_title import measure_title
+
 NUMBER_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7}
 
 # "CITY OF ALHAMBRA GENERAL MUNICIPAL ELECTION ..." / "LOS ANGELES CITY GENERAL ..." /
@@ -64,11 +66,15 @@ def contest_record(c, label, choice_rows, votes, ballots):
     total = sum(r["votes"] for r in rows)
     for r in rows:
         r["share"] = round(r["votes"] / total, 4) if total else None
-    return {
+    rec = {
         "id": int(c["contest_id"]), "label": label, "kind": c["type"].lower(),
         "vote_for": parse_vote_for(c["vote_for"]), "pass_rate": c["pass_rate"],
         "ballots_cast": ballots.get(c["contest_id"]), "total_votes": total, "choices": rows,
     }
+    if c.get("measure_text"):          # the county's own words: full text, and a one-sentence title taken from it
+        rec["measure_text"] = c["measure_text"]
+        rec["measure_title"] = measure_title(c["measure_text"])
+    return rec
 
 
 def latest_numbers(tidy):

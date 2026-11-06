@@ -36,8 +36,6 @@ def build(tidy_dir):
     for c in contests:
         g = groups.setdefault(c["group"], {"name": c["group"], "order": int(c["group_order"]), "contests": []})
         rec = contest_record(c, c["title"].title() if c["title"].isupper() else c["title"], choices[c["contest_id"]], votes, ballots)
-        if c["measure_text"]:
-            rec["measure_text"] = c["measure_text"]
         g["contests"].append(rec)
     ordered = sorted(groups.values(), key=lambda g: (g["order"], g["name"]))
     for g in ordered:

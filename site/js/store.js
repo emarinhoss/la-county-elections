@@ -30,3 +30,7 @@ export async function load() {
 export const cityName = (key) => (S.cityByKey[key] && S.cityByKey[key].name) ||
   (S.totals && S.totals.contests.map((c) => c.cities[key]).find(Boolean) || {}).name || null;
 export const countyContest = (id) => S.byId["k" + id] || null;
+
+// The one-sentence title of a measure (the county's own headline or first sentence). Countywide-by-city contests carry no text of their
+// own, so they borrow it from the county contest with the same id.
+export const measureTitleOf = (c) => c.measure_title || (S.byId["k" + c.id] || {}).measure_title || null;

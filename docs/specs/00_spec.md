@@ -383,3 +383,16 @@ From `data/rehearsal/4348_svc_precinct_public/election_layer_match.json`:
 - Browser test on the real data: 652 precincts drawn, click opens the panel with the Mayor result and 59 other contests, no console
   errors; the 11 earlier UI checks pass; 93 Python tests pass. Not verified: other browsers, phones, the live site.
 
+### One-sentence measure titles (added Nov 6)
+
+- `sitegen/measure_title.py` derives a one-sentence title for every ballot measure from the county's own measure text, never from our
+  wording: the county's headline when the text opens with one (type labels such as "LEGISLATIVE STATUTE" or "CHARTER AMENDMENT EE" and
+  a leading "MEASURE X:" are dropped; all-caps is converted to Title Case), otherwise the first sentence of the ballot question. Text
+  over 190 characters is cut at a word boundary and ends with "...". The full text stays under "Read the measure".
+- Written into `city_contests.json` and `county_contests.json` as `measure_title` (`contest_record` now also carries `measure_text`
+  for city measures). Shown under the contest name on measure cards, in the map's right-hand panel (countywide and city measures) and
+  in the precinct panel; countywide-by-city contests borrow the title from the county contest with the same id. Candidate races show none.
+- Checked on all 82 measures in the 2026 data: all 82 get a title, no all-caps titles, no type-label words left. 52 city, 30 county,
+  state and school measures. Titles that came from the ballot question (not a headline) read as the question itself ("Shall the ...").
+  98 Python tests pass (5 for the extractor); browser checks pass on a local copy. Not verified: the live site, other browsers, phones.
+

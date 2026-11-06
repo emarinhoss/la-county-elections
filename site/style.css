@@ -247,3 +247,5 @@ footer.site { max-width: 1320px; margin: 0 auto; padding: 0 20px 40px; color: va
   #map { height: 52vh; min-height: 320px; }
   .contest { padding: 16px; }
 }
+
+.measure-title { margin: 2px 0 4px; font-size: 14px; font-weight: 500; line-height: 1.4; color: var(--text-2); }

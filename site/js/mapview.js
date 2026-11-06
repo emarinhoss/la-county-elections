@@ -1,7 +1,7 @@
 // The map view: color every city by one contest, search for a city, read the details in the side panel.
 import { h, num, pct, countyTime, icon, palette, mix, diverging, choiceColor, leaderIndex, titleCase } from "./util.js";
 import { S, cityName, getPrecincts } from "./store.js";
-import { combobox, contestCard, resultRows } from "./components.js";
+import { combobox, contestCard, resultRows, measureTitleLine } from "./components.js";
 import { TOPICS, topicOf } from "./topics.js";
 import { navigate, hashFor } from "./router.js";
 
@@ -150,7 +150,7 @@ function sourceNote() {
 }
 function cwCity(cw, key) {
   const e = cw.cities[key];
-  const card = h("div", { class: "inline-card accent" }, h("div", { class: "tag" }, "Countywide contest, this area"), h("h3", { class: "contest-title" }, titleCase(cw.label)));
+  const card = h("div", { class: "inline-card accent" }, h("div", { class: "tag" }, "Countywide contest, this area"), h("h3", { class: "contest-title" }, titleCase(cw.label)), measureTitleLine(cw));
   if (!e) { card.append(h("p", { class: "note" }, "No precinct-level data for this area.")); return card; }
   const total = e.votes.reduce((s, v) => s + v, 0);
   card.append(resultRows(cw.choices.map((c, i) => ({ name: c.name, party: c.party, votes: e.votes[i], share: total ? e.votes[i] / total : null, color: choiceColor(cw, i) }))),
@@ -167,7 +167,7 @@ function precinctPanel(m, id) {
   if (!p) { box.append(h("p", { class: "note" }, "No results for this precinct.")); return; }
   const one = (cw, row, title) => {
     const votes = row.slice(2), total = votes.reduce((a, b) => a + b, 0);
-    return h("div", { class: "inline-card" + (title ? "" : " accent") }, h("h3", { class: "contest-title" }, titleCase(cw.label)),
+    return h("div", { class: "inline-card" + (title ? "" : " accent") }, h("h3", { class: "contest-title" }, titleCase(cw.label)), measureTitleLine(cw),
       row[1] ? resultRows(cw.choices.map((c, i) => ({ name: c.name, party: c.party, votes: votes[i], share: total ? votes[i] / total : null, color: choiceColor(cw, i) }))) : h("p", { class: "note" }, "No ballots counted in this precinct."),
       h("div", { class: "contest-meta" }, h("span", {}, `${num(row[1])} ballots`), h("span", {}, `${num(row[0])} registered`)));
   };
@@ -188,7 +188,7 @@ function renderPanel() {
     box.append(h("h2", { class: "panel-title" }, "Pick an area"));
     if (m.type === "cw") {
       const cw = m.cw, total = cw.choices.reduce((s, c) => s + c.county_votes, 0);
-      box.append(h("div", { class: "inline-card accent" }, h("div", { class: "tag" }, "Countywide"), h("h3", { class: "contest-title" }, titleCase(cw.label)),
+      box.append(h("div", { class: "inline-card accent" }, h("div", { class: "tag" }, "Countywide"), h("h3", { class: "contest-title" }, titleCase(cw.label)), measureTitleLine(cw),
         resultRows(cw.choices.map((c, i) => ({ name: c.name, party: c.party, votes: c.county_votes, share: total ? c.county_votes / total : null, color: choiceColor(cw, i) }))),
         h("p", { class: "note" }, "County totals at the tally the city numbers come from, which can trail the live count.")));
     } else if (m.type === "city") box.append(contestCard(m.contest, { compact: true, kicker: m.contest.city }));
