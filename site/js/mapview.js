@@ -5,6 +5,8 @@ import { combobox, contestCard, resultRows } from "./components.js";
 import { TOPICS, topicOf } from "./topics.js";
 import { navigate, hashFor } from "./router.js";
 
+const REFERENCE_POINT = [34.00929527935462, -118.32913315320754];   // a fixed reference dot, requested by the project owner
+let refDot = null;
 let built = false, lastContest = null, lastPrecincts = null, map = null, layer = null, lineLayer = null, precLayer = null, prec = null, precLoading = false, precFailed = false, fitBounds = null, params = {}, els = {}, contestBox, cityBox;
 
 // ---- what is being shown ---------------------------------------------------------------------------------------------------
@@ -255,7 +257,12 @@ function build(root, ctx) {
   const view = L.latLngBounds([]);
   layer.eachLayer((l) => { if (l.feature.properties.has_contests) view.extend(l.getBounds()); });
   fitBounds = view.isValid() ? view.pad(0.03) : layer.getBounds();
-  window.addEventListener("themechange", () => { restyle(); renderLegend(); });
+  // Reference dot, above the precincts and city lines. Small, with a surface-coloured ring so it reads on any fill, light or dark.
+  const refStyle = () => { const P = palette(); return { radius: 5, color: P.surface || "#fff", weight: 2, fillColor: P.text, fillOpacity: 1, opacity: 1 }; };
+  map.createPane("refPoint").style.zIndex = 480;
+  refDot = L.circleMarker(REFERENCE_POINT, { ...refStyle(), pane: "refPoint" }).addTo(map)
+    .bindTooltip(`Reference point<br>${REFERENCE_POINT[0].toFixed(5)}, ${REFERENCE_POINT[1].toFixed(5)}`, { direction: "top", offset: [0, -6] });
+  window.addEventListener("themechange", () => { restyle(); renderLegend(); refDot.setStyle(refStyle()); });
   // precinct state is not carried when switching contests unless it still applies
 }
 

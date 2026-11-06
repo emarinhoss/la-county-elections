@@ -63,7 +63,7 @@ export const titleCase = (s) => (s === s.toUpperCase()
 const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 export function palette() {
   return { a: cssVar("--a"), b: cssVar("--b"), other: cssVar("--other"), mid: cssVar("--div-mid"), nodata: cssVar("--nodata"),
-           line: cssVar("--map-line"), seqLo: cssVar("--seq-lo"), seqHi: cssVar("--seq-hi"), text: cssVar("--text"),
+           line: cssVar("--map-line"), seqLo: cssVar("--seq-lo"), seqHi: cssVar("--seq-hi"), text: cssVar("--text"), surface: cssVar("--surface"),
            series: ["--a", "--b", "--c3", "--c4", "--c5", "--c6"].map(cssVar) };
 }
 function rgb(hex) {
