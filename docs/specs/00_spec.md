@@ -307,7 +307,7 @@ history chart, About dialog, unknown route). Not verified: other browsers, scree
   county PDF's column order) and `data/rehearsal/<name>/precinct_shapes.geojson` (polygons of only the precincts in that file, from the county
   precinct layer, joined by exact precinct id; kept per file because a later run on another file would overwrite a shared one). `sitegen/precincts.py` puts the columns in the API's choice order with the same mapping
   `city_totals` used, so city and precinct numbers share one matching, and writes `site/data/precincts.json` and `precincts.geojson`.
-- The map has a "Precincts" toggle for countywide contests. The data loads only when it is turned on. Clicking a precinct shows its
+- The map has a "Precincts" toggle for countywide contests. City boundary lines are drawn above the precincts in their own non-clickable pane (thicker for the selected city), with a legend entry. The data loads only when it is turned on. Clicking a precinct shows its
   result for the selected contest and, in a collapsed list, all countywide contests in that precinct.
 - Scope: countywide contests only (the ones matched to the county API). City, district and school contests by precinct are in the
   PDF but not shown yet. Precincts in the PDF with no polygon in the layer cannot be drawn; the workflow summary lists how many.

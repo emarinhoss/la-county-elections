@@ -5,7 +5,7 @@ import { combobox, contestCard, resultRows } from "./components.js";
 import { TOPICS, topicOf } from "./topics.js";
 import { navigate, hashFor } from "./router.js";
 
-let built = false, map = null, layer = null, precLayer = null, prec = null, precLoading = false, precFailed = false, fitBounds = null, params = {}, els = {}, contestBox, cityBox;
+let built = false, map = null, layer = null, lineLayer = null, precLayer = null, prec = null, precLoading = false, precFailed = false, fitBounds = null, params = {}, els = {}, contestBox, cityBox;
 
 // ---- what is being shown ---------------------------------------------------------------------------------------------------
 function defaultContest() {
@@ -54,7 +54,19 @@ function precinctTooltip(feature) {
   box.append(h("div", {}, `${m.cw.choices[i].name} ${pct(total ? votes[i] / total : null)}`), h("div", { class: "muted" }, `${num(row[1])} ballots`));
   return box;
 }
+// City boundary lines drawn ABOVE the precincts (the precincts would otherwise hide them). Not clickable: clicks go to the precinct below.
+function lineStyle(feature) {
+  const P = palette(), picked = feature.properties.key === params.city;
+  return { fill: false, color: P.text, weight: picked ? 3 : 1.6, opacity: picked ? 0.95 : 0.6, interactive: false };
+}
+function drawLines() {
+  if (lineLayer) { map.removeLayer(lineLayer); lineLayer = null; }
+  if (!map || !S.shapes || !precinctsOn(modeOf(params))) return;
+  if (!map.getPane("cityLines")) { const pane = map.createPane("cityLines"); pane.style.zIndex = 450; pane.style.pointerEvents = "none"; }
+  lineLayer = L.geoJSON(S.shapes, { style: lineStyle, pane: "cityLines", interactive: false }).addTo(map);
+}
 function drawPrecincts() {
+  drawLines();
   if (precLayer) { map.removeLayer(precLayer); precLayer = null; }
   const m = modeOf(params);
   if (!map || !precinctsOn(m)) return;
@@ -108,6 +120,7 @@ function legendFor(m) {
       box.append(ramp(`linear-gradient(90deg, ${P.b}, ${P.mid}, ${P.a})`, `${other} ahead`, `${c.choices[f].name} ahead`, "even"), h("div", { class: "note" }, "Full color at a 30-point lead."));
     } else box.append(ramp(`linear-gradient(90deg, ${P.seqLo}, ${P.seqHi})`, "0%", "60%+"), h("div", { class: "note" }, `${c.choices[f].name}'s share of the vote in each city.`));
     box.append(item(P.nodata, m.type === "cw" ? "No precinct data" : "Not part of this contest"));
+    if (precinctsOn(m)) box.append(h("div", { class: "legend-item" }, h("span", { class: "key", style: { background: "transparent", borderTop: `2px solid ${P.text}`, height: "0", borderRadius: "0" } }), "City boundary"));
   }
   return box;
 }
@@ -194,7 +207,7 @@ function contestGroups() {
   for (const city of S.city.cities) groups.push({ label: `${city.name}: city contests`, options: city.contests.map((c) => ({ value: "c:" + c.id, label: `${city.name}: ${titleCase(c.label)}` })) });
   return groups;
 }
-function restyle() { if (layer) layer.setStyle(styleFor); if (precLayer) precLayer.setStyle(precinctStyle); }
+function restyle() { if (layer) layer.setStyle(styleFor); if (precLayer) precLayer.setStyle(precinctStyle); if (lineLayer) lineLayer.setStyle(lineStyle); }
 function update() { drawPrecincts(); restyle(); renderLegend(); renderPanel(); renderToolbarState(); }
 function renderLegend() { els.legend.replaceChildren(legendFor(modeOf(params))); }
 
