@@ -1,0 +1,9 @@
+{
+  "source_id": "rrcc_api_counter_data",
+  "url": "https://results.lavote.gov/ElectionResults/GetCounterData?electionID=4348",
+  "fetched_at": "2026-11-09T00:21:31.352097+00:00",
+  "http_status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "bytes": 288230,
+  "sha256": "3958cadcba48d9231b91c4ba4eb0b2ac9e46be8fbeb40d862d0b65e4bfc368e5"
+}
