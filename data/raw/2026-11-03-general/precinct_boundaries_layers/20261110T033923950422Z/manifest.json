@@ -1,0 +1,9 @@
+{
+  "source_id": "precinct_boundaries_layers",
+  "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/Registrar_Recorder_Precincts/FeatureServer/layers?f=json",
+  "fetched_at": "2026-11-10T03:39:23.950422+00:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 29244,
+  "sha256": "c09280883e59ff548a1c3360a6538f0cf570264a7be53b35957dfbd7f1933bb7"
+}
