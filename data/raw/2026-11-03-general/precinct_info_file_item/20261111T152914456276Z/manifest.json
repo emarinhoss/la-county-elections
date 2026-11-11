@@ -1,0 +1,9 @@
+{
+  "source_id": "precinct_info_file_item",
+  "url": "https://www.arcgis.com/sharing/rest/content/items/cff9421b413c4a40b591d94297d995bf?f=json",
+  "fetched_at": "2026-11-11T15:29:14.456276+00:00",
+  "http_status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "bytes": 4974,
+  "sha256": "13a989419526cb24ceb0f77d9c7601d27a225e54c7f3e232761b5e36b445afde"
+}
