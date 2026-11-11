@@ -1,0 +1,9 @@
+{
+  "source_id": "city_boundary_layer_meta",
+  "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services/City_Boundry/FeatureServer/24?f=json",
+  "fetched_at": "2026-11-11T01:18:20.575123+00:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 14153,
+  "sha256": "1cf5d91aa9882698f464a3e2a0e0fc40baf090a2d0ddd05646683d85a4a559d1"
+}
