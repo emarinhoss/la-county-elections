@@ -1,0 +1,9 @@
+{
+  "source_id": "rrcc_services_directory",
+  "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/ArcGIS/rest/services?f=json",
+  "fetched_at": "2026-11-19T17:29:15.395131+00:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 742254,
+  "sha256": "c197ee5b8431cfe38678eb2cd40a2d46ff3060b39df60f57c387598b619571d0"
+}
