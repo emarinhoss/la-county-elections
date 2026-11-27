@@ -94,11 +94,19 @@ def write_csv(path, rows, fields):
 def run(raw_election_dir, tidy_election_dir):
     raw, tidy = Path(raw_election_dir), Path(tidy_election_dir)
     info, contests, choices = parse_structure(load(latest(raw / "rrcc_api_election_data")))
-    results, ccount, ecount = [], [], []
+    results, ccount, ecount, skipped = [], [], [], []
     for snap in sorted((raw / "rrcc_api_counter_data").iterdir()):
         if not (snap / "body").exists():
             continue
-        r, c, e = parse_counters(load(snap / "body"), snap.name)
+        try:
+            payload = load(snap / "body")
+        except ValueError:  # the county sometimes answers with an HTML error page (e.g. 504)
+            skipped.append(snap.name)
+            continue
+        if not isinstance(payload, dict) or "TimeStamp" not in payload:  # {"Message": "An error has occurred."}
+            skipped.append(snap.name)
+            continue
+        r, c, e = parse_counters(payload, snap.name)
         results += r
         ccount += c
         ecount += e
@@ -109,7 +117,7 @@ def run(raw_election_dir, tidy_election_dir):
     write_csv(tidy / "contest_counters.csv", ccount, ["snapshot", "county_time", "contest_id", "counter", "value"])
     write_csv(tidy / "election_counters.csv", ecount, ["snapshot", "county_time", "counter", "value"])
     (tidy / "election.json").write_text(json.dumps(info, indent=2) + "\n")
-    return {"contests": len(contests), "choices": len(choices), "result_rows": len(results), "problems": problems}
+    return {"contests": len(contests), "choices": len(choices), "result_rows": len(results), "problems": problems, "skipped_snapshots": skipped}
 
 
 if __name__ == "__main__":
