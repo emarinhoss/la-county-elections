@@ -1,0 +1,13 @@
+{
+ "svc_precincts": 2218,
+ "layer_precincts": 2853,
+ "matched": 2218,
+ "matched_share": 1.0,
+ "unmatched_svc": [],
+ "unmatched_ballots": 0,
+ "layer_only": 635,
+ "city_changed_precincts": 0,
+ "city_changed_ballots": 0,
+ "total_ballots": 3182417,
+ "shapes_written": 2218
+}
